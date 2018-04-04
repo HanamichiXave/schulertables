@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Counselor</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/custom/css/Counselor/C_MainPage.css" rel="stylesheet">
+      <link href="../../content/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style>
+    .super-panel-lg {
+    border: 3px solid #44A5C9!important;
+    border-radius: 20px!important;
+    }
+    .modal-xl {
+      width: 90%;
+      max-width: 1200px;
+    }
+    @media (min-width: 768px) {
+    .modal-dialog {
+        width: 600px;
+        margin: 30px auto;
+    }
+
+    ...
+    }
+
+    @media (min-width: 992px) {
+        .modal-lg {
+            width: 900px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .modal-xl {
+            width: 90%;
+            max-width: 1200px;
+        }
+    }
+    .dataTables_paginate {
+      float: right;
+    }
+    .marginbottom {
+      margin-bottom: 10px;
+    }
+    .dataTables_length {
+      margin-bottom: 25px;
+    }
+    td, th {
+      text-align: center;
+    }
+  </style>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                         <li>
+                                <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                         </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container">
+        <br>
+        <br>
+        <div class="page-header" style="color: #000033"><h2><strong>Counselor Management</strong></h2>
+          <ol class="breadcrumb" style="background-color: #D9EDF7">
+            <li><a href="counselor-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+            <li>Incident Report</li>
+          </ol>
+          </div>
+      <!-- your code start here -->
+      <!-- Please observe indention -->
+        <div class="panel panel-custom">
+            <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-exclamation-circle fa-lg"></i> Incident Report</div>
+            <div class="container-fluid">
+
+              <div class="row">
+                <div class="col-lg-12" style="text-align: center; justify-content: center;">
+                  <label class="control-label" style="font-size: 20px; margin-top: 15px;">School Year<br>2017 - 2018</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-8">
+                  <div class="form-group contact-search m-b-30">
+                     <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                  </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 marginbottom">
+                  <a href="#" class="btn btn-info btn-md waves-effect waves-light m-b-30" style="height: 40px; margin-top: 7px;" data-toggle="modal" data-target="#addreport">
+                  <i class="fa fa-pencil"></i> File Report</a>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="table-responsive">
+                    <table id="incident" class="display nowrap table table-hover table-striped">
+                      <thead class="thead-color">
+                        <tr>
+                         <th></th>
+                         <th>Student Name</th>
+                         <th>Student ID</th>
+                         <th >Date</th>
+                         <th >Time</th>
+                         <th >Nature of Injury</th>
+                         <th >First Aid Administered</th>
+                         <th >Remark</th>
+                         <th >Staff Present</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td>John Mayson Labuntog</td>
+                          <td>123-456</td>
+                          <td>January 21, 2017</td>
+                          <td>4:00pm</td>
+                          <td>Black Eye</td>
+                          <td>Ice Bag</td>
+                          <td>Home Rest Required</td>
+                          <td>Antonio Bravo</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td>John Xavier Buenaventura</td>
+                          <td>123-456</td>
+                          <td>March 31, 2017</td>
+                          <td>1:00pm</td>
+                          <td>Bruised Arm</td>
+                          <td>Cold Compress</td>
+                          <td>Approved to attend class tomorrow</td>
+                          <td>Antonio Bravo</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td>John Benson Leabres</td>
+                          <td>123-456</td>
+                          <td>May 15, 2017</td>
+                          <td>3:00pm</td>
+                          <td>Broken Finger</td>
+                          <td>Bandage</td>
+                          <td>Won't be able to write</td>
+                          <td>Antonio Bravo</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+ 
+
+      <!-- end of your code -->
+      <!-- footer here -->
+      <footer class="navbar-fixed-bottom">
+         <div class="container-fluid footer">
+            <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+         </div>
+      </footer>
+      <!-- end foooter -->
+      </div>
+
+      <!-- Modal For Add Report -->
+      <div class="modal fade" id="addreport" role="dialog">
+       <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+             <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+             </div>
+             <div class="modal-body">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="panel panel-custom">
+                    <div class="panel-heading"><i class="fa fa-pencil"></i> &nbspAdd Incident Report</div>
+                      <div class="panel-body">                     
+                        <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 clearfix">
+                              <label class="control-label" for="itemtype">Student ID</label>
+                              <select class='required form-control' id="selectId" name='studentId' type='text'>
+                                <option hidden>--Please Select--</option>
+                                <option value="Bravo, Antonio, Jr. Gaveria">101558</option>
+                                <option value="Bravo, Khrystine Gaveria">101559</option>
+                              </select>
+                        </div>
+
+                        <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 clearfix">
+                          <label class="control-label" for="itemtype">Student Name</label>
+                            <input class='required form-control' id='selectName' name='studentName' type='text' value="" readonly>
+                            <input class='required form-control' id='hideStudentId' name='hideStudentId' type='hidden' value="" readonly>
+                        </div>
+
+                        <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 clearfix">
+                          <label class="control-label">Date of Incident</label>
+                          <input class="required form-control" id="date" type="date">
+                        </div>
+
+                        <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 clearfix">
+                          <label class="control-label" for="itemtype">Time</label>
+                          <input class='required form-control' id='time' name='time' type="time">
+                        </div>
+
+                        <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 clearfix">
+                          <label class="control-label" for="itemtype">Nature of Counseling</label>
+                          <select class='required form-control' id='' name='counseling' rows='3'>
+                            <option disabled="">-- Select Nature --</option>
+                            <option>Emotional Counseling</option>
+                            <option>Physical Counseling</option>
+                          </select>  
+                        </div>
+
+                        <div class="form-group col-xs-12 col-sm-12 col-md-6  col-lg-6 clearfix">
+                          <label class=" control-label" for="itemtype">Staff Name</label>
+                          <input class='required form-control' autocomplete="off" id='' name='staff' type='text' list="staffPresent">
+                          <datalist id="staffPresent">
+                            <option disabled="">-- Select Staff --</option>
+                            <option value="Super Admin">Super Admin</option>
+                          </datalist>
+                        </div>
+
+                        <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 clearfix">
+                          <label class="control-label" for="itemtype">Nature of Injury</label>
+                          <textarea class='required form-control' id='employeradd' name='injury' rows='3' style="resize: none;"></textarea>
+                        </div>
+
+                        <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 clearfix">
+                          <label class=" control-label" for="itemtype">First Aid Administered</label>
+                          <textarea class='required form-control' id='employeradd' name='firstaid' rows='3'style="resize: none;"></textarea>
+                        </div>
+
+                        <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 clearfix">
+                          <label class=" control-label" for="itemtype">Remark</label>
+                          <textarea class='required form-control' id='employeradd' name='comments' rows='3' style="resize: none;"></textarea>
+                        </div>
+                    </div> 
+                  </div>
+                </div>
+             </div>
+              <div class="modal-footer">
+                 <button class="btn btn-success btn-rounded waves-effect waves-light" type="sumbit" id="addReport">Save</button>
+                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+       </div>
+      </div>
+      <!-- End of Modal --> 
+
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/dataTables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script type="text/javascript">
+       $(document).ready(function(){
+         var oTable = $('#incident').DataTable({
+           "orderCellsTop": false,
+           "searchHighlight" : true,
+         });
+         $('#search').keyup(function(){
+               oTable.search($(this).val()).draw() ;
+         });
+         $(".dataTables_filter").hide();
+         oTable.on('order.dt search.dt', function(){
+           oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+            function (cell, i) {
+             cell.innerHTML = i+1;
+             } );
+         }).draw();
+
+
+       });
+    </script>
+
+      <!-- end of your custom script -->
+   </body>
+</html>

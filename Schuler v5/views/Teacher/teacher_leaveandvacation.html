@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Teacher Management</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <style>
+         .badge-info {
+         background-color: #5bc0de;
+         }
+         .badge-success {
+         background-color: #60b660;
+         }
+         .badge-danger {
+         background-color: #C73232;
+         }
+         .badge-warning {
+         background-color: #EA9632;
+         }
+         .badge-primary {
+         background-color: #2B618E;
+         }
+         .m-b-10 {
+         margin-bottom: 15px !important;
+         }
+      </style>
+      <!-- end of your custom css -->
+   </head>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                        <li>
+                           <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                        <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                        <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033">
+            <h2><strong>Teacher Management</strong></h2>
+         </div>
+         <ol class="breadcrumb" style="background-color: #D9EDF7">
+            <li><a href="teacher-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+            <li>Leave Request</li>
+         </ol>
+         <!-- your code start here -->
+         <!-- Please observe indention -->
+
+         <div class="panel panel-custom">
+            <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-futbol-o fa-lg"></i> List of Vacation & Leave</div>
+            <div class="panel-body">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="row">
+                        <center>
+                           <h4><strong>School Year for 2017-2018</strong></h4>
+                        </center>
+                        <div class="col-sm-6 col-xs-12 col-lg-6">
+                           <div class="form-group contact-search m-b-30">
+                              <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                           </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 col-lg-6">
+                           <button type="button" class="btn btn-info btn-md waves-effect waves-light m-b-30" style="height: 40px; margin-top: 7px; margin-bottom: 10px;" data-toggle="modal" data-target="#myModal">Request Leave/Vacation</button>
+                        </div>
+                     </div>
+                     <div class="container-fluid">
+                        <div class="row">
+                           <form class="table-responsive">
+                              <table class="display nowrap table table-striped table-hover" id="myTable" role="grid" aria-describedby="searchList_info">
+                                 <thead>
+                                    <tr role="row">
+                                       <th class="sorting_asc " tabindex="0" aria-controls="searchList" rowspan="1" colspan="1" aria-label=": activate to sort column descending" aria-sort="ascending" style="width: 5px;"></th>
+                                       <th class="sorting " tabindex="0" aria-controls="searchList" rowspan="1" colspan="1" aria-label="Student ID: activate to sort column ascending" style="width: 92px;">Date of File</th>
+                                       <th class="sorting " tabindex="0" aria-controls="searchList" rowspan="1" colspan="1" aria-label="Student Name: activate to sort column ascending" style="width: 123px;">Type of Leave</th>
+                                       <th class="sorting " tabindex="0" aria-controls="searchList" rowspan="1" colspan="1" aria-label="Contact: activate to sort column ascending" style="width: 69px;">No. of Days</th>
+                                       <th class="sorting " tabindex="0" aria-controls="searchList" rowspan="1" colspan="1" aria-label="Nature of Accident: activate to sort column ascending" style="width: 156px;">Reason of Leave & Vacation</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td></td>
+                                       <td>December 3,2017</td>
+                                       <td>Vacation</td>
+                                       <td>3</td>
+                                       <td>Family Gathering</td>
+                                    </tr>
+                                    <tr>
+                                       <td></td>
+                                       <td>April 6,2017</td>
+                                       <td>Sick</td>
+                                       <td>2</td>
+                                       <td>Flu</td>
+                                    </tr>
+                                    <tr>
+                                       <td></td>
+                                       <td>March 6,2017</td>
+                                       <td>Vacation</td>
+                                       <td>3</td>
+                                       <td>Team Outing</td>
+                                    </tr>
+                                    <tr>
+                                       <td></td>
+                                       <td>Nov 3,2017</td>
+                                       <td>Vacation</td>
+                                       <td>1</td>
+                                       <td>Out of town</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <hr />
+      </div>
+      <!-- end of your code -->
+      <!-- footer here -->
+      <footer class="navbar-fixed-bottom">
+         <div class="container-fluid footer">
+            <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+         </div>
+      </footer>
+      <!-- end foooter -->
+      </div>
+
+      <!-- Modal -->
+         <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+               <!-- Modal content-->
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     <h4 class="modal-title"></h4>
+                  </div>
+                  <div class="modal-body">
+                     <div class="card-box">
+                        <div class="col-lg-12">
+                           <div class="container-fluid panel panel-custom">
+                              <div class="row">
+                                <center><h4><strong>Teacher Attendance/Leave Information</strong></strong></h4></center>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-8">Type of Employee:</div>
+                                   <div class="col-lg-8 col-md-8 col-sm-6 col-xs-4"> <strong>Regular</strong></div>
+                                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-8">Available Vacation Leave:</div>
+                                   <div class="col-lg-1 col-md-2 col-sm-6 col-xs-4"> <span class="badge badge-success">4</span></div>
+                                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-8">Available Sick Leave:</div>
+                                   <div class="col-lg-3 col-md-2 col-sm-6 col-xs-4"> <span class="badge badge-warning">6</span></div>
+                                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-8">No. of Absent:</div>
+                                   <div class="col-lg-1 col-md-2 col-sm-6 col-xs-4"> <span class="badge badge-danger">2</span></div>
+                                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-8">No. of Present:</div>
+                                   <div class="col-lg-3 col-md-2 col-sm-6 col-xs-4"> <span class="badge badge-primary">130</span></div>
+                                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-8">No. of Vacation Leave Used:</div>
+                                   <div class="col-lg-1 col-md-2 col-sm-6 col-xs-4"> <span class="badge badge-info">5</span></div>
+                                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-8">No. of Sick Leave Used:  </div>
+                                   <div class="col-lg-3 col-md-2 col-sm-6 col-xs-4"> <span class="badge badge-info">1</span></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-12">
+                           <div class="panel panel-custom">
+                              <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-futbol-o fa-lg"></i> Leave Request Form
+                              </div>
+                              <div class="panel-body">
+                                 <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 m-b-10"><label>Employee Name:</label></div>
+                                 <div class="col-lg-3 col-md-9 col-sm-7 col-xs-12 m-b-10"><input class="form-control" style="width: 100%;" type="" name=""></div>
+                                 <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 m-b-10"><label>Employee ID:</label></div>
+                                 <div class="col-lg-3 col-md-9 col-sm-7 col-xs-12 m-b-10"><input class="form-control" style="width: 100%;" type="" name=""></div>
+                                 <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 m-b-10"><label>Department:</label></div>
+                                 <div class="col-lg-3 col-md-9 col-sm-7 col-xs-12 m-b-10"><input class="form-control" style="width: 100%;" type="" name=""></div>
+                                 <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 m-b-10"><label>Department Head:</label></div>
+                                 <div class="col-lg-3 col-md-9 col-sm-7 col-xs-12 m-b-10"><input class="form-control" style="width: 100%;" type="" name=""></div>
+                                 <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 m-b-10"><label>Type of Leave:</label></div>
+                                 <div class="col-lg-9 col-md-9 col-sm-7 col-xs-12 m-b-10">
+                                    <select style="width: 100%;" class="form-control m-b-10">
+                                       <option>Sick</option>
+                                       <option>Vacation</option>
+                                       <option>Absence / Personal</option>
+                                       <option>Maternity / Paternity</option>
+                                       <option>Leaves w/o Pay</option>
+                                    </select>
+                                 </div>
+                                 <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 m-b-10">Date of Leave:</div>
+                                 <div class="col-lg-3 col-md-9 col-sm-7 col-xs-12 m-b-10"><input class="form-control" style="width: 100%;" type="date" name=""></div>
+                                 <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 m-b-10">Date of Leave:</div>
+                                 <div class="col-lg-3 col-md-9 col-sm-7 col-xs-12 m-b-10"><input class="form-control" style="width: 100%;" type="date" name=""></div>
+                                 <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 m-b-10">Reason of Leave:</div>
+                                 <div class="col-lg-9 col-md-9 col-sm-7 col-xs-12 m-b-10"> <textarea class="form-control" style=" resize: none; width: 100%; height: 100%;"></textarea></div>
+                                 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                                    <button type="button" class="btn btn-info pull-right">Submit Request</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--end of modal-->
+
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/dataTables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script type="text/javascript">
+         $(document).ready(function(){
+           var oTable = $('#myTable').DataTable({
+             "orderCellsTop": false,
+             "searchHighlight" : true,
+           });
+           $('#search').keyup(function(){
+                 oTable.search($(this).val()).draw() ;
+           });
+           $(".dataTables_filter").hide();
+           oTable.on('order.dt search.dt', function(){
+             oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+              function (cell, i) {
+               cell.innerHTML = i+1;
+               } );
+           }).draw();
+         });
+      </script>
+      <!-- end of your custom script -->
+   </body>
+</html>

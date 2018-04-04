@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Employee List</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/custom/css/HR/HR_mainpage.css" rel="stylesheet">
+      <link href="../../Content/datatables.net/css/jquery.dataTables.min.css" rel="stylesheet" />
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand" href="#" style="color: #35ac49;">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Setting</a></li>
+                        <li><a href="#exit">Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               <form class="navbar-form navbar-right search-form" role="search">
+                  <input type="text" class="form-control" placeholder="Search" />
+               </form>
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033">
+            <h2><strong>Other Staffs</strong></h2>
+         </div>
+         <!-- your code start here -->
+         <!-- Please observe indention -->
+         <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="griditem panel-body center-block">
+                  <div class="row  panelPopUp">
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                        <div>
+                           <img src="../../content/Images/Admin.png" height="80" />
+                        </div>
+                     </div>
+                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                        <a href="../../views/hr/hr-payroll-admin-list.html">
+                        <label class="spr-label">Administration</label>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="griditem panel-body center-block">
+                  <div class="row panelPopUp">
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                        <div>
+                           <img src="../../content/Images/clinic1.png" height="80" />
+                        </div>
+                     </div>
+                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                        <a href="">
+                        <label class="spr-label">Clinic</label>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="griditem panel-body center-block">
+                  <div class="row panelPopUp">
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                        <div>
+                           <img src="../../content/Images/counselor1.png" height="80" />
+                        </div>
+                     </div>
+                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                        <a href="../../views/hr/hr-employee-list.html">
+                        <label class="spr-label">Councelor</label>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="griditem panel-body center-block">
+                  <div class="row panelPopUp">
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                        <div>
+                           <img src="../../content/Images/finance1.png" height="80" />
+                        </div>
+                     </div>
+                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                        <a href="../../views/hr/hr-payroll_department_list.html">
+                        <label class="spr-label">Finance</label>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="griditem panel-body center-block">
+                  <div class="row panelPopUp">
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                        <div>
+                           <img src="../../content/Images/hr.png" height="80" />
+                        </div>
+                     </div>
+                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                        <a href="../../views/Librarian/library-management.html">
+                        <label class="spr-label">Human Resources</label>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="griditem panel-body center-block">
+                  <div class="row panelPopUp">
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                        <div>
+                           <img src="../../content/Images/library.png" height="80" />
+                        </div>
+                     </div>
+                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                        <a href="../../views/Teacher/teacher-management.html">
+                        <label class="spr-label">Library</label>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="griditem panel-body center-block">
+                  <div class="row panelPopUp">
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                        <div>
+                           <img src="../../content/Images/maintenanceq.png" height="80" />
+                        </div>
+                     </div>
+                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                        <a href="">
+                        <label class="spr-label">Maintenance</label>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="griditem panel-body center-block">
+                  <div class="row panelPopUp">
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                        <div>
+                           <img src="../../content/Images/security1.png" height="80" />
+                        </div>
+                     </div>
+                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                        <a href="">
+                        <label class="spr-label">Security</label>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="griditem panel-body center-block">
+                  <div class="row panelPopUp">
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                        <div>
+                           <img src="../../content/Images/teachers.png" height="80" />
+                        </div>
+                     </div>
+                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                        <a href="">
+                        <label class="spr-label">Teacher</label>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="griditem panel-body center-block">
+                  <div class="row panelPopUp">
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                        <div>
+                           <img src="../../content/Images/transportation.png" height="80" />
+                        </div>
+                     </div>
+                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                        <a href="">
+                        <label class="spr-label">Transportation</label>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="griditem panel-body center-block">
+                  <div class="row panelPopUp">
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                        <div>
+                           <img src="../../content/Images/principal1.png" height="80" />
+                        </div>
+                     </div>
+                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                        <a href="">
+                        <label class="spr-label">Other Staffs</label>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="griditem panel-body center-block">
+                  <div class="row panelPopUp">
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                        <div>
+                           <img src="../../content/Images/principal1.png" height="80" />
+                        </div>
+                     </div>
+                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                        <a href="">
+                        <label class="spr-label">All Employee</label>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end of your code -->
+         <!-- footer here -->
+         <hr />
+         <footer class="navbar-fixed-bottom">
+            <div class="container-fluid" style="background-color: #35AC49;">
+               <p class="pull-right " style="padding-top: .5%; padding-right: 3%; font-size: 10px; font-weight: bolder; color: #000033;">&copy; 2016 - Powered by <a href="http://www.simplevia.com" style="color: #fff;">QuickTrack</a></p>
+            </div>
+         </footer>
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/datatables.net/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="../../content/datatables.net/js/datatables.bootstrap.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/datatables.net/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/datatables.net/js/buttons.html5.min.js"></script>
+      <script src="../../content/datatables.net/js/buttons.print.min.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.scroller.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <!-- end of your custom script -->
+   </body>
+</html>

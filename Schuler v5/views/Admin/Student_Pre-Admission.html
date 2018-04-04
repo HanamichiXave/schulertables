@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Administration Management</title>
+	<link rel="icon" href="../../content/images/logonatin.png">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../content/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+	<!-- css for nav bar -->
+	<link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+	<link href="../../content/custom/css/style.css" rel="stylesheet">
+    <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+
+	<!-- end of css  -->
+	<!-- your custom css -->
+
+	<!-- end of your custom css -->
+</head>
+<style>
+.no-border-right {
+  border-right: solid 1px #FFF!important;
+}
+.dataTables_length {
+ margin-bottom: 15px;
+ margin-top: 5px;
+}
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #;
+}
+
+</style>
+<body>
+	<!-- navigation bar  -->
+	<nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+	    <div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                 <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+                    <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+                </a>
+				<a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+							</li>
+							<li class="divider">|</li>
+                            <li>
+                                <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                            </li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+							<li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+							<li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			
+			</div>
+		</div>
+	</nav>
+	<!-- end of navigation bar -->
+	<div class="container" >
+		<br>
+		<br>
+		<div class="page-header" style="color: #000033"><h2><strong>Administration Management</strong></h2></div>
+		<ol class="breadcrumb" style="background-color: #D9EDF7">
+            <li><a href="admin-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> <label> Home</label></a></li>
+            <li>Student Pre-Admission</li>
+        </ol>
+		<!-- your code start here -->
+		<!-- Please observe indention -->
+       	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          	<div class="pull-right">
+      			<button type="button" class="btn btn-default" value='Print' onclick='printDiv();' ><i class="fa fa-print" aria-hidden="true"></i>Print Form</button>
+      		</div>
+       	</div>
+        <br>
+        <br>
+	    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+	        <ul class="nav nav-pills nav-stacked">
+	            <li role="presentation" class="active"><a data-toggle="tab" href="#stud-app">Student Application Form</a></li>
+	            <li role="presentation"><a data-toggle="tab" href="#stud-req">Student Requirement &amp Result Pre-Admission</a></li>
+	            <li role="presentation"><a data-toggle="tab" href="#list-preadmission">List of Student Pre-Admission</a></li>
+	        </ul>
+	    </div>
+	    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+	        <div class="tab-content">
+	            <div class="tab-pane fade in active" id="stud-app">
+	                <div class="panel panel-custom">
+	                	<div class="panel-heading">IA. APPLICANTS INFORMATION</div>
+	                    <div class="panel-body">
+	                    	<div class="row">
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+		                            <div class="form-group">
+		                                <label>Surname</label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+		                            <div class="form-group">
+		                                <label>First Name</label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+		                            <div class="form-group">
+		                                <label>Middle Name</label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+		                            <div class="form-group">
+		                                <label>Chinese</label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+		                            <div class="form-group">
+		                                <label>Address: </label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+		                            <div class="form-group">
+		                                <label>Citizenship</label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+		                            <div class="form-group">
+		                                <label>Telephone No. (S)</label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+		                            <div class="form-group">
+		                                <label>Mobile No. (S)</label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+		                            <div class="form-group">
+		                                <label>Email</label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+		                            <div class="form-group">
+	                                    <label class="control-label" for="dob">Date of Birth *</label>
+	                                    <div class="input-group date form_date" data-date-format="dd MM yyyy" data-link-field="dob" data-link-format="dd MM yyyy">
+	                                       <input id="dateOfBirth" class="form-control" size="16" type="text" value="" readonly="">
+	                                       <span class="input-group-addon">
+	                                          <div id="dateOfBirthIcon" class="glyphicon glyphicon-calendar datepicker"></div>
+	                                       </span>
+	                                       <span class="input-group-addon">
+	                                          <div id="dateOfBirthCloseIcon" class="glyphicon glyphicon-remove"></div>
+	                                       </span>
+	                                    </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+		                            <div class="form-group">
+		                                <label>Place of Birth</label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+		                            <div class="form-group">
+		                                <label>Birth Order</label>
+		                                <select class="form-control">
+		                                    <option selected disabled>- SELECT -</option>
+		                                    <option>Eldest</option>
+		                                    <option>Middle</option>
+		                                    <option>Youngest</option>
+		                                </select>
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+		                            <div class="form-group">
+		                                <label>Number of Bro. </label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+		                            <div class="form-group">
+		                                <label>Number of Sis. </label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+		                            <div class="form-group">
+		                                <label>Religion</label>
+		                                <select class="form-control" id="select-religion">
+		                                    <option selected disabled>- SELECT RELIGION -</option>
+		                                    <option value="">Roman Catholic</option>
+		                                    <option value="1">Protestant</option>
+		                                    <option value="2">Others</option>
+		                                </select>
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" id="protestant" style="display: none;">
+		                            <div class="form-group">
+		                                <label>Specify</label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" id="others" style="display: none;">
+		                            <div class="form-group">
+		                                <label>Specify</label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+		                            <div class="form-group">
+		                                <label>Place of Baptism </label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+		                            <div class="form-group">
+		                                <label>Date of Baptism </label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+		                            <div class="form-group">
+		                                <label>Church</label>
+		                                <input class="form-control" type="" name="">
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-6">
+		                            <div class="form-group">
+		                                <label>Language(s) Fluent In: </label>
+		                                <div class="col-lg-12">
+			                                <div class="row">
+				                                <div class="checkbox-inline">
+				                                    <label style="font-weight: normal;"><input type="checkbox" value="">Chinese (Mandarin</label>
+				                                </div>
+				                                <div class="checkbox-inline">
+				                                    <label style="font-weight: normal;"><input type="checkbox" value="">Chinese (Fookien</label>
+				                                </div>
+				                            </div>
+				                            <div class="row">
+				                                <div class="checkbox-inline">
+				                                    <label style="font-weight: normal;"><input type="checkbox" value="">Filipino</label>
+				                                </div>
+				                                <div class="checkbox-inline">
+				                                    <label style="font-weight: normal;"><input type="checkbox" value="">English</label>
+				                                </div>
+				                            </div>
+				                            <div class="row">
+				                                <div class="form-inline">
+				                                    <label class="checkbox-inline"><input type="checkbox" value="">Others: </label>
+				                                    <input class="form-control" type="" name="">
+				                                </div>
+				                            </div>
+				                        </div>
+		                            </div>
+		                        </div>
+		                    </div>
+	                    </div>
+	                </div>
+	                <div class="panel panel-custom">
+	                	<div class="panel-heading">IB. SCHOLASTICS BACKGROUND</div>
+	                    <div class="panel-body">
+	                        <p>List in order, beginning from the lowest grade, ALL schools attended. This must be a COMPLETE listing of evevry school in which the child has been enrolled.</p>
+	                        <div style="overflow-x: auto;">
+	                            <table id="scholastic" class="table table-bordered">
+	                                <thead>
+	                                    <tr>
+	                                        <th style="width: 30%; text-align: center;">School Attended</th>
+	                                        <th style="width: 35%; text-align: center;">Address</th>
+	                                        <th style="width: 20%; text-align: center;" colspan="3">Level</th>
+	                                        <th style="width: 15%; text-align: center;" colspan="3">School Year</th>
+	                                    </tr>
+	                                </thead>
+	                                <tbody>
+	                                    <tr>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td class="no-border-right">
+	                                            <center>
+	                                                <input class="form-control" style="width:50px;" type="" name="" placeholder="G - 1"> 
+	                                            </center>
+	                                        </td>
+	                                        <td class="no-border-right">
+	                                        	<center>
+	                                        		<label> - </label>
+	                                        	</center>
+	                                        </td>
+	                                        <td>
+	                                        	<center>
+	                                        		<input class="form-control" style="width:50px;" type="" name="" placeholder="G - 3">
+	                                        	</center>
+	                                        </td>
+	                                        <td class="no-border-right">
+	                                            <center>
+	                                                <input class="form-control" style="width: 60px;" type="" name="" placeholder="2013" maxlength="4">
+	                                            </center>
+	                                        </td>
+	                                        <td class="no-border-right">
+	                                        	<center>
+	                                        		<label> - </label>
+	                                        	</center>
+	                                        </td>
+	                                        <td>
+	                                        	<center>
+	                                        		<input class="form-control" style="width: 60px;" type="" name="" placeholder="2016" maxlength="4">
+	                                        	</center>
+	                                        </td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td><input class="form-control input-sm" type="" name=""></td>
+	                                        <td><input class="form-control input-sm" type="" name=""></td>
+	                                        <td class="no-border-right">
+	                                            <center>
+	                                                <input class="form-control" style="width:50px;" type="" name="" placeholder="G - 1"> 
+	                                            </center>
+	                                        </td>
+	                                        <td class="no-border-right">
+	                                        	<center>
+	                                        		<label> - </label>
+	                                        	</center>
+	                                        </td>
+	                                        <td>
+	                                        	<center>
+	                                        		<input class="form-control" style="width:50px;" type="" name="" placeholder="G - 3">
+	                                        	</center>
+	                                        </td>
+	                                        <td class="no-border-right">
+	                                            <center>
+	                                                <input class="form-control" style="width: 60px;" type="" name="" placeholder="2013" maxlength="4">
+	                                            </center>
+	                                        </td>
+	                                        <td class="no-border-right">
+	                                        	<center>
+	                                        		<label> - </label>
+	                                        	</center>
+	                                        </td>
+	                                        <td>
+	                                        	<center>
+	                                        		<input class="form-control" style="width: 60px;" type="" name="" placeholder="2016" maxlength="4">
+	                                        	</center>
+	                                        </td>
+	                                    </tr>
+	                                </tbody>
+	                            </table>
+	                            <button class="btn btn-info" id="btnAddRow" name="">Add more.</button><button class="btn btn-warning" id="btndeleteRow" style="margin-left: 10px;" name="">Delete Row</button>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="panel panel-custom">
+	                	<div class="panel-heading">II. PARENTS' INFORMATION</div>
+	                    <div class="panel-body">
+	                        <ul class="nav nav-pills nav-justified">
+	                            <li class="active"><a data-toggle="tab" href="#father-info">Father's Information</a></li>
+	                            <li><a data-toggle="tab" href="#mother-info">Mother's Information</a></li>
+	                        </ul>
+	                        <div class="tab-content">
+	                            <div id="father-info" class="tab-pane fade in active">
+	                                <br>
+	                                <div class="row">
+	                                    <div class="col-lg-12">
+	                                        <div class="row">
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Surname</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>First Name</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Middle Name</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Chinese  Surname</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Chinese  First Name</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Chinese  Middle Name</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	                                                <div class="form-group">
+	                                                    <label>Address</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Telephone No. (S)</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Mobile No. (S)</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Email</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Occupation/Profession</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Business Name</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Business Email</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	                                                <div class="form-group">
+	                                                    <label>Company Address</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Telephone No. (S)</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Religion</label>
+	                                                    <select class="form-control" id="religion-select">
+	                                                        <option selected disabled>- SELECT RELIGION -</option>
+	                                                        <option value="">Roman Catholic</option>
+	                                                        <option value="1">Protestant</option>
+	                                                        <option value="2">Others</option>
+	                                                    </select>
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-lg-4" id="protest" style="display: none;">
+	                                                <div class="form-group">
+	                                                    <label>Specify</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-lg-4" id="other" style="display: none;">
+	                                                <div class="form-group">
+	                                                    <label>Specify</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div id="mother-info" class="tab-pane fade in">
+	                                <br>
+	                                <div class="row">
+	                                    <div class="col-sm-12 col-lg-12">
+	                                        <div class="row">
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Maiden Name</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>First Name</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Middle Name</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Chinese  Maiden Name</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Chinese  First Name</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Chinese  Middle Name</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-lg-12">
+	                                                <div class="form-group">
+	                                                    <label>Address</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Telephone No. (S)</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Mobile No. (S)</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Email</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Occupation/Profession</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Business Name</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Business Email</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	                                                <div class="form-group">
+	                                                    <label>Company Address</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Telephone No. (S)</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+	                                                <div class="form-group">
+	                                                    <label>Religion</label>
+	                                                    <select class="form-control" id="select-religion">
+	                                                        <option selected disabled>- SELECT RELIGION -</option>
+	                                                        <option value="">Roman Catholic</option>
+	                                                        <option value="1">Protestant</option>
+	                                                        <option value="2">Others</option>
+	                                                    </select>
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-lg-4" id="protestant" style="display: none;">
+	                                                <div class="form-group">
+	                                                    <label>Specify</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-lg-4" id="others" style="display: none;">
+	                                                <div class="form-group">
+	                                                    <label>Specify</label>
+	                                                    <input class="form-control" type="" name="">
+	                                                </div>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="panel panel-custom">
+	                	<div class="panel-heading">II. A. LANGUAGES</div>
+	                    <div class="panel-body">
+	                        <div style="overflow-x:auto;">
+	                            <table class="table table-bordered">
+	                                <thead style="background-color: lightgreen;">
+	                                    <tr>
+	                                        <th colspan="2" style="width: 20%; text-align: center;"></th>
+	                                        <th colspan="4" style="width: 40%; text-align: center;">FATHER</th>
+	                                        <th colspan="4" style="width: 40%; text-align: center;">MOTHER</th>
+	                                    </tr>
+	                                </thead>
+	                                <tbody>
+	                                    <tr>
+	                                        <th colspan="2" style="text-align: center;">LANGUAGE</th>
+	                                        <th style="text-align: center; font-size: 11px;">CAN SPEAK</th>
+	                                        <th style="text-align: center; font-size: 11px;">CAN READ</th>
+	                                        <th style="text-align: center; font-size: 11px;">CAN WRITE</th>
+	                                        <th style="text-align: center; font-size: 11px;">CAN UNDERSTAND</th>
+	                                        <th style="text-align: center; font-size: 11px;">CAN SPEAK</th>
+	                                        <th style="text-align: center; font-size: 11px;">CAN READ</th>
+	                                        <th style="text-align: center; font-size: 11px;">CAN WRITE</th>
+	                                        <th style="text-align: center; font-size: 11px;">CAN UNDERSTAND</th>
+	                                    </tr>
+	                                    <tr>
+	                                        <td rowspan="2" style="font-size: 12px; text-align: center; vertical-align: middle; width: 10%;">CHINESE</td>
+	                                        <td style="font-size: 12px; text-align: center; vertical-align: middle; width: 10%;">(MANDARIN)</td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td style="font-size: 12px; text-align: center; vertical-align: middle;">(FOOKIEN)</td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td style="font-size: 12px; text-align: center; vertical-align: middle;">ENGLISH</td>
+	                                        <td></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td style="font-size: 12px; text-align: center; vertical-align: middle;">FILIPINO</td>
+	                                        <td></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td style="font-size: 12px; text-align: center; vertical-align: middle;">OTHERS</td>
+	                                        <td></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                    </tr>
+	                                </tbody>
+	                            </table>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="panel panel-custom">
+	                	<div class="panel-heading">II. B. EDUCATION</div>
+	                    <div class="panel-body">
+	                        <div style="overflow-x: auto;">
+	                            <table class="table table-bordered">
+	                                <thead>
+	                                    <tr>
+	                                        <th style="text-align: center; font-size: 12px; width: 12%;">FATHER</th>
+	                                        <th style="text-align: center; font-size: 12px; width: 23%;">NAME OF SCHOOL</th>
+	                                        <th style="text-align: center; font-size: 12px; width: 30%">ADDRESS</th>
+	                                        <th style="text-align: center; font-size: 12px; width: 15%;">DEGREE OBTAINED</th>
+	                                        <th style="text-align: center; font-size: 12px; width: 20%;">SCHOOL YEAR ATTENDED</th>
+	                                    </tr>
+	                                </thead>
+	                                <tbody>
+	                                    <tr>
+	                                        <td>Grade School</td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td>High School</td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td>College</td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td>Post Graduate</td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                    </tr>
+	                                </tbody>
+	                            </table>
+	                        </div>
+	                        <div style="overflow-x: auto;">
+	                            <table class="table table-bordered">
+	                                <thead>
+	                                    <tr>
+	                                        <th style="text-align: center; font-size: 12px; width: 12%;">MOTHER</th>
+	                                        <th style="text-align: center; font-size: 12px; width: 23%;">NAME OF SCHOOL</th>
+	                                        <th style="text-align: center; font-size: 12px; width: 30%">ADDRESS</th>
+	                                        <th style="text-align: center; font-size: 12px; width: 15%;">DEGREE OBTAINED</th>
+	                                        <th style="text-align: center; font-size: 12px; width: 20%;">SCHOOL YEAR ATTENDED</th>
+	                                    </tr>
+	                                </thead>
+	                                <tbody>
+	                                    <tr>
+	                                        <td>Grade School</td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td>High School</td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td>College</td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td>Post Graduate</td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                    </tr>
+	                                </tbody>
+	                            </table>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="panel panel-custom">
+	                	<div class="panel-heading">II. C. CITIZENSHIP</div>
+	                    <div class="panel-body">
+	                        <div style="overflow-x: auto;">
+	                            <table class="table table-bordered">
+	                                <thead>
+	                                    <tr>
+	                                        <th style=" width: 10%;"></th>
+	                                        <th style="text-align: center; width: 10%;">Chinese</th>
+	                                        <th style="text-align: center; width: ">Native Born Filipino</th>
+	                                        <th style="text-align: center; width: ">Naturalized Filipino</th>
+	                                        <th style="text-align: center; width: ">Applicant for Naturalized</th>
+	                                        <th style="text-align: center; width: ">Other Nationality</th>
+	                                    </tr>
+	                                </thead>
+	                                <tbody>
+	                                    <tr>
+	                                        <td style="text-align: center;">Father</td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td style="text-align: center;">Mother</td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                        <td style="text-align: center; vertical-align: middle;"><input type="checkbox" value=""></td>
+	                                    </tr>
+	                                </tbody>
+	                            </table>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="panel panel-custom">
+	                	<div class="panel-heading">III. INFORMATION ON BROTHERS &amp; SISTERS</div>
+	                    <div class="panel-body">
+	                        <div style="overflow-x: auto;">
+	                            <table id="brothers" class="table table-bordered">
+	                                <thead>
+	                                    <tr>
+	                                        <th style="text-align: center; width: 30%;">NAME</th>
+	                                        <th style="text-align: center; width: 30%;">CHINESE NAME</th>
+	                                        <th style="text-align: center; width: 15%;">DATE OF BIRTH</th>
+	                                        <th style="text-align: center; width: 8%;">AGE</th>
+	                                        <th style="text-align: center; width: 8%;">SEX</th>
+	                                        <th style="text-align: center; width: 10%;">GR./YR.</th>
+	                                    </tr>
+	                                </thead>
+	                                <tbody>
+	                                    <tr>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                        <td><input class="form-control input-sm tb-input" type="" name=""></td>
+	                                    </tr>
+	                                </tbody>
+	                            </table>
+	                            <button class="btn btn-info" id="brobtnAddRow" name="">Add more.</button><button class="btn btn-warning" id="brobtndeleteRow" style="margin-left: 10px;" name="">Delete Row</button>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="panel panel-custom">
+	                	<div class="panel-heading">IV. FAMILY STATUS <small style="font-style: italic;">(Please check any statement that applies.)</small></div>
+	                    <div class="panel-body">
+	                        <h4 style="font-weight: bold;"></h4>
+	                        <form class="row">
+	                            <div class="col-lg-12">
+	                                <div class="col-lg-4">
+	                                    <div class="checkbox">
+	                                        <label><input type="checkbox" value=""> Applicant lives with both parents</label>
+	                                    </div>
+	                                    <div class="checkbox">
+	                                        <label><input type="checkbox" value=""> Applicant lives with grandparents</label>
+	                                    </div>
+	                                    <div class="checkbox">
+	                                        <label><input type="checkbox" value=""> Parents are separated</label>
+	                                    </div>
+	                                    <div class="checkbox">
+	                                        <label><input type="checkbox" value=""> Others</label>
+	                                        <input class="form-inline input-bottom" type="" name="" style="width: 1.65in; border-bottom: 1px solid black;">
+	                                    </div>
+	                                </div>
+	                                <div class="col-lg-4">
+	                                    <div class="checkbox">
+	                                        <label><input type="checkbox" value=""> Parents are anunulled/divorced</label>
+	                                    </div>
+	                                    <div class="checkbox">
+	                                        <label><input type="checkbox" value=""> Applicant lives with father only</label>
+	                                    </div>
+	                                    <div class="checkbox">
+	                                        <label><input type="checkbox" value=""> Applicant lives with mother only</label>
+	                                    </div>
+	                                </div>
+	                                <div class="col-lg-4">
+	                                    <div class="checkbox">
+	                                        <label><input type="checkbox" value=""> Child is adopted</label>
+	                                    </div>
+	                                    <div class="checkbox">
+	                                        <label><input type="checkbox" value=""> Father is deceased</label>
+	                                    </div>
+	                                    <div class="checkbox">
+	                                        <label><input type="checkbox" value=""> Mother is deceased</label>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="col-lg-12">
+	                                <p>To whom will the school address its communication regarding the child's application.</p>
+	                                    <div class="col-lg-4">
+	                                        <select name="childApplications" id="childApplications" class="form-control">
+	                                            <option value="" hidden>-Please select...</option>
+	                                            <option value="Mr_Mrs">Mr. &amp; Mrs.</option>
+	                                            <option value="Mr">Mr.</option>
+	                                            <option value="Mrs">Mrs.</option>
+	                                            <option value="Ms">Ms.</option>
+	                                        </select>
+	                                        <br />
+	                                    </div>
+	                                <div class="col-lg-6">
+	                                    <div class="row">
+	                                        <div class="col-lg-12">
+	                                            <div class="input-group" id="mrmrs">
+	                                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+	                                                <input class="form-control" type="text"  name="" placeholder="Mr. &amp; Mrs." >
+	                                            </div>
+	                                            <div class="input-group" id="mr">
+	                                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+	                                                <input class="form-control" type="text"  name="" placeholder="Mr. ">
+	                                            </div>
+	                                            <div class="input-group" id="mrs">
+	                                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+	                                                <input class="form-control" type="text"  name="" placeholder="Mrs. ">
+	                                            </div>
+	                                            <div class="input-group" id="ms">
+	                                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+	                                                <input class="form-control" type="text"  name="" placeholder="Ms. ">
+	                                            </div>
+	                                        </div><br>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </form>
+	                    </div>
+	                </div>
+	                <div class="panel panel-custom">
+	                	<div class="panel-heading">V. OTHER INFORMATION</div>
+	                    <div class="panel-body">
+	                        <form class="row">
+	                            <div class="col-lg-12">
+	                                <div class="col-lg-12">
+	                                    <br>
+	                                    <div class="form-inline">
+	                                        <div class="form-group">
+	                                            <label style="padding-right: 20px;">Has the child undergone any form of therapy? </label>
+	                                            <label class="radio-inline"><input type="radio" name="optradio"> YES</label>
+	                                            <label class="radio-inline"><input type="radio" name="optradio"> NO</label>
+	                                        </div>
+	                                    </div><br>
+	                                        <div class="form-group">
+	                                            <label>If yes, please state kind of therapy.</label>
+	                                            <input class="form-control input-bottom" type="" name="" size="76">
+	                                        </div>
+	                                        <br>
+	                                        <div class="form-group">
+	                                            <label>If yes, please state period of treatment.</label>
+	                                            <textarea class="form-control input-bottom" type="" style="resize: none;" name=""></textarea>
+	                                        </div>
+	                                </div>
+	                            </div>
+	                        </form>
+	                        <nav aria-label="...">
+	                            <ul class="pager">
+	                                <li class="next"><a data-toggle="tab" href="#">Submit <span aria-hidden="true">&rarr;</span></a></li>
+	                            </ul>
+	                        </nav>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="tab-pane fade" id="stud-req">
+	                <div class="panel panel-custom">
+	                	<div class="panel-heading">Requirements and Results</div>
+	                    <div class="panel-body">
+	                        <div class="row">
+	                            <div class="col-lg-3">
+	                                <div class="form-group" style="text-align: center;">
+	                                    <img src="../../content/images/xavier.png" style="height: 165px; width: 165px;"><br /><br />
+	                                    <label>Admission Number</label> <br />
+	                                    <input class="bordernone" type="text" width="3%">
+	                                </div>
+	                            </div>
+	                            <div class="col-lg-9">
+	                                <div class="row">
+	                                    <div class="col-lg-6">
+	                                    	<div class="form-inline">
+		                                        <div class="tryText col-xs-12 col-sm-5 col-md-4 col-lg-5">
+		                                            <label>Name of Applicant:</label>
+		                                        </div>
+		                                        <div class="tryInput col-xs-12 col-sm-7 col-md-8 col-lg-7">
+		                                            <p class="bordernone text-wrap" type="text" size="35"><strong>John Xavier Villarin Buenaventura</strong></p>
+		                                        </div>
+		                                    </div>
+	                                    </div>
+	                                    <div class="col-lg-6">
+	                                        <div class="tryText col-xs-12 col-sm-5 col-md-4 col-lg-8">
+	                                            <label>Application for Grade:</label>
+	                                        </div>
+	                                        <div class="tryInput col-xs-12 col-sm-7 col-md-8 col-lg-4">
+	                                            <p class="bordernone text-wrap" type="text" size="35">Grade 11</p>
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-lg-12">
+	                                        <div class="tryText col-xs-12 col-sm-5 col-md-4 col-lg-5">
+	                                            <label>Date Filed:</label>
+	                                        </div>
+	                                        <div class="tryInput col-xs-12 col-sm-7 col-md-8 col-lg-7">
+	                                            <p class="bordernone text-wrap" type="text" size="35">September 25,2017</p>
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-lg-12">
+	                                        <div class="tryText col-xs-12 col-sm-5 col-md-4 col-lg-5">
+	                                            <label>O.R Number for Payment:</label>
+	                                        </div>
+	                                        <div class="tryInput col-xs-12 col-sm-7 col-md-8 col-lg-7">
+	                                            <p class="bordernone text-wrap" type="text" size="35">1023912084</p>
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-lg-12">
+	                                        <div class="tryText col-xs-12 col-sm-5 col-md-4 col-lg-5">
+	                                            <label>Amount:</label>
+	                                        </div>
+	                                        <div class="tryInput col-xs-12 col-sm-7 col-md-8 col-lg-7">
+	                                            <p class="bordernone text-wrap" type="text" size="35">100,000</p>
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-lg-12">
+	                                        <div class="tryText col-xs-12 col-sm-5 col-md-4 col-lg-5">
+	                                            <label>Date of Scheduled Exam:</label>
+	                                        </div>
+	                                        <div class="tryInput col-xs-12 col-sm-7 col-md-8 col-lg-7">
+	                                            <p class="bordernone text-wrap" type="text" size="35">September 29,2017</p>
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-lg-12">
+	                                        <div class="tryText col-xs-12 col-sm-5 col-md-4 col-lg-5">
+	                                            <label>Date of Interview:</label>
+	                                        </div>
+	                                        <div class="tryInput col-xs-12 col-sm-7 col-md-8 col-lg-7">
+	                                            <p class="bordernone text-wrap" type="text" size="35">September 30,2017</p>
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-lg-12">
+	                                        <div class="tryText col-xs-12 col-sm-5 col-md-4 col-lg-5">
+	                                            <label>Result of the Exam:</label>
+	                                        </div>
+	                                        <div class="tryInput col-xs-12 col-sm-7 col-md-8 col-lg-7" style="margin-bottom: 5px;">
+	                                            <button type="button" class="btn btn-success btn-xs"><i class="fa fa-check-square-o" aria-hidden="true"></i><strong>ACCEPTED</strong></button><button type="button" class="btn btn-danger btn-xs"><i class="fa fa-times" aria-hidden="true"></i><strong>REJECTED</strong></button>
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-lg-12">
+	                                        <div class="tryText col-xs-12 col-sm-5 col-md-4 col-lg-5">
+	                                            <label>Result of the Interview:</label>
+	                                        </div>
+	                                        <div class="tryInput col-xs-12 col-sm-7 col-md-8 col-lg-7" style="margin-bottom: 5px;">
+	                                            <button type="button" class="btn btn-success btn-xs"><i class="fa fa-check-square-o" aria-hidden="true"></i><strong>ACCEPTED</strong></button><button type="button" class="btn btn-danger btn-xs"><i class="fa fa-times" aria-hidden="true"></i><strong>REJECTED</strong></button>
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-lg-12">
+	                                        <div class="tryText col-xs-12 col-sm-5 col-md-4 col-lg-5">
+	                                            <label>Remarks:</label>
+	                                        </div>
+	                                        <div class="tryInput col-xs-12 col-sm-7 col-md-8 col-lg-7">
+	                                            <p class="bordernone text-wrap" type="text" size="35">Free Tuition fee and Uniform</p>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="col-lg-12">
+	                            <hr />
+	                            <div class="row">
+	                                <center><h3><u>Student Requirement</u></h3></center>
+	                                <h4>Attached File</h4>
+	                                <table class="table table-hover">
+	                                    <tbody>
+	                                        <tr>
+	                                            <th>Birth Certificate</th>
+	                                            <td><a href="#"> View File</a></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <th>Good Moral Certificate</th>
+	                                            <td><a href="#"> View File</a></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <th>Student Card</th>
+	                                            <td><a href="#"> View File</a></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <th>Add More</th>
+	                                            <td><a href="#"> View File</a></td>
+	                                        </tr>
+	                                    </tbody>
+	                                </table>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="tab-pane fade" id="list-preadmission">
+	                
+	                    <div class="panel-body">
+	                        <div class="row">
+	                            <div class="clearfix"></div>
+	                            <div class="col-lg-12">
+	                            	<div class="panel panel-custom">
+									  <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-users fa-lg"></i> Student List</div>
+									   <div class="panel-body">
+										   <div class="row">
+											<div class="col-sm-6">
+												<div class="form-group contact-search m-b-30">
+													<input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+												</div>
+											</div>
+										</div>
+		                                <div class="table-responsive">
+		                                    <form>
+		                                        <table id="myTable" class=" table table-striped table-hover" cellspacing="0" width="100%">
+		                                            <thead>
+		                                                <tr class="header thead-color">
+		                                                    <th style="width: 2%;  text-align: center;">#</th>
+		                                                    <th style="width: 20%;  text-align: center;">Applicant Name</th>
+		                                                    <th style="width: 5%;  text-align: center;">Admission Number</th>
+		                                                    <th style="width: 8%;  text-align: center;">Application for Grade</th>
+		                                                    <th style="width: 8%;  text-align: center;">Exam Result</th>
+		                                                    <th style="width: 10%; text-align: center;">Interview Result</th>
+		                                                    <th style="width: 25%; text-align: center;">Remarks</th>
+		                                                </tr>
+		                                            </thead>
+		                                            <tbody>
+		                                                <tr>
+		                                                    <td>1</td>
+		                                                    <td>Xavier</td>
+		                                                    <td>1</td>
+		                                                    <td>Grade 11</td>
+		                                                    <td>Passed</td>
+		                                                    <td>Passed</td>
+		                                                    <td>Free Tuition Fee</td>
+		                                                </tr>
+		                                                <tr>
+		                                                    <td>2</td>
+		                                                    <td>Mayson</td>
+		                                                    <td>1</td>
+		                                                    <td>Grade 11</td>
+		                                                    <td>Passed</td>
+		                                                    <td>Passed</td>
+		                                                    <td>Free Tuition Fee</td>
+		                                                </tr>
+		                                                <tr>
+		                                                    <td>3</td>
+		                                                    <td>Benson</td>
+		                                                    <td>1</td>
+		                                                    <td>Grade 11</td>
+		                                                    <td>Passed</td>
+		                                                    <td>Passed</td>
+		                                                    <td>Free Tuition Fee</td>
+		                                                </tr>
+		                                                <tr>
+		                                                    <td>4</td>
+		                                                    <td>Bravo</td>
+		                                                    <td>1</td>
+		                                                    <td>Grade 11</td>
+		                                                    <td>Passed</td>
+		                                                    <td>Passed</td>
+		                                                    <td>Free Tuition Fee</td>
+		                                                </tr>
+		                                                <tr>
+		                                                    <td>5</td>
+		                                                    <td>Ivan</td>
+		                                                    <td>1</td>
+		                                                    <td>Grade 11</td>
+		                                                    <td>Passed</td>
+		                                                    <td>Passed</td>
+		                                                    <td>Free Tuition Fee</td>
+		                                                </tr>
+		                                                <tr>
+		                                                    <td>6</td>
+		                                                    <td>Carl</td>
+		                                                    <td>1</td>
+		                                                    <td>Grade 11</td>
+		                                                    <td>Passed</td>
+		                                                    <td>Passed</td>
+		                                                    <td>Free Tuition Fee</td>
+		                                                </tr>
+
+		                                            </tbody>
+		                                        </table>
+		                                    </form>
+		                                </div>
+		                               </div>
+		                        	</div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                
+	            </div>
+	        </div>
+	    </div>
+		<div id="AppForm" style="height: 11in; width: 8.5in;" hidden="">
+		    <img src="../../content/Images/Admin/PreAdmissionPage1.jpg" style="height: auto; width: 100%;"/>
+		    <img src="../../content/Images/Admin/PreAdmissionPage2.jpg" style="height: auto; width: 100%;"/>
+		</div>
+		<!-- end of your code -->
+		<!-- footer here -->
+		 <hr />
+	        <footer class="navbar-fixed-bottom">
+	            <div class="container-fluid footer">
+	                <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+	            </div>
+	        </footer>
+		<!-- end foooter -->
+	</div>
+
+	<!-- plugin scripts -->
+	<!-- <script src="../../content/jquery/dist/jquery.min.js"></script> -->
+    <script src="../../content/jquery/dist/jquery.min.js"></script>
+    <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+    <script src="../../content/DataTables/js/datatables.bootstrap.js"></script>
+    <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+    <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+    <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+    <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+    <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+    <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+    <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+    <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+    <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+    <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+
+	<!-- end of plugin scripts -->
+	<!-- your custom script -->
+	<script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+        $(document).ready(function(){
+		   var oTable = $('#myTable').DataTable({
+		     "orderCellsTop": false,
+		     "searchHighlight" : true,
+		   });
+		   $('#search').keyup(function(){
+		         oTable.search($(this).val()).draw() ;
+		   });
+		   $(".dataTables_filter").hide();
+		   oTable.on('order.dt search.dt', function(){
+		     oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+		      function (cell, i) {
+		       cell.innerHTML = i+1;
+		       } );
+		   }).draw();
+		 });
+	</script>
+
+	<script>
+	        $('#select-religion').on('change', function () {
+	            var optionSelected = $("option:selected", this);
+	            var valueSelected = this.value;
+	            if (valueSelected == 1) {
+	                $("#protestant").show();
+	                $("#others").hide();
+	            }
+	            else if (valueSelected == 2) {
+	                $("#protestant").hide();
+	                $("#others").show();
+	            }
+	            else {
+	                $("#protestant").hide();
+	                $("#others").hide();
+	            }
+	        });
+	</script>
+	<script>
+	        $(document).ready(function () {
+	            $('#religion-select').on('change', function () {
+	                var optionSelected = $("option:selected", this);
+	                var valueSelected = this.value;
+	                if (valueSelected == 1) {
+	                    $('#protest').show();
+	                    $('#other').hide();
+	                }
+	                else if (valueSelected == 2) {
+	                    $('#protest').hide();
+	                    $('#other').show();
+	                }
+	                else {
+	                    $('#protest').hide();
+	                    $('#other').hide();
+	                }
+	            });
+	        });
+	</script>
+
+	<script>
+	        function printDiv() {
+	            var divToPrint = document.getElementById('AppForm');
+	            var newWin = window.open('', 'Print-Window');
+	            newWin.document.open();
+	            newWin.document.write('<html><body onload="window.print()">' + divToPrint.innerHTML + '</body></html>');
+	            newWin.document.close();
+	            setTimeout(function () { newWin.close(); }, 10);
+	        }
+	</script>
+
+	<script type="text/javascript">
+	        $(document).ready(function () {
+	            $("#mrmrs").hide();
+	            $("#mr").hide();
+	            $("#mrs").hide();
+	            $("#ms").hide();
+	        })
+	        $("#childApplications").change(function () {
+	            if ($(this).val() == "Mr_Mrs") {
+	                $("#mrmrs").show();
+	                $("#mr").hide();
+	                $("#mrs").hide();
+	                $("#ms").hide();
+	            } else if ($(this).val() == "Mr") {
+	                $("#mrmrs").hide();
+	                $("#mr").show();
+	                $("#mrs").hide();
+	                $("#ms").hide();
+	            } else if ($(this).val() == "Mrs") {
+	                $("#mrmrs").hide();
+	                $("#mr").hide();
+	                $("#mrs").show();
+	                $("#ms").hide();
+	            } else {
+	                $("#mrmrs").hide();
+	                $("#mr").hide();
+	                $("#mrs").hide();
+	                $("#ms").show();
+	            }
+	        })
+	</script>
+
+	<script>
+      $('#dateOfBirthIcon').click(function(){
+          $('#dateOfBirth').datepicker("show");
+      })
+
+      $('#dateOfBirthCloseIcon').click(function(){
+          $('#dateOfBirth').datepicker("hide");
+          $('#dateOfBirth').datepicker('setDate', null)
+      })
+
+      $( function() {
+         $( "#dateOfBirth" ).datepicker({
+            dateFormat: 'd MM, yy',
+            changeMonth: true,
+            changeYear: true,
+            maxDate: 0
+         });
+      } );
+     </script>
+     <script>
+		// Add row the table
+		$('#btnAddRow').on('click', function() {
+		    var lastRow = $('#scholastic tbody tr:last').html();
+		    //alert(lastRow);
+		    $('#scholastic tbody').append('<tr>' + lastRow + '</tr>');
+		    $('#scholastic tbody tr:last input').val('');
+		});
+
+		// Delete last row in the table
+		$('#btndeleteRow').on('click', function() {
+		    var lenRow = $('#scholastic tbody tr').length;
+		    //alert(lenRow);
+		    if (lenRow == 1 || lenRow <= 1) {
+		        alert("Can't remove all row!");
+		    } else {
+		        $('#scholastic tbody tr:last').remove();
+		    }
+		});
+
+     </script>
+     <script>
+		// Add row the table
+		$('#brobtnAddRow').on('click', function() {
+		    var lastRow = $('#brothers tbody tr:last').html();
+		    //alert(lastRow);
+		    $('#brothers tbody').append('<tr>' + lastRow + '</tr>');
+		    $('#brothers tbody tr:last input').val('');
+		});
+
+		// Delete last row in the table
+		$('#brobtndeleteRow').on('click', function() {
+		    var lenRow = $('#brothers tbody tr').length;
+		    //alert(lenRow);
+		    if (lenRow == 1 || lenRow <= 1) {
+		        alert("Can't remove all row!");
+		    } else {
+		        $('#brothers tbody tr:last').remove();
+		    }
+		});
+
+     </script>
+	<!-- end of your custom script -->
+</body>
+</html>

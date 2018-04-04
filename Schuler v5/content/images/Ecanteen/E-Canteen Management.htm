@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<!-- saved from url=(0106)file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#tuesday -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>E-Canteen Management</title>
+      <link rel="icon" href="./E-Canteen Management_files/logonatin.png">
+      
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="./E-Canteen Management_files/bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="./E-Canteen Management_files/style.css" rel="stylesheet">
+      <link href="./E-Canteen Management_files/dataTables.bootstrap.min.css" rel="stylesheet">
+      <link href="./E-Canteen Management_files/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   <style>
+   td, th {
+         text-align: center;
+      }
+   .card-view {
+        clear: both;
+    }
+
+    .card-view .title {
+        display: block;
+        width: 30%;
+        float: left;
+    }
+
+    .card-view .value {
+        display: block;
+        width: 70%;
+        float: right;
+    }
+
+   /* [class*="col-"] {
+       padding-left: 3px !important;
+       padding-right: 3px !important;
+      }*/
+
+   </style></head>
+   
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#" style="color: white;">
+               <img class="schuler" src="./E-Canteen Management_files/logonatin.png" height="25" width="30">
+               </a>
+               <a class="navbar-brand schulercolor" href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                        <li>
+                           <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;See all notifications...</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                        <li><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                        <li><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+          
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container">
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033"><h2><strong>Clinic Management</strong></h2></div>
+            <ol class="breadcrumb" style="background-color: #D9EDF7">
+              <li><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/clinic-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+              <li style="font-size: 18px;"></li>
+            </ol>
+         <section>
+         <!-- your code start here -->
+         <!-- Please observe indention -->
+
+                
+                  <div class="col-md-12 col-lg-8">
+                    <div class="panel panel-custom">
+                      <div class="panel-heading" style="font-size: 30px; font-weight: 350;"><center><i class="fa fa-cutlery fa-lg"></i> Menu</center></div>
+                         <div class="panel-body">
+
+                            <div class="col-lg-12">
+                              <ul class="nav nav-justified nav-pills" role="tablist">
+                                <li role="presentation" class="active tabwidth"><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#monday" aria-controls="home" role="tab" data-toggle="tab">Monday</a></li>
+                                <li role="presentation" class="tabwidth"><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#tuesday" aria-controls="profile" role="tab" data-toggle="tab">Tuesday</a></li>
+                                <li role="presentation" class="tabwidth"><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#wednesday" aria-controls="messages" role="tab" data-toggle="tab">Wednesday</a></li>
+                                <li role="presentation" class="tabwidth"><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#thursday" aria-controls="settings" role="tab" data-toggle="tab">Thursday</a></li>
+                                <li role="presentation" class="tabwidth"><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/E-Canteen/ecanteen-management.html?#friday" aria-controls="settings" role="tab" data-toggle="tab">Friday</a></li>
+                              </ul>
+                            </div>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                              <div role="tabpanel" class="tab-pane active" id="monday">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; margin-bottom: 20px;">
+                                  <div align="center" data-name="Hotdog" data-price="30.00" data-id="1" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/hot.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Sinigang" data-price="50.00" data-id="2" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/sinigang.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Porksilog" data-price="60.00" data-id="3" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/pork.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Spaghetti" data-price="40.00" data-id="4" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/spag.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Tapsilog" data-price="60.00" data-id="5" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/tapsilog.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Fries" data-price="30.00" data-id="6" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/fries.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Pizza" data-price="45.00" data-id="7" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/pizza.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Burger" data-price="40.00" data-id="8" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/burger.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div role="tabpanel" class="tab-pane to fade" id="tuesday">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; margin-bottom: 20px;">
+                                  <div align="center" data-name="Bangus" data-price="30.00" id="t1" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/bangus.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="BBQ" data-price="20.00" id="t2" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/bbq.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Beef Steak" data-price="90.00" id="t3" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/beef.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Beef Nilaga" data-price="50.00" id="t4" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/beffnilaga.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="KareKare" data-price="60.00" id="t5" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/karekare.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Carbonara" data-price="40.00" id="t6" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/carbonara.png" id="1" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Chopsuey" data-price="30.00" id="t7" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/Chapseuy.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Chocopao" data-price="25.00" id="t8" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/chocopao.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div role="tabpanel" class="tab-pane to fade" id="wednesday">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; margin-bottom: 20px;">
+                                  <div align="center" data-name="Fish&amp;Chips" data-price="80.00" id="w1" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/fish&amp;chips.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Fishball" data-price="20.00" id="w2" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/fishball.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="KareKare" data-price="70.00" id="w3" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/karekare.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Kilawin" data-price="40.00" id="w4" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/kilawin.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Lomi" data-price="50.00" id="w5" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/lomi.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Longganisa" data-price="40.00" id="w6" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/longa.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Lumpia" data-price="30.00" id="w7" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/lumpiatoge.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Macaroni" data-price="60.00" id="w8" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/macaroni.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div role="tabpanel" class="tab-pane to fade" id="thursday">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; margin-bottom: 20px;">
+                                  <div align="center" data-name="Mami" data-price="30.00" id="th1" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/mami.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Meatball" data-price="40.00" id="th2" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/meatball.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Palabok" data-price="40.00" id="th3" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/palabok.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Pancake" data-price="30.00" id="th4" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/pancake.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Pansit" data-price="30.00" id="th5" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/pansit.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Porkchop" data-price="60.00" id="th6" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/porkchop.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Shanghai" data-price="40.00" id="th7" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/shanghai.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Shawarma" data-price="70.00" id="th8" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/shawar.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div role="tabpanel" class="tab-pane to fade" id="friday">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; margin-bottom: 20px;">
+                                  <div align="center" data-name="Monggo" data-price="50.00" id="f1" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/monggo.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Sinigang" data-price="70.00" id="f2" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/sinigang.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Longganisa" data-price="65.00" id="f3" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/longa.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Kilawin" data-price="40.00" id="f4" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/kilawin.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Steak" data-price="60.00" id="f5" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/steak.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="KareKare" data-price="70.00" id="f6" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/karekare.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Pancake" data-price="30.00" id="f7" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 food">
+                                    <img src="./E-Canteen Management_files/pancake.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                  <div align="center" data-name="Burger" data-price="30.00" id="f8" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 add-row">
+                                    <img src="./E-Canteen Management_files/burger.png" style="height: 150px;
+                                    width: 150px; margin: 10px;">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                              <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <div class="panel panel-custom">
+                                  <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><center><i class="fa fa-plus fa-lg"></i> Add Ons</center></div>
+                                   <div class="panel-body">
+
+                                      <div class="table-responsive">
+                                         <table>
+                                            <thead>
+                                               <tr>
+                                                  <th style="width: 33.33%;">Foods:</th>
+                                                  <th style="width: 33.33%;">Price</th>
+                                               </tr>
+                                            </thead>
+                                            <tbody>
+                                               <tr>
+                                                  <td style="text-align: left;"><label class="checkbox-inline"><input type="checkbox" data-name="Rice" data-price="12.00" class="add-food" id="ad1">Rice</label></td>
+                                                  <td>Php 12.00</td>
+                                               </tr>
+                                               <tr>
+                                                  <td style="text-align: left;"><label class="checkbox-inline"><input type="checkbox" data-name="Cheese" data-price="7.00" class="add-food" id="ad2">Cheese</label></td>
+                                                  <td>Php 7.00</td>
+                                               </tr>
+                                               <tr>
+                                                  <td style="text-align: left;"><label class="checkbox-inline"><input type="checkbox" data-name="Chicharon" data-price="20.00" class="add-food" id="ad3">Chicharon</label></td>
+                                                  <td>Php 20.00</td>
+                                               </tr>
+                                               <tr>
+                                                  <td style="text-align: left;"><label class="checkbox-inline"><input type="checkbox" data-name="Cookies" data-price="18.00" class="add-food" id="ad4">Cookies</label></td>
+                                                  <td>Php 18.00</td>
+                                               </tr>
+                                               <tr>
+                                                  <td style="text-align: left;"><label class="checkbox-inline"><input type="checkbox" data-name="Snacks" data-price="13.00" class="add-food" id="ad5">Snacks</label></td>
+                                                  <td>Php 13.00</td>
+                                               </tr>
+                                               
+                                            </tbody>
+                                         </table>
+                                      </div>
+                                   </div>
+                                </div>
+                              </div>
+                            
+                              
+                            
+                             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <div class="panel panel-custom">
+                                  <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><center><i class="fa fa-coffee fa-lg"></i> Drinks</center></div>
+                                   <div class="panel-body">
+
+                                      <div class="table-responsive">
+                                         <table>
+                                            <thead>
+                                               <tr>
+                                                  <th style="width: 33.33%;">Foods:</th>
+                                                  <th style="width: 33.33%;">Price</th>
+                                               </tr>
+                                            </thead>
+                                            <tbody>
+                                               <tr>
+                                                  <td style="text-align: left;"><label class="checkbox-inline"><input id="cjd1" type="checkbox" data-name="Coke" data-price="20.00" class="add-food" data-id="d1">Coke</label></td>
+                                                  <td>Php 20.00</td>
+                                               </tr>
+                                               <tr>
+                                                  <td style="text-align: left;"><label class="checkbox-inline"><input id="cjd2" type="checkbox" data-name="Iced Tea" data-price="50.00" class="add-food" data-id="d2">Iced Tea</label></td>
+                                                  <td>Php 50.00</td>
+                                               </tr>
+                                               <tr>
+                                                  <td style="text-align: left;"><label class="checkbox-inline"><input id="cjd3" type="checkbox" data-name="Orange Juice" data-price="15.00" class="add-food" data-id="d3">Orange Juice</label></td>
+                                                  <td>Php 15.00</td>
+                                               </tr>
+                                               <tr>
+                                                  <td style="text-align: left;"><label class="checkbox-inline"><input id="cjd4" type="checkbox" data-name="Coffee" data-price="25.00" class="add-food" data-id="d4">Coffee</label></td>
+                                                  <td>Php 25.00</td>
+                                               </tr>
+                                               <tr>
+                                                  <td style="text-align: left;"><label class="checkbox-inline"><input id="cjd5" type="checkbox" data-name="Water" data-price="18.00" class="add-food" data-id="d5">Water</label></td>
+                                                  <td>Php 18.00</td>
+                                               </tr>
+                                               <tr>
+                                                  <td style="text-align: left;"><label class="checkbox-inline"><input id="cjd6" type="checkbox" data-name="Pepsi" data-price="16.00" class="add-food" data-id="d6">Pepsi</label></td>
+                                                  <td>Php 16.00</td>
+                                               </tr>
+                                               <tr>
+                                                  <td style="text-align: left;"><label class="checkbox-inline"><input id="cjd7" type="checkbox" data-name="Vitwater" data-price="26.00" class="add-food" data-id="d7">Vitwater</label></td>
+                                                  <td>Php 27.00</td>
+                                               </tr>
+                                            </tbody>
+                                         </table>
+                                      </div>
+                                   </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+
+                    </div>
+                  </div>
+
+
+
+                  <div class="col-md-12 col-lg-4">
+                    <div class="panel panel-custom">
+                      <div class="panel-heading" style="font-size: 30px; font-weight: 350;"><center><i class="fa fa-print fa-lg"></i> Receipt</center></div>
+                        <div class="panel-body">
+                          <div class="table-responsive">
+                            <table style="width: 100%;" id="receipt">
+                              <thead>
+                                 <tr>
+                                    <th style="width: 25%;">Orders:</th>
+                                    <th style="width: 25%;">Price</th>
+                                    <th style="width: 25%;">Quantity</th>
+                                    <th style="width: 25%;"></th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                <!-- <td>Coke</td>
+                                <td>20.00</td>
+                                <td>
+                                  <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                  </select>
+                                </td>
+                                <td><button class='delete'>X</button></td> -->
+                              </tbody>
+                            </table>
+                          </div>
+                          <hr>
+                          <div class="table-responsive">
+                            <table style="width: 100%;">
+                              <thead>
+                                 <tr>
+                                    <th style="width: 33.3%;">Amount</th>
+                                    <th style="width: 33.3%;">Total</th>
+                                    <th style="width: 33.3%;">Change</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td><input type="text" style="width: 100%;" placeholder="Enter Amount:"></td>
+                                    <td><input type="number" style="width: 100%;" id="grdtot" value="" name="" readonly=""></td>
+                                    <td><input type="number" style="width: 100%;" readonly=""></td>
+                                 </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <hr>
+                          <div>
+                            <button id="print" name="delete" class="btn btn-success pull-right">Print</button>
+                          </div>
+                           <div>
+                           <button id="compute" class="btn btn-info pull-right">Compute</button>
+                           </div>
+                          </div>
+                    </div>
+                  </div>
+
+         <!-- end of your code -->
+         <!-- footer here -->
+         </section>
+
+         <hr>
+         <footer class="navbar-fixed-bottom">
+            <div class="container-fluid" style="background-color: #35AC49;">
+               <p class="pull-right " style="padding-top: .5%; padding-right: 3%; font-size: 10px; font-weight: bolder; color: #000033;">© 2016 - Powered by <a href="http://www.simplevia.com/" style="color: #fff;">QuickTrack</a></p>
+            </div>
+         </footer>
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="./E-Canteen Management_files/jquery.min.js"></script>
+      <script src="./E-Canteen Management_files/jquery-ui.min.js"></script>
+
+      <script src="./E-Canteen Management_files/bootstrap.min.js"></script>
+      <!-- DataTable Link -->
+      <script src="./E-Canteen Management_files/jquery.dataTables.min.js"></script> 
+      <script src="./E-Canteen Management_files/datatables.bootstrap.js"></script>
+      <script src="./E-Canteen Management_files/dataTables.buttons.min.js"></script>
+      <script src="./E-Canteen Management_files/buttons.bootstrap.min.js"></script>
+      <script src="./E-Canteen Management_files/buttons.html5.min.js"></script>
+      <script src="./E-Canteen Management_files/buttons.print.min.js"></script>
+      <script src="./E-Canteen Management_files/dataTables.fixedColumns.min.js"></script>
+      <script src="./E-Canteen Management_files/dataTables.fixedHeader.min.js"></script>
+      <script src="./E-Canteen Management_files/dataTables.keyTable.min.js"></script>
+      <script src="./E-Canteen Management_files/dataTables.scroller.min.js"></script>
+      <!-- End of LInk -->
+
+      <script src="./E-Canteen Management_files/formValidation.min.js"></script>
+      <script src="./E-Canteen Management_files/bootstrap.min(1).js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+
+      <!-- This is the Code for dataTable, Please copy paste -->
+      <script type="text/javascript">
+        $('.food').click(function(){
+          var id = $(this).data("id");
+          if($("tr[name='tr"+id+"']").length){
+            
+          }else{
+            var id = $(this).data("id");
+            var name = $(this).data("name");
+            var price = $(this).data("price");
+            var markup = "<tr name='tr"+ id +"'><td>" + name + "</td><td id='price"+id+"'>" + price + "</td><td><select data-id='"+id+"' class='qty' id='qty"+id+"'><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option></select></td><td><button class='delete'>X</button></td><td hidden><input class='subTotal' id='subTotal"+id+"' value='"+price+"'></td></tr>";
+            $("#receipt").append(markup);
+
+          //compute grand total
+          var total = 0;
+          vattotal = 0;
+          fintotal = 0;
+            $(".subTotal").each(function() {
+                total+= this.value * 1;
+                vattotal = total *.12;
+                fintotal = total + vattotal;
+            });
+          $('#grdtot').val(fintotal.toFixed(2));
+            
+          }
+        })
+
+        $("#receipt").on('change', '.qty',  function(){
+          var id = $(this).data("id");
+          var subTotal = $(this).val() * $('#price'+id).text();
+          $('#subTotal'+id).val(subTotal)
+          // alert(subTotal);
+
+          //compute grand total
+          var total = 0;
+          vattotal = 0;
+          fintotal = 0;
+            $(".subTotal").each(function() {
+                total+= this.value * 1;
+                vattotal = total *.12;
+                fintotal = total + vattotal;
+            });
+          $('#grdtot').val(fintotal.toFixed(2));
+          
+        });
+
+        $('#compute').click(function(){
+          var total = 0;
+          vattotal = 0;
+          fintotal = 0;
+            $(".subTotal").each(function() {
+                total+= this.value * 1;
+                vattotal = total *.12;
+                fintotal = total + vattotal;
+            });
+          $('#grdtot').val(fintotal.toFixed(2));
+
+        })
+
+        $("#receipt").on('click', '.delete',  function(){
+          var clicked = $(this).attr("id");
+          $(this).closest("tr").remove();
+          $('#'+clicked).prop('checked', false);
+
+          //compute grand total
+          var total = 0;
+          vattotal = 0;
+          fintotal = 0;
+            $(".subTotal").each(function() {
+                total+= this.value * 1;
+                vattotal = total *.12;
+                fintotal = total + vattotal;
+            });
+          $('#grdtot').val(fintotal.toFixed(2));
+        }); 
+
+
+        // $('#compute').click(function(){
+        //   alert($('#price3').text())
+        // })
+
+
+
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+          var id = $(this).data("id");
+
+            $(".add-food").change(function(){
+              if($(this).is(':checked')){
+                var id = $(this).data("id");
+                var name = $(this).data("name");
+                var price = $(this).data("price");
+                var markup = "<tr name='tr"+ id +"'><td>" + name + "</td><td id='price"+id+"'>" + price + "</td><td><select data-id='"+id+"' class='qty' id='qty"+id+"'><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option></select></td><td><button class='delete'>X</button></td><td hidden><input class='subTotal' id='subTotal"+id+"' value='"+price+"'></td></tr>";
+                $("#receipt").append(markup);
+                var total = 0;
+            $(".subTotal").each(function() {
+                total+= this.value * 1;
+            });
+          $('#grdtot').val(total.toFixed(2));
+              }
+              else{
+                   var id = $(this).data("id");
+                   $("tr[name='tr"+id+"']").remove();
+              //compute grand total
+              var total = 0;
+                $(".subTotal").each(function() {
+                    total+= this.value * 1;
+                });
+              $('#grdtot').val(total.toFixed(2));
+
+                  }
+                })
+                  
+              $("#receipt").on('change', '.qty',  function(){
+                var id = $(this).data("id");
+                var subTotal = $(this).val() * $('#price'+id).text();
+              $('#subTotal'+id).val(subTotal)
+              // alert(subTotal);
+
+              //compute grand total
+              var total = 0;
+                $(".subTotal").each(function() {
+                    total+= this.value * 1;
+                });
+              $('#grdtot').val(total.toFixed(2));
+              
+            });
+
+            $('#compute').click(function(){
+              var total = 0;
+                $(".subTotal").each(function() {
+                    total+= this.value * 1;
+                });
+              $('#grdtot').val(total.toFixed(2));
+
+            })
+
+            $("#receipt").on('click', '.delete',  function(){
+              var clicked = $(this).attr("id");
+              $(this).closest("tr").remove();
+              $('#'+clicked).prop('checked', false);
+
+              //compute grand total
+              var total = 0;
+                $(".subTotal").each(function() {
+                    total+= this.value * 1;
+                });
+              $('#grdtot').val(total.toFixed(2));
+            }); 
+
+
+
+            // $("#delete").on('click', ' .fClick', function(){ 
+            //     alert("hey!");
+            // });
+
+
+            // $("#delete").on('click',function(){
+            //   alert('sadsa')
+            //   console.log('taengyan')
+            //   $(this).closest("tr").remove();
+
+            // });
+
+             // Find and remove selected table rows
+             // $(".delete-row").click(function(){
+             //     $("table tbody").find('input[name="record"]').each(function(){
+             //      if($(this).is(":checked")){
+             //             $(this).parents("tr").remove();
+             //         }
+             //     });
+             // });
+         });    
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+           var oTable = $('#sampleTable').DataTable({
+             "orderCellsTop": false,
+             "searchHighlight" : true,
+           });
+           $('#search').keyup(function(){
+                 oTable.search($(this).val()).draw() ;
+           });
+           $(".dataTables_filter").hide();
+           oTable.on('order.dt search.dt', function(){
+             oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+              function (cell, i) {
+               cell.innerHTML = i+1;
+               } );
+           }).draw();
+         });
+      </script>
+
+
+  <!--     <script type="text/javascript">
+        var $tblrows = $("#receipt tbody tr");
+          $tblrows.each(function (index) {
+              var $tblrow = $(this);
+           
+              ...
+          });
+      </script> -->
+
+      <!-- This is the Code for dataTable -->
+
+      <!-- end of your custom script -->
+   
+</body></html>

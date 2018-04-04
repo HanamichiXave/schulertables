@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Lost & Found Management</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style>
+      #claimed_filter {
+      display: none;
+      }
+      #found_filter {
+      display: none;
+      }
+      .dataTables_length {
+       margin-bottom: 15px;
+       margin-top: 5px;
+      }
+      .nav-pills {
+         border-bottom: none;
+      }
+      td, th {
+         text-align: center;
+      }
+   </style>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                           <li>
+                                  <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                           </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033"><h2><strong>Lost &amp; Found</strong></h2></div>
+           <ol class="breadcrumb" style="background-color: #D9EDF7">
+               <li><a href="lostandfound_management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+               <li>Claim Items</li>
+           </ol>
+         <!-- your code start here -->
+         <!-- Please observe indention -->
+         <section class="">
+            <div class="row ">
+               <div class="col-lg-12">
+                  <ul class="nav nav-tabs nav-pills tabs">
+                     <li class="active tab">
+                        <a href="#home-1" data-toggle="tab" aria-expanded="false">
+                        <span class="visible-xs"><i class="fa fa-home"></i></span>
+                        <span>TO BE CLAIMED LIST</span>
+                        </a>
+                     </li>
+                     <li class="tab">
+                        <a href="#home-2" data-toggle="tab" aria-expanded="false">
+                        <span class="visible-xs"><i class="fa fa-user"></i></span>
+                        <span>CLAIMED LIST</span>
+                        </a>
+                     </li>
+                  </ul>
+                  <div class="tab-content">
+                     <div class="tab-pane active" id="home-1">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <div class="panel panel-custom">
+                                <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-futbol-o fa-lg"></i> To Be Claimed List
+                                </div>
+                                 <div class="panel-body">
+                                    <div class="row">
+                                       <div class="col-sm-8">
+                                          <div class="form-group contact-search m-b-30">
+                                             <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                                             <br/>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                       <table class="table table-striped table-hover" id="found">
+                                          <thead>
+                                             <tr>
+                                                <th style="max-width: 95px;"></th>
+                                                <th>Type of Item</th>
+                                                <th>Description</th>
+                                                <th>Found at</th>
+                                                <th>Date Found</th>
+                                                <th>Time Surrendered</th>
+                                                <th>Surrendered by</th>
+                                             </tr>
+                                          </thead>
+                                          <tbody>
+                                             <tr>
+                                                <td></td>
+                                                <td>Watch</td>
+                                                <td>Casio</td>
+                                                <td>Cafeteria</td>
+                                                <td>March 29,2017</td>
+                                                <td>1pm</td>
+                                                <td>Mayson</td>
+                                             </tr>
+                                             <tr>
+                                                <td></td>
+                                                <td>Cellphone</td>
+                                                <td>Samsung</td>
+                                                <td>Classroom</td>
+                                                <td>June 12,2017</td>
+                                                <td>3pm</td>
+                                                <td>Benson</td>
+                                             </tr>
+                                             <tr>
+                                                <td></td>
+                                                <td>Mug</td>
+                                                <td>Starbucks</td>
+                                                <td>Teachers Lobby</td>
+                                                <td>August 12,2017</td>
+                                                <td>5pm</td>
+                                                <td>Ivan</td>
+                                             </tr>
+                                             <tr>
+                                                <td></td>
+                                                <td>Refrigerator</td>
+                                                <td>American Home</td>
+                                                <td>Pantry</td>
+                                                <td>July 20,2017</td>
+                                                <td>6pm</td>
+                                                <td>Carl Joseph</td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane" id="home-2">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <div class="panel panel-custom">
+                                <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-futbol-o fa-lg"></i> Claimed List
+                                </div>
+                                 <div class="panel-body">
+                                    <div class="row">
+                                       <div class="col-sm-8">
+                                          <div class="form-group contact-search m-b-30">
+                                             <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                                             <br/>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                       <table class="table table-striped table-hover" id="claimed">
+                                          <thead>
+                                             <tr>
+                                                <th style="max-width: 95px;">
+                                                </th>
+                                                <th>Type of Item</th>
+                                                <th>Description</th>
+                                                <th>Claimed Date</th>
+                                                <th>Claimed by</th>
+                                                <th>Security in charge</th>
+                                             </tr>
+                                          </thead>
+                                          <tbody>
+                                             <tr>
+                                                <td></td>
+                                                <td>Watch</td>
+                                                <td>G-shock</td>
+                                                <td>February 14, 2017</td>
+                                                <td>Benson Leabres</td>
+                                                <td>Mang Dodong</td>
+                                             </tr>
+                                             <tr>
+                                                <td></td>
+                                                <td>Laptop</td>
+                                                <td>Asus</td>
+                                                <td>June 30, 2017</td>
+                                                <td>Xavier Buenaventura</td>
+                                                <td>Mang Engelbert</td>
+                                             </tr>
+                                             <tr>
+                                                <td></td>
+                                                <td>PC Desktop</td>
+                                                <td>Mac</td>
+                                                <td>May 3,2017</td>
+                                                <td>Ivan Genesis</td>
+                                                <td>Mang Kanor</td>
+                                             </tr>
+                                             <tr>
+                                                <td></td>
+                                                <td>Charger</td>
+                                                <td>Samsung</td>
+                                                <td>August 12,2017</td>
+                                                <td>Bea Trixia</td>
+                                                <td>Mang Julio</td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                 </div>
+                              </div>  
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- end of your code -->
+         <!-- footer here -->
+         <hr />
+         <footer class="navbar-fixed-bottom">
+            <div class="container-fluid footer">
+               <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+            </div>
+         </footer>
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script type="text/javascript">
+         $(document).ready(function(){
+           var oTable = $('#found').DataTable({
+             "orderCellsTop": false,
+             "searchHighlight" : true,
+             "ordering": false,
+             // "columnDefs": [
+             //                 { 
+             //                   "sortable" : false, "targets": [0, 5, 5],
+             //                   "searchable": false, "targets": [0, 5,  5]
+             //                 }
+             //                 ]
+           });
+           
+           oTable.on('order.dt search.dt', function(){
+             oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+              function (cell, i) {
+               cell.innerHTML = i+1;
+               } );
+           }).draw();
+         
+           $('#search').keyup(function(){
+                 oTable.search($(this).val()).draw() ;
+           });
+           $('#datatable-keytable').DataTable({keys: true});
+           $('#datatable-responsive').DataTable();
+           $('#datatable-colvid').DataTable({
+               "dom": 'C<"clear">lfrtip',
+               "colVis": {
+                   "buttonText": "Change columns"
+               }
+           });
+           
+           var table = $('#datatable-fixed-header').DataTable({fixedHeader: true});
+           var table = $('#datatable-fixed-col').DataTable({
+               scrollY: "300px",
+               scrollX: true,
+               scrollCollapse: true,
+               paging: false,
+               fixedColumns: {
+                   leftColumns: 1,
+                   rightColumns: 1
+               }
+           });
+         });
+         
+      </script>
+      <script>
+         $(document).ready(function(){
+           var oTable = $('#claimed').DataTable({
+             "orderCellsTop": false,
+             "searchHighlight" : true,
+             "ordering": false,
+             // "columnDefs": [
+             //                 { 
+             //                   "sortable" : false, "targets": [0, 5, 5],
+             //                   "searchable": false, "targets": [0, 5,  5]
+             //                 }
+             //                 ]
+           });
+           
+           oTable.on('order.dt search.dt', function(){
+             oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+              function (cell, i) {
+               cell.innerHTML = i+1;
+               } );
+           }).draw();
+         
+           $('#search1').keyup(function(){
+                 oTable.search($(this).val()).draw() ;
+           });
+           $('#datatable-keytable').DataTable({keys: true});
+           $('#datatable-responsive').DataTable();
+           $('#datatable-colvid').DataTable({
+               "dom": 'C<"clear">lfrtip',
+               "colVis": {
+                   "buttonText": "Change columns"
+               }
+           });
+           
+           var table = $('#datatable-fixed-header').DataTable({fixedHeader: true});
+           var table = $('#datatable-fixed-col').DataTable({
+               scrollY: "300px",
+               scrollX: true,
+               scrollCollapse: true,
+               paging: false,
+               fixedColumns: {
+                   leftColumns: 1,
+                   rightColumns: 1
+               }
+           });
+         });
+         
+      </script>
+      <script>
+         var myVar = setInterval(function(){ myTimer() }, 1000);
+         //timer
+         function myTimer() {
+           var d = new Date();
+           var t = d.toLocaleTimeString();
+           var time1 =
+           $('.time').val(t);
+         
+         
+           //date
+           var d1 = new Date();
+           var Months = ["January","February","March","April","May","June","July", "August", "September", "October", "November", "December"];
+           var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+           var dateview = days[d1.getDay()] +", "+Months[d.getMonth()] +" "+d1.getDate()+", "+ d1.getFullYear() ;
+           $('.date').val(dateview);
+         }
+      </script> <!-- time and date-->
+      <script>
+         function typesel($id){
+           $select = $('.selectType'+$id).val();
+              if($select == 'Student'){
+                 $('.stud').show();
+                 $('.emp').hide();
+               }else{
+                 $('.stud').hide();
+                 $('.emp').show();
+               }
+         } 
+         
+         $(document).ready(function(){
+           $('.stud').hide();
+           $('.emp').hide();
+         
+           $('.closeClaim').click(function(){
+             $('.stud').hide();
+             $('.emp').hide();
+             $('.selectType').val("no");
+             $('.studentId').val("studNone");
+             $('.employeeId').val("empNone");
+             $('.name').val("");
+             $('.grade').val("");
+             $('.empName').val("");
+             $('.empRole').val("");
+           })
+         });
+      </script>
+      <script>
+         var type;
+           $('.selectType').change(function(){
+             type = this.value;
+           });
+         
+               $('.studentId').change(function(){
+                 var id = this.value;
+         
+                 $.ajax({
+                   method: 'get',
+                    url: 'http://localhost:8000/security/return_details',
+                    dataType:'json',
+                    data: {
+                        id: id,
+                        type:type,
+                    },
+                    success:function(data){
+                       if(data.type=="student"){
+                           $('.name').val(data.studentName['firstName']+' '+data.studentName['lastName']);
+                           $('.grade').val(data.grade['studentGradeLvl']+' - '+data.grade['studentSection']);
+                       }
+                     }
+                  })
+               })
+               $('.employeeId').change(function(){
+                 var id = this.value;
+         
+                 $.ajax({
+                   method: 'get',
+                    url: 'http://localhost:8000/security/return_details',
+                    dataType:'json',
+                    data: {
+                        id: id,
+                        type:type,
+                    },
+                    success:function(data){
+                       if(data.type=="employee"){
+                           $('.empName').val(data.employeeInfo['emp_firstname']+' '+data.employeeInfo['emp_lastname']);
+                           $('.empRole').val(data.employeeInfo['emp_role']);
+                       }
+                     }
+                  })
+               })
+           
+      </script>
+      <script>
+         function claimed($id){
+           swal({
+             title: "Are you sure?",
+               text: "This item will be claimed.",
+               type: "warning",
+               showCancelButton: true,
+               confirmButtonColor: "#DD6B55",
+               confirmButtonText: "Yes",
+               closeOnConfirm: false,
+               closeOnCancel: false
+           },
+           function(isConfirm){
+             var id = $id;
+             var claimed = $("#foundClaimModal");
+             var dataString = claimed.serialize();
+             if(isConfirm){
+               $.ajax({
+                 method: 'POST',
+                 url: "/security/save_claimed/"+id,
+                 headers:{'X-CSRF-Token': $('input[name="_token"]').val()},
+                 dataType: 'JSON',
+                 processData : false,
+                 data: dataString,
+                 success: function(data){
+                     if(data.success == "yes"){
+                     swal({
+                       title:"Claimed!", 
+                       text: "The item has been handed to its owner.",
+                       type: "success",
+                       showConfirmButton: false
+                     });
+                     setTimeout(function(){
+                                location.reload(); // then reload the page.(3)
+                           }, 2000); 
+                   }
+                 },error: function(data){
+                     swal("Error!", "Something went wrong", "error");
+                   }
+               });
+             }
+             else {
+               swal("Cancelled", "Something went wrong!", "error");
+             }
+           });
+         }
+      </script>
+      <!-- end of your custom script -->
+   </body>
+</html>

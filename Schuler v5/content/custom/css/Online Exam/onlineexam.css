@@ -1,0 +1,36 @@
+.quizpanel{
+	border: solid 1px #44A5C9;
+	border-radius: 5px;
+	margin: 0px 20px 20px 0px;
+	padding: 20px;
+}
+
+.center{
+	margin: 0 auto;
+}
+
+.question-panel{
+	margin: 0px 20px 20px 0px;
+	padding: 10px;
+	background-color: #dedede;
+}
+
+.block{
+	display:block;
+}
+
+.ng-cloak { 
+	display:none; 
+}
+
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}

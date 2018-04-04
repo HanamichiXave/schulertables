@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Library Management</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/custom/css/Library/LI_MainPage.css" rel="stylesheet">
+    <link href="../../content/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                           <li>
+                                  <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                           </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+              
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+         <br>
+         <br>
+         <br>
+         <ol class="breadcrumb" style="background-color: #D9EDF7">
+            <li><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</li>
+         </ol>
+         <!-- your code start here -->
+         <!-- Please observe indention -->
+         <div class="row">
+             <div class="col-sm-6 col-md-6 col-lg-4">
+                <a href="Dashboard.html" >
+                   <div class="hovereffect">
+                       <img class="img-responsive" src="../../content/images/Super Admin/v5/dashboard.png" height="100" width="100" alt="">
+                       <div class="overlay">
+                          <h2>Dashboard</h2>
+                           <p class="info">
+                                  Provides in-depth data analysis, organizes and presents information regarding all library assets.
+                           </p>
+                         </div>
+                     </div>
+                 </a>
+             </div>
+             <div class="col-sm-6 col-md-6 col-lg-4">
+                <a href="library-catalouge.html" >
+                   <div class="hovereffect">
+                       <img class="img-responsive" src="../../content/images/catalogou.png" height="100" width="100" alt="">
+                       <div class="overlay">
+                          <h2>Library Catalogue</h2>
+                           <p class="info">
+                                  Contains a list books and the person in charge of the book.
+                           </p>
+                         </div>
+                     </div>
+                 </a>
+             </div>
+             <div class="col-sm-6 col-md-6 col-lg-4">
+                <a href="library-borrowed_reservedlist.html" >
+                   <div class="hovereffect">
+                       <img class="img-responsive" src="../../content/images/list.png" height="100" width="100" alt="">
+                       <div class="overlay">
+                          <h2>List of Materials and Status</h2>
+                           <p class="info">
+                                  Contains a list of borrowed and reserved materials for students and staffs.
+                           </p>
+                         </div>
+                     </div>
+                 </a>
+             </div>
+             <div class="col-sm-6 col-md-6 col-lg-4">
+                <a data-toggle="modal" data-target="#addMaterial"" >
+                   <div class="hovereffect">
+                       <img class="img-responsive" src="../../content/images/add.png" height="100" width="100" alt="">
+                       <div class="overlay">
+                          <h2>Add Material</h2>
+                           <p class="info">
+                                  Submit a form to add a material in the library.
+                           </p>
+                         </div>
+                     </div>
+                 </a>
+             </div>
+             <div class="col-sm-6 col-md-6 col-lg-4">
+                <a data-toggle="modal" data-target="#checkOutReserved">
+                   <div class="hovereffect">
+                       <img class="img-responsive" src="../../content/images/reserved.png" height="100" width="100" alt="">
+                       <div class="overlay">
+                          <h2>Checkout / Reserve Material</h2>
+                           <p class="info">
+                                 Submit a form to borrow or reserve a material.
+                           </p>
+                         </div>
+                     </div>
+                 </a>
+             </div>
+             <div class="col-sm-6 col-md-6 col-lg-4 col-xs-12">
+                <a href="library-history.html" >
+                   <div class="hovereffect">
+                       <img class="img-responsive" src="../../content/images/hisotry.png" height="100" width="100" alt="">
+                       <div class="overlay">
+                          <h2>Library History</h2>
+                           <p class="info">
+                                  Contains a list of students that borrowed books from the library.
+                           </p>
+                         </div>
+                     </div>
+                 </a>
+             </div>
+         </div>
+         <div id="addMaterial" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     <h4 class="modal-title"><strong>Add New Material</strong></h4>
+                  </div>
+                  <div class="modal-body">
+                     <div class="panel panel-custom">
+                       <div class="panel-heading"><i class="fa fa-book" aria-hidden="true"></i> &nbspMaterial Informations</div>
+                        <div class="panel-body">
+                           <br>
+                           <div class="col-lg-4">
+                              <p> Material Image: </p>
+                              <div>
+                                 <center>
+                                    <img src="../../content/images/logonatin.png" class="form-control" id="imgAsset" style="border: 2px solid; height: 230px; width: 230px; background-color: white;"><br />
+                                 </center>
+                              </div>
+                              <div>
+                                 <center>
+                                    <label>Material Photo </label>
+                                    <input id="picture" name="picture" class="revalidate" type="file" style="display: none;">
+                                    <input class="btn" type="button" value="Choose File" />
+                                 </center>
+                              </div>
+                           </div>
+                           <div class="col-lg-8">
+                              <p> Material Informations: </p>
+                              <div class="col-lg-12 col-sm-12">
+                                 <div class="col-lg-6">
+                                    <label for=""> Title</label>
+                                    <input class="form-control" id="" name="" />
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <label for=""> Material Type</label>
+                                    <input class="form-control" id="" name="" /><br />
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-sm-12">
+                                 <div class="col-lg-6">
+                                    <label for=""> Title Statement</label>
+                                    <textarea class="form-control" id="" name="" style="resize: none;"></textarea>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <label for=""> I.S.B.N.</label>
+                                    <input class="form-control" id="" name="" /><br /><br />
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-sm-12">
+                                 <div class="col-lg-6">
+                                    <label for=""> Date Published</label>
+                                    <input class="form-control" id="" name="" />
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <label for=""> Author</label>
+                                    <input class="form-control" id="" name="" /><br />
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-sm-12">
+                                 <div class="col-lg-6">
+                                    <label for=""> Publisher</label>
+                                    <input class="form-control" id="" name="" />
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <label for=""> Publication, Distribution & Etc.</label>
+                                    <input class="form-control" id="" name="" /><br />
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-sm-12">
+                                 <div class="col-lg-6">
+                                    <label for=""> General Information</label>
+                                    <textarea class="form-control" id="" name="" style="resize: none;"></textarea>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <label for=""> PhysicaL Description</label>
+                                    <input class="form-control" id="" name="" /><br /><br />
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-sm-12">
+                                 <div class="col-lg-6">
+                                    <label for=""> Authentication Code </label>
+                                    <input class="form-control" id="" name="" />
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <label for=""> Language Code</label>
+                                    <input class="form-control" id="" name="" /><br />
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-sm-12">
+                                 <div class="col-lg-6">
+                                    <label for=""> Format </label>
+                                    <input class="form-control" id="" name="" />
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <label for=""> Collection Category </label>
+                                    <input class="form-control" id="" name="" /><br />
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-sm-12">
+                                 <div class="col-lg-6">
+                                    <label for=""> Vol./ Year </label>
+                                    <input class="form-control" id="" name="" />
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <label for=""> Collection Category </label>
+                                    <input class="form-control" id="" name="" /><br />
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-sm-12">
+                                 <div class="col-lg-6">
+                                    <label for=""> Price </label>
+                                    <input class="form-control" id="" name="" placeholder="₱" />
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-sm-12">
+                                 <div class="col-lg-12">
+                                    <br /><button type="button" class="btn btn-success pull-right" id="" name=""> Submit</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="checkOutReserved" class="modal fade" role="dialog">
+             <div class="modal-dialog modal-lg">
+                 <div class="modal-content">
+                     <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         <h4 class="modal-title"><strong>Check-out / Reserved Material</strong></h4>
+                     </div>
+                     <div class="modal-body">
+                      <div class="panel panel-custom">
+                        <div class="panel-heading"><i class="fa fa-book" aria-hidden="true"></i> &nbspLender Item</div>
+                        <div class="panel-body">
+                           <div class="col-lg-4">
+                                 <p> Lender Image: </p>
+                                 <div>
+                                     <center>
+                                         <img src="../../content/images/logonatin.png" class="form-control" id="imgAsset" style="border: 2px solid; height: 230px; width: 230px; background-color: white;"><br />
+                                     </center>
+                                 </div>
+                                 <div>
+                                     <center>
+                                         <table class="table table-striped table-response">
+                                             <thead>
+                                             </thead>
+                                             <tbody>
+                                                 <tr class="">
+                                                     <th>Name</th>
+                                                     <td id="myName"></td>
+                                                 </tr>
+                                                 <tr class="">
+                                                     <th>Gr. & Sec. / Department</th>
+                                                     <td id="myPos"></td>
+                                                 </tr>
+                                             </tbody>
+                                         </table>
+                                     </center>
+                                 </div>
+                             </div>
+                             <div class="col-lg-8">
+                                 <p> Please fill up the Form: </p><br />
+                                 <center>
+                                     <p>Select Type of Lender</p>
+                                     <label class="radio-inline" for="optn_student"><input type="radio" id="optn_student" name="lender" value="Student">Student</label>
+                                     <label class="radio-inline" for="optn_employee"><input type="radio" id="optn_employee" name="lender" value="Employee">Employee</label><br /><br />
+                                     <div class="col-lg-12">
+                                         <div class="input-group " id="studentDiv">
+                                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                             <input class="form-control" type="text" name="" id="studentLenID" placeholder="Schuler-2017-9001">
+                                         </div>
+                                         <div class="input-group" id="employeeDiv">
+                                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                             <input class="form-control" type="text" name="" id="employeeLendID" placeholder="Schuler-2017-9001">
+                                         </div>
+                                     </div>
+                                 </center>
+                                 <br />
+                                 <br />
+                                 <br />
+                                 <div class="col-lg-12">
+                                     <div class="col-lg-4">
+                                         <select class="form-control" id="" name="">
+                                             <option hidden>Please select</option>
+                                             <option>Book</option>
+                                             <option>CD/DVD</option>
+                                             <option>Magazines</option>
+                                             <option>Thesis</option>
+                                             <option >Others</option>
+                                         </select>
+                                     </div>
+                                     <div class="col-lg-4">
+                                         <input type="text" class="form-control" id="" name="" placeholder="Material Code" list="matControlNo"/>
+                                             <datalist id="matControlNo">
+                                                 <option>Book001</option>
+                                                 <option>Book002</option>
+                                                 <option>Book003</option>
+                                             </datalist>
+                                     </div>
+                                     <div class="col-lg-4">
+                                         <input class="form-control" id="" name="" type="text" placeholder="Item location"/><br />
+                                     </div>
+                                 </div>
+                                 <div class="col-lg-12">
+                                     <div class="col-lg-6">
+                                         <label>Lender Control</label>
+                                         <select class="form-control" id="lenderType" name="lenderType">
+                                             <option hidden>Please select</option>
+                                             <option value="1">Borrow Material</option>
+                                             <option value="2">Reserve Material</option>
+                                         </select><br />
+                                     </div>
+                                 </div>
+                                 <div class="col-lg-12">
+                                     <div class="col-lg-6">
+                                         <label id="dob">Date of Borrowing:</label>
+                                         <label id="dor">Date of Reserving:</label>
+                                         <input class="form-control" type="text" id="" name=""/>
+                                     </div>
+                                     <div class="col-lg-6" id="returnDate">
+                                         <label id="dor">Return Date:</label>
+                                         <input class="form-control" type="text" id="" name="" /><br />
+                                     </div>
+                                 </div>
+                                 <div class="col-lg-12">
+                                     <div class="col-lg-6">
+                                         <label>Librarian on Duty:</label>
+                                         <input class="form-control" id="" name="" /><br />
+                                     </div>
+                                 </div>
+                                 <div class="col-lg-12">
+                                     <div class="col-lg-12">
+                                         <button type="button" class="btn btn-success pull-right" id="" name="">Submit</button>
+                                     </div>
+                                 </div>
+                             </div>
+                        </div>
+                     </div>
+                     <div class="modal-footer">
+                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+      </div>
+      <!-- end of your code -->
+      <!-- footer here -->
+      <hr />
+      <footer class="navbar-fixed-bottom">
+         <div class="container-fluid footer">
+            <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+         </div>
+      </footer>
+      <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+     <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+     <script src="../../content/DataTables/js/datatables.bootstrap.js"></script>
+     <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+     <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+     <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+     <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+     <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+     <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+     <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+     <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+     <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script type="text/javascript">
+           $(document).ready(function () {
+               $("#studentDiv").hide();
+               $("#employeeDiv").hide();
+               $("#dor").hide();
+           })
+           $("#optn_student").click(function () {
+               $("#studentDiv").show();
+               $("#employeeDiv").hide();
+               $("#studentLenID").val("");
+               $("#employeeLendID").val("");
+           })
+           $("#optn_employee").click(function () {
+               $("#studentDiv").hide();
+               $("#employeeDiv").show();
+               $("#studentLenID").val("");
+               $("#employeeLendID").val("");
+           })
+           $("#lenderType").change(function () {
+               if ($(this).val() == "1") {
+                   $("#dob").show();
+                   $("#dor").hide();
+                   $("#returnDate").show();
+               } else {
+                   $("#dob").hide();
+                   $("#dor").show();
+                   $("#returnDate").hide();
+               }
+           })
+       </script>
+      <!-- end of your custom script -->
+   </body>
+</html>

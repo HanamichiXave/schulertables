@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Finance</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style>
+
+   .calendar-btn {
+      background-color: #99bbff;
+      border-color: white;
+      color: #000033;
+      border-radius: 0px;
+    }
+
+    .calendar-btn:hover,
+    .calendar-btn:focus,
+    .calendar-btn:active {
+      background-color: #000033;
+      color: white;
+    }
+
+    .acc-btn {
+      width: 280px;
+      height: 60px;
+      font-weight: normal;
+      font-size: 17px;
+    }
+
+    .cal-btn {
+      width: 98px;
+      background-color: #F5FAFA;
+      color: #537279;
+    }
+
+    .cal-btn:hover,
+    .cal-btn:focus {
+        background-color: #B7AFA3;
+    }
+
+    .btn-file {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-file input[type=file] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 100%;
+      min-height: 100%;
+      font-size: 100px;
+      text-align: right;
+      filter: alpha(opacity=0);
+      opacity: 0;
+      outline: none;
+      background: white;
+      cursor: inherit;
+      display: block;
+    }
+
+    #img-upload,
+    #img-upload1,
+    #img-upload2,
+    #img-upload3,
+    #img-upload4,
+    #img-upload5,
+    #img-upload6 {
+        width: 300px;
+        height: 400px;
+        padding-bottom: 10px;
+    }
+
+    #img-upload:active {
+      display: block
+    }
+
+   
+   </style>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                           <li>
+                                  <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                           </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+        <br>
+        <br>
+          <div class="page-header" style="color: #000033"><h2><strong>Finance Management</strong></h2></div>
+            <ol class="breadcrumb" style="background-color: #D9EDF7">
+              <li><a href="finance-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+              <li><a href="fin-accounting-management.html">Accounting Management</a></li>
+              <li>Expenses Transactions</li>
+            </ol>
+         <!-- your code start here -->
+         <!-- Please observe indention -->
+
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="nav nav-pills nav-justified">
+                <li class="active"><a data-toggle="pill" href="#single-expense">Single Expense</a></li>
+                <li><a data-toggle="pill" href="#multiple-expenses">Multiple Expenses</a></li>
+            </ul><br>
+          </div>
+          <div class="col-lg-12">
+              <div class="tab-content">
+                  <div id="single-expense" class="tab-pane fade in active">
+                      <div class="col-lg-2"></div>
+                      <div class="col-lg-8">
+                          <div class="panel panel-default">
+                              <div class="panel-body" style="margin: 0px;   ">
+                                  <div class="col-lg-12">
+                                      <div class="row">
+                                          <label class="col-lg-3 pull-right" style="color: #8c8c8c;">Receipt No.: 00000001</label>
+                                          <label class="col-lg-5 pull-left" style="color: #8c8c8c;">Receipt Date: 01-01-2017</label>
+                                      </div><br>
+                                  </div>
+                                  <div class="col-lg-12">
+                                      <div class="row" style="border-bottom: 1px dotted; padding-bottom: 20px;">
+                                          <div class="col-lg-4">
+                                              <div class="form-group">
+                                                  <label>Vendor</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                              <div class="form-group">
+                                                  <label>Mode of Payment</label>
+                                                  <select class="form-control">
+                                                      <option selected disabled>SELECT PAYMENT</option>
+                                                      <option>Cash</option>
+                                                      <option>Credit Card</option>
+                                                      <option>Cheque</option>
+                                                  </select>
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-4">
+                                              <div class="form-group">
+                                                  <label>Category of Expenses</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                              <div class="form-group">
+                                                  <label>Currency</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-4">
+                                              <div class="form-group">
+                                                  <label>Value Added Tax (VAT)</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-4 pull-right">
+                                              <label style="color: red">Total Amount</label>
+                                              <input class="form-control input-sm" type="" name="">
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-lg-12" style="text-align: center; padding-bottom: 10px;">
+                                              <h3>Expenses Description</h3>
+                                          </div>
+                                          <div class="col-lg-4">
+                                              <div class="form-group">
+                                                  <label>Project/Customer</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-4">
+                                              <div class="form-group">
+                                                  <label>Person Reports Expense</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-4">
+                                              <div class="form-group">
+                                                  <label id="123">Department</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-12">
+                                              <div class="form-group">
+                                                  <label>Notes</label>
+                                                  <textarea class="form-control" rows="3"></textarea>
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-12">
+                                              <div class="form-group">
+                                                  <label>Upload Image</label>
+                                                  <div class="input-group">
+                                                      <span class="input-group-btn">
+                                                          <span class="btn btn-default btn-file">
+                                                              Browse… <input type="file" id="imgInp">
+                                                          </span>
+                                                      </span>
+                                                      <input type="text" class="form-control" readonly="">
+                                                  </div>
+                                                  <div id="imageDiv" style="text-align: center;" hidden>
+                                                      <br>
+                                                      <img id='img-upload' />
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-lg-6">
+                                              <div class="form-group">
+                                                  <br>
+                                                  <label>Total Expenses Amount</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                              <div class="form-group">
+                                                  <label>Non Reimbursable</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-6">
+                                              <div class="form-group">
+                                                  <br>
+                                                  <label>Cash Advance Amount</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                              <div class="form-group">
+                                                  <label>Reimbursable Amount</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-12">
+                                              <div class="form-group pull-left">
+                                                  <a href=""><button class="btn btn-default" type="button">View Transactions</button></a>
+                                              </div>
+                                              <div class="form-group pull-right">
+                                                  <button class="btn btn-success" type="button"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+                                                  <button class="btn btn-info" type="button"><i class="fa fa-print" aria-hidden="true"></i> Print</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div id="multiple-expenses" class="tab-pane fade">
+                      <div class="col-lg-1"></div>
+                      <div class="col-lg-10">
+                          <div class="panel panel-default">
+                              <div class="panel-body" style="margin: 0px;   ">
+                                  <div class="col-lg-12">
+                                      <div class="row">
+                                          <label class="col-lg-2 pull-right" style="color: #8c8c8c;">Report No.: 00000001</label>
+                                      </div><br>
+                                  </div>
+                                  <div class="col-lg-12">
+                                      <div class="row" style="border-bottom: 1px dotted; padding-bottom: 20px;">
+                                          <div class="col-lg-6">
+                                              <div class="form-group">
+                                                  <label>Expense Report Name</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                              <div class="form-group">
+                                                  <label>Details of Report:</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-6">
+                                              <div class="form-group">
+                                                  <label>Purpose</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                              <div class="form-group">
+                                                  <label>Duration</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <br>
+                                          <div class="col-lg-12">
+                                              <table  class="table table-bordered">
+                                                  <thead>
+                                                      <tr>
+                                                          <th style="width: 20%; text-align: center;">Expenses Description</th>
+                                                          <th style="width: 20%; text-align: center;">Project/Customer</th>
+                                                          <th style="width: 10%; text-align: center;">Date</th>
+                                                          <th style="width: 10%; text-align: center;">Category</th>
+                                                          <th style="width: 10%; text-align: center;">Vendor/Merchant</th>
+                                                          <th style="width: 15%; text-align: center;">Amount</th>
+                                                          <th style="width: 15%; text-align: center;">VAT</th>
+                                                      </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                      <tr>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                          <td></td>
+                                                      </tr>
+                                                  </tbody>
+                                              </table>
+                                          <div class="col-lg-4">
+                                              <div class="form-group">
+                                                  <label>Upload Image</label>
+                                                  <div class="input-group" style="padding-bottom: 5px;">
+                                                      <span class="input-group-btn">
+                                                          <span class="btn btn-default btn-file">
+                                                              Browse… <input type="file" id="imgInp1">
+                                                          </span>
+                                                      </span>
+                                                      <input type="text" class="form-control" readonly>
+                                                  </div>
+                                                  <div id="imgDiv1" style="text-align: center; padding-top: 5px;" hidden>
+                                                      <img id='img-upload1' />
+                                                  </div>
+                                                  <div class="input-group">
+                                                      <span class="input-group-btn">
+                                                          <span class="btn btn-default btn-file">
+                                                              Browse… <input type="file" id="imgInp2">
+                                                          </span>
+                                                      </span>
+                                                      <input type="text" class="form-control" readonly>
+                                                  </div>
+                                                  <div id="imgDiv2" style="text-align: center; padding-top: 5px;" hidden>
+                                                      <img id='img-upload2' />
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-4">
+                                              <div class="form-group">
+                                                  <label>Upload Image</label>
+                                                  <div class="input-group" style="padding-bottom: 5px;">
+                                                      <span class="input-group-btn">
+                                                          <span class="btn btn-default btn-file">
+                                                              Browse… <input type="file" id="imgInp3">
+                                                          </span>
+                                                      </span>
+                                                      <input type="text" class="form-control" readonly>
+                                                  </div>
+                                                  <div id="imgDiv3" style="text-align: center; padding-top: 5px;" hidden>
+                                                      <img id='img-upload3'/ >
+                                                  </div>
+                                                  <div class="input-group">
+                                                      <span class="input-group-btn">
+                                                          <span class="btn btn-default btn-file">
+                                                              Browse… <input type="file" id="imgInp4">
+                                                          </span>
+                                                      </span>
+                                                      <input type="text" class="form-control" readonly>
+                                                  </div>
+                                                  <div id="imgDiv4" style="text-align: center; padding-top: 5px;" hidden>
+                                                      <img id='img-upload4' />
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-4">
+                                              <div class="form-group">
+                                                  <label>Upload Image</label>
+                                                  <div class="input-group" style="padding-bottom: 5px;">
+                                                      <span class="input-group-btn">
+                                                          <span class="btn btn-default btn-file">
+                                                              Browse… <input type="file" id="imgInp5">
+                                                          </span>
+                                                      </span>
+                                                      <input type="text" class="form-control" readonly>
+                                                  </div>
+                                                  <div id="imgDiv5" style="text-align: center; padding-top: 5px;" hidden>
+                                                      <img id='img-upload5'/ >
+                                                  </div>
+                                                  <div class="input-group">
+                                                      <span class="input-group-btn">
+                                                          <span class="btn btn-default btn-file">
+                                                              Browse… <input type="file" id="imgInp6">
+                                                          </span>
+                                                      </span>
+                                                      <input type="text" class="form-control" readonly>
+                                                  </div>
+                                                  <div id="imgDiv6" style="text-align: center; padding-top: 5px;" hidden>
+                                                      <img id='img-upload6' />
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-lg-4">
+                                              <div class="form-group">
+                                                  <br>
+                                                  <label>Total Expenses Amount</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                              <div class="form-group">
+                                                  <label>Non Reimbursable</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-4">
+                                              <div class="form-group">
+                                                  <br>
+                                                  <label>Cash Advance Amount</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                              <div class="form-group">
+                                                  <label>Reimbursable Amount</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-4">
+                                              <br>
+                                              <div class="form-group">
+                                                  <label>Total</label>
+                                                  <input class="form-control input-sm" type="" name="">
+                                              </div><br>
+                                          </div>
+                                          <div class="col-lg-12">
+                                              <div class="form-group pull-left">
+                                                  <a href=""><button class="btn btn-default" type="button">View Transactions</button></a>
+                                              </div>
+                                              <div class="form-group pull-right">
+                                                  <button class="btn btn-success" type="button"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+                                                  <button class="btn btn-info" type="button"><i class="fa fa-print" aria-hidden="true"></i> Print</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <!-- end of your code -->
+         <!-- footer here -->
+         <hr />
+         <footer class="navbar-fixed-bottom">
+            <div class="container-fluid footer">
+               <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+            </div>
+         </footer>
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/datatables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script type="text/javascript">
+           $(document).ready(function () {
+               $('#expense-report-table').DataTable({
+                   "scrollY": 300,
+                   "scrollCollapse": false
+               });
+           });
+      </script>
+      <script type="text/javascript">
+       $(function() {
+        var createMonthPopover = function (item, title) {
+            var $pop = $(item);
+            $pop.popover({
+                placement: 'bottom',
+                title: ( title || '&nbsp;' ) + ' <a class="close" href="#">&times;</a>',
+                trigger: 'click',
+                html: true,
+                content: function () {
+                    return $('#monthPopUpContent').html();
+                }
+            }).on('shown.bs.popover', function(e) {
+                //console.log('shown triggered');
+                // 'aria-describedby' is the id of the current popover
+                var current_popover = '#' + $(e.target).attr('aria-describedby');
+                var $cur_pop = $(current_popover);
+
+                $cur_pop.find('.close').click(function(){
+                    //console.log('close triggered');
+                    $pop.popover('hide');
+                });
+
+                $cur_pop.find('.monthButton').click(function(){
+                    //console.log('OK triggered');
+                    $pop.popover('hide');
+                });
+            });
+
+            return $pop;
+          };
+
+          // create popover
+          createMonthPopover('#monthPopOver', 'Select a Month');
+            var createYearPopover = function (item, title) {
+              var $pop = $(item);
+
+              $pop.popover({
+                  placement: 'bottom',
+                  title: ( title || '&nbsp;' ) + ' <a class="close" href="#">&times;</a>',
+                  trigger: 'click',
+                  html: true,
+                  content: function () {
+                      return $('#yearPopUpContent').html();
+                  }
+              }).on('shown.bs.popover', function(e) {
+                  //console.log('shown triggered');
+                  // 'aria-describedby' is the id of the current popover
+                  var current_popover = '#' + $(e.target).attr('aria-describedby');
+                  var $cur_pop = $(current_popover);
+
+                  $cur_pop.find('.close').click(function(){
+                      //console.log('close triggered');
+                      $pop.popover('hide');
+                  });
+
+                  $cur_pop.find('.yearButton').click(function(){
+                      //console.log('OK triggered');
+                      $pop.popover('hide');
+                  });
+              });
+
+              return $pop;
+          };
+
+          // create popover
+          createYearPopover('#yearPopOver', 'Select a Year');
+
+        });
+  </script>
+  <script type="text/javascript">
+        $(document).ready( function() {
+        $(document).on('change', '.btn-file :file', function() {
+          var input = $(this),
+            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+          input.trigger('fileselect', [label]);
+          });
+
+          $('.btn-file :file').on('fileselect', function(event, label) {
+
+              var input = $(this).parents('.input-group').find(':text'),
+                  log = label;
+
+              if( input.length ) {
+                  input.val(log);
+              } else {
+                  if( log ) alert(log);
+              }
+
+          });
+          function readURL(input) {
+              if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+
+                  reader.onload = function (e) {
+                      $('#img-upload').attr('src', e.target.result);
+                      $('#imageDiv').show();
+                  }
+
+                  reader.readAsDataURL(input.files[0]);
+              }
+          }
+
+          $("#imgInp").change(function(){
+              readURL(this);
+          });
+        });
+  </script>
+  <script type="text/javascript">
+        $(document).ready( function() {
+        $(document).on('change', '.btn-file :file', function() {
+          var input = $(this),
+            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+          input.trigger('fileselect', [label]);
+          });
+
+          $('.btn-file :file').on('fileselect', function(event, label) {
+
+              var input = $(this).parents('.input-group').find(':text'),
+                  log = label;
+
+              if( input.length ) {
+                  input.val(log);
+              } else {
+                  if( log ) alert(log);
+              }
+
+          });
+          function readURL(input) {
+              if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+
+                  reader.onload = function (e) {
+                      $('#img-upload1').attr('src', e.target.result);
+                      $('#imgDiv1').show();
+                  }
+
+                  reader.readAsDataURL(input.files[0]);
+              }
+          }
+
+          $("#imgInp1").change(function(){
+              readURL(this);
+          });
+        });
+  </script>
+  <script type="text/javascript">
+        $(document).ready( function() {
+        $(document).on('change', '.btn-file :file', function() {
+          var input = $(this),
+            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+          input.trigger('fileselect', [label]);
+          });
+
+          $('.btn-file :file').on('fileselect', function(event, label) {
+
+              var input = $(this).parents('.input-group').find(':text'),
+                  log = label;
+
+              if( input.length ) {
+                  input.val(log);
+              } else {
+                  if( log ) alert(log);
+              }
+
+          });
+          function readURL(input) {
+              if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+
+                  reader.onload = function (e) {
+                      $('#img-upload2').attr('src', e.target.result);
+                      $('#imgDiv2').show();
+                  }
+
+                  reader.readAsDataURL(input.files[0]);
+              }
+          }
+
+          $("#imgInp2").change(function(){
+              readURL(this);
+          });
+        });
+  </script>
+  <script type="text/javascript">
+        $(document).ready( function() {
+        $(document).on('change', '.btn-file :file', function() {
+          var input = $(this),
+            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+          input.trigger('fileselect', [label]);
+          });
+
+          $('.btn-file :file').on('fileselect', function(event, label) {
+
+              var input = $(this).parents('.input-group').find(':text'),
+                  log = label;
+
+              if( input.length ) {
+                  input.val(log);
+              } else {
+                  if( log ) alert(log);
+              }
+
+          });
+          function readURL(input) {
+              if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+
+                  reader.onload = function (e) {
+                      $('#img-upload3').attr('src', e.target.result);
+                      $('#imgDiv3').show();
+                  }
+
+                  reader.readAsDataURL(input.files[0]);
+              }
+          }
+
+          $("#imgInp3").change(function(){
+              readURL(this);
+          });
+        });
+  </script>
+  <script type="text/javascript">
+        $(document).ready( function() {
+        $(document).on('change', '.btn-file :file', function() {
+          var input = $(this),
+            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+          input.trigger('fileselect', [label]);
+          });
+
+          $('.btn-file :file').on('fileselect', function(event, label) {
+
+              var input = $(this).parents('.input-group').find(':text'),
+                  log = label;
+
+              if( input.length ) {
+                  input.val(log);
+              } else {
+                  if( log ) alert(log);
+              }
+
+          });
+          function readURL(input) {
+              if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+
+                  reader.onload = function (e) {
+                      $('#img-upload4').attr('src', e.target.result);
+                      $('#imgDiv4').show();
+                  }
+
+                  reader.readAsDataURL(input.files[0]);
+              }
+          }
+
+          $("#imgInp4").change(function(){
+              readURL(this);
+          });
+        });
+  </script>
+  <script type="text/javascript">
+        $(document).ready( function() {
+        $(document).on('change', '.btn-file :file', function() {
+          var input = $(this),
+            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+          input.trigger('fileselect', [label]);
+          });
+
+          $('.btn-file :file').on('fileselect', function(event, label) {
+
+              var input = $(this).parents('.input-group').find(':text'),
+                  log = label;
+
+              if( input.length ) {
+                  input.val(log);
+              } else {
+                  if( log ) alert(log);
+              }
+
+          });
+          function readURL(input) {
+              if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+
+                  reader.onload = function (e) {
+                      $('#img-upload5').attr('src', e.target.result);
+                      $('#imgDiv5').show();
+                  }
+
+                  reader.readAsDataURL(input.files[0]);
+              }
+          }
+
+          $("#imgInp5").change(function(){
+              readURL(this);
+          });
+        });
+  </script>
+  <script type="text/javascript">
+        $(document).ready( function() {
+        $(document).on('change', '.btn-file :file', function() {
+          var input = $(this),
+            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+          input.trigger('fileselect', [label]);
+          });
+
+          $('.btn-file :file').on('fileselect', function(event, label) {
+
+              var input = $(this).parents('.input-group').find(':text'),
+                  log = label;
+
+              if( input.length ) {
+                  input.val(log);
+              } else {
+                  if( log ) alert(log);
+              }
+
+          });
+          function readURL(input) {
+              if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+
+                  reader.onload = function (e) {
+                      $('#img-upload6').attr('src', e.target.result);
+                      $('#imgDiv6').show();
+                  }
+
+                  reader.readAsDataURL(input.files[0]);
+              }
+          }
+
+          $("#imgInp6").change(function(){
+              readURL(this);
+          });
+        });
+  </script>
+      <!-- end of your custom script -->
+   </body>
+</html>

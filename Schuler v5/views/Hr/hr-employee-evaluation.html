@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Human Resource Management</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style type="text/css">
+   .dataTables_length {
+    margin-bottom: 15px;
+    margin-top: 5px;
+   }
+   .floating-text {
+      float: left;
+      margin: 10px; 
+   }
+   </style>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                           <li>
+                                  <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                           </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+             
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033"><h2><strong>Human Resource Management</strong></h2></div>
+         <ol class="breadcrumb" style="background-color: #D9EDF7">
+           <li><a href="hr-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+           <li>Employee Evaluation</li>
+         </ol>
+      <!-- your code start here -->
+      <!-- Please observe indention -->
+      <section class="card-box">
+         <div class="panel panel-custom">
+            <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-users fa-lg"></i> Employee List</div>
+            <div class="panel-body"> 
+               <div class="row">
+                  <div class="col-sm-8">
+                     <div class="form-group contact-search m-b-30">
+                        <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                     </div>
+                  </div>
+                  <div class="col-sm-4">
+                     <button type="button" class="btn btn-info btn-md waves-effect waves-light m-b-30" style="height: 40px; margin-top: 7px;" data-toggle="modal" data-target="#addEvaluation"><i class="fa fa-gavel"></i>&nbsp&nbspAdd Evaluation</button>
+                  </div>
+               </div>
+               <div class="table-responsive">
+                  <table class="table table-striped table-hover" id="myTable">
+                     <thead>
+                        <tr>
+                           <th style="text-align: center;">#</th>
+                           <th style="text-align: center; max-width: 95px;">Photo</th>
+                           <th style="text-align: center;" >Name of Employee</th>
+                           <th style="text-align: center;" >Hired Date</th>
+                           <th style="text-align: center;" >Years of Service</th>
+                           <th style="text-align: center;" >Gender</th>
+                           <th style="text-align: center;" >Achievements</th>
+                           <th style="text-align: center;" >Department</th>
+                           <th style="text-align: center;" >Remarks</th>
+                           <th style="text-align: center;" >Evaluation Form</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr class="">
+                           <td style="text-align: center;">1</td>
+                           <td style="text-align: center;"><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                           <td style="text-align: center;">Raymark Duyor Bravo</td>
+                           <td style="text-align: center;">2017-04-06 04:58:15</td>
+                           <td style="text-align: center;">06</td>
+                           <td style="text-align: center;">Male</td>
+                           <td style="text-align: center;">Professional</td>
+                           <td style="text-align: center;">Driver</td>
+                           <td style="text-align: center;"></td>
+                           <td style="text-align: center;"><button type="button" class="btn btn-info btn-md waves-effect waves-light m-b-30" data-toggle="modal" data-target="#viewEvaluation"><i class="fa fa-eye"></i> &nbsp&nbspView Evaluation</button></td>
+                        </tr>
+                        <tr class="">
+                           <td style="text-align: center;">1</td>
+                           <td style="text-align: center;"><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                           <td style="text-align: center;">John Xavier Buenaventura</td>
+                           <td style="text-align: center;">2017-03-02 04:58:15</td>
+                           <td style="text-align: center;">03</td>
+                           <td style="text-align: center;">Male</td>
+                           <td style="text-align: center;">Black Belter</td>
+                           <td style="text-align: center;">Bodyguard</td>
+                           <td style="text-align: center;"></td>
+                           <td style="text-align: center;"><button type="button" class="btn btn-info btn-md waves-effect waves-light m-b-30" data-toggle="modal" data-target="#viewEvaluation"><i class="fa fa-eye"></i> &nbsp&nbspView Evaluation</button></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+         </div>
+      </section>   
+      <!-- end of your code -->
+      <!-- footer here -->
+      <hr />
+      <footer class="navbar-fixed-bottom">
+         <div class="container-fluid footer">
+            <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+         </div>
+      </footer>
+      <!-- end foooter -->
+      </div>
+
+      <!-- Add Evaluation Modal -->
+      <div class="modal fade" id="addEvaluation" role="dialog">
+         <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Add Evaluation</h4>
+               </div>
+               <div class="modal-body">
+                  <div class="panel panel-custom">
+                     <div class="panel-heading"><i class="fa fa-gavel"></i>&nbsp&nbspEvaluate Employee</div>
+                     <div class="panel-body">
+                        <div class="col-lg-12">
+                           <form method="POST" id="evaluate">
+                              <div class="row">
+                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                       <h3>School Year 2016-2017</h3>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <div class="clearfix form-group">
+                                       <label class="control-label" for="">Employee ID</label>
+                                          <select class="form-control" id="empId" name="empId">
+                                             <option hidden>-- Please Select --</option>
+                                             <option value="1">1</option>
+                                             <option value="2">2</option>
+                                             <option value="3">3</option>
+                                             <option value="56">56</option>
+                                             <option value="1015584">1015584</option>
+                                             <option value="107871">107871</option>
+                                             <option value="1078712">1078712</option>
+                                          </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <div class="clearfix form-group">
+                                       <label class="control-label" for="">Employee's Name</label>
+                                       <input class='required form-control' id='emp_name' name='emp_name' type='text' value="" readonly>
+                                    </div>
+                                 </div>
+                                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <div class="clearfix form-group">
+                                       <label class="control-label" for="">Department</label>
+                                       <input class='required form-control' id='empDept' name='empDept' type='text' value="" readonly>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 clearfix form-group">
+                                    <label class="control-label" for="">Job Classification</label>
+                                    <select class="selectpicker form-control" name="jobClassification" data-style='btn-white'>
+                                       <option>Annual</option>
+                                       <option>End of Probation Period</option>
+                                       <option>Other</option>
+                                    </select>
+                                 </div>
+                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 clearfix form-group">
+                                    <label class="control-label" for="">Hire Date</label>
+                                    <input class='required form-control' id='hireDate' name='hireDate' type='text' value="" readonly>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="floating-text">
+                                       <span>5 - <strong>Exceptional</strong></span>
+                                    </div>
+                                    <div class="floating-text">
+                                       <span>4 - <strong>Superior</strong></span>
+                                    </div>
+                                    <div class="floating-text">
+                                       <span>3 - <strong>Satisfactory</strong></span>
+                                    </div>
+                                    <div class="floating-text">
+                                       <span>2 - <strong>Improvement Needed</strong></span>
+                                    </div>
+                                    <div class="floating-text">
+                                       <span>1 - <strong>Unsatisfactory</strong></span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <h3>1. Quality</br></h3>
+                                    <input type="hidden" id="quality" name="quality">
+                                 </div>
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">a. Work is accurate and precise.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="qualityA">
+                                          <option hidden>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">b. Recognizes and points out substandard workmanship.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker col-lg-12 form-control" data-style='btn-white' id="qualityB">
+                                          <option hidden>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">c. Displays thoroughness and completeness in work activity.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="qualityC">
+                                          <option hidden>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">d. Takes proper care of equipments/keeps work area clean.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="qualityD">
+                                          <option hidden>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>  
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <h3>2. Productivity </br></h3>
+                                    <input type="hidden" id="productivity" name="productivity">
+                                 </div>
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">a. Amount of work completed (quantity).</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="productivityA">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">b. Utilizes time well.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="productivityB">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-12">
+
+                                 </div>
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">c. Organizes in such a manner to perform responsibilities.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="productivityC">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <h3>3. Job Knowledge </br></h3>
+                                    <input type="hidden" id="jobKnowledge" name="jobKnowledge">
+                                 </div>
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">a. Able to follow verbal and/or written instructions.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="jobKnowledgeA">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">b. Uses proper procedures.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="jobKnowledgeB">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">c. Uses proper methods and tools.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="jobKnowledgeC">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">d. Perform work without detailed instructions. </label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="jobKnowledgeD">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">e. Shows improvement on repetitive tasks.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="col-lg-12 selectpicker form-control" data-style='btn-white' id="jobKnowledgeE">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">f. Able to train others (if applicable)</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="col-lg-12 selectpicker col-lg-12 form-control" data-style='btn-white' id="jobKnowledgeF">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">g. Has practical/technical knowledge to perform job.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="col-lg-12 selectpicker form-control" data-style='btn-white' id="jobKnowledgeG">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <h3>4. Reliability </br></h3>
+                                    <input type="hidden" id="reliability" name="reliability">
+                                 </div>
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">a. Begins and finishes on time.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="reliabilityA">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">b. Requires minimum supervision; completes tasks without prompting.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="reliabilityB">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">c. Completes tasks efficiectly within required time frames.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="reliabilityC">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">d. Puts in extra time and effort.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="reliabilityD">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">e. Does the best according to ability and within minimum job standards.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="reliabilityE">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <h3>5. Attendance</h3>
+                                    <input type="hidden" id="attendance" name="attendance">
+                                 </div>
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">a. At work on a daily basis.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="attendanceA">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">b. Starts and finishes according to approved schedule (punctual).</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="attendanceB">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">c. Calls to explain absence.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="form-control" data-style='btn-white' id="attendanceC">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">d. Observes generally agreed work break/meal periods.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="attendanceD">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <h3>6. Initiative/Creativity</h3>
+                                    <input type="hidden" id="initiative" name="initiative">
+                                 </div>
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">a. Seeks out new assignments when finished with own work</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="initiativeA">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">b. Assumes addutional responsibilities when needed.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="initiativeB">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">c. Properly selects priorities.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="initiativeC">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">d. Determines wqhat must be done without beiung told.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="initiativeD">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">e. Makes suggestions on better ways of getting work done.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="initiativeE">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">f. Identifies and corrects errors during work process.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="initiativeF">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <h3>7. Teamwork</h3>
+                                    <input type="hidden" id="teamwork" name="teamwork">
+                                 </div>
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">a. Works well with supervisor, peers, and subordinates.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="teamworkA">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">b. Sets an example with a positive and supportive attitude.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="teamworkB">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">c. Communicates well with coworkers and supervisors.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="teamworkC">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">d. Promotes teamwork in the work place.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="teamworkD">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <h3>8. Policy Compliance</h3>
+                                    <input type="hidden" id="teamwork" name="teamwork">
+                                 </div>
+
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">a. Works well with supervisor, peers, and subordinates.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="teamworkA">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">b. Sets an example with a positive and supportive attitude.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="teamworkB">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">c. Communicates well with coworkers and supervisors.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="teamworkC">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">d. Promotes teamwork in the work place.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="teamworkD">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <h3>9. Customer Service</h3>
+                                    <input type="hidden" id="service" name="service">
+                                 </div>
+
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">a. Establishes positive relations inter/intra departmentally.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="col-lg-12 selectpicker form-control" data-style='btn-white' id="serviceA">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">b. Responsive and courteous to client inquires.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="otherC">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <h3>10. Other</h3>
+                                    <input type="hidden" id="other" name="other">
+                                 </div>
+
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">a. Judgement and decision-making.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="otherC">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">b. Adaptability.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="otherC">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearfix form-group">
+                                       <label class="control-label">c. Problem Solving.</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearfix form-group">
+                                       <select class="selectpicker form-control" data-style='btn-white' id="otherC">
+                                          <option>--SELECT--</option>
+                                          <option value="5">5</option>
+                                          <option value="4">4</option>
+                                          <option value="3">3</option>
+                                          <option value="2">2</option>
+                                          <option value="1">1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <div class="clearfix form-group">
+                                       <label class="control-label">Supervisor's Comments</label>
+                                       <textarea class='required form-control form-control' id='comments' name='comments' rows='6' style="resize: none;"></textarea>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <div class="pull-right">
+                                       <!-- <button class="btn btn-default btn-rounded waves-effect waves-light" type="button">Cancel</button> -->
+                                       <button class="btn btn-success" type="button" id="addEval">Save</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--end of modal-->  
+
+      <!-- View Evaluation Modal -->
+      <div class="modal fade" id="viewEvaluation" role="dialog">
+         <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">View Evaluation</h4>
+               </div>
+               <div class="modal-body">
+                  <div class="panel panel-custom">
+                     <div class="panel-heading"><i class="fa fa-eye"></i> &nbsp&nbspEmployee View Evaluation</div>
+                     <div class="panel-body">
+                        <div class="card-box">
+                     <div class="row">
+                        <div class="row">
+                           <div class="col-lg-12 text-center">
+                              <img src='../../content/images/principal1.png' class="img-circle " title="contact-img" alt="contact-img" height="60px" width="60px">
+                              <div>
+                                 <b>Employee No. 3</b>
+                              </div>
+                           </div>
+                           <div class="col-lg-12">
+                              <div class="row" align="center">
+                                 <br>
+                                 <div>
+                                    <b>Name: Bravo, Raymark Duyor</b>
+                                 </div>
+                                 <br>
+                                 <div>
+                                    <b>Department: Transportation</b>
+                                 </div>
+                                 <div>
+                                    <b>Role: Driver</b>
+                                 </div>
+                                 <div>
+                                    <b>Job Classification: Annual</b>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <h1 style="margin-left: 15px; font-size: 30px;">Employee Evaluation</h1>
+                     <div class="row ">
+                        <div class="card-box">
+                           <div class="row" align="center">
+                              <div class="col-lg-12">
+                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="floating-text">
+                                       <span>5 - <strong>Exceptional</strong></span>
+                                    </div>
+                                    <div class="floating-text">
+                                       <span>4 - <strong>Superior</strong></span>
+                                    </div>
+                                    <div class="floating-text">
+                                       <span>3 - <strong>Satisfactory</strong></span>
+                                    </div>
+                                    <div class="floating-text">
+                                       <span>2 - <strong>Improvement Needed</strong></span>
+                                    </div>
+                                    <div class="floating-text">
+                                       <span>1 - <strong>Unsatisfactory</strong></span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- end of cardbox-->
+                     </div>
+                     <!-- end of row-->
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="col-lg-12">
+                              <div class="table-responsive card-box">
+                                 <table class="table table-hover ">
+                                    <thead>
+                                       <tr>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <label>1. Quality</label>
+                                       <input type="hidden" id="qualityArray" value="5,4,3,2">
+                                       <tr class="">
+                                          <th>a. Work is accurate and precise.</th>
+                                          <td style="padding-left: 200px" class="quality pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>b. Recognizes and points out substandard workmanship.</th>
+                                          <td style="padding-left: 200px" class="quality pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>c. Displays thoroughness and completeness in work activity.</th>
+                                          <td style="padding-left: 200px" class="quality pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>d. Takes proper care of equipments/keeps work area clean.</th>
+                                          <td style="padding-left: 200px" class="quality pull-right"></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <div class="table-responsive card-box">
+                                 <table class="table table-hover mails m-0 table table-actions-bar">
+                                    <tbody>
+                                       <label>2. Productivity</label>
+                                       <input type="hidden" id="productivityArray" value="3,2,1">
+                                       <tr class="">
+                                          <th>a. Amount of work completed (quantity).</th>
+                                          <td style="padding-left: 200px" class="productivity pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>b. Utilizes time well.</th>
+                                          <td style="padding-left: 200px" class="productivity pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>c. Organizes in such a manner to perform responsibilities.</th>
+                                          <td style="padding-left: 200px" class="productivity pull-right"></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <div class="table-responsive card-box">
+                                 <table id="test" class="table table-hover mails m-0 table table-actions-bar">
+                                    <tbody>
+                                       <label>3. Job Knowledge</label>
+                                       <input type="hidden" id="jobArray" value="4,2,4,3,3,1,1">
+                                       <tr class="">
+                                          <th>a. Able to follow verbal and/or written instructions.</th>
+                                          <td style="padding-left: 200px" class="job pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>b. Uses proper procedures.</th>
+                                          <td style="padding-left: 200px" class="job pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>c. Uses proper methods and tools.</th>
+                                          <td style="padding-left: 200px" class="job pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>d. Perform work without detailed instructions.</th>
+                                          <td style="padding-left: 200px" class="job pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>e. Shows improvement on repetitive tasks.</th>
+                                          <td style="padding-left: 200px" class="job pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>f. Able to train others (if applicable)</th>
+                                          <td style="padding-left: 200px" class="job pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>g. Has practical/technical knowledge to perform job.</th>
+                                          <td style="padding-left: 200px" class="job pull-right"></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <div class="table-responsive card-box">
+                                 <table class="table table-hover mails m-0 table table-actions-bar">
+                                    <thead>
+                                       <tr>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <label>4. Reliability</label>
+                                       <input type="hidden" id="reliabilityArray" value="4,3,3,3,5">
+                                       <tr class="">
+                                          <th>a. Begins and finishes on time.</th>
+                                          <td style="padding-left: 200px" class="reliability pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>b. Requires minimum supervision; completes tasks without prompting.</th>
+                                          <td style="padding-left: 200px" class="reliability pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>c. Completes tasks efficiectly within required time frames.</th>
+                                          <td style="padding-left: 200px" class="reliability pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>d. Puts in extra time and effort.</th>
+                                          <td style="padding-left: 200px" class="reliability pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>e. Does the best according to ability and within minimum job standards.</th>
+                                          <td style="padding-left: 200px" class="reliability pull-right"></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <div class="table-responsive card-box">
+                                 <table class="table table-hover mails m-0 table table-actions-bar">
+                                    <thead>
+                                       <tr>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <label>5. Attendance </label>
+                                       <input type="hidden" id="attendanceArray" value="5,4,2,3">
+                                       <tr class="">
+                                          <th>a. At work on a daily basis.</th>
+                                          <td style="padding-left: 200px" class="attendance pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>b. Starts and finishes according to approved schedule (punctual).</th>
+                                          <td style="padding-left: 200px" class="attendance pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>c. Calls to explain absence.</th>
+                                          <td style="padding-left: 200px" class="attendance pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>d. Observes generally agreed work break/meal periods.</th>
+                                          <td style="padding-left: 200px" class="attendance pull-right"></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <div class="table-responsive card-box">
+                                 <table class="table table-hover mails m-0 table table-actions-bar">
+                                    <thead>
+                                       <tr>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <label>6. Initiative/Creativity </label>
+                                       <input type="hidden" id="creativityArray" value="2,2,2,2,3,4">
+                                       <tr class="">
+                                          <th>a. Seeks out new assignments when finished with own work.</th>
+                                          <td style="padding-left: 200px" class="creativity pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>b. Assumes addutional responsibilities when needed.</th>
+                                          <td style="padding-left: 200px" class="creativity pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>c. Properly selects priorities.</th>
+                                          <td style="padding-left: 200px" class="creativity pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>d. Determines wqhat must be done without beiung told.</th>
+                                          <td style="padding-left: 200px" class="creativity pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>e. Makes suggestions on better ways of getting work done.</th>
+                                          <td style="padding-left: 200px" class="creativity pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>f. Identifies and corrects errors during work process.</th>
+                                          <td style="padding-left: 200px" class="creativity pull-right"></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <div class="table-responsive card-box">
+                                 <table class="table table-hover mails m-0 table table-actions-bar">
+                                    <tbody>
+                                       <label>7. Teamwork</label>
+                                       <input type="hidden" id="teamworkArray" value="5,1,5,5">
+                                       <tr class="">
+                                          <th>a. Works well with supervisor, peers, and subordinates.</th>
+                                          <td style="padding-left: 200px" class="teamwork pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>b. Sets an example with a positive and supportive attitude.</th>
+                                          <td style="padding-left: 200px" class="teamwork pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>c. Communicates well with coworkers and supervisors.</th>
+                                          <td style="padding-left: 200px" class="teamwork pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>d. Promotes teamwork in the work place.</th>
+                                          <td style="padding-left: 200px" class="teamwork pull-right"></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <div class="table-responsive card-box">
+                                 <table class="table table-hover mails m-0 table table-actions-bar">
+                                    <tbody>
+                                       <label>8. Policy Compliance</label>
+                                       <input type="hidden" id="policyArray" value="5,3">
+                                       <tr class="">
+                                          <th>a. Practices proper safety procedures.</th>
+                                          <td style="padding-left: 200px" class="policy pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>b. Aderes to all company policies and regulations.</th>
+                                          <td style="padding-left: 200px" class="policy pull-right"></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <div class="table-responsive card-box">
+                                 <table class="table table-hover mails m-0 table table-actions-bar">
+                                    <tbody>
+                                       <label>9. Customer Service</label>
+                                       <input type="hidden" id="customerArray" value="3,4">
+                                       <tr class="">
+                                          <th>a. Establishes positive relations inter/intra departmentally.</th>
+                                          <td style="padding-left: 200px" class="customer pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>b. Responsive and courteous to client inquires.</th>
+                                          <td style="padding-left: 200px" class="customer pull-right"></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <div class="table-responsive card-box">
+                                 <table class="table table-hover mails m-0 table table-actions-bar">
+                                    <tbody>
+                                       <label>10. Other</label>
+                                       <input type="hidden" id="otherArray" value="5,5,5">
+                                       <tr class="">
+                                          <th>a. Judgement and decision-making.</th>
+                                          <td style="padding-left: 200px" class="other pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>b. Adaptability.</th>
+                                          <td style="padding-left: 200px" class="other pull-right"></td>
+                                       </tr>
+                                       <tr class="">
+                                          <th>c. Problem Solving.</th>
+                                          <td style="padding-left: 200px" class="other pull-right"></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <div class="table-responsive card-box">
+                                 <table class="table table-hover mails m-0 table table-actions-bar">
+                                    <tbody>
+                                       <label>Supervisor's Comments</label>
+                                       <tr class="">
+                                          <th style="min-width: 350px"></th>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--end of modal-->
+
+      <!-- plugin scripts -->
+
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/dataTables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script>
+         $(document).ready(function () {      
+                     $('#datatable').dataTable();
+                     $('#datatable-keytable').DataTable({keys: true});
+                     $('#datatable-responsive').DataTable();
+                     $('#datatable-colvid').DataTable({
+                         "dom": 'C<"clear">lfrtip',
+                         "colVis": {
+                             "buttonText": "Change columns"
+                         }
+                     });
+                     $('#datatable-scroller').DataTable({
+                         ajax: "assets/plugins/datatables/json/scroller-demo.json",
+                         deferRender: true,
+                         scrollY: 380,
+                         scrollCollapse: true,
+                         scroller: true
+                     });
+                     var table = $('#datatable-fixed-header').DataTable({fixedHeader: true});
+                     var table = $('#datatable-fixed-col').DataTable({
+                         scrollY: "300px",
+                         scrollX: true,
+                         scrollCollapse: true,
+                         paging: false,
+                         fixedColumns: {
+                             leftColumns: 1,
+                             rightColumns: 1
+                         }
+                     });
+                 });
+                 
+         
+                 var quality = $('#qualityArray').val();
+                 var qualityArr = quality.split(",");
+                 $('.quality').each(function(i){
+                   $(this).text(qualityArr[i]);
+                 })  
+                 var productivity = $('#productivityArray').val();
+                 var productivityArr = productivity.split(",");
+                 $('.productivity').each(function(i){
+                   $(this).text(productivityArr[i]);
+                 })       
+                 var job = $('#jobArray').val();
+                 var jobArr = job.split(",");
+                 $('.job').each(function(i){
+                   $(this).text(jobArr[i]);
+                 })  
+                 var reliability = $('#reliabilityArray').val();
+                 var reliabilityArr = reliability.split(",");
+                 $('.reliability').each(function(i){
+                   $(this).text(reliabilityArr[i]);
+                 })  
+                 var attendance = $('#attendanceArray').val();
+                 var attendanceArr = attendance.split(",");
+                 $('.attendance').each(function(i){
+                   $(this).text(attendanceArr[i]);
+                 })  
+                 var creativity = $('#creativityArray').val();
+                 var creativityArr = creativity.split(",");
+                 $('.creativity').each(function(i){
+                   $(this).text(creativityArr[i]);
+                 })  
+                 var teamwork = $('#teamworkArray').val();
+                 var teamworkArr = teamwork.split(",");
+                 $('.teamwork').each(function(i){
+                   $(this).text(teamworkArr[i]);
+                 })  
+                 var policy = $('#policyArray').val();
+                 var policyArr = policy.split(",");
+                 $('.policy').each(function(i){
+                   $(this).text(policyArr[i]);
+                 })  
+                 var customer = $('#customerArray').val();
+                 var customerArr = customer.split(",");
+                 $('.customer').each(function(i){
+                   $(this).text(customerArr[i]);
+                 })  
+                 var other = $('#otherArray').val();
+                 var otherArr = other.split(",");
+                 $('.other').each(function(i){
+                   $(this).text(otherArr[i]);
+                 })  
+         
+             
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+           var oTable = $('#myTable').DataTable({
+             "orderCellsTop": false,
+             "searchHighlight" : true,
+             "ordering": false,
+           });
+           $('#search').keyup(function(){
+                 oTable.search($(this).val()).draw() ;
+           });
+           $(".dataTables_filter").hide();
+           oTable.on('order.dt search.dt', function(){
+             oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+              function (cell, i) {
+               cell.innerHTML = i+1;
+               } );
+           }).draw();
+         });
+    </script>
+      <!-- end of your custom script -->
+   </body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/document.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Principal</title>
+      <link rel="icon" href="./Principal_files/logonatin.png">
+      
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="./Principal_files/bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="./Principal_files/style.css" rel="stylesheet">
+      <link href="./Principal_files/P-Mainpage.css" rel="stylesheet">
+      <link href="./Principal_files/font-awesome.min.css" rel="stylesheet">
+      <link href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/content/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   <style>
+    .super-panel-lg {
+    border: 3px solid #44A5C9!important;
+    border-radius: 20px!important;
+    }
+    .pageimg {
+      height: 70px;
+      margin: 0px 5px 5px 5px;
+    }
+    .spr-label {
+      font-size: 18px !important;
+    }
+    .modal-xl {
+      width: 90%;
+      max-width: 1200px;
+    }
+    @media (min-width: 768px) {
+    .modal-dialog {
+        width: 600px;
+        margin: 30px auto;
+    }
+
+    ...
+    }
+
+    @media (min-width: 992px) {
+        .modal-lg {
+            width: 900px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .modal-xl {
+            width: 90%;
+            max-width: 1200px;
+        }
+    }
+    .dataTables_paginate {
+      float: right;
+    }
+  </style></head>
+   
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/document.html#" style="color: white;">
+               <img class="schuler" src="./Principal_files/logonatin.png" height="25" width="30">
+               </a>
+               <a class="navbar-brand schulercolor" href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/document.html#">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/document.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/document.html#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/document.html#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/document.html#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                         <li>
+                                <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/document.html#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;See all notifications...</a>
+                         </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/document.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/document.html#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/document.html#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/document.html#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container ">
+        <br>
+        <br>
+        <div class="page-header" style="color: #000033"><h2><strong>Principal Management</strong></h2></div>
+        <ol class="breadcrumb" style="background-color: #D9EDF7">
+          <li><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/principal-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+          <li>Student Transcript</li>
+        </ol>
+      <!-- your code start here -->
+      <!-- Please observe indention -->
+      
+      <div class="panel panel-custom">
+              <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-male fa-lg"></i> Student List
+               </div>
+               <div class="panel-body">
+
+                  <div class="row">
+                     <div class="col-sm-8">
+                        <div class="form-group contact-search m-b-30">
+                           <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                        </div>
+                     </div>
+                     <div class="col-lg-12">
+                     <div class="table-responsive">
+                        <table class="display nowrap table table-striped table-hover" id="myTable">
+                           <thead>
+                              <tr>
+                                 <th style="max-width: 95px;"> </th>
+                                 <th style="max-width: 95px;"> </th>
+                                 <th>Student Name:</th>
+                                 <th>Grade/Year</th>
+                                 <th>Section</th>
+                                 <th>Document Type</th>
+                                 <th>Action</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr class="">
+                                 <td></td>
+                                 <td></td>
+                                 <td>Ivan Genesis</td>
+                                 <td>5th Grade</td>
+                                 <td>Aguinaldo</td>
+                                 <td>
+                                  <select id="1st">
+                                      <option disabled="" selected="" value=""> -- Select Document Type -- </option>
+                                      <option value="transcript.html">Transcript of Records</option>
+                                      <option value="diploma.html">Diploma</option>
+                                      <option value="form137.html">Form 137</option>
+                                  </select>
+                                 </td>
+                                 <td><a id="view1" href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/document.html" class="btn btn-info" name="" type="button">View</a></td>
+                              </tr>
+                              <tr class="">
+                                 <td></td>
+                                 <td></td>
+                                 <td>John Xavier Buenaventura</td>
+                                 <td>2nd Year</td>
+                                 <td>Block B</td>
+                                 <td>
+                                  <select id="2nd">
+                                      <option disabled="" selected="" value=""> -- Select Document Type -- </option>
+                                      <option value="transcript2.html">Transcript of Records</option>
+                                      <option value="diploma2.html">Diploma</option>
+                                      <option value="form1372.html">Form 137</option>
+                                  </select>
+                                 </td>
+                                 <td><a id="view2" href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/document.html" class="btn btn-info" name="" type="button">View</a></td>
+                              </tr>
+                              <tr class="">
+                                 <td></td>
+                                 <td></td>
+                                 <td>John Benson Leabres</td>
+                                 <td>3rd Year</td>
+                                 <td>Block A</td>
+                                 <td>
+                                  <select id="3rd">
+                                      <option disabled="" selected="" value=""> -- Select Document Type -- </option>
+                                      <option value="transcript3.html">Transcript of Records</option>
+                                      <option value="diploma3.html">Diploma</option>
+                                      <option value="form1373.html">Form 137</option>
+                                  </select>
+                                 </td>
+                                 <td><a id="view3" href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/document.html" class="btn btn-info" name="" type="button">View</a></td>
+                              </tr>
+                              <tr class="">
+                                 <td></td>
+                                 <td></td>
+                                 <td>Carl Gorgonia</td>
+                                 <td>1st Year</td>
+                                 <td>Block D</td>
+                                 <td>
+                                  <select>
+                                      <option disabled="" selected="" value=""> -- Select Document Type -- </option>
+                                      <option value="transcript.html">Transcript of Records</option>
+                                      <option value="diploma.html">Diploma</option>
+                                      <option value="form137.html">Form 137</option>
+                                  </select>
+                                 </td>
+                                 <td><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/transcript.html" class="btn btn-info" id="" name="" type="button">View</a></td>
+                              </tr>
+                              <tr class="">
+                                 <td></td>
+                                 <td></td>
+                                 <td>Bea Trixia</td>
+                                 <td>4th Grade</td>
+                                 <td>Rose</td>
+                                 <td>
+                                  <select>
+                                      <option disabled="" selected="" value=""> -- Select Document Type -- </option>
+                                      <option value="transcript.html">Transcript of Records</option>
+                                      <option value="diploma.html">Diploma</option>
+                                      <option value="form137.html">Form 137</option>
+                                  </select>
+                                 </td>
+                                 <td><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/transcript.html" class="btn btn-info" id="" name="" type="button">View</a></td>
+                              </tr>
+                              <tr class="">
+                                 <td></td>
+                                 <td></td>
+                                 <td>Antonio Bravo</td>
+                                 <td>4th Year</td>
+                                 <td>Block D</td>
+                                 <td>
+                                  <select>
+                                      <option disabled="" selected="" value=""> -- Select Document Type -- </option>
+                                      <option value="transcript.html">Transcript of Records</option>
+                                      <option value="diploma.html">Diploma</option>
+                                      <option value="form137.html">Form 137</option>
+                                  </select>
+                                 </td>
+                                 <td><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/transcript.html" class="btn btn-info" id="" name="" type="button">View</a></td>
+                              </tr>
+                              <tr class="">
+                                 <td></td>
+                                 <td></td>
+                                 <td>John Mayson Labuntog</td>
+                                 <td>7th Grade</td>
+                                 <td>Quartz</td>
+                                 <td>
+                                  <select>
+                                      <option disabled="" selected="" value=""> -- Select Document Type -- </option>
+                                      <option value="transcript.html">Transcript of Records</option>
+                                      <option value="diploma.html">Diploma</option>
+                                      <option value="form137.html">Form 137</option>
+                                  </select>
+                                 </td>
+                                 <td><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/transcript.html" class="btn btn-info" id="" name="" type="button">View</a></td>
+                              </tr>
+                              <tr class="">
+                                 <td></td>
+                                 <td></td>
+                                 <td>Jhamila Okla</td>
+                                 <td>3rd Year</td>
+                                 <td>Block C</td>
+                                 <td>
+                                  <select>
+                                      <option disabled="" selected="" value=""> -- Select Document Type -- </option>
+                                      <option value="transcript.html">Transcript of Records</option>
+                                      <option value="diploma.html">Diploma</option>
+                                      <option value="form137.html">Form 137</option>
+                                  </select>
+                                 </td>
+                                 <td><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Principal/transcript.html" class="btn btn-info" id="" name="" type="button">View</a></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+                  </div>
+                  
+               </div>
+            </div>
+     
+      <!-- end of your code -->
+      <!-- footer here -->
+      <footer class="navbar-fixed-bottom">
+         <div class="container-fluid footer">
+            <p class="pull-right powerby">© 2016 - Powered by <a href="http://www.simplevia.com/" class="quicktrackcolor">QuickTrack</a></p>
+         </div>
+      </footer>
+      <!-- end foooter -->
+      </div>
+
+      <!-- plugin scripts -->
+      <script src="./Principal_files/jquery.min.js"></script>
+      <script src="./Principal_files/jquery-ui.min.js"></script>
+      <script src="./Principal_files/jquery.min.js"></script>
+      <script src="./Principal_files/jquery.dataTables.min.js"></script> 
+      <script src="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/content/DataTables/js/dataTables.bootstrap.js"></script>
+      <script src="./Principal_files/dataTables.buttons.min.js"></script>
+      <script src="./Principal_files/buttons.bootstrap.min.js"></script>
+      <script src="./Principal_files/buttons.html5.min.js"></script>
+      <script src="./Principal_files/buttons.print.min.js"></script>
+      <script src="./Principal_files/dataTables.fixedColumns.min.js"></script>
+      <script src="./Principal_files/dataTables.fixedHeader.min.js"></script>
+      <script src="./Principal_files/dataTables.keyTable.min.js"></script>
+      <script src="./Principal_files/dataTables.scroller.min.js"></script>
+      <script src="./Principal_files/bootstrap.min.js"></script>
+      <script src="./Principal_files/formValidation.min.js"></script>
+      <script src="./Principal_files/bootstrap.min(1).js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script type="text/javascript">
+       $(document).ready(function(){
+         var oTable = $('#myTable').DataTable({
+           "orderCellsTop": false,
+           "searchHighlight" : true,
+         });
+         $('#search').keyup(function(){
+               oTable.search($(this).val()).draw() ;
+         });
+         $(".dataTables_filter").hide();
+         oTable.on('order.dt search.dt', function(){
+           oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+            function (cell, i) {
+             cell.innerHTML = i+1;
+             } );
+         }).draw();
+
+
+       });
+    </script>
+    <script>
+      $(document).ready(function () {
+            $('#1st').on('change', function () {
+               $('#view1').attr('href', $('#1st').val());
+            });
+        });
+
+    </script>
+    <script>
+      $(document).ready(function () {
+            $('#2nd').on('change', function () {
+               $('#view2').attr('href', $('#2nd').val());
+            });
+        });
+
+    </script>
+    <script>
+      $(document).ready(function () {
+            $('#3rd').on('change', function () {
+               $('#view3').attr('href', $('#3rd').val());
+            });
+        });
+
+    </script>
+      <!-- end of your custom script -->
+   
+</body></html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Certificates</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style type="text/css">
+      #goodmoral, #goodmoral * {
+         display: none;
+      }
+      @media  print {
+         body * {
+            visibility: hidden;         }
+         #goodmoral, #goodmoral * {
+            visibility: visible;
+            display: block;
+         }
+         #goodmoral {
+            position: absolute;
+            left: 0;
+            top: 0;
+         }
+
+      }
+      .dataTables_length {
+       margin-bottom: 15px;
+       margin-top: 5px;
+      }
+      .page-header {
+        padding-bottom: 0px!important;
+        margin: 20px 0 0px!important;
+        border-bottom: 0px solid #eee!important;
+      }
+      .breadcrumb {
+        padding: 5px 15px!important;
+        margin-bottom: 10px!important;
+      }
+   </style>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                        <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                        <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+             
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033"><h2><strong>Counselor Management</strong></h2>
+          <ol class="breadcrumb" style="background-color: #D9EDF7">
+            <li><a href="counselor-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> <label style="font-size: 15px;"> Home</label></a></li>
+            <li style="font-size: 15px;">Student List</li>
+            <li><a href="#"></a></li>
+          </ol>
+          </div>
+
+         <!-- your code start here -->
+         <!-- Please observe indention -->
+         <section class="card-box">
+            <div class="panel panel-custom">
+              <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-users fa-lg"></i> Certificate List
+               </div>
+               <div class="panel-body">
+                  <div class="row">
+                     <div class="col-sm-6">
+                        <div class="form-group contact-search m-b-30">
+                           <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                        </div>
+                     </div>
+                     <div class="col-sm-4">
+                        <a href="#" class="btn btn-info btn-md waves-effect waves-light m-b-30" style="height: 40px; margin-top: 7px;" data-toggle="modal" data-target="#certModal">
+                        <i class="md md-add"></i> Issue Certificate</a>
+                     </div>
+                  </div>
+                  <div class="table-responsive">
+                     <table id="tableCert" class="table table-striped table-hover">
+                        <thead>
+                           <tr>
+                              <th  style="max-width: 95px;">ID</th>
+                              <th >Name of Certificate</th>
+                              <th >Name of Student</th>
+                              <th >Grade</th>
+                              <th  style="min-width: 10%;">Date Released</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>201203123</td>
+                              <td>Certificate of Honor</td>
+                              <td>John Mayson Labuntog</td>
+                              <td>95</td>
+                              <td>March 23,2017</td>
+                           </tr>
+                           <tr>
+                              <td>201203123</td>
+                              <td>Certificate of Appreciation</td>
+                              <td>John Xavier Buenaventura</td>
+                              <td>95</td>
+                              <td>March 23,2017</td>
+                           </tr>
+                           <tr>
+                              <td>201203123</td>
+                              <td>Certificate of Excellence</td>
+                              <td>John Benson Leabres</td>
+                              <td>95</td>
+                              <td>March 23,2017</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <form method="post" >
+            <div class="modal fade" id="certModal" role="dialog">
+               <div class="modal-dialog">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Certificate</h4>
+                     </div>
+                     <div  class="modal-body">
+                      
+                           <h3 style="font-size: 24px; margin-top: 5px;">Issue Certificate</h3>
+                           <br/>
+                           <table class="table table-hover mails m-0 table table-actions-bar">
+                              <thead>
+                                 <tr>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <div class="col-lg-12">
+                                    <label class="col-lg-12 control-label" for="itemtype">Type of Certificate</label>
+                                    <select class="col-lg-12 control-label form-control" id="certificate" name="certificate" data-style='btn-white'>
+                                       <option>Good Moral</option>
+                                       <option>Certificate of Something</option>
+                                    </select>
+                                    <label class="col-lg-12 control-label" for="name" style="padding-top: 10px;">Name of Student</label>
+                                    <input class='required form-control' placeholder="Enter Student Name or ID" id='name' name='name' type='text' list="listid" autocomplete="off" required>
+                                    <datalist id='listid'>
+                                       <option class="I,101558" value="Antonio, Jr. Gaveria Bravo">101558</option>
+                                       <option class="I,101559" value="Khrystine Gaveria Bravo">101559</option>
+                                       <option class="I,101560" value="John Xavier Buenaventura">101558</option>
+                                       <option class="I,101561" value="John Mayson Labuntog">101559</option>
+                                       <option class="I,101562" value="John Benson Leabres">101558</option>
+                                    </datalist>
+                                    <label class="col-lg-12 control-label" for="itemtype" style="padding-top: 10px;">Reason</label>
+                                    <input type="text" class="form-control" id="reason" name="reason" required>
+                                 </div>
+                              </tbody>
+                           </table>
+                     
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="printPage();">Save and Print</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <input type="hidden" name="grade3" id="grade3">
+            <input type="hidden" name="name3" id="name3">
+            <input type="hidden" name="studentId" id="studentId">
+            <input type="hidden" name="_token" value="clDkc4rSF3gvQUxgwvPfrzK1anskffTOkP82P1a3">
+            <hr />
+         </form>
+         <div id="goodmoral" class="goodmoral" style="height: 12in; width: 11.5in;" >
+            <img src="../../content/images/goodmoral2.jpg" style="height: 20%; width: auto;">
+            <p id="name2" style="position: absolute; left: 47%; top: 42%;"></p>
+            <p id="grade2" style="position: absolute; left: 17%; top: 46.5%;"></p>
+            <p id="reason2" style="position: absolute; left: 66%; top: 64.5%;"></p>
+            <p style="position: absolute; left: 26%; top: 68.6%;">18</p>
+            <p style="position: absolute; left: 41%; top: 68.6%;">October, 2017</p>
+         </div>
+         <!-- end of your code -->
+         <!-- footer here -->
+         <footer class="navbar-fixed-bottom">
+            <div class="container-fluid" style="background-color: #35AC49;">
+               <p class="pull-right " style="padding-top: .5%; padding-right: 3%; font-size: 10px; font-weight: bolder; color: #000033;">&copy; 2016 - Powered by <a href="http://www.simplevia.com" style="color: #fff;">QuickTrack</a></p>
+            </div>
+         </footer>
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/datatables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script type="text/javascript">
+         //datatables
+         function filterGlobal () {
+             $('#tableCert').DataTable().search(
+                 $('#search').val()
+             ).draw();
+         }
+         $(document).ready(function() {
+           $('#tableCert').DataTable({
+               "dom": "<'col-sm-12'l>Brtip",
+               buttons: 
+               [],
+               "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+               
+           });
+         
+         $('#search').on( 'keyup click', function () {
+             filterGlobal();
+           });
+         });
+      </script>
+      <script type="text/javascript">
+         $('#reason').on('keyup keypress blur change', function() {
+           $('#reason2').text($(this).val());
+         });
+         
+         $(function() {
+           $('#name').on('input change',function() {
+             var opt = $('option[value="'+$(this).val()+'"]');
+             var foo = (opt.attr('class'));
+             var bar = foo.split(",");
+             // console.log(foo);
+             $('#name2').text($(this).val());
+             $('#name3').val($(this).val());
+             $('#grade2').text('Grade ' + bar[0]);
+             $('#grade3').val('Grade ' + bar[0]);
+             $('#studentId').val(bar[1]);
+           });
+         });
+         function printPage(){
+            window.print();
+         }
+      </script>
+      <!-- end of your custom script -->
+   </body>
+</html>

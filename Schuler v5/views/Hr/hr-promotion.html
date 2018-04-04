@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Human Resource Management</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style>
+      .dataTables_length {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      }
+   </style>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                        <li>
+                           <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                        <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                        <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+      <br>
+      <br>
+      <div class="page-header" style="color: #000033">
+         <h2><strong>Human Resource Management</strong></h2>
+      </div>
+      <ol class="breadcrumb" style="background-color: #D9EDF7">
+         <li><a href="hr-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+         <li>Employee Promotion</li>
+      </ol>
+      <!-- your code start here -->
+      <!-- Please observe indention -->
+      <section class="card-box">
+         <div class="panel panel-custom">
+            <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-users fa-lg"></i> Employee List</div>
+            <div class="panel-body">
+               <div class="row">
+                  <div class="col-sm-8">
+                     <div class="form-group contact-search m-b-30">
+                        <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                     </div>
+                  </div>
+                  <div class="col-sm-4">
+                     <button type="button" class="btn btn-info btn-md waves-effect waves-light m-b-30" style="height: 40px; margin-top: 7px;" data-toggle="modal" data-target="#promoteEmployee"> <i class="fa fa-bar-chart" ></i>&nbsp&nbspPromote Employee</button>
+                  </div>
+               </div>
+               <div class="table-responsive" style="margin-top: 10px;">
+                  <table class="display no wrap table table-striped table-hover" id="myTable">
+                     <thead>
+                        <tr>
+                           <th style="text-align: center;">#</th>
+                           <th style="text-align: center;">Name of Employee</th>
+                           <th style="text-align: center;">Hired Date</th>
+                           <th style="text-align: center;">Years of Service</th>
+                           <th style="text-align: center;">Department</th>
+                           <th style="text-align: center;">Gender</th>
+                           <th style="text-align: center;">Recommended By</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td style="text-align: center;"></td>
+                           <td style="text-align: center;">Mayson</td>
+                           <td style="text-align: center;">May 2,2013</td>
+                           <td style="text-align: center;">3</td>
+                           <td style="text-align: center;">IT Dept</td>
+                           <td style="text-align: center;">Male</td>
+                           <td style="text-align: center;">John Mayson Labuntog</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center;"></td>
+                           <td style="text-align: center;">Xavier</td>
+                           <td style="text-align: center;">October 2,2013</td>
+                           <td style="text-align: center;">4</td>
+                           <td style="text-align: center;">Hr Dept</td>
+                           <td style="text-align: center;">Male</td>
+                           <td style="text-align: center;">John Mayson Labuntog</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center;"></td>
+                           <td style="text-align: center;">Benson</td>
+                           <td style="text-align: center;">July 2,2013</td>
+                           <td style="text-align: center;">5</td>
+                           <td style="text-align: center;">Sales Dept</td>
+                           <td style="text-align: center;">Male</td>
+                           <td style="text-align: center;">John Mayson Labuntog</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center;"></td>
+                           <td style="text-align: center;">Bravo</td>
+                           <td style="text-align: center;">January 2,2013</td>
+                           <td style="text-align: center;">6</td>
+                           <td style="text-align: center;">Sales Dept</td>
+                           <td style="text-align: center;">Male</td>
+                           <td style="text-align: center;">John Mayson Labuntog</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center;"></td>
+                           <td style="text-align: center;">Ivan</td>
+                           <td style="text-align: center;">March 2,2013</td>
+                           <td style="text-align: center;">7</td>
+                           <td style="text-align: center;">Sales Dept</td>
+                           <td style="text-align: center;">Male</td>
+                           <td style="text-align: center;">John Mayson Labuntog</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center;"></td>
+                           <td style="text-align: center;">CJ</td>
+                           <td style="text-align: center;">April 2,2013</td>
+                           <td style="text-align: center;">8</td>
+                           <td style="text-align: center;">Sales Dept</td>
+                           <td style="text-align: center;">Male</td>
+                           <td style="text-align: center;">John Mayson Labuntog</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center;"></td>
+                           <td style="text-align: center;">Ave</td>
+                           <td style="text-align: center;">June 2,2013</td>
+                           <td style="text-align: center;">9</td>
+                           <td style="text-align: center;">Sales Dept</td>
+                           <td style="text-align: center;">Female</td>
+                           <td style="text-align: center;">John Mayson Labuntog</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center;"></td>
+                           <td style="text-align: center;">Eli</td>
+                           <td style="text-align: center;">August 2,2013</td>
+                           <td style="text-align: center;">1</td>
+                           <td style="text-align: center;">Sales Dept</td>
+                           <td style="text-align: center;">Male</td>
+                           <td style="text-align: center;">John Mayson Labuntog</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center;"></td>
+                           <td style="text-align: center;">Jham</td>
+                           <td style="text-align: center;">September 2,2013</td>
+                           <td style="text-align: center;">4</td>
+                           <td style="text-align: center;">Sales Dept</td>
+                           <td style="text-align: center;">Female</td>
+                           <td style="text-align: center;">John Mayson Labuntog</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center;"></td>
+                           <td style="text-align: center;">Bea</td>
+                           <td style="text-align: center;">December 2,2013</td>
+                           <td style="text-align: center;">4</td>
+                           <td style="text-align: center;">Sales Dept</td>
+                           <td style="text-align: center;">Female</td>
+                           <td style="text-align: center;">John Mayson Labuntog</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="modal fade" id="promoteEmployee" role="dialog">
+                  <div class="modal-dialog modal-lg">
+                     <!-- Modal content-->
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <button type="button" class="close" data-dismiss="modal">&times;</button>
+                           <h4 class="modal-title">Promotion Form</h4>
+                        </div>
+                        <div class="modal-body">
+                           <div class="panel panel-custom">
+                              <div class="panel-heading"><i class="fa fa-bar-chart" ></i>&nbsp&nbspPromote Employee</div>
+                              <div class="panel-body">
+                                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <div class="panel panel-custom p-xs">
+                                       <center>
+                                          <img src="../../content/images/principal1.png" height="170px" width="170px">
+                                       </center>
+                                       <br><br>
+                                       <table class="table table-striped table-responsive">
+                                          <thead>
+                                          </thead>
+                                          <tbody>
+                                             <tr class="">
+                                                <th>Name</th>
+                                                <td class="empName"></td>
+                                             </tr>
+                                             <tr class="">
+                                                <th>Employee No.</th>
+                                                <td class="empNumber"></td>
+                                             </tr>
+                                             <tr class="">
+                                                <th>Department</th>
+                                                <td class="empDept"></td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                    <div class="panel panel-custom p-xs">
+                                       <div class="panel-heading"><i class="fa fa-bar-chart" ></i>&nbsp&nbspSearch Employee</div>
+                                       <div class="panel panel-body">
+                                          <div class="col-lg-6 m-t-b-xs">
+                                             <label class=" control-label" for="">Department:</label>
+                                             <select class=" form-control" id="empNo" name="empId">
+                                                <option hidden="">-- Please Select --</option>
+                                                <option value="1">Filipino Deparment</option>
+                                                <option value="1">English Department</option>
+                                                <option value="1">Mapeh Department</option>
+                                             </select>
+                                          </div>
+                                          <div class="col-lg-6 m-t-b-xs">
+                                             <label class=" control-label" for="">Employee Name</label>
+                                             <select class=" form-control" id="empNo" name="empId">
+                                                <option hidden="">-- Please Select --</option>
+                                                <option value="1">Genesis Ivan Aquino</option>
+                                                <option value="1">John Benson Leabres</option>
+                                                <option value="1">John Xavier Buenaventura</option>
+                                                <option value="1">John Mayson Labuntog</option>
+                                             </select>
+                                          </div>
+                                       </div>
+                                       <div class="panel-heading"><i class="fa fa-bar-chart" ></i>&nbsp&nbspEmployee Information</div>
+                                       <div class="panel panel-body">
+                                          <div class="col-lg-6 m-t-b-xs">
+                                             <label class="control-label">Date Hired</label>
+                                             <input class="required form-control" type="text" id="dateHired" name="dateHired" readonly="">
+                                          </div>
+                                          <div class="col-lg-6 m-t-b-xs">
+                                             <label class="control-label">Employee Category</label>
+                                             <select class="form-control" name="empCategory">
+                                                <option hidden="">-- Please Select --</option>
+                                                <option>Regular</option>
+                                                <option>Contractual</option>
+                                             </select>
+                                          </div>
+                                          <div class="col-lg-6 m-t-b-xs">
+                                             <label class="control-label">Last Promoted on</label>
+                                             <input class="required form-control" type="text" name="lastPromoted">
+                                          </div>
+                                          <div class="col-lg-6 m-t-b-xs">
+                                             <label class="control-label">Promoted to</label>
+                                             <input class="required form-control" type="text" name="lastDestination">
+                                          </div>
+                                          <div class="col-lg-6 m-t-b-xs">
+                                             <label class="control-label">Qualification</label>
+                                             <input class="required form-control" name="qualification">
+                                          </div>
+                                       </div>
+                                       <div class="panel-heading"><i class="fa fa-bar-chart" ></i>&nbsp&nbspRecomendation</div>
+                                       <div class="panel panel-body">
+                                          <div class="col-lg-6 m-t-b-xs">
+                                             <label class="control-label">Recommended Designation</label>
+                                             <input class="required form-control" name="recDestination">
+                                          </div>
+                                          <div class="col-lg-6 m-t-b-xs">
+                                             <label class="control-label">Effective Date</label>
+                                             <input class="required form-control" name="effectiveDate">
+                                          </div>
+                                       </div>
+                                       <div class="panel-heading"><i class="fa fa-bar-chart" ></i>&nbsp&nbspPerformance</div>
+                                       <div class="panel panel-body">
+                                          <div class="col-lg-12 m-t-b-xs">
+                                             <label class="control-label">Achievements (Indicate achievements against objectives set)</label>
+                                             <textarea class="required form-control" style="resize: none" id="employeradd" name="achievements" rows="6"></textarea>
+                                          </div>
+                                          <div class="col-lg-12 m-t-b-xs">
+                                             <div class="table-responsive">
+                                                <table class="table table-striped ">
+                                                   <thead>
+                                                      <tr>
+                                                         <th>General Skills</th>
+                                                         <th>Score</th>
+                                                      </tr>
+                                                   </thead>
+                                                   <tbody>
+                                                      <tr class="">
+                                                         <td>1. Ability of Decision Making</td>
+                                                         <td>
+                                                            <select id="gen1" class="form-control">
+                                                               <option value="1">1</option>
+                                                               <option value="2">2</option>
+                                                               <option value="3">3</option>
+                                                               <option value="4">4</option>
+                                                               <option value="5">5</option>
+                                                            </select>
+                                                         </td>
+                                                      </tr>
+                                                      <tr class="">
+                                                         <td>2. level of Core Job Skills</td>
+                                                         <td>
+                                                            <select id="gen2" class="form-control">
+                                                               <option value="1">1</option>
+                                                               <option value="2">2</option>
+                                                               <option value="3">3</option>
+                                                               <option value="4">4</option>
+                                                               <option value="5">5</option>
+                                                            </select>
+                                                         </td>
+                                                      </tr>
+                                                      <tr class="">
+                                                         <td>3. Oral Communication</td>
+                                                         <td>
+                                                            <select id="gen3" class="form-control">
+                                                               <option value="1">1</option>
+                                                               <option value="2">2</option>
+                                                               <option value="3">3</option>
+                                                               <option value="4">4</option>
+                                                               <option value="5">5</option>
+                                                            </select>
+                                                         </td>
+                                                      </tr>
+                                                      <tr class="">
+                                                         <td>4. Team Work</td>
+                                                         <td>
+                                                            <select id="gen4" class="form-control">
+                                                               <option value="1">1</option>
+                                                               <option value="2">2</option>
+                                                               <option value="3">3</option>
+                                                               <option value="4">4</option>
+                                                               <option value="5">5</option>
+                                                            </select>
+                                                         </td>
+                                                      </tr>
+                                                      <tr class="">
+                                                         <td>5. Ability to Lead/Monitoring a Team/Staff</td>
+                                                         <td>
+                                                            <select id="gen5" class="form-control">
+                                                               <option value="1">1</option>
+                                                               <option value="2">2</option>
+                                                               <option value="3">3</option>
+                                                               <option value="4">4</option>
+                                                               <option value="5">5</option>
+                                                            </select>
+                                                         </td>
+                                                      </tr>
+                                                      <tr class="">
+                                                         <td>6. Ability to Develop/ Motivate a Team/Staff</td>
+                                                         <td>
+                                                            <select id="gen6" class="form-control">
+                                                               <option value="1">1</option>
+                                                               <option value="2">2</option>
+                                                               <option value="3">3</option>
+                                                               <option value="4">4</option>
+                                                               <option value="5">5</option>
+                                                            </select>
+                                                         </td>
+                                                      </tr>
+                                                      <tr class="">
+                                                         <td>7. Ability to Coaching/ Training Skills</td>
+                                                         <td>
+                                                            <select id="gen7" class="form-control">
+                                                               <option value="1">1</option>
+                                                               <option value="2">2</option>
+                                                               <option value="3">3</option>
+                                                               <option value="4">4</option>
+                                                               <option value="5">5</option>
+                                                            </select>
+                                                         </td>
+                                                      </tr>
+                                                      <tr class="">
+                                                         <td>8. Ability to Technical Suppport to Team</td>
+                                                         <td>
+                                                            <select id="gen8" class="form-control">
+                                                               <option value="1">1</option>
+                                                               <option value="2">2</option>
+                                                               <option value="3">3</option>
+                                                               <option value="4">4</option>
+                                                               <option value="5">5</option>
+                                                            </select>
+                                                         </td>
+                                                      </tr>
+                                                      <tr class="">
+                                                         <td>9. Dependability</td>
+                                                         <td>
+                                                            <select id="gen9" class="form-control">
+                                                               <option value="1">1</option>
+                                                               <option value="2">2</option>
+                                                               <option value="3">3</option>
+                                                               <option value="4">4</option>
+                                                               <option value="5">5</option>
+                                                            </select>
+                                                         </td>
+                                                      </tr>
+                                                   </tbody>
+                                                </table>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="panel-heading"><i class="fa fa-bar-chart" ></i>&nbsp&nbspNew Role Information</div>
+                                       <div class="panel panel-body">
+                                          <div class="col-lg-6 m-t-b-xs">
+                                             <label class="control-label">Behavior in the Workplace</label>
+                                             <input type="text" class="required form-control" name="behavior">
+                                          </div>
+                                          <div class="col-lg-12 m-t-b-xs">
+                                             <label class="control-label">Justification for Promotion</label>
+                                             <textarea type="text" class="required form-control" name="justification" cols="4"></textarea>
+                                          </div>
+                                          <div class="col-lg-12 m-t-b-xs">
+                                             <label class="control-label">Growth of Department by this Promotion</label>
+                                             <textarea type="text" class="required form-control" name="growth" cols="3"></textarea>
+                                          </div>
+                                          <div class="col-lg-12 m-t-b-xs">
+                                             <label class="control-label">Responsibilities <br>(Indicate the major change in responsibilities in the New Role)</label>
+                                             <textarea type="text" class="required form-control" name="responsibilities" cols="3"></textarea>
+                                          </div>
+                                          <hr>
+                                          <div class="col-lg-6 m-t-b-xs">
+                                             <h5>
+                                                <strong>
+                                                   <center>Hard Skill</center>
+                                                </strong>
+                                             </h5>
+                                             <input class=" form-control form-group" type="text" name="hardSkills1">
+                                             <input class="required form-control form-group" type="text" name="hardSkills1">
+                                             <input class="required form-control form-group" type="text" name="hardSkills1">
+                                             <input class="required form-control form-group" type="text" name="hardSkills1">
+                                             <input class="required form-control form-group" type="text" name="hardSkills1">
+                                          </div>
+                                          <div class="col-lg-6 m-t-b-xs">
+                                             <h5>
+                                                <strong>
+                                                   <center>Soft Skill</center>
+                                                </strong>
+                                             </h5>
+                                             <input class=" form-control form-group" type="text" name="hardSkills1">
+                                             <input class="required form-control form-group" type="text" name="hardSkills1">
+                                             <input class="required form-control form-group" type="text" name="hardSkills1">
+                                             <input class="required form-control form-group" type="text" name="hardSkills1">
+                                             <input class="required form-control form-group" type="text" name="hardSkills1">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="modal-footer">
+                              <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-info" data-dismiss="modal">Submit</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+      </section>
+      <!-- end of your code -->
+      <!-- footer here -->
+      <hr />
+      <footer class="navbar-fixed-bottom">
+         <div class="container-fluid footer">
+            <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+         </div>
+      </footer>
+      <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/dataTables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+       <script type="text/javascript">
+         $(document).ready(function(){
+           var oTable = $('#myTable').DataTable({
+             "orderCellsTop": false,
+             "searchHighlight" : true,
+           });
+           $('#search').keyup(function(){
+                 oTable.search($(this).val()).draw() ;
+           });
+           $(".dataTables_filter").hide();
+           oTable.on('order.dt search.dt', function(){
+             oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+              function (cell, i) {
+               cell.innerHTML = i+1;
+               } );
+           }).draw();
+         });
+      </script>
+      <!-- end of your custom script -->
+   </body>
+</html>

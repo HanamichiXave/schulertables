@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Human Resource Management</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/dataTables/css/DataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style type="text/css">
+      .dataTables_length {
+      margin-bottom: 15px;
+      margin-top: 5px;
+      }
+   </style>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                        <li>
+                           <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                        <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                        <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container">
+      <br>
+      <br>
+      <div class="page-header" style="color: #000033">
+         <h2><strong>Human Resource Management</strong></h2>
+      </div>
+      <ol class="breadcrumb" style="background-color: #D9EDF7">
+         <li><a href="hr-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+         <li><a href="hr-payroll-department-list.html">Department List</a></li>
+         <li>Administration Department</li>
+      </ol>
+      <!-- your code start here -->
+      <!-- Please observe indention -->
+      <div class="container">
+         <section class="card-box">
+            <div class="panel panel-custom">
+               <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-user-o fa-lg"></i> Admin Employee List</div>
+               <div class="panel-body">
+                  <div class="row">
+                     <div class="col-sm-8">
+                        <div class="form-group contact-search m-b-30">
+                           <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                        </div>
+                     </div>
+                     <div class="col-sm-4">
+                        <a href="payroll_summary_emp.html" style="height: 40px; margin-top: 7px;" class="btn btn-success">Payroll Summary</a>
+                     </div>
+                  </div>
+                  <div class="table-responsive">
+                     <table id="myTable" class="display nowrap table table-striped table-hover">
+                        <thead>
+                           <tr>
+                              <th style="max-width: 95px;">#
+                              </th>
+                              <th style="max-width: 95px;">Photo
+                              </th>
+                              <th >Employee No.</th>
+                              <th >Name</th>
+                              <th >Date Hired</th>
+                              <th >Gender</th>
+                              <th >Remarks</th>
+                              <th >View</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="">
+                              <td>1</td>
+                              <td><img src='http://localhost:8000/images/bravopogi.jpg' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm" /></td>
+                              <td>1</td>
+                              <td>Antonio Bravo Jr.</td>
+                              <td>February 6, 2016</td>
+                              <td>Male</td>
+                              <td>Highly Skilled</td>
+                              <td>
+                                 <button type="button" class="btn btn-info btn-md waves-effect waves-light m-b-30" style="height: 40px; margin-top: 7px;" data-toggle="modal" data-target="#payroll">View Payroll</button>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="payroll" role="dialog">
+               <div class="modal-dialog modal-lg">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     </div>
+                     <div class="modal-body">
+                        <div class="">
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 
+                                    <div class="col-lg-4 text-center" style="padding-bottom: 10px;">
+                                       <img class="img-circle " title="contact-img" alt="contact-img" src='http://localhost:8000/images/bravopogi.jpg' width="150px" height="150px"></br>
+                                    </div>
+                                    <div class="col-lg-8">
+                                      <table id="empInfo" style="text-align: left;">
+                                        <tr>
+                                          <td style="width: 400px;">
+                                            <table>
+                                              <tr>
+                                                <td style="width: 200px;">Name:</td>
+                                                <td style="width: 200px;">Antonio Bravo</td>
+                                              </tr>
+                                              <tr>
+                                                <td style="width: 200px;">Designation:</td>
+                                                <td style="width: 200px;">Principal</td>
+                                              </tr>
+                                              <tr>
+                                                <td style="width: 200px;">Employee No:</td>
+                                                <td style="width: 200px;">1</td>
+                                              </tr>
+                                              <tr>
+                                                <td style="width: 200px;">Pay Rate:</td>
+                                                <td style="width: 200px;">Php 25,000</td>
+                                              </tr>
+                                              <tr>
+                                                <td style="width: 200px;">No. of Dependents:</td>
+                                                <td style="width: 200px;">3</td>
+                                              </tr>
+                                              <tr>
+                                                <td style="width: 200px;">Working Days:</td>
+                                                <td style="width: 200px;">5</td>
+                                              </tr>
+                                              <tr>
+                                                <td style="width: 200px;">Bank Acc. Details:</td>
+                                                <td style="width: 200px;">321-312344-12312</td>
+                                              </tr>
+                                            </table>
+                                          </td>
+                                          <td style="width: 400px;">
+                                            <table>
+                                              <tr>
+                                                <td style="width: 200px;">Pag-ibig No:</td>
+                                                <td style="width: 200px;">Antonio Bravo</td>
+                                              </tr>
+                                              <tr>
+                                                <td style="width: 200px;">Philhealth No:</td>
+                                                <td style="width: 200px;">Principal</td>
+                                              </tr>
+                                              <tr>
+                                                <td style="width: 200px;">SSS No:</td>
+                                                <td style="width: 200px;">1</td>
+                                              </tr>
+                                              <tr>
+                                                <td style="width: 200px;">TIN:</td>
+                                                <td style="width: 200px;">Php 25,000</td>
+                                              </tr>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </div>
+                              </div>
+                              <div class="col-lg-12">
+                                 <div class="col-lg-12">
+                                    <div class=" card-box col-lg-6">
+                                       <div class="table-responsive">
+                                          <table class="table table-striped mails m-0 table table-action-bar">
+                                             <thead>
+                                                <th>Attendance Summary</th>
+                                             </thead>
+                                             <tbody>
+                                                <tr class="">
+                                                   <td>Absent</td>
+                                                   <td class="align-right">0</td>
+                                                </tr>
+                                                <tr class="">
+                                                   <td>Holiday</td>
+                                                   <td class="align-right">0</td>
+                                                </tr>
+                                                <tr class="">
+                                                   <td>Present</td>
+                                                   <td class="align-right">0</td>
+                                                </tr>
+                                                <tr class="">
+                                                   <td>Leave</td>
+                                                   <td class="align-right">0</td>
+                                                </tr>
+                                                <tr class="">
+                                                   <td>Late</td>
+                                                   <td class="align-right">0</td>
+                                                </tr>
+                                                <tr class="">
+                                                   <td>Overtime</td>
+                                                   <td class="align-right">0</td>
+                                                </tr>
+                                                <tr class="">
+                                                   <td>Early Leaving</td>
+                                                   <td class="align-right">0</td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </div>
+                                    </div>
+                                    <div class=" card-box col-lg-6">
+                                       <div class="table-responsive">
+                                          <table class="table table-striped mails m-0 table table-action-bar">
+                                             <thead>
+                                                <th>Hours Summary</th>
+                                             </thead>
+                                             <tbody>
+                                                <tr class="">
+                                                   <td>Total Late</td>
+                                                   <td class="align-right">00:00</td>
+                                                </tr>
+                                                <tr class="">
+                                                   <td>Total Early</td>
+                                                   <td class="align-right">00:00</td>
+                                                </tr>
+                                                <tr class="">
+                                                   <td>Total Rest</td>
+                                                   <td class="align-right">00:00</td>
+                                                </tr>
+                                                <tr class="">
+                                                   <td>Total Overtime</td>
+                                                   <td class="align-right">00:00</td>
+                                                </tr>
+                                                <tr class="">
+                                                   <td>Total Work</td>
+                                                   <td class="align-right">00:00</td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-lg-12">
+                                    <div class=" card-box col-lg-12">
+                                       <!-- end of salary breakdown-->
+                                       <div class="col-lg-12" style="padding-top:30px; border-bottom: 1px dotted #8c8b8b; padding-bottom: 30px">
+                                          <div class="col-lg-12" style="border-bottom: 1px dotted #8c8b8b; padding-bottom: 30px">
+                                             <h4>Payroll Period</h4>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Cut-off From</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <div class="input-group date form_date col-lg-12" data-date-format="MM dd, yyyy" data-link-field="cutOffFrom">
+                                                      <input class="form-control" size="16" type="text" id="cutOffFrom" name="cutOffFrom" readonly>
+                                                      <span class="input-group-addon">
+                                                         <div class="glyphicon glyphicon-remove"></div>
+                                                      </span>
+                                                      <span class="input-group-addon">
+                                                         <div class="glyphicon glyphicon-calendar"></div>
+                                                      </span>
+                                                   </div>
+                                                   <input type="text" id="cutOffFromHidden" name="cutOffFromHidden" class="cj" value="" style=" position: absolute; visibility: hidden;" />
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Cut-off To</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <div class="input-group date form_date col-lg-12" data-date-format="MM dd, yyyy" data-link-field="cutOffTo">
+                                                      <input class="form-control" size="16" type="text" id="cutOffTo" name="cutOffTo" readonly>
+                                                      <span class="input-group-addon">
+                                                         <div class="glyphicon glyphicon-remove"></div>
+                                                      </span>
+                                                      <span class="input-group-addon">
+                                                         <div class="glyphicon glyphicon-calendar"></div>
+                                                      </span>
+                                                   </div>
+                                                   <input type="text" id="cutOffToHidden" name="cutOffToHidden" class="cj" value="" style=" position: absolute; visibility: hidden;" />
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <!-- end of salary breakdown-->
+                                          <div class="col-xs-12 col-lg-12" style="padding-top:10px; padding-bottom: 10px; border-bottom: 1px dotted #8c8b8b; ">
+                                             <h4>Salary Breakdown</h4>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Basic Pay</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input class="required form-control" type="text" id="basic" name="basic" value="25,000" readonly>
+                                                   <input class="required form-control" type="hidden" id="basicpay" name="basicpay" value="25000" readonly>
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Overtime</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input class="required form-control" type="number" id="overtime" name="overtime">
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Daily Rate</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input id="dailyrate" class="required form-control" type="text" name="dailyrate" readonly>
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Holiday Pay</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input class="required form-control" type="number" id="holidayPay" name="holidayPay">
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-12"></div>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Hour Rate</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input class="required form-control" type="text" id="hourrate" name="hourrate" readonly>
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-12"></div>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Minute Rate</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input class="required form-control" type="text" id="minuterate" name="minuterate" readonly>
+                                                </div>
+                                             </div>
+                                             <div class="col-xs-12 col-lg-6" style="padding-top: 25px;">
+                                                <label class="control-label col-lg-12" style="color: #ff7558">GROSS PAY: </label>
+                                             </div>
+                                             <!-- <div class="col-xs-6 col-lg-2" style="padding-top: 25px">
+                                                <div class="col-xs-12 col-lg-6 form-group">
+                                                  <button type="submit" class="btn btn-sm btn-default waves-effect waves-light"><i class="md md-add"></i> Add</button>
+                                                </div>
+                                                </div> -->
+                                          </div>
+                                          <td id="taxable" hidden></td>
+                                          <td id="deduction" hidden></td>
+                                          <div class="col-lg-12" style="padding-top:30px; border-bottom: 1px dotted #8c8b8b; padding-bottom: 30px">
+                                             <h4>Deductions</h4>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Philhealth</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input id="philhealth" class="required form-control" type="number" name="philhealth" readonly>
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Absent</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input class="required form-control" type="text" name="">
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">SSS/GSIS</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input id="sss" class="required form-control" type="number" name="sss" readonly>
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Tardiness (Late)</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input class="required form-control" type="text" name="">
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Pag-ibig dues</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input id="pagibig" class="required form-control" type="number" name="pagibig" readonly>
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Undertime</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input class="required form-control" type="number" name="">
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Withholding Tax</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input class="required form-control" type="text" id="withholdingtax" name="withholdingtax" readonly>
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Unpaid Leave</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input class="required form-control" type="text" name="">
+                                                </div>
+                                             </div>
+                                             <!-- <div class="col-lg-12" style="padding-top: 10px">
+                                                <div class="col-lg-6 form-group">
+                                                   <button type="submit" class="btn btn-sm btn-default waves-effect waves-light"><i class="md md-add"></i> Add</button>
+                                                </div>
+                                                <div class="col-lg-6 pull-right">
+                                                   <h3 style="color: #ff7558">DEDUCTION: <label id="deduction" style="color: red; font-weight: bold; text-decoration: underline; font-size: 20px; padding-left: 5%"></label></h3>
+                                                   <input type="hidden" id="deductionHidden" name="deductionHidden">
+                                                </div>
+                                             </div> -->
+                                             <div class="col-lg-12" style="padding-top: 10px">
+                                                <div class="col-lg-6 form-group">
+                                                   <button type="submit" class="btn btn-sm btn-default waves-effect waves-light"><i class="md md-add"></i> Add</button>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                   <label class="control-label col-lg-6" style="color: #ff7558" id="otherDeduction">DEDUCTION:</label><label id="deduction" style="color: red; font-weight: bold; text-decoration: underline; font-size: 20px; padding-left: 5%"></label>
+                                                   <input type="hidden" id="otherDeductionHidden" name="otherDeductionHidden">
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <!-- END OF DEDUCTION-->
+                                          <div class="col-lg-12" style="padding-top:30px; border-bottom: 1px dotted #8c8b8b; padding-bottom: 30px">
+                                             <h4>Other Deductions</h4>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Cash Advance</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input class="required form-control" type="text" name="">
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">SSS/GSIS Loan</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input class="required form-control" type="text" name="">
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Pag-ibig Loan</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input class="required form-control" type="text" name="">
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                <label class="col-lg-12 control-label">Union Dues</label>
+                                                <div class="col-lg-12 form-group">
+                                                   <input class="required form-control" type="text" name="">
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-12" style="padding-top: 10px">
+                                                <div class="col-lg-6 form-group">
+                                                   <button type="submit" class="btn btn-sm btn-default waves-effect waves-light"><i class="md md-add"></i> Add</button>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                   <label class="control-label col-lg-6" style="color: #ff7558" id="otherDeduction">OTHER DEDUCTION:</label>
+                                                   <input type="hidden" id="otherDeductionHidden" name="otherDeductionHidden">
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <!-- END OTHER DEDUCTIONS-->
+                                          <div class="col-lg-12" style="padding-top:30px">
+                                             <div class="col-lg-6 pull-right">
+                                                <h3 style="color: #26AF8C">NET PAY: <label id="netincome" style=" font-weight: bold; text-decoration: underline; font-size: 20px; padding-left: 5%"></label></h3>
+                                                <input type="hidden" id="netPayHidden" name="netPayHidden">
+                                             </div>
+                                             <div class="col-lg-12 col-lg-push-9 button-list" style="padding-top: 10px">
+                                                <!-- <button class="btn btn-default btn-rounded waves-effect waves-light" type="button">Cancel</button> -->
+                                                <button class="btn btn-success" type="submit" id="save">Save</button>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                       <!-- end col-10-->
+                                 
+                                 
+                                 
+                              </div>
+                              <!-- end of row-->
+                           </div>
+                        </div>
+                        <div class="modal-footer">
+                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!--end of modal-->
+         </section>
+         <!-- Footer -->
+         <!-- End Footer -->
+         <!-- end of your code -->
+         <!-- footer here -->
+         <hr />
+         <footer class="navbar-fixed-bottom">
+            <div class="container-fluid footer">
+               <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+            </div>
+         </footer>
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/dataTables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+
+      <script src="http://localhost:8000/assets/datepicker/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+      <script src="http://localhost:8000/assets/datepicker/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script type="text/javascript">
+         $(document).ready(function(){
+           var oTable = $('#myTable').DataTable({
+             "orderCellsTop": false,
+             "searchHighlight" : true,
+             "ordering": false,
+           });
+           $('#search').keyup(function(){
+                 oTable.search($(this).val()).draw() ;
+           });
+           $(".dataTables_filter").hide();
+           oTable.on('order.dt search.dt', function(){
+             oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+              function (cell, i) {
+               cell.innerHTML = i+1;
+               } );
+           }).draw();
+         });
+      </script>
+      <script>
+      // $('#save').focus(function(e){
+      //         e.preventDefault();
+      //         swal({
+      //           title: "Are you sure?",
+      //             text: "You are trying to save the event.",
+      //             type: "warning",
+      //             showCancelButton: true,
+      //             confirmButtonColor: "#DD6B55",
+      //             confirmButtonText: "Yes",
+      //             closeOnConfirm: false,
+      //             closeOnCancel: false
+      //         },
+      //         function(isConfirm){
+      //           if(isConfirm){
+      //             $.ajax({
+      //               method: 'POST',
+      //               url: "http://localhost:8000/hr/save_payslip",
+      //               headers:{'X-CSRF-Token': $('input[name="_token"]').val()},
+      //               dataType: 'JSON',
+      //               processData : false,
+      //               contentType : false,
+      //               data: new FormData($("#savePayroll")[0]),
+      //               success: function(data){
+      //                 if(data.success == "yes"){
+      //                   swal({
+      //                     title:"Saved!", 
+      //                     text: "The asset has been saved!",
+      //                     type: "success",
+      //                     showConfirmButton: false
+      //                   });
+      //                   setTimeout(function(){
+      //                              location.reload();
+      //                         }, 2000); 
+                        
+      //                   $('.form-group').removeClass('has-success');
+      //                 }
+      //               },error: function(data){
+      //                   swal("Error!", "Something went wrong", "error");
+      //                 }
+      //             });
+      //           }
+      //           else {
+      //             swal("Cancelled", "Something went wrong!", "error");
+      //           }
+      //         });
+      //       });
+
+
+        // $('#save').focus(function(e){
+        //       e.preventDefault();
+        //       swal({
+        //         title: "Are you sure?",
+        //           text: "You are trying to save the event.",
+        //           type: "warning",
+        //           showCancelButton: true,
+        //           confirmButtonColor: "#DD6B55",
+        //           confirmButtonText: "Yes",
+        //           closeOnConfirm: false,
+        //           closeOnCancel: false
+        //       },
+        //       function(isConfirm){
+        //         var payroll = $("#savePayroll");
+        //         var dataString = payroll.serialize();
+        //         if(isConfirm){
+        //           $.ajax({
+        //             method: 'POST',
+        //             url: "http://localhost:8000/hr/save_payslip",
+        //             headers:{'X-CSRF-Token': $('input[name="_token"]').val()},
+        //             dataType: 'JSON',
+        //             processData : false,
+        //             data: dataString,
+        //             success: function(data){
+        //               if(data.success == "yes"){
+        //                 swal("Saved!", "The payslip has been saved!", "success");
+        //                 $("#savePayroll")[0].reset();
+        //               }
+        //             },error: function(data){
+        //                 swal("Error!", "Something went wrong", "error");
+        //               }
+        //           });
+        //         }
+        //         else {
+        //           swal("Cancelled", "Something went wrong!", "error");
+        //         }
+        //       });
+        //     })
+      </script>
+      <script type="text/javascript">
+        $('.form_date').datetimepicker({
+          weekStart: 1,
+          todayBtn:  1,
+          autoclose: 1,
+          todayHighlight: 1,
+          startView: 2,
+          minView: 2
+        });
+
+        $('.year').datetimepicker({
+          weekStart: 1,
+          todayBtn:  1,
+          autoclose: 1,
+          todayHighlight: 1,
+          startView: 4,
+          minView: 4
+        });
+      </script>
+      <script> //yeardropdown
+        var end = 1990;
+        var start = new Date().getFullYear();
+        var options = "";
+        for(var year = start ; year >=end; year--){
+          options += "<option>"+ year +"</option>";
+        } 
+        document.getElementById("year").innerHTML = options;
+      </script>
+
+      <script>
+        //date
+        var d1 = new Date();
+        var Months = ["January","February","March","April","May","June","July", "August", "September", "October", "November", "December"];
+        var dateview = days[d1.getDay()] +", "+Months[d.getMonth()] +" "+d1.getDate()+", "+ d1.getFullYear() ;
+        document.getElementById("txtDate").value = dateview;
+        }
+      </script>
+
+      <script type="text/javascript">
+          $(document).ready(function () {
+              $('#datatable').dataTable();
+              $('#datatable-keytable').DataTable({keys: true});
+              $('#datatable-responsive').DataTable();
+              $('#datatable-colvid').DataTable({
+                  "dom": 'C<"clear">lfrtip',
+                  "colVis": {
+                      "buttonText": "Change columns"
+                  }
+              });
+              $('#datatable-scroller').DataTable({
+                  ajax: "assets/plugins/datatables/json/scroller-demo.json",
+                  deferRender: true,
+                  scrollY: 380,
+                  scrollCollapse: true,
+                  scroller: true
+              });
+              var table = $('#datatable-fixed-header').DataTable({fixedHeader: true});
+              var table = $('#datatable-fixed-col').DataTable({
+                  scrollY: "300px",
+                  scrollX: true,
+                  scrollCollapse: true,
+                  paging: false,
+                  fixedColumns: {
+                      leftColumns: 1,
+                      rightColumns: 1
+                  }
+              });
+          });
+          TableManageButtons.init();
+      </script>
+
+      <script type="text/javascript">
+        $(window).load(function() {
+          if($("#workingDays").text() == 5) {
+            var x =  (($('#basicpay').val()) * 12) / 261;
+            $('#dailyrate').val(x.toFixed(2));
+            var y = x/8;
+            $('#hourrate').val(y.toFixed(2));
+            var z = y/60;
+            $('#minuterate').val(z.toFixed(2));
+          } else if($("#workingDays").text() == 6) {
+            var x =  (($('#basicpay').val()) * 12) / 313;
+            $('#dailyrate').val(x.toFixed(2));
+            var y = x/8;
+            $('#hourrate').val(y.toFixed(2));
+            var z = y/60;
+            $('#minuterate').val(z.toFixed(2));
+          }
+       
+          var basicpay = $('#basicpay').val();
+          switch (true){
+            case (basicpay == ''):
+            $('#philhealth').val();
+            break;
+            case (basicpay >= 0 && basicpay < 9000):
+            $('#philhealth').val(100);
+            break;
+            case (basicpay >= 9000 && basicpay < 10000):
+            $('#philhealth').val(112.50);
+            break;
+            case (basicpay >= 10000 && basicpay < 11000):
+            $('#philhealth').val(125.00);
+            break;
+            case (basicpay >= 11000 && basicpay < 12000):
+            $('#philhealth').val(137.50);
+            break;
+            case (basicpay >= 12000 && basicpay < 13000):
+            $('#philhealth').val(150.00);
+            break;
+            case (basicpay >= 13000 && basicpay < 14000):
+            $('#philhealth').val(162.50);
+            break;
+            case (basicpay >= 14000 && basicpay < 15000):
+            $('#philhealth').val(175.00);
+            break;
+            case (basicpay >= 15000 && basicpay < 16000):
+            $('#philhealth').val(187.50);
+            break;
+            case (basicpay >= 16000 && basicpay < 17000):
+            $('#philhealth').val(200.00);
+            break;
+            case (basicpay >= 17000 && basicpay < 18000):
+            $('#philhealth').val(212.50);
+            break;
+            case (basicpay >= 18000 && basicpay < 19000):
+            $('#philhealth').val(225.00);
+            break;
+            case (basicpay >= 19000 && basicpay < 20000):
+            $('#philhealth').val(237.50);
+            break;
+            case (basicpay >= 20000 && basicpay < 21000):
+            $('#philhealth').val(250.00);
+            break;
+            case (basicpay >= 21000 && basicpay < 22000):
+            $('#philhealth').val(262.50);
+            break;
+            case (basicpay >= 22000 && basicpay < 23000):
+            $('#philhealth').val(275.00);
+            break;
+            case (basicpay >= 23000 && basicpay < 24000):
+            $('#philhealth').val(287.50);
+            break;
+            case (basicpay >= 24000 && basicpay < 25000):
+            $('#philhealth').val(300.00);
+            break;
+            case (basicpay >= 25000 && basicpay < 26000):
+            $('#philhealth').val(312.50);
+            break;
+            case (basicpay >= 26000 && basicpay < 27000):
+            $('#philhealth').val(325.00);
+            break;
+            case (basicpay >= 27000 && basicpay < 28000):
+            $('#philhealth').val(337.50);
+            break;
+            case (basicpay >= 28000 && basicpay < 29000):
+            $('#philhealth').val(350.00);
+            break;
+            case (basicpay >= 29000 && basicpay < 30000):
+            $('#philhealth').val(362.50);
+            break;
+            case (basicpay >= 30000 && basicpay < 31000):
+            $('#philhealth').val(375.00);
+            break;
+            case (basicpay >= 31000 && basicpay < 32000):
+            $('#philhealth').val(387.50);
+            break;
+            case (basicpay >= 32000 && basicpay < 33000):
+            $('#philhealth').val(400.00);
+            break;
+            case (basicpay >= 33000 && basicpay < 34000):
+            $('#philhealth').val(412.50);
+            break;
+            case (basicpay >= 34000 && basicpay < 35000):
+            $('#philhealth').val(425.00);
+            break;
+            case (basicpay >= 35000):
+            $('#philhealth').val(437.50);
+            break;
+          }
+
+          switch (true){
+            case (basicpay == ''):
+            $('#sss').val();
+            break;
+            case (basicpay >= 0 && basicpay < 1000):
+            $('#sss').val(0.00);
+            break;
+            case (basicpay >= 1000 && basicpay < 1250):
+            $('#sss').val(36.30);
+            break;
+            case (basicpay >= 1250 && basicpay < 1750):
+            $('#sss').val(54.5);
+            break;
+            case (basicpay >= 1750 && basicpay < 2250):
+            $('#sss').val(72.70);
+            break;
+            case (basicpay >= 2250 && basicpay < 2750):
+            $('#sss').val(90.80);
+            break;
+            case (basicpay >= 2750 && basicpay < 3250):
+            $('#sss').val(109.00);
+            break;
+            case (basicpay >= 3250 && basicpay < 3750):
+            $('#sss').val(127.20);
+            break;
+            case (basicpay >= 3750 && basicpay < 4250):
+            $('#sss').val(145.30);
+            break;
+            case (basicpay >= 4250 && basicpay < 4750):
+            $('#sss').val(163.50);
+            break;
+            case (basicpay >= 4750 && basicpay < 5250):
+            $('#sss').val(181.70);
+            break;
+            case (basicpay >= 5250 && basicpay < 5750):
+            $('#sss').val(199.80);
+            break;
+            case (basicpay >= 5750 && basicpay < 6250):
+            $('#sss').val(218.00);
+            break;
+            case (basicpay >= 6250 && basicpay < 6750):
+            $('#sss').val(236.20);
+            break;
+            case (basicpay >= 6750 && basicpay < 7250):
+            $('#sss').val(254.30);
+            break;
+            case (basicpay >= 7250 && basicpay < 7750):
+            $('#sss').val(272.50);
+            break;
+            case (basicpay >= 7750 && basicpay < 8250):
+            $('#sss').val(290.70);
+            break;
+            case (basicpay >= 8250 && basicpay < 8750):
+            $('#sss').val(308.80);
+            break;
+            case (basicpay >= 8750 && basicpay < 9250):
+            $('#sss').val(327.00);
+            break;
+            case (basicpay >= 9250 && basicpay < 9750):
+            $('#sss').val(345.20);
+            break;
+            case (basicpay >= 9750 && basicpay < 10250):
+            $('#sss').val(363.30);
+            break;
+            case (basicpay >= 10250 && basicpay < 10750):
+            $('#sss').val(381.50);
+            break;
+            case (basicpay >= 10750 && basicpay < 11250):
+            $('#sss').val(399.70);
+            break;
+            case (basicpay >= 11250 && basicpay < 11750):
+            $('#sss').val(417.80);
+            break;
+            case (basicpay >= 11750 && basicpay < 12250):
+            $('#sss').val(436.00);
+            break;
+            case (basicpay >= 12250 && basicpay < 12750):
+            $('#sss').val(454.20);
+            break;
+            case (basicpay >= 12750 && basicpay < 13250):
+            $('#sss').val(472.30);
+            break;
+            case (basicpay >= 13250 && basicpay < 13750):
+            $('#sss').val(490.50);
+            break;
+            case (basicpay >= 13750 && basicpay < 14250):
+            $('#sss').val(508.70);
+            break;
+            case (basicpay >= 14250 && basicpay < 14750):
+            $('#sss').val(526.80);
+            break;
+            case (basicpay >= 14750 && basicpay < 15250):
+            $('#sss').val(545.00);
+            break;
+            case (basicpay >= 15250 && basicpay < 15750):
+            $('#sss').val(563.20);
+            break;
+            case (basicpay >= 15750):
+            $('#sss').val(581.30);
+            break;
+          }
+          //pagibig
+          switch (true){
+            case (basicpay == ''):
+            $('#pagibig').val('');
+            break;
+            case (basicpay > 0 && basicpay <= 1500):
+            var pagibig = basicpay * 0.01;
+            $('#pagibig').val(pagibig);
+            break;
+            case (basicpay > 1500):
+            var pagibig = basicpay * 0.02;
+            if (pagibig > 100) {
+              $('#pagibig').val(100);
+            }else{
+              $('#pagibig').val(pagibig);
+            }
+            break;
+          }
+        // });
+
+          // var absent = $('#absent').val() * $('#dailyrate').val();
+          // var latehr = $('#latehr').val() * $('#hourrate').val();
+          // var latemin = $('#latemin').val() * $('#minuterate').val();
+          //Deductions comment
+          var absent = 0 * $('#dailyrate').val();
+          var latehr = 0 * $('#hourrate').val();
+          var latemin = 0 * $('#minuterate').val();
+          var philhealth = $('#philhealth').val();
+          var sss = $('#sss').val();
+          var pagibig = $('#pagibig').val();
+          //income comment
+          var overtime = $('#overtime').val();
+          var holidayPay = $('#holidayPay').val();
+
+          var deduction = parseFloat(absent) + parseFloat(latehr) + parseFloat(latemin) + parseFloat(philhealth) + parseFloat(sss) + parseFloat(pagibig);
+          var income = $('#basicpay').val() + overtime + holidayPay;
+          var taxable = income - deduction;
+          $('#taxable').html(taxable.toLocaleString());
+          
+          var dependents = $('#dependents').text();
+          if(dependents == 0){
+            switch (true){
+            case (taxable == ''):
+            $('#withholdingtax').val(0);
+            break;
+            case (taxable > 0 && taxable <= 4167):
+            $('#withholdingtax').val(0);
+            break;
+            case (taxable > 4167 && taxable <= 5000):
+            var a = taxable - 4167;
+            var withholdingtax = a * 0.05;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 5000 && taxable <= 6667):
+            var a = taxable - 5000;
+            var withholdingtax = (a * 0.1) + 41.67;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 6667 && taxable <= 10000):
+            var a = taxable - 6667;
+            var withholdingtax = (a * 0.15) + 208.33;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 10000 && taxable <= 15833):
+            var a = taxable - 10000;
+            var withholdingtax = (a * 0.2) + 708.33;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 15833 && taxable <= 25000):
+            var a = taxable - 15833;
+            var withholdingtax = (a * 0.25) + 1875.00;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 25000 && taxable <= 45833):
+            var a = taxable - 25000;
+            var withholdingtax = (a * 0.3) + 4166.67;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 45833):
+            var a = taxable - 45833;
+            var withholdingtax = (a * 0.32) + 10416.67;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            }
+          }else if(dependents == 1){
+            switch (true){
+            case (taxable == ''):
+            $('#withholdingtax').val(0);
+            break;
+            case (taxable > 0 && taxable <= 6250):
+            $('#withholdingtax').val(0);
+            break;
+            case (taxable > 6250 && taxable <= 7083):
+            var a = taxable - 6250;
+            var withholdingtax = a * 0.05;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 7083 && taxable <= 8750):
+            var a = taxable - 7083;
+            var withholdingtax = (a * 0.1) + 41.67;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 8750 && taxable <= 12083):
+            var a = taxable - 8750;
+            var withholdingtax = (a * 0.15) + 208.33;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 12083 && taxable <= 17917):
+            var a = taxable - 12083;
+            var withholdingtax = (a * 0.2) + 708.33;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 17917 && taxable <= 27083):
+            var a = taxable - 17917;
+            var withholdingtax = (a * 0.25) + 1875.00;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 27083 && taxable <= 47917):
+            var a = taxable - 27083;
+            var withholdingtax = (a * 0.3) + 4166.67;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 47917):
+            var a = taxable - 47917;
+            var withholdingtax = (a * 0.32) + 10416.67;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            }
+          }else if(dependents == 2){
+            switch (true){
+            case (taxable == ''):
+            $('#withholdingtax').val(0);
+            break;
+            case (taxable > 0 && taxable <= 8333):
+            $('#withholdingtax').val(0);
+            break;
+            case (taxable > 8333 && taxable <= 9167):
+            var a = taxable - 8333;
+            var withholdingtax = a * 0.05;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 9167 && taxable <= 10833):
+            var a = taxable - 9167;
+            var withholdingtax = (a * 0.1) + 41.67;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 10833 && taxable <= 14167):
+            var a = taxable - 10833;
+            var withholdingtax = (a * 0.15) + 208.33;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 14167 && taxable <= 20000):
+            var a = taxable - 14167;
+            var withholdingtax = (a * 0.2) + 708.33;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 20000 && taxable <= 29167):
+            var a = taxable - 20000;
+            var withholdingtax = (a * 0.25) + 1875.00;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 29167 && taxable <= 50000):
+            var a = taxable - 29167;
+            var withholdingtax = (a * 0.3) + 4166.67;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 50000):
+            var a = taxable - 50000;
+            var withholdingtax = (a * 0.32) + 10416.67;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            }
+          }else if(dependents == 3){
+            switch (true){
+            case (taxable == ''):
+            $('#withholdingtax').val(0);
+            break;
+            case (taxable > 0 && taxable <= 10417):
+            $('#withholdingtax').val(0);
+            break;
+            case (taxable > 10417 && taxable <= 11250):
+            var a = taxable - 10417;
+            var withholdingtax = a * 0.05;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 11250 && taxable <= 12917):
+            var a = taxable - 11250;
+            var withholdingtax = (a * 0.1) + 41.67;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 12917 && taxable <= 16250):
+            var a = taxable - 12917;
+            var withholdingtax = (a * 0.15) + 208.33;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 16250 && taxable <= 22083):
+            var a = taxable - 16250;
+            var withholdingtax = (a * 0.2) + 708.33;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 22083 && taxable <= 31250):
+            var a = taxable - 22083;
+            var withholdingtax = (a * 0.25) + 1875.00;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 31250 && taxable <= 52083):
+            var a = taxable - 31250;
+            var withholdingtax = (a * 0.3) + 4166.67;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 52083):
+            var a = taxable - 52083;
+            var withholdingtax = (a * 0.32) + 10416.67;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            }
+          }else if(dependents == 4){
+            switch (true){
+            case (taxable == ''):
+            $('#withholdingtax').val(0);
+            break;
+            case (taxable > 0 && taxable <= 12500):
+            $('#withholdingtax').val(0);
+            break;
+            case (taxable > 12500 && taxable <= 13333):
+            var a = taxable - 12500;
+            var withholdingtax = a * 0.05;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 13333 && taxable <= 15000):
+            var a = taxable - 13333;
+            var withholdingtax = (a * 0.1) + 41.67;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 15000 && taxable <= 18333):
+            var a = taxable - 15000;
+            var withholdingtax = (a * 0.15) + 208.33;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 18333 && taxable <= 24167):
+            var a = taxable - 18333;
+            var withholdingtax = (a * 0.2) + 708.33;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 24167 && taxable <= 33333):
+            var a = taxable - 24167;
+            var withholdingtax = (a * 0.25) + 1875.00;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 33333 && taxable <= 54167):
+            var a = taxable - 33333;
+            var withholdingtax = (a * 0.3) + 4166.67;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            case (taxable > 54167):
+            var a = taxable - 54167;
+            var withholdingtax = (a * 0.32) + 10416.67;
+            var withholdingtax1 = parseFloat(withholdingtax.toFixed(2));
+            $('#withholdingtax').val(withholdingtax1.toLocaleString(2));
+            break;
+            }
+          }
+          var deduc = deduction + withholdingtax;
+          $('#deduction').html(deduc.toLocaleString());
+          var netincome = taxable - withholdingtax;
+          var netincome1 = parseFloat(netincome.toFixed(2));
+          $('#netincome').html(netincome1.toLocaleString());
+
+
+          var emp = $('#empNo').html();
+          var otherDeduc = $('#otherDeduction').html();
+          $('#empNoHidden').val(emp);
+          $('#deductionHidden').val(deduc);
+          $('#otherDeductionHidden').val(otherDeduc);
+          $('#netPayHidden').val(netincome1);
+        });
+
+      </script>
+            <!-- end of your custom script -->
+   </body>
+</html>

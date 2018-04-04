@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Principal</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/custom/css/Principal/P-Mainpage.css" rel="stylesheet">
+      <link href="../../content/DataTables/css/jquery.dataTables.min.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style>
+   p {
+    margin-bottom: 0;
+     font-family: Courier;
+   }
+   td {
+    font-family: Courier;
+   }
+    #transcript img {
+        z-index: -999; 
+        background-size:contain;
+    }
+    .centered {
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+    .panel-heading {
+      padding:0px 0px;
+    }
+    @font-face {
+      font-family: Carta;
+      src: url("../../content/fonts/Carta_Magna-line-demo-FFP.ttf");
+   }
+   @font-face {
+      font-family: Liber;
+      src: url("../../content/fonts/LiberationSerif-Regular.ttf");
+   }
+  </style>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="#">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                         <li>
+                                <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                         </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container ">
+        <br>
+        <br>
+        <div class="page-header" style="color: #000033"><h2><strong>Principal Management</strong></h2></div>
+        <ol class="breadcrumb" style="background-color: #D9EDF7">
+          <li><a href="principal-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+          <li><a href="document.html"> Student Transcript</a></li>
+          <li> Transcript</li>
+        </ol>
+      <!-- your code start here -->
+      <!-- Please observe indention -->
+      
+       <div class="col-lg-12">
+         <div id="transcript" class="panel panel-default" style="height: 815px; width: 1080px;">
+          <div class="panel-heading" style="height: 815px; width: 1080px;">
+            <center><img src="../../content/images/Principal/diploma3.png" style="height: 817px; width: 1063px;"></center>
+            <img style="position: absolute; left: 750px; top: 65px; z-index: 999" src="../../content/images/depedlogo.png" height="130" width="120"></img>
+            <img style="position: absolute; left: 250px; top: 65px; z-index: 999" src="../../content/images/transcriptlogo.png" height="143" width="130"></img>
+              <p style="position: absolute; left: 460px; top: 40px; font-size: 16px; width: 1000px;"><b>Republika ng Pilipinas</b></p>
+              <p style="position: absolute; left: 468px; top: 58px; font-size: 13px;width: 1000px;">Republic of the Philippines</p>
+              <p style="position: absolute; left: 445px; top: 72px; font-size: 16px;width: 1000px;"><b>Kagawaran ng Edukasyon</b></p>
+              <p style="position: absolute; left: 470px; top: 92px; font-size: 13px;width: 1000px;">Department of Education</p>
+              <p style="position: absolute; left: 455px; top: 110px; font-size: 16px;width: 1000px;"><b>National Capital Region</b></p>
+              <p style="position: absolute; left: 477px; top: 128px; font-size: 13px;width: 1000px;">National Capital Region</p>
+              <p style="position: absolute; left: 402px; top: 145px; font-size: 16px;width: 1000px;"><b>SANGAY NG LUNGSOD NG ORTIGAS</b></p>
+              <p style="position: absolute; left: 495px; top: 165px; font-size: 13px;width: 1000px;">Division of Ortigas</p>
+              <p style="position: absolute; left: 360px; top: 200px; font-size: 24px;width: 1000px; font-family: Liber !important;"><b>SCHULER ORTIGAS UNIVERSITY</b></p>
+              <p style="position: absolute; left: 464px; top: 230px; font-size: 14px;width: 1000px;">Brgy. San Antonio, Ortigas</p>
+              <p style="position: absolute; left: 125px; top: 280px; font-size: 17px;width: 1000px; "><b>Pinatunayan nito na si JUAN E. DELA CRUZ ay maluwalhating nakatapos ng Basic Education Curriculum</b></p>
+              <p style="position: absolute; left: 125px; top: 305px; font-size: 15px;width: 1000px;">This</p>
+              <p style="position: absolute; left: 190px; top: 305px; font-size: 15px;width: 1000px;">certify</p>
+              <p style="position: absolute; left: 280px; top: 305px; font-size: 15px;width: 1000px;">that</p>
+              <p style="position: absolute; left: 510px; top: 305px; font-size: 15px;width: 1000px;">has&nbsp;&nbsp;&nbsp;satisfactory</p>
+              <p style="position: absolute; left: 677px; top: 305px; font-size: 15px;width: 1000px;">completed&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;&nbsp;Basic&nbsp;&nbsp;&nbsp;&nbsp;Education&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Curriculum</p>
+              <p style="position: absolute; left: 80px; top: 325px; font-size: 17px;width: 1000px;"><b>na itinakda para sa mataas na paaralan ng Kagawaran ng Edukasyon, kaya pinagkalooban siya nitong</b></p>
+               <p style="position: absolute; left: 82px; top: 350px; font-size: 15px;width: 1000px;">as&nbsp;&nbsp;&nbsp;&nbsp;prescribed</p>
+              <p style="position: absolute; left: 230px; top: 350px; font-size: 15px;width: 1000px;">for</p>
+              <p style="position: absolute; left: 260px; top: 350px; font-size: 15px;width: 1000px;">secondary</p>
+              <p style="position: absolute; left: 350px; top: 350px; font-size: 15px;width: 1000px;">schools&nbsp;&nbsp;of&nbsp;&nbsp;the</p>
+              <p style="position: absolute; left: 470px; top: 350px; font-size: 15px;width: 1000px;">Department&nbsp;&nbsp;of&nbsp;&nbsp;&nbsp;&nbsp;Education</p>
+              <p style="position: absolute; left: 710px; top: 350px; font-size: 15px;width: 1000px;">and&nbsp;&nbsp;&nbsp;&nbsp;therefore&nbsp;&nbsp;&nbsp;&nbsp;is&nbsp;&nbsp;&nbsp;&nbsp;awarded&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for</p>
+              <p style="position: absolute; left: 390px; top: 390px; font-size: 90px;width: 1000px; font-family: Carta !important;">Diploma</p>
+              <p style="position: absolute; left: 190px; top: 530px; font-size: 17px;width: 1000px;"><b>Nilagdaan sa Lungsod ng Ortigas, Pilipinas ngayong ika-20 ng Nobyembre, 2014.</b></p>
+              <p style="position: absolute; left: 190px; top: 565px; font-size: 15px;width: 1000px;">Signed</p>
+              <p style="position: absolute; left: 285px; top: 565px; font-size: 15px;width: 1000px;">at</p>
+              <p style="position: absolute; left: 365px; top: 565px; font-size: 15px;width: 1000px;">Ortigas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;City,</p>
+              <p style="position: absolute; left: 495px; top: 565px; font-size: 15px;width: 1000px;">Philippines</p>
+              <p style="position: absolute; left: 645px; top: 565px; font-size: 15px;width: 1000px;">this&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20th</p>
+              <p style="position: absolute; left: 730px; top: 565px; font-size: 15px;width: 1000px;">day of November, 2014.</p>
+              <p style="position: absolute; left: 230px; top: 680px; font-size: 17px;width: 1000px;"><b>JUANITO E. DELA CRUZ SR.</b></p>
+              <p style="position: absolute; left: 285px; top: 700px; font-size: 17px;width: 1000px;">Punong-Guro</p>
+              <p style="position: absolute; left: 297px; top: 720px; font-size: 17px;width: 1000px;">Principal I</p>
+              <p style="position: absolute; left: 640px; top: 680px; font-size: 17px;width: 1000px;"><b>JUANITO E. DELA CRUZ SR.</b></p>
+              <p style="position: absolute; left: 590px; top: 700px; font-size: 17px;width: 1000px;">Acting Schools Division Superintendent</p>
+
+          </div>
+        </div>
+       </div>
+        <div class="col-lg-12">
+          <button style="margin-bottom: 3%; width: 180px; height: 50px; font-size: 20px;" onclick="print();" class="btn btn-success pull-right"><i class="fa fa-print"></i> Print Transcript</button>
+        </div>
+
+     
+      <!-- end of your code -->
+      <!-- footer here -->
+      <footer class="navbar-fixed-bottom">
+         <div class="container-fluid footer">
+            <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+         </div>
+      </footer>
+      <!-- end foooter -->
+      </div>
+
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/datatables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script type="text/javascript">
+       $(document).ready(function(){
+         var oTable = $('#myTable').DataTable({
+           "orderCellsTop": false,
+           "searchHighlight" : true,
+         });
+         $('#search').keyup(function(){
+               oTable.search($(this).val()).draw() ;
+         });
+         $(".dataTables_filter").hide();
+         oTable.on('order.dt search.dt', function(){
+           oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+            function (cell, i) {
+             cell.innerHTML = i+1;
+             } );
+         }).draw();
+
+
+       });
+    </script>
+    <script type="text/javascript">
+        //Print Receipt
+        function print() 
+        {
+
+          var divToPrint=document.getElementById('transcript');
+
+          var newWin=window.open('','Print-Window');
+
+          newWin.document.open();
+
+          newWin.document.write('<html><body onload="window.print()">'+transcript.innerHTML+'</body></html>');
+
+          newWin.document.close();
+
+          setTimeout(function(){newWin.close();},10);
+
+
+        }
+      </script>
+      <!-- end of your custom script -->
+   </body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Human Resource Management</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/custom/css/hr/school_struct.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                           <li>
+                                  <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                           </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+                
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033"><h2><strong>Human Resource Management</strong></h2></div>
+         <ol class="breadcrumb" style="background-color: #D9EDF7">
+           <li><a href="hr-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+           <li>School Structure</li>
+         </ol>
+         <!-- your code start here -->
+         <!-- Please observe indention -->
+         <div class="container">
+            <!-- Page-Title -->
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="content">
+                     <figure class="org-chart">
+                        <ul class="administration">
+                           <li>
+                              <ul class="director">
+                                 <li>
+                                    <a href="#">
+                                       <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                       <div class="col-xs-7 col-sm-9 col-md-10 col-lg-10"><span>JOHN BENSON LEABRES<br/>PRINCIPAL</span></div>
+                                       <br/>
+                                    </a>
+                                    <ul class="subdirector">
+                                    </ul>
+                                    <ul class="departments">
+                                       <li>
+                                          <a href="#">
+                                             <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                             <div class="col-xs-7 col-sm-9 col-md-10 col-lg-10"><span>JOHN BENSON LEABRES<br/>VICE PRINCIPAL</span></div>
+                                             <br/>
+                                          </a>
+                                       </li>
+                                       <li class="department dep-a">
+                                          <a href="#">
+                                             <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                             <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>MATH HEAD</span></div>
+                                             <br/>
+                                          </a>
+                                          <ul class="sections">
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="department dep-b">
+                                          <a href="#">
+                                             <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                             <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>SCIENCE HEAD</span></div>
+                                             <br/>
+                                          </a>
+                                          <ul class="sections">
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="department dep-c">
+                                          <a href="#">
+                                             <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                             <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>FILIPINO HEAD</span></div>
+                                             <br/>
+                                          </a>
+                                          <ul class="sections">
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="department dep-d">
+                                          <a href="#">
+                                             <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                             <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>ENGLISH HEAD</span></div>
+                                             <br/>
+                                          </a>
+                                          <ul class="sections">
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="department dep-e">
+                                          <a href="#">
+                                             <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                             <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>ARTS HEAD</span></div>
+                                             <br/>
+                                          </a>
+                                          <ul class="sections">
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-10 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                             <li class="section">
+                                                <a href="#">
+                                                   <div class="col-xs-3 col-sm-2 col-md-5 col-lg-5" id="scimag" style="background-image: url(../../content/images/teacher1.png);"></img></div>
+                                                   <div class="col-xs-7 col-sm-10 col-md-7 col-lg-7"><span>JOHN BENSON LEABRES<br/>TEACHER II</span></div>
+                                                   <br/>
+                                                </a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end of your code -->
+         <!-- footer here -->
+         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+         <br/><br/><br/>
+         <hr />
+         <footer class="navbar-fixed-bottom">
+            <div class="container-fluid footer">
+               <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+            </div>
+         </footer>
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+       
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/datatables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <!-- end of your custom script -->
+   </body>
+</html>

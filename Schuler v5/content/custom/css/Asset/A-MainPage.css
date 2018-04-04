@@ -1,0 +1,79 @@
+.spr-label {
+    font-family: Helvetica;
+    font-size: 15px;
+    color: #000033;
+    text-align: center;
+    margin-bottom: 0px !important;
+}
+
+.panelPopUp:hover,
+.panelPopUp:focus {
+    background-color: white;
+    transform: scale(1.01);
+    transition: all .1s;
+    background-color: transparent;
+}
+
+.super-panel {
+    height: 50%;
+    width: 200px;
+    text-align: center;
+    border: 1px solid #44A5C9;
+}
+.super-panels {
+    height: 50%;
+    width: 200px;
+    text-align: center;
+    border: 1px solid #FF0000;
+}
+.lblexit {
+    font-size: 53px;
+    color: red;
+    margin-left: 23%;
+}
+
+.super-panels {
+    height: 50%;
+    width: 200;
+    text-align: center;
+    border: 1px solid #FF0000;
+}
+
+.pagetitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+.griditem {
+    border: solid 1px #44A5C9;
+     border-radius: 4px;
+     padding: 5px;
+     text-align: center;
+     margin-bottom: 20px;
+     width: 250px;
+     height: 82px;
+}
+
+.bs-tooltip + .tooltip > .tooltip-inner {
+    background-color: #2c6b84;
+    font-size: 12px;
+}
+
+.btn-custom{
+    background: #99bbff;
+}
+
+.no-p-l-r{
+    padding: 0px !important;
+}
+
+@media screen and (max-width: 320px){
+    .griditem {
+        width: 290px !important;
+    }
+    .spr-label {
+        width: 190px !important;
+    }
+}

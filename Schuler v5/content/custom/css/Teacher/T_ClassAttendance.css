@@ -1,0 +1,73 @@
+﻿.super-panel {
+    width: 260px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.super-panel-lg {
+    width: 310px;
+    height: 110px;
+    border: 1px solid #44A5C9;
+    border-radius: 4px;
+    margin-bottom: 20px !important;
+}
+
+.super-panel-lg:hover,
+.super-panel-lg:focus {
+    background-color: white;
+    transform: scale(1.03);
+    transition: all .1s;
+    background-color: transparent;
+}
+
+.pagetitle {
+    width: 205px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.spr-label {
+    font-family: Helvetica;
+    font-size: 20px;
+    color: #000033;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+
+.student-container {
+    height: 85px;
+    width: 72px;
+    display: inline-block;
+}
+
+.teacher-table {
+    height: 85px;
+    width: 100px;
+    display: inline-block;
+    margin-bottom: 10px !important;
+}
+
+    .teacher-table img {
+        height: 80px;
+        width: 85px;
+    }
+
+
+.no-p-l-r {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.p-l-r-5 {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+.no-m-l-r {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}

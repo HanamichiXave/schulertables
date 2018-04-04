@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Security Management</title>
+    <link rel="icon" href="../../content/images/logonatin.png">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../content/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+	<!-- css for nav bar -->
+	<link href="../../content/custom/css/style.css" rel="stylesheet">
+    <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+	<!-- end of css  -->
+	<!-- your custom css -->
+
+	<!-- end of your custom css -->
+</head>
+<style>
+.dataTables_length {
+ margin-bottom: 10px;
+ margin-top: 10px;
+}
+td, th {
+  text-align: center;
+}
+</style>
+<body>
+	<!-- navigation bar  -->
+	 <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                           <li>
+                                  <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                           </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               
+            </div>
+         </div>
+      </nav>
+	<!-- end of navigation bar -->
+	<div class="container" >
+		<br>
+    <br>
+    <div class="page-header" style="color: #000033"><h2><strong>Security Management</strong></h2></div>
+      <ol class="breadcrumb" style="background-color: #D9EDF7">
+        <li><a href="security-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+        <li>No ID List</li>
+      </ol>
+	<!-- your code start here -->
+	<!-- Please observe indention -->
+	 <div class="panel panel-custom">
+         <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-shield fa-lg"></i> No ID Record</div>
+            <div class="panel-body"> 
+               <div class="row" style="margin-bottom: 10px;">
+                  <div class="col-lg-6">
+                     <div class="form-group contact-search m-b-30">
+                        <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                     </div>
+                  </div>
+               </div>
+               <div class="table-responsive">
+                  <table id="myTable" class="display nowrap table table-striped table-hover" id="myTable">
+                     <thead>
+                        <tr>
+                           <th style="max-width: 95px;"></th>
+                           <th >Visitor Type</th>
+                           <th >Name</th>
+                           <th >Reason</th>
+                           <th >Time-in</th>
+                           <th >Guard Issued Entry</th>
+                           <th >Date</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>1</td>
+                           <td>Parent</td>
+                           <td>Genesis Ivan J. Aquino</td>
+                           <td>Parents Meeting</td>
+                           <td>3:00 PM</td>
+                           <td>Xavier Buenaventura</td>
+                           <td>October 1, 2017</td>
+                       </tr>
+                       <tr>
+                           <td>2</td>
+                           <td>Delivery Boy</td>
+                           <td>Carl John Gorgonia</td>
+                           <td>Delivery</td>
+                           <td>8:00 AM</td>
+                           <td>Angelo Quiambao</td>
+                           <td>October 13, 2017</td>
+                       </tr>
+                       <tr>
+                           <td>3</td>
+                           <td>Police</td>
+                           <td>Antonio Bravo</td>
+                           <td>Seminar</td>
+                           <td>9:00 AM</td>
+                           <td>Jon-Jon Dela Cruz</td>
+                           <td>November 2, 2017</td>
+                       </tr>
+                       <tr>
+                           <td>3</td>
+                           <td>Researcher</td>
+                           <td>Willy Ponce</td>
+                           <td>For Thesis project</td>
+                           <td>9:00 AM-3:00 PM</td>
+                           <td>Dario Calica</td>
+                           <td>November 7, 2017</td>
+                       </tr>
+                       <tr>
+                           <td>3</td>
+                           <td>Contractor</td>
+                           <td>James Fernandez</td>
+                           <td>Building Inspection</td>
+                           <td>6:00 AM</td>
+                           <td>John Dave Marcelo</td>
+                           <td>November 15, 2017</td>
+                       </tr>
+                       <tr>
+                           <td>3</td>
+                           <td>Associate Staff</td>
+                           <td>Patrick Antonio</td>
+                           <td>For Business Talks</td>
+                           <td>4:00-5:00 PM</td>
+                           <td>Leonardo Laroza</td>
+                           <td>December 5, 2017</td>
+                       </tr>
+                       <tr>
+                           <td>3</td>
+                           <td>Accountant</td>
+                           <td>Kevin Lloyd Fernandez</td>
+                           <td>For Financial Reaseon</td>
+                           <td>9:30 AM</td>
+                           <td>Lester Nicolas</td>
+                           <td>December 18, 2017</td>
+                       </tr>
+                       <tr>
+                           <td>3</td>
+                           <td>Teacher</td>
+                           <td>Dann Michael Sallo</td>
+                           <td>New Teacher</td>
+                           <td>7:00 AM</td>
+                           <td>Christopher Cacho</td>
+                           <td>January 12, 2018</td>
+                       </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+   </div>
+
+      <!-- end of your code -->
+      <!-- footer here -->
+      <hr />
+      <footer class="navbar-fixed-bottom">
+         <div class="container-fluid footer">
+            <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+         </div>
+      </footer>
+      <!-- end foooter -->
+      </div>
+
+      <!-- Modal -->
+
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/dataTables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script type="text/javascript">
+         $(document).ready(function(){
+           var oTable = $('#myTable').DataTable({
+             "orderCellsTop": false,
+             "searchHighlight" : true,
+             "ordering": false,
+           });
+           $('#search').keyup(function(){
+                 oTable.search($(this).val()).draw() ;
+           });
+           $(".dataTables_filter").hide();
+           oTable.on('order.dt search.dt', function(){
+             oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+              function (cell, i) {
+               cell.innerHTML = i+1;
+               } );
+           }).draw();
+         });
+    </script>
+
+      <!-- end of your custom script -->
+      </body>
+      </html>

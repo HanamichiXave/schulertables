@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Dashboard</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <link href="../../content/dashboards/bootstrap dashboard/bsdashboard.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                        <li>
+                           <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                        <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                        <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+        <br>
+        <br>
+        <div class="page-header" style="color: #000033"><h2><strong>Asset Management</strong></h2></div>
+          <ol class="breadcrumb" style="background-color: #D9EDF7">
+              <li><a href="asset-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+              <li>Dashboard</li>
+          </ol>
+         <section>
+            <!-- your code start here -->
+            <!-- Please observe indention -->
+            <div class="col-lg-12">
+              <div class="container-2">
+               <div id="page-wrapper">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                          <div class="circle-tile" data-toggle="tooltip" data-placement="bottom" title="Average number of patient per day.">
+                             <a href="#">
+                                <div class="circle-tile-heading green db-container">
+                                   <i class="fa fa-users fa-fw fa-3x"></i>
+                                </div>
+                             </a>
+                             <div class="circle-tile-content green db-container">
+                                <div class="circle-tile-description text-faded">
+                                   Patients
+                                </div>
+                                <div class="circle-tile-number text-faded">
+                                   24
+                                </div>
+                             </div>
+                          </div>
+                      </div>
+
+                      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                          <div class="circle-tile" data-toggle="tooltip" data-placement="bottom" title="Average number of Male patient per day.">
+                             <a href="#">
+                                <div class="circle-tile-heading blue db-container">
+                                   <i class="fa fa-male fa-fw fa-3x"></i>
+                                </div>
+                             </a>
+                             <div class="circle-tile-content blue db-container">
+                                <div class="circle-tile-description text-faded">
+                                   Male
+                                </div>
+                                <div class="circle-tile-number text-faded">
+                                   14
+                                </div>
+                             </div>
+                          </div>
+                      </div>
+
+                      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                          <div class="circle-tile" data-toggle="tooltip" data-placement="bottom" title="Average number of Female patient per day.">
+                             <a href="#">
+                                <div class="circle-tile-heading red db-container">
+                                   <i class="fa fa-female fa-fw fa-3x"></i>
+                                </div>
+                             </a>
+                             <div class="circle-tile-content red db-container">
+                                <div class="circle-tile-description text-faded">
+                                   Female
+                                </div>
+                                <div class="circle-tile-number text-faded">
+                                   10
+                                </div>
+                             </div>
+                          </div>
+                      </div>
+
+                      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                          <div class="circle-tile" data-toggle="tooltip" data-placement="bottom" title="Average cycle time at the clinic per patient.">
+                             <a href="#">
+                                <div class="circle-tile-heading purple db-container">
+                                   <i class="fa fa-hourglass-half fa-fw fa-3x"></i>
+                                </div>
+                             </a>
+                             <div class="circle-tile-content purple db-container">
+                                <div class="circle-tile-description text-faded">
+                                   Hours
+                                </div>
+                                <div class="circle-tile-number text-faded">
+                                   2
+                                </div>
+                             </div>
+                          </div>
+                      </div>
+
+                      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                          <div class="circle-tile" data-toggle="tooltip" data-placement="bottom" title="Average wait time for a patient visit.">
+                             <a href="#">
+                                <div class="circle-tile-heading orange db-container">
+                                   <i class="fa fa-clock-o fa-fw fa-3x"></i>
+                                </div>
+                             </a>
+                             <div class="circle-tile-content orange db-container">
+                                <div class="circle-tile-description text-faded">
+                                   Minutes
+                                </div>
+                                <div class="circle-tile-number text-faded">
+                                   10
+                                </div>
+                             </div>
+                          </div>
+                      </div>
+                      
+                      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                          <div class="circle-tile" data-toggle="tooltip" data-placement="bottom" title="Average number of stops that a patient makes during their time at the clinic.">
+                             <a href="#">
+                                <div class="circle-tile-heading yellow db-container">
+                                   <i class="fa fa-map-marker fa-fw fa-3x"></i>
+                                </div>
+                             </a>
+                             <div class="circle-tile-content yellow db-container">
+                                <div class="circle-tile-description text-faded">
+                                   Stops
+                                </div>
+                                <div class="circle-tile-number text-faded">
+                                   5
+                                </div>
+                             </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+               </div>
+               <!-- page-wrapper END-->
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="padding-top:25px;">
+                  <div class="db-container" style="position: relative; width:auto;">
+                    <canvas id="myChartlinePatient" style="margin-bottom: 50px;"></canvas>
+                  </div>
+              </div>
+
+               <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" style="padding-top:25px; padding-bottom: 25px;">
+                  <div class="db-container" style="position: relative; width:auto;">
+                    <canvas id="myChartpie" height="215px"></canvas>
+                  </div>
+               </div>
+
+              <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                  <div class="db-container" style="position: relative; width:auto;">
+                    <canvas id="myChartline" style="margin-bottom: 50px;"></canvas>
+                  </div>
+              </div>
+
+              <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                  <div class="db-container" style="position: relative; width:auto;">
+                    <canvas id="myBarGroupChart" height="215px"></canvas>
+                  </div>
+               </div> 
+
+           </div>
+            <!-- end of your code -->
+            <!-- footer here -->
+         </section>
+        <br/><br/><br/><br/>
+          <footer class="navbar-fixed-bottom">
+             <div class="container-fluid footer">
+                <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+             </div>
+          </footer>
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!-- DataTable Link -->
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/datatables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <!-- End of LInk -->
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script>
+      var ctxline = $("#myChartline");
+      var ctxpie = $("#myChartpie");
+      var ctxlinepatient = $("#myChartlinePatient");
+      var ctxbargroup = $("#myBarGroupChart");
+
+      var myChartlinePatient = new Chart(ctxlinepatient, {
+          type: 'line',
+          data: {
+              labels: ["Nov. 1", "Nov. 2", "Nov. 3", "Nov. 4", "Nov. 5", "Nov. 6", "Nov. 7"],
+              datasets: [{
+                  label: 'Patient',
+                  data: [18, 26, 23, 24, 20, 21, 29],
+                  backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                  borderColor: 'rgba(75, 192, 192, 1)' ,
+                  borderWidth: 1,
+                  pointBackgroundColor: 'rgba(75, 192, 192, 1)'
+              }]
+          },
+           options: {
+              scales: {
+                  xAxes: [{
+                      ticks: {
+                          stepSize: 1,
+                          min: 0,
+                          autoSkip: false,
+                          fontSize: 14
+                      }
+                  }],
+                  yAxes:[{
+                      ticks: {
+                          beginAtZero: true,
+                          fontSize: 14
+                      }
+                  }]
+              },
+                title: {
+                          display: true,
+                          text: 'Number of patient visit per day'
+                      },
+          }
+      });
+
+      var myChartline = new Chart(ctxline, {
+          type: 'line',
+          data: {
+              labels: ["Nov. 1", "Nov. 2", "Nov. 3", "Nov. 4", "Nov. 5", "Nov. 6", "Nov. 7"],
+              datasets: [{
+                  label: 'Male',
+                  data: [10, 13, 15, 10, 20, 25, 10],
+                  backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                  borderColor: 'rgba(54, 162, 235, 0.2)',
+                  borderWidth: 1,
+                  pointBackgroundColor: 'rgba(54, 162, 235, 0.2)'
+              },{
+                  label: 'Female',
+                  data: [13, 10, 12, 20, 14, 18, 15],
+                  backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                  borderColor: 'rgba(255, 99, 132, 0.2)',
+                  borderWidth: 1,
+                  pointBackgroundColor: 'rgba(255, 99, 132, 0.2)'
+              }]
+          },
+           options: {
+              scales: {
+                  xAxes: [{
+                      ticks: {
+                          stepSize: 1,
+                          min: 0,
+                          autoSkip: false,
+                          fontSize: 14
+                      }
+                  }],
+                  yAxes:[{
+                      ticks: {
+                          beginAtZero: true,
+                          fontSize: 14
+                      }
+                  }]
+              },
+                title: {
+                          display: true,
+                          text: 'Cycle Time by Gender'
+                      },
+          }
+      });
+
+      var myPieChart = new Chart(ctxpie,{
+          type: 'doughnut',
+          data: {
+                labels: ['Average Wait Time','Maximum Wait Time'],
+                datasets: [{
+                    data: [10, 20],
+                    backgroundColor: [
+                      'green','gray'
+                    ],
+                    borderColor: [
+                      'green','gray'
+                    ],
+                    hoverBackgroundColor: [
+                      'green','gray'
+                    ],
+                    hoverBorderColor: [
+                      'green','gray'
+                    ],
+                    hoverBorderWidth: 5,
+                    borderWidth: 1
+                }], 
+                // These labels appear in the legend and in the tooltips when hovering different arcs
+               
+            }, options: {
+                  title: {
+                            display: true,
+                            text: 'Average Waiting Time in minutes',
+                        }, 
+                  legend: { 
+                    display: false 
+                  },
+                  rotation: 1 * Math.PI,
+                  circumference: 1 * Math.PI
+            }
+      });
+
+      var myBarGroupChart = new Chart(ctxbargroup,{
+          type: 'bar',
+          data: {
+                labels: ['Yesterday','Today'],
+                datasets: [{
+                            label: "Yesterday",
+                            backgroundColor:  'rgba(255, 99, 132, 0.2)',
+                            data: [21]
+                          }, {
+                            label: "Today",
+                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                            data: [29]
+                }], 
+            }, options: {
+                  scales: {
+                        xAxes: [{
+                            ticks: {
+                                stepSize: 1,
+                                min: 0,
+                                autoSkip: false,
+                                fontSize: 14
+                            }
+                        }],
+                        yAxes:[{
+                            ticks: {
+                                beginAtZero: true,
+                                fontSize: 14
+                            }
+                        }]
+                    },
+                  title: {
+                            display: true,
+                            text: 'Visitor Comparison',
+                        },
+                        legend: { 
+                          display: false 
+                        }
+            }
+      });
+
+      </script>
+      <script type="text/javascript">
+       $(function () {
+           $(".circle-tile").tooltip();
+       });
+    </script> 
+
+      <!-- This is the Code for dataTable, Please copy paste -->
+      <!-- This is the Code for dataTable -->
+      <!-- end of your custom script -->
+   </body>
+</html>

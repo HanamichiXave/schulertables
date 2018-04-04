@@ -1,0 +1,2754 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finance Management</title>
+    <link rel="icon" href="../../content/images/logonatin.png">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- css for nav bar -->
+	<link href="../../content/custom/css/style.css" rel="stylesheet">
+    <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+	<!-- end of css  -->
+	<!-- your custom css -->
+
+	<!-- end of your custom css -->
+</head>
+<style>
+.bs-tooltip + .tooltip > .tooltip-inner {
+    background-color: #2c6b84;
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 600px;
+        margin: 30px auto;
+    }
+
+    ...
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 900px;
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-xl {
+        width: 90%;
+        max-width: 1200px;
+    }
+}
+
+.no-p-l-r {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.no-border-right {
+  border-right: solid 1px #FFF!important;
+}
+.no-border-left {
+  border-left: solid 1px #FFF!important;
+}
+.no-border-bottom {
+  border-bottom: solid 1px #FFF!important;
+}
+.no-border-top {
+  border-top: solid 1px #FFF!important;
+}
+.no-border-all {
+  border-top: solid 1px #FFF!important;
+  border-bottom: solid 1px #FFF!important;
+  border-left: solid 1px #FFF!important;
+  border-right: solid 1px #FFF!important;
+}
+.no-border-right-header {
+  border-right: solid 1px #20CB9A!important;
+}
+.no-border-left-header {
+  border-left: solid 1px #20CB9A!important;
+}
+.no-border-top-header {
+  border-top: solid 1px #20CB9A!important;
+}
+.no-border-bottom-header {
+  border-bottom: solid 1px #20CB9A!important;
+}
+.no-border-all-header {
+  border-right: solid 1px #20CB9A!important;
+  border-left: solid 1px #20CB9A!important;
+  border-top: solid 1px #20CB9A!important;
+  border-bottom: solid 1px #20CB9A!important;
+}
+
+.checkbox-inline, .radio-inline{
+    padding-left: 5px !important;
+}
+
+tr.noBorder td {
+  border: 0;
+}
+
+.parag{
+    text-align: justify;
+    text-justify: inter-word;
+    text-indent: 40px;
+}
+
+.form-control{
+    display: initial !important;
+}
+
+.input-signature{
+    width: 300px;  
+    border: 0; 
+    border-bottom: 1px solid; 
+    outline: 0;
+}
+
+
+.formtable th, td {
+    width: 100px;
+}
+</style>
+<body>
+	<!-- navigation bar  -->
+	<nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+	    <div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                 <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+                    <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+                </a>
+				<a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+							</li>
+              <li class="divider">|</li>
+              <li>
+                <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+              </li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- end of navigation bar -->
+	<div class="container" >
+		<br>
+    <br>
+    <div class="page-header" style="color: #000033"><h2><strong>Finance Management</strong></h2></div>
+      <ol class="breadcrumb" style="background-color: #D9EDF7">
+          <li><a href="finance-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+          <li><a href="fin-bir-rev-com.html">Bureau of Internal Revenue Compliance</a></li>
+          <li>Alpha List</li>
+      </ol>
+	<!-- your code start here -->
+	<!-- Please observe indention -->   
+
+    
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="hovereffect" data-toggle="modal" data-target="#Form1604E">
+            <img class="img-responsive" src="../../content/images/reserved.png" height="100" width="100" alt="">
+            <div class="overlay">
+               <h2>BIR-1604 E</h2>
+                <p class="info">
+                  Alpha list of payees subject to expanded withholding tax.
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="hovereffect" data-toggle="modal" data-target="#Form1702Q">
+            <img class="img-responsive" src="../../content/images/reserved.png" height="100" width="100" alt="">
+            <div class="overlay">
+               <h2>BBIR-1702 Q</h2>
+                <p class="info">
+                  Alpha list of withholding tax.
+                </p> 
+            </div> 
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="hovereffect" data-toggle="modal" data-target="#Form1604CF73">
+            <img class="img-responsive" src="../../content/images/reserved.png" height="100" width="100" alt="">
+            <div class="overlay">
+               <h2>BIR-1604 CF 7.3</h2>
+                <p class="info">
+                  Alpha list of empoloyees as of December with no previous employer within the year. 
+                </p>
+            </div>
+        </div> 
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="hovereffect" data-toggle="modal" data-target="#Form1604CF74">
+            <img class="img-responsive" src="../../content/images/reserved.png" height="100" width="100" alt="">
+            <div class="overlay">
+               <h2>BIR-1604 CF 7.4</h2>
+                <p class="info">
+                  Alpha list of employees as of December with previous employer within the year as of December 
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="hovereffect" data-toggle="modal" data-target="#Form1604CF75">
+            <img class="img-responsive" src="../../content/images/reserved.png" height="100" width="100" alt="">
+            <div class="overlay">
+               <h2>BIR-1604 CF Schedule 7.5 </h2>
+                <p class="info">
+                  Alpha list of minimum wage earns as of December.
+                </p>
+            </div> 
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="hovereffect" data-toggle="modal" data-target="#Form1604CF71">
+            <img class="img-responsive" src="../../content/images/reserved.png" height="100" width="100" alt="">
+            <div class="overlay">
+               <h2>BIR-1604 CF Schedule 7.1</h2>
+                <p class="info">
+                  Alpha list of payees terminated before December as of December. 
+                </p>
+            </div>
+        </div> 
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="hovereffect" data-toggle="modal" data-target="#Form1604CF5">
+            <img class="img-responsive" src="../../content/images/reserved.png" height="100" width="100" alt="">
+            <div class="overlay">
+               <h2>BIR-1604 CF Schedule 5</h2>
+                <p class="info">
+                  Alpha list of payees subject to final withholding tax as of December.
+                </p>
+            </div> 
+        </div>
+      </div>
+
+    </div> 
+
+    
+	<!-- end of your code -->
+	<!-- footer here -->
+	 <hr />
+        <footer class="navbar-fixed-bottom">
+            <div class="container-fluid footer">
+                <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+            </div>
+        </footer>
+	<!-- end foooter -->
+	</div>
+
+  <!-- Modal Form 1604E -->
+  <div class="modal fade" id="Form1604E" role="dialog">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title">BIR Form No. 1604E</h3>
+          </div>
+          <div class="modal-body col-lg-12">
+            <div class="col-lg-12">
+              <div class="col-lg-12" style="padding-bottom: 10px; padding-top: 10px; border-bottom: 1px dotted;">
+                <div class="row">  
+                  <div class="form-group">
+                    <div class="form-inline col-lg-4 no-p-l-r">
+                      <label style="font-weight: normal;"><strong>1 </strong> For the Year</label>
+                      <input class="form-control" type="" name="" style="width: 50px; padding: 0; text-align: center;" placeholder="YYYY">
+                    </div>
+                    <div class="form-inline col-lg-4 no-p-l-r">
+                      <label style="padding-bottom: 0px; margin-bottom: 0px; border-bottom: 0px; font-weight: normal;"><strong>2 </strong> Amended Return?</label>
+                      <input id="amended-return1" class="css-checkbox" type="checkbox" />
+                      <label for="amended-return1" name="demo_lbl_2" class="checkbox-inline css-label"> Yes</label>
+                      <input id="amended-return2" class="css-checkbox" type="checkbox" />
+                      <label for="amended-return2" name="demo_lbl_3" class="checkbox-inline css-label"> No</label>        
+                    </div>
+                    <div class="form-inline col-lg-4 no-p-l-r">
+                      <label style="font-weight: normal;"><strong>3 </strong> No. of Sheets Attached</label>
+                      <input class="form-control" type="" name="" style="width: 40px; padding: 0; text-align: center;" placeholder="- -">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0; margin-top: 0;">
+                <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Part I</strong> Background Information</h5>
+              </div>
+              <div class="col-lg-12" style="padding-bottom: 10px; padding-top: 10px; border-bottom: 1px dotted;">
+                <div class="row">  
+                  <div class="form-group">
+                    <div class="form-inline col-lg-4 no-p-l-r">
+                      <label style="font-weight: normal;"><strong>4 </strong> TIN </label>
+                      <input class="form-control" style="width: 50px; padding: 0; text-align: center;" placeholder="000"> - 
+                      <input class="form-control" style="width: 50px; padding: 0; text-align: center;" placeholder="000"> - 
+                      <input class="form-control" style="width: 50px; padding: 0; text-align: center;" placeholder="000"> - 
+                      <input class="form-control" style="width: 50px; padding: 0; text-align: center;" placeholder="000">
+                    </div>
+                    <div class="form-inline col-lg-2   no-p-l-r">
+                      <label style="font-weight: normal;"><strong>5 </strong> RDO Code </label>
+                      <input class="form-control" type="" name="" style="width: 45px; padding: 0; text-align: center;" placeholder="- - -">
+                    </div>
+                    <div class="form-inline col-lg-6 no-p-l-r">
+                      <label style="font-weight: normal;"><strong>6 </strong> Line of Business/Occupation </label>
+                      <input class="form-control" type="" name="" style="width: 75%; padding: 0; text-align: center;" placeholder="Private School">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 no-p-l-r" style="padding-top: 10px; border-bottom: 1px dotted;">
+                <div class="row">
+                  <div class="form-group col-lg-10">
+                    <label style="font-weight: normal;"><strong>7 </strong> Withholding Agent's Name<small style="font-weight: normal;"> (Last Name, First Name, Middle Name for Individuals)/(Registered Names for Non-Individuals)</small></label>
+                    <input class="form-control" type="" name="" placeholder="Private School of San Juan" style="text-align: center;">
+                  </div>
+                  <div class="form-group col-lg-2">
+                    <label style="font-weight: normal;"><strong>8 </strong> Telephone No.</label>
+                    <input class="form-control" type="" name="" placeholder="123-45-67" style="text-align: center;">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 no-p-l-r" style="padding-top: 10px; border-bottom: 1px dotted;">
+                <div class="row">
+                  <div class="form-group col-lg-10">
+                    <label style="font-weight: normal;"><strong>9 </strong> Registered Address</label>
+                    <input class="form-control" type="" name="" placeholder="01 Greenhills Street, Greenhills, San Juan, Metro Manila"  style="text-align: center;">
+                  </div>
+                  <div class="form-group col-lg-2">
+                    <label style="font-weight: normal;"><strong>10 </strong> Zip Code</label>
+                    <input class="form-control" type="" name="" placeholder="1500" style="text-align: center;">
+                  </div>
+                </div>
+              </div>
+                <div class="col-lg-12 no-p-l-r" style="padding-top: 10px;">
+                <div class="row">
+                  <div class="form-group col-lg-12">
+                      <div class="col-lg-4 no-p-l-r"> 
+                          <label style="font-weight: normal;"><strong>11 </strong> Category of Withholding Agent</label>
+                      </div>
+                      <div class="col-lg-8 no-p-l-r">
+                          <input id="agent-private" class="css-checkbox" type="checkbox" />
+                          <label for="agent-private" name="demo_lbl_2" class="checkbox-inline css-label"> Private</label>
+                          <input id="agent-government" class="css-checkbox" type="checkbox" />
+                          <label for="agent-government" name="demo_lbl_3" class="checkbox-inline css-label"> Government</label> 
+                       </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0;margin-top: 0;">
+                <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Part II</strong> Summary of Remittance</h5>
+              </div>
+              <div class="col-lg-12" style="padding-bottom: 10px; padding-top: 10px;">
+                <div class="row">
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          </div>
+                            <div class="col-lg-12" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0;margin-top: 0; border-top: 1px dotted;">
+                            <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Schedule 1</strong> Remittance per BIR Form No. 1601 - E</h5>
+                          </div>
+                        </tr>
+                        <tr>
+                          <th class="center-t">MONTH</th>
+                          <th class="center-t">DATE OF REMITTANCE</th>
+                          <th class="center-t">NAME OF BANK/BANKCODE/ROR NO., IF ANY</th>
+                          <th class="center-t">TAX WITHHELD</th>
+                          <th class="center-t" colspan="2">PENALTIES</th>
+                          <th class="center-t" colspan="2">TOTAL AMOUNT REMITTED</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="center-t">JAN</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">FEB</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">MAR</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">APR</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">MAY</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">JUN</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">JUL</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">AUG</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">SEPT</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">OCT</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">NOV</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">DEC</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td colspan="3">TOTAL</td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="8" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0;margin-top: 0; border-top: 1px dotted;">
+                              <div class="col-lg-12" >
+                              <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Schedule 2</strong> Remittance per BIR Form No. 1606</h5>
+                              </div>
+                            </td>
+                        </tr>
+                      </tbody>
+
+                  
+
+                      <thead>
+                        <tr>
+                          <th class="center-t">MONTH</th>
+                          <th class="center-t">DATE OF REMITTANCE</th>
+                          <th class="center-t">NAME OF BANK/BANKCODE/ROR NO., IF ANY</th>
+                          <th class="center-t">TAX WITHHELD</th>
+                          <th class="center-t" colspan="2">PENALTIES</th>
+                          <th class="center-t" colspan="2">TOTAL AMOUNT REMITTED</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="center-t">JAN</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">FEB</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">MAR</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">APR</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">MAY</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">JUN</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">JUL</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">AUG</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">SEPT</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">OCT</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">NOV</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td class="center-t">DEC</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td colspan="3">TOTAL</td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td colspan="8" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0;margin-top: 0; border-top: 1px dotted;">
+                              <div class="col-lg-12" >
+                                  <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Part III</strong> ALPHABETICAL LISTS OF PAYEES (Format Only)</h5>
+                              </div>
+                          </td>
+                        </tr>
+                        <tr>
+                            <td colspan="8" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0;margin-top: 0; border-top: 1px dotted;">
+                              <div class="col-lg-2" >
+                                  <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Schedule 3</strong></h5>
+                              </div>
+                              <div class="col-lg-10" ><label class="center">ALPHALIST OF OTHER PAYEES WHOSE INCOME PAYMENTS ARE EXEMPT FROM WITHHOLDING TAX BUT SUBJECT TO INCOME TAX (Reported Under Form 2304)</label></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                          <th class="center-t">SEQ NO.<br/>(1)</th>
+                          <th class="center-t">Taxpayer Identification Number(TIN)<br/>(2)</th>
+                          <th class="center-t">NAME OF PAYEES<br/>(Last Name, First Name, Middle Name for individuals, complete name for Non-individual(s)<br/>(3)</th>
+                          <th class="center-t">ATC<br/>(4)</th>
+                          <th colspan="2" class="center-t">NATURE OF INCOME PAYMENT<br/>(5)</th>
+                          <th colspan="2" class="center-t">AMOUNT OF INCOME PAYMENT <br/>(6)</th>
+                        </tr>
+
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                          <td colspan="2"><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                            <td class="col-lg-12" colspan="6">
+                              <p class="parag">I declare, under the penalties of perjury that this return has been made in good faith, verified by me, and to the best of my knowledge and belief, is true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof.</p>
+                            <br/>
+                              <div class="row">
+                                  <div class="col-lg-6 center-t">
+                                      12 ______________________________________________________ <br/>
+                                      Taxpayer/Authorized Agent Signature over Printed Name
+                                  </div>
+                                  <div class="col-lg-6 center-t">
+                                      13 _______________________________ <br/>
+                                      Title/Position of Signatory
+                                  </div>
+                              </div>
+                            </td>
+                            <td colspan="2">
+                                <p class="center-t">
+                                    Stamp of Receiving Office and Date of Receipt
+                                </p>
+                            </td>
+                        </tr>
+                           <tr>
+                            <td colspan="8" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0;margin-top: 0; border-top: 1px dotted;">
+                              <div class="col-lg-2" >
+                                  <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Schedule 4</strong></h5>
+                              </div>
+                              <div class="col-lg-10" ><label class="center">Alphalist of Payees Subject to Expanded Withholding Tax (reported under Form 2307)</label></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                          <th class="center-t">SEQ NO.<br/>(1)</th>
+                          <th class="center-t">Taxpayer Identification Number(TIN)<br/>(2)</th>
+                          <th class="center-t">NAME OF PAYEES<br/>(Last Name, First Name, Middle Name for individuals, complete name for Non-individual(s)<br/>(3)</th>
+                          <th class="center-t">ATC<br/>(4)</th>
+                          <th class="center-t">NATURE OF INCOME PAYMENT<br/>(5)</th>
+                          <th class="center-t">AMOUNT OF INCOME PAYMENT <br/>(6)</th>
+                          <th class="center-t">RATE OF TAX <br/>(7)</th>
+                          <th class="center-t">AMOUNT OF TAX WITHHELD <br/>(8)</th>
+                        </tr>
+
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                        <tr>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+                       <tr>
+                          <td colspan="5"><input style="width:100%">TOTAL</td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                          <td><input style="width:100%"></td>
+                        </tr>
+
+
+                      </tbody>
+                    </table>
+                                              <div class="col-lg-12">Note: For Schedule 3 prepare a separate schedule for foreign nationals/payees indicating their foreign address
+                          Attach additional sheets, if necessary
+                        </div>
+
+                        <div class="col-lg-12 center-t">
+                          <h4>
+                              BIR Form No. 1604-E - Annual Information Return of Creditable Income Taxes Withheld (Expanded)/Income Payments
+                              <br/>Exempt From Withholding Tax
+                              <br/>Guidelines and Instructions
+                          </h4>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <h5>Who Shall File</h5><br/>
+                          <p class="parag">
+                                      This return shall be filed in triplicate by every withholding
+                              agent/payor who is either an individual, estate, trust, partnership,
+                              corporation, government agency and instrumentality, governmentowned
+                              and controlled corporation, local government unit and other
+                              juridical entity required to deduct and withhold taxes on income
+                              payments subject to Expanded Withholding Taxes, or making income
+                              payments not subject to withholding tax but subject to income tax. The
+                              tax rates for and nature of income payments subject to expanded
+                              withholding taxes are printed in BIR Form Nos. 1601-E and 1606.
+                              If the payor is the Government of the Philippines or any
+                              political subdivision or agency/instrumentality thereof, or governmentowned
+                              and controlled corporation, the return shall be made by the officer or
+                              employee having control of the payments or by any designated officer or
+                              employee.
+                          </p>
+                              <br/>
+                          <p class="parag">            If the person required to withhold and pay the tax is a
+                              corporation, the return shall be made in the name of the corporation and
+                              shall be signed and verified by the president, vice president or
+                              authorized officer and shall be countersigned by the treasurer or
+                              assistant treasurer.
+                          </p class="parag">
+                              <br/>
+                          <p class="parag">           With respect to fiduciary, the return shall be made in the
+                              name of the individual, estate or trust for which such fiduciary acts, and
+                              shall be signed and verified by such fiduciary. In case of two or more
+                              fiduciaries, the return shall be signed and verified by one of such
+                              fiduciaries.
+                          </p>
+                           <h5>When and Where to File</h5><br/>
+                           <p class="parag">
+                                      The return shall be filed on or before March 1 of the year
+                              following the calendar year in which the income payments subjected to
+                              expanded withholding taxes or exempt from withholding tax were paid
+                              or accrued.
+                           </p>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <p class="parag">
+                                      The return shall be filed with the Revenue Collection Officer
+                              or duly authorized City/Municipal Treasurer of the Revenue District
+                              Office having jurisdiction over the withholding agent's place of
+                              business/office.
+                          </p>
+                              <br/>
+                          <p class="parag"> 
+                                       A taxpayer may file a separate return for the head office and
+                              for each branch or place of business/office or a consolidated return for
+                              the head office and all the branches/offices except in the case of large
+                              taxpayers where only one consolidated return is required.
+                          </p>
+                          <h5>Penalty for failure to file information returns</h5><br/>
+                          <p class="parag">
+                                      In the case of each failure to file an information return,
+                              statement or list, or keep any record, or supply any information required
+                              by the Code or by the Commissioner on the date prescribed therefor,
+                              unless it is shown that such failure is due to reasonable cause and not to
+                              willful neglect, there shall, upon notice and demand by the
+                              Commissioner, be paid by the person failing to file, keep or supply the
+                              same One thousand pesos (P= 1,000.00) for each such failure. Provided,
+                              however, that the aggregate amount imposed for all such failures
+                              during a calendar year shall not exceed Twenty five thousand pesos
+                              (P= 25,000.00).
+                          </p>
+                          <h5>Attachment Required</h5><br/>
+                          <ol type="1">
+                              <li>Alphalist of Payees Subjected to Expanded Withholding Tax.</li>
+                              <li>Alphalist of Other Payees Whose Income Payments Are Exempt
+                                  from Withholding Tax but Subject to Income Tax.
+                              </li>                                
+                          </ol>
+                          <h5>Note: All background information must be properly filled up.</h5><br/>
+                          <ul>
+                              <li>Box No. 1 refers to the transaction year and not the date of filing this return.</li>
+                              <li>The last 3 digits of the 12-digit TIN refers to the branch code.</li>
+                              <li>TIN = Taxpayer Identification Number.</li>
+                              <li>The ATC in the Alphabetical List of Payees shall be taken from BIR Form Nos. 2307 and 2304.</li>
+
+                              <h5 class="pull-right">ENCS</h5>
+                          </ul>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" value='Print' onclick='printDiv();' ><i class="fa fa-print" aria-hidden="true"></i>Print</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- Modal Form 1702Q -->
+  <div class="modal fade" id="Form1702Q" role="dialog">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title">BIR Form No. 1702Q</h3>
+          </div>
+          <div class="modal-body col-lg-12">
+            <div class="col-lg-12">
+              <div class="col-lg-12" style="padding-bottom: 10px; padding-top: 10px; border-bottom: 1px dotted;">
+                <div class="row">  
+                  <div class="form-group">
+                    <div class="form-inline col-lg-3 no-p-l-r">
+                      <label style="font-weight: normal;"><strong>1 </strong> For the</label>
+                      <input id="Calendar" class="css-checkbox" type="checkbox" />
+                      <label for="Calendar" class="checkbox-inline css-label"> Calendar</label>
+                      <input id="Fiscal" class="css-checkbox" type="checkbox" />
+                      <label for="Fiscal" class="checkbox-inline css-label"> Fiscal</label>
+                      <label style="font-weight: normal;"><strong>2 </strong> Year Ended</label>
+                      <input class="form-control" style="width: 50px; padding: 0; text-align: center;" placeholder="MM"> - 
+                      <input class="form-control" style="width: 50px; padding: 0; text-align: center;" placeholder="YYYY">
+                    </div>
+                     <div class="form-inline col-lg-3 no-p-l-r">
+                      <label style="padding-bottom: 0px; margin-bottom: 0px; border-bottom: 0px; font-weight: normal;"><strong>3 </strong> Quarter</label>
+                      <input id="Quarter1" class="css-checkbox" type="checkbox" />
+                      <label for="Quarter1" class="checkbox-inline css-label"> 1st</label>
+                      <input id="Quarter2" class="css-checkbox" type="checkbox" />
+                      <label for="Quarter2" class="checkbox-inline css-label"> 2nd</label>
+                      <input id="Quarter3" class="css-checkbox" type="checkbox" />
+                      <label for="Quarter3" class="checkbox-inline css-label"> 3rd</label>              
+                    </div>
+                    <div class="form-inline col-lg-3 no-p-l-r">
+                      <label style="padding-bottom: 0px; margin-bottom: 0px; border-bottom: 0px; font-weight: normal;"><strong>4 </strong> Amended Return?</label>
+                      <input id="amended-return1" class="css-checkbox" type="checkbox" />
+                      <label for="amended-return1" name="demo_lbl_2" class="checkbox-inline css-label"> Yes</label>
+                      <input id="amended-return2" class="css-checkbox" type="checkbox" />
+                      <label for="amended-return2" name="demo_lbl_3" class="checkbox-inline css-label"> No</label>        
+                    </div>
+                    <div class="form-inline col-lg-3 no-p-l-r">
+                      <label style="font-weight: normal;"><strong>5 </strong> No. of Sheets Attached</label>
+                      <input class="form-control" type="" name="" style="width: 40px; padding: 0; text-align: center;" placeholder="- -">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0; margin-top: 0;">
+                <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Part I</strong> Background Information</h5>
+              </div>
+              <div class="col-lg-12" style="padding-bottom: 10px; padding-top: 10px; border-bottom: 1px dotted;">
+                <div class="row">  
+                  <div class="form-group">
+                    <div class="form-inline col-lg-4 no-p-l-r">
+                      <label style="font-weight: normal;"><strong>6 </strong> TIN </label>
+                      <input class="form-control" style="width: 50px; padding: 0; text-align: center;" placeholder="000"> - 
+                      <input class="form-control" style="width: 50px; padding: 0; text-align: center;" placeholder="000"> - 
+                      <input class="form-control" style="width: 50px; padding: 0; text-align: center;" placeholder="000"> - 
+                      <input class="form-control" style="width: 50px; padding: 0; text-align: center;" placeholder="000">
+                    </div>
+                    <div class="form-inline col-lg-2   no-p-l-r">
+                      <label style="font-weight: normal;"><strong>7 </strong> RDO Code </label>
+                      <input class="form-control" type="" name="" style="width: 45px; padding: 0; text-align: center;" placeholder="- - -">
+                    </div>
+                    <div class="form-inline col-lg-6 no-p-l-r">
+                      <label style="font-weight: normal;"><strong>8 </strong> Line of Business</label>
+                      <input class="form-control" type="" name="" style="width: 50%; padding: 0; text-align: center;" placeholder="Private School">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 no-p-l-r" style="padding-top: 10px; border-bottom: 1px dotted;">
+                <div class="row">
+                  <div class="form-group col-lg-10">
+                    <label style="font-weight: normal;"><strong>9 </strong> Taxpayer's Name</label>
+                    <input class="form-control" type="" name="" placeholder="Private School of San Juan" style="text-align: center;">
+                  </div>
+                  <div class="form-group col-lg-2">
+                    <label style="font-weight: normal;"><strong>10 </strong> Telephone No.</label>
+                    <input class="form-control" type="" name="" placeholder="123-45-67" style="text-align: center;">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 no-p-l-r" style="padding-top: 10px; border-bottom: 1px dotted;">
+                <div class="row">
+                  <div class="form-group col-lg-10">
+                    <label style="font-weight: normal;"><strong>11 </strong> Registered Address</label>
+                    <input class="form-control" type="" name="" placeholder="01 Greenhills Street, Greenhills, San Juan, Metro Manila"  style="text-align: center;">
+                  </div>
+                  <div class="form-group col-lg-2">
+                    <label style="font-weight: normal;"><strong>12 </strong> Zip Code</label>
+                    <input class="form-control" type="" name="" placeholder="1500" style="text-align: center;">
+                  </div>
+                </div>
+              </div>
+                <div class="col-lg-12 no-p-l-r" style="padding-top: 10px;">
+                <div class="row">
+                  <div class="form-group col-lg-10">
+                      <div class="col-lg-4 no-p-l-r"> 
+                          <label style="font-weight: normal;"><strong>13 </strong>  Are you availing of tax relief under 14 ATC Special Law / International Tax Treaty?</label>
+                      </div>
+                      <div class="col-lg-6">
+                          <input id="agent-private" class="css-checkbox" type="checkbox" />
+                          <label for="agent-private" name="demo_lbl_2" class="checkbox-inline css-label"> Yes</label>
+                          <input id="agent-government" class="css-checkbox" type="checkbox" />
+                          <label for="agent-government" name="demo_lbl_3" class="checkbox-inline css-label"> No</label> 
+                          <label for="agent-government" name="demo_lbl_3" class="checkbox-inline css-label"> If yes, specify</label>
+                          <input class="form-control" style="text-align: center;">
+                      </div>
+                  </div>
+                  <div class="form-group col-lg-2">
+                      <label for="agent-private" name="demo_lbl_2" class="checkbox-inline css-label"><strong>14 </strong> ATC</label>
+                      <input class="form-control" type="" name="" placeholder="0000" style="text-align: center;">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0;margin-top: 0;">
+                <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Part II</strong> Computation of Tax</h5>
+              </div>
+              
+              <div class="table-responsive" style="width:100%;">
+                <table class="table table-bordered" style="width:1138px;">
+                  <thead>
+                    <tr>
+                      <th class="center-t" >Declaration This Quarter</th>
+                      <th class="center-t" >E X E M P T</th>
+                      <th class="center-t" colspan="2" >T A X A B L E</th>
+                    </tr>
+                    <tr>
+                      <th colspan="2"></th>
+                      <th class="center-t" style="width:25%;">Special Rate</th>
+                      <th class="center-t" style="width:25%;">Regular Rate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+
+                    <tr>
+                      <td><strong>15</strong> Sales/Revenues/Receipts</td>
+                      <td class="form-inline center-t">
+                          <strong>15A</strong></div>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>15B</strong>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>15C</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                     <tr>
+                      <td><strong>16</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Less: Cost of Sales/Services</td>
+                      <td class="form-inline center-t">
+                          <strong>16A</strong></div>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>16B</strong>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>16C</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><strong>17</strong> Gross Income</td>
+                      <td class="form-inline center-t">
+                          <strong>17A</strong></div>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>17B</strong>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>17C</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                     <tr>
+                      <td><strong>18</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add: Other Income</td>
+                      <td class="form-inline center-t">
+                          <strong>18A</strong></div>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>18B</strong>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>18C</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><strong>19</strong> Total Gross Income</td>
+                      <td class="form-inline center-t">
+                          <strong>19A</strong></div>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>19B</strong>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>19C</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                     <tr>
+                      <td><strong>20</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Less: Deductions</td>
+                      <td class="form-inline center-t">
+                          <strong>20A</strong></div>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>20B</strong>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>20C</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2"><strong>21</strong> Taxable Income This Quarter</td>
+                      <td class="form-inline center-t">
+                          <strong>21A</strong>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>21B</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                     <tr>
+                      <td colspan="2"><strong>22</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add: Taxable Income from Previous Quarter(s)</td>
+                      <td class="form-inline center-t">
+                          <strong>22A</strong>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>22B</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2"><strong>23</strong> Total Taxable Income to Date </td>
+                      <td class="form-inline center-t">
+                          <strong>23A</strong>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>23B</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2"><strong>24</strong> Tax Rate</td>
+                      <td class="form-inline center-t">
+                          <strong>24A</strong>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>24B</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2"><strong>25</strong> Tax Due</td>
+                      <td class="form-inline center-t">
+                          <strong>25A</strong>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>25B</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2"><strong>26</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Less: Share of Other Agencies (RA 7916 / 8748 etc.)</td>
+                      <td class="form-inline center-t">
+                          <strong>26</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2"><strong>27</strong> Tax due to the BIR on transaction under Special Rate (Item 25A less 26) </td>
+                      <td class="form-inline center-t">
+                          <strong>27</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                     <tr>
+                      <td colspan="2"><strong>28</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Aggregate Tax Due - (Sum of Items 27 and 25B)]</td>
+                      <td colspan="2" class="form-inline center-t">
+                          <strong>28</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                     <tr>
+                      <td colspan="2"><strong>29</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Less: Tax Credits/Payments</td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;29A</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prior Year's Excess Credits</td>
+                      <td colspan="2" class="form-inline center-t">
+                          <strong>29A</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;29B</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tax Payment(s) for the Previous Quarter(s)</td>
+                      <td colspan="2" class="form-inline center-t">
+                          <strong>29B</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td colspan="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;29C</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creditable Tax Withheld for the Previous Quarter(s)</td>
+                      <td colspan="2" class="form-inline center-t">
+                          <strong>29C</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;29D</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creditable Tax Withheld Per BIR Form No. 2307 for this Quarter</td>
+                      <td colspan="2" class="form-inline center-t">
+                          <strong>29D</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;29E</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tax paid in Return Previously Filed, if this is an Amended Return</td>
+                      <td colspan="2" class="form-inline center-t">
+                          <strong>29E</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;29F</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Tax Credits/Payments (Sum of Items 29A, 29B, 29C, 29D and 29E)</td>
+                      <td colspan="2" class="form-inline center-t">
+                          <strong>29F</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2"><strong>30</strong> Tax Payable/(Overpayment)(Item 28 less Item 29F)</td>
+                      <td colspan="2" class="form-inline center-t">
+                          <strong>30</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2"><strong>31</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add:</td>
+                    </tr>
+
+                    <tr>
+                      <td class="center-t">Penalties Surcharge</td>
+                      <td class="center-t">Interest</td>
+                      <td class="center-t">Compromise</td>
+                    </tr>
+                    <tr>
+                      <td class="form-inline center-t">
+                          <strong>&nbsp;&nbsp;&nbsp;31A</strong>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>&nbsp;&nbsp;&nbsp;31B</strong>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>&nbsp;&nbsp;&nbsp;31C</strong>
+                          <input class="form-control center-t">
+                      </td>
+                      <td class="form-inline center-t">
+                          <strong>&nbsp;&nbsp;&nbsp;31D</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2"><strong>32</strong> Total Amount Payable (Overpayment)(Sum of Items 30 and 31D)</td>
+                      <td colspan="2" class="form-inline center-t">
+                          <strong>32</strong>
+                          <input class="form-control center-t">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="4">
+                          <p class="parag">
+                              We declare, under the penalties of perjury that this return has been made in good faith, verified by us, and to the best of our knowledge and belief, is true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof.
+                          </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" class="form-inline center-t">
+                          <strong>33</strong>
+                          <input type="text" class="input-signature">
+                          <br/>
+                          President/Vice President or Authorized Agent
+                          <br/>
+                          (Signature over Printed Name) 
+                          <br/>
+                          <input type="text" class="input-signature">
+                          <br/>
+                          TIN of Tax Agent (if applicable)
+                      </td>
+                      <td colspan="2" class="form-inline center-t">
+                          <strong>34</strong>
+                          <input type="text" class="input-signature">
+                          <br/>
+                          Treasurer/Asst. Treasurer or Authorized Agent
+                          <br/>
+                          (Signature over Printed Name) 
+                          <br/>
+                          <input type="text" class="input-signature">
+                          <br/>
+                          Tax Agent Accreditation No. (if applicable)
+                      </td>
+                    </tr>
+
+                     <tr>
+                      <td colspan="3" class="no-p-l-r">
+                          <div class="col-lg-12" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0;margin-top: 0;">
+                            <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Part III</strong> D e t a i l s of P a y m e n t</h5>
+                          </div>
+
+                          <table class="table table-responsive table-bordered">
+                              <thead>
+                                  <th class="center-t"><strong>Particulars</strong></th>
+                                  <th class="center-t"><strong>Drawee Bank/Agency</strong></th>
+                                  <th class="center-t"><strong>Number</strong></th>
+                                  <th class="center-t"><strong>Date</strong></th>
+                                  <th class="center-t"><strong>Amount</strong></th>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td colspan="4">
+                                        <strong>35</strong> Cash/Bank Debit Memo
+                                      </td>
+                                      <td class="form-inline">
+                                          <strong>35</strong>
+                                          <input class="form-control center-t">
+                                      </td>
+                                  </tr>
+
+                                  <tr>
+                                      <td>
+                                        <strong>36</strong> Check
+                                      </td>
+                                      <td class="form-inline">
+                                          <strong>36A</strong>
+                                          <input class="form-control center-t">
+                                      </td>
+                                      <td class="form-inline">
+                                          <strong>36B</strong>
+                                          <input class="form-control center-t">
+                                      </td>
+                                      <td class="form-inline">
+                                          <strong>36C</strong>
+                                          <input class="form-control center-t" placeholder="MMDDYY">
+                                      </td>
+                                       <td class="form-inline">
+                                          <strong>36D</strong>
+                                          <input class="form-control center-t">
+                                      </td>
+                                  </tr>
+
+                                  <tr>
+                                      <td colspan="2">
+                                        <strong>37</strong> Tax Debit Memo
+                                      </td>
+                                      <td class="form-inline">
+                                          <strong>37A</strong>
+                                          <input class="form-control center-t">
+                                      </td>
+                                      <td class="form-inline">
+                                          <strong>37B</strong>
+                                          <input class="form-control center-t" placeholder="MMDDYY">
+                                      </td>
+                                       <td class="form-inline">
+                                          <strong>37C</strong>
+                                          <input class="form-control center-t">
+                                      </td>
+                                  </tr>
+
+                                  <tr>
+                                      <td>
+                                        <strong>38</strong> Others
+                                      </td>
+                                      <td class="form-inline">
+                                          <strong>38A</strong>
+                                          <input class="form-control center-t">
+                                      </td>
+                                      <td class="form-inline">
+                                          <strong>38B</strong>
+                                          <input class="form-control center-t">
+                                      </td>
+                                      <td class="form-inline">
+                                          <strong>38C</strong>
+                                          <input class="form-control center-t" placeholder="MMDDYY">
+                                      </td>
+                                       <td class="form-inline">
+                                          <strong>38D</strong>
+                                          <input class="form-control center-t">
+                                      </td>
+                                  </tr>
+
+                              </tbody>
+                          </table>
+                      </td>
+                      <td class="center-t">
+                          <div class="table-bordered" style="height: 352px;">
+                          Stamp of Receiving Office and Date of Receipt
+                          </div>
+                      </td>
+                     </tr>
+
+                      <tr>
+                          <td colspan="4">Machine Validation/Revenue Official Receipt Details (If not filled with the bank)</td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <table class="table table-bordered">
+                  <thead>
+                      <th class="center-t"><strong>Operation Code</strong></th>
+                      <th class="center-t"><strong>ATC</strong></th>
+                      <th class="center-t"><strong>Description</strong></th>
+                      <th class="center-t"><strong>Tax Rate</strong></th>
+                      <th class="center-t"><strong>Tax Base</strong></th>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td colspan="5" class="center-t"><strong>DOMESTIC CORPORATION</strong></td>
+                      </tr>
+
+                      <tr>
+                          <td class="center-t">01</td>
+                          <td>IC 010</td>
+                          <td>
+                              1. In General<br/>
+                              &nbsp;&nbsp; a. 1998 <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1999 <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2000
+                          </td>
+                          <td>
+                              <br/>
+                              34% <br/>
+                              33% <br/>
+                              32% <br/>
+                          </td>
+                          <td>
+                              <br/><br/>
+                              Taxable Income from All sources
+                          </td>
+                      </tr>
+
+                      <tr>
+                          <td class="center-t">02</td>
+                          <td>IC 030</td>
+                          <td>2. Proprietary Educational Institution</td>
+                          <td>10%</td>
+                          <td>On Taxable Income from all sources</td>
+                      </tr>
+
+                      <tr>
+                          <td class="center-t">02</td>
+                          <td>IC 031</td>
+                          <td>3. Non-stock, Non-Profit Hospitals</td>
+                          <td>10%</td>
+                          <td>On Taxable Income from All sources</td>
+                      </tr>
+
+                      <tr>
+                          <td class="center-t">04</td>
+                          <td>IC 040</td>
+                          <td>
+                              4. GOCC, Agencies & Insrumentalities<br/>
+                              &nbsp;&nbsp; a. 1998 <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1999 <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2000
+                          </td>
+                          <td>
+                              <br/>
+                              34% <br/>
+                              33% <br/>
+                              32% <br/>
+                          </td>
+                          <td>On Taxable Income from All sources</td>
+                      </tr>
+
+                      <tr>
+                          <td class="center-t"></td>
+                           <td>IC 041</td>
+                          <td>
+                              National Gov't & LGU's<br/>
+                              &nbsp;&nbsp; a. 1998 <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1999 <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2000
+                          </td>
+                          <td>
+                              <br/>
+                              34% <br/>
+                              33% <br/>
+                              32% <br/>
+                          </td>
+                          <td>On Taxable Income from Proprietary activities</td>
+                      </tr>
+
+                      <tr>
+                          <td class="center-t"><br/>13<br/>01</td>
+                          <td>IC 011<br/>IC 010</td>
+                          <td>6. Exempt Corporation<br/>
+                              &nbsp;&nbsp; a. On Exempt Activities <br/>
+                              &nbsp;&nbsp; b. On Taxable Activities <br/>
+                          </td>
+                          <td><br/>0%<br/>* same rate as in 1a</td>
+                          <td><br/><br/>On Taxable Income</td>
+                      </tr>
+
+                      <tr>
+                          <td class="center-t">14</td>
+                          <td>IC 021</td>
+                          <td>7. General Professional Partnership<br/>
+                              8. Corporation covered by Special Law
+                          </td>
+                          <td>0%</td>
+                          <td></td>
+                      </tr>
+
+                      <tr>
+                          <td colspan="5" class="center-t"><strong>RESIDENT FOREIGN CORPORATION</strong></td>
+                      </tr>
+
+                      <tr>
+                          <td class="center-t">09</td>
+                          <td>IC 070</td>
+                     <td>
+                              1. In General<br/>
+                              &nbsp;&nbsp; a. 1998 <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1999 <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2000
+                          </td>
+                          <td>
+                              <br/>
+                              34% <br/>
+                              33% <br/>
+                              32% <br/>
+                          </td>
+                          <td>
+                              <br/><br/>
+                              On Taxable Income from within the Philippines
+                          </td>
+                      </tr>
+
+                      <tr>
+                          <td class="center-t">10</td>
+                          <td>IC 080</td>
+                          <td>2. International Carriers</td>
+                          <td>2.5%</td>
+                          <td>Gross Philippine Billing</td>
+                      </tr>
+
+                      <tr>
+                          <td class="center-t"></td>
+                          <td>IC 101</td>
+                          <td>3. Regional Operating Headquarters*<br/>
+                              4. Corporation covered by Special Law*
+                          </td>
+                          <td>10%</td>
+                          <td>On Taxable Income</td>
+                      </tr>
+
+                      <tr>
+                          <td class="center-t"></td>
+                          <td>IC 190</td>
+                          <td>5. Offshore Banking Units (OBU's)<br/><br/><br/>
+                              &nbsp;&nbsp; a. 1998 <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1999 <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2000
+                          </td>
+                          <td>10%
+                              <br/>
+                              <br/>
+                              <br/>
+                              34%<br/>
+                              33%<br/>
+                              32%<br/>
+                          </td>
+                          <td>
+                              On Gross Taxable Income on Foreign Currency Transaction not subjected to Final Tax<br/><br/>
+                              On Taxable Income Othere Than Foreign Currency Transaction
+                          </td>
+                      </tr>
+
+                      <tr>
+                          <td class="center-t"></td>
+                          <td>IC 191</td>
+                          <td>5. Foreign Currency Deposit Units (FCDU's)<br/><br/><br/>
+                              &nbsp;&nbsp; a. 1998 <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1999 <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2000
+                          </td>
+                          <td>10%
+                              <br/>
+                              <br/>
+                              <br/>
+                              34%<br/>
+                              33%<br/>
+                              32%<br/>
+                          </td>
+                          <td>
+                              On Gross Taxable Income on Foreign Currency Transaction not subjected to Final Tax<br/><br/>
+                              On Taxable Income Othere Than Foreign Currency Transaction
+                          </td>
+                      </tr>
+
+
+                      
+                  </tbody>
+              </table>
+              <div><strong>* PLEASE REFER TO REVENUE DISTRICT OFFICES</strong></div>
+              <div><center><strong>BIR Form No.1702Q - Quarterly Income Tax Return</strong></center></div>
+              <div><center><strong>For Corporations and Partnerships</strong></center></div>
+              <div><center><strong>GUIDELINES AND INSTRUCTIONS</strong></center></div>
+
+
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" value='Print' onclick='printDiv();' ><i class="fa fa-print" aria-hidden="true"></i>Print</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  <!-- Modal Form Form1604CF7.3 -->
+  <div class="modal fade" id="Form1604CF73" role="dialog">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title">BIR Form No. 1604 CF 7.3</h3>
+          </div>
+          <div class="modal-body col-lg-12">
+              <div class="table-responsive" style="width:100%">
+                  <table class="table table-bordered table-responsive" style="width: 1600px">
+                        <tr>
+                            <th colspan="20" style="background-color: #00cc99;"><h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Schedule 7.3</strong> ALPHALIST OF EMPLOYEES AS OF DECEMBER 31 WITH NO PREVIOUS EMPLOYER WITHIN THE YEAR (Reported Under BIR Form No.2316)</h5></th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" rowspan="4">SEQ NO </br>(1)</th>
+                          <th class="center-t" rowspan="4">TIN </br>(2)</th>
+                          <th class="center-t" colspan="3" rowspan="2">NAME OF EMPLOYEES</th>
+                          <th class="center-t" colspan="15">(4)&nbsp;&nbsp;&nbsp;GROSS COMPENSATION INCOME</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" rowspan="3">Gross Compensation Income<br/>(4a)</th>
+                          <th class="center-t" colspan="9">Previous Employer</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" rowspan="2">Last Name </br>(3a)</th>
+                          <th class="center-t" rowspan="2">First Name </br>(3b)</th>
+                          <th class="center-t" rowspan="2">Middle Name </br>(3c)</th>
+                          <th class="center-t" colspan="5">NON - TAXABLE</th>
+                          <th class="center-t" colspan="4">TAXABLE</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" >13th Month Pay & Other Benefits </br>(4b)</th>
+                          <th class="center-t" >De Minimis Benefits </br>(4c)</th>
+                          <th class="center-t" >SSS, GSIS, PHIC & Pag - ibig Contributions, and Union Dues </br>(4d)</th>
+                          <th class="center-t" >Salaries Other Forms of Compensation </br>(4e)</th>
+                          <th class="center-t" >Total Non-Taxable Compensation Income (Previous) </br>(4f)</th>
+                          <th class="center-t" >Basic Salary </br>(4g)</th>
+                          <th class="center-t" >13th Month Pay & Other Benefits </br>(4h)</th>
+                          <th class="center-t" >Salaries & Other Forms of Compensation </br>(4i)</th>
+                          <th class="center-t" >Total Taxable (Previous Employer) </br>(4j)</th>
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td>TOTALS</td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                        </tr>
+                      </table>
+              </div>
+          </div>
+          <div class="modal-body col-lg-12">
+              <div class="table-responsive" style="width:100%">
+                  <table class="table table-bordered table-responsive" style="width: 1600px">
+                      <tr>
+                          <th colspan="20" style="background-color: #00cc99;"><h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Schedule 7.3 (continuation)</strong> ALPHALIST OF EMPLOYEES AS OF DECEMBER 31 WITH NO PREVIOUS EMPLOYER WITHIN THE YEAR</h5></th>
+                      </tr>
+                      <tr>
+                          <th class="center-t" colspan="2">EXEMPTION</th>
+                          <th class="center-t" rowspan="2">Premium Paid on Health and/or Hospital Insurance <br/>(6)</th>
+                          <th class="center-t" rowspan="2">Net Taxable Compensation Income <br/>(7)</th>
+                          <th class="center-t" rowspan="2">TAX DUE<br/> (JAN. - DEC.) <br/>(8)</th>
+                          <th class="center-t" rowspan="2">TAX WITHHELD<br/> (JAN. - NOV.) <br/>(9)</th>
+                          <th class="center-t" colspan="2">YEAR - END ADJUSTMENT (10a or 10b)</th>
+                          <th class="center-t" rowspan="2">AMOUT OF TAX WITHHELD AS ADJUSTED (to be reflected in BIR Form No. 2316)<br/> (11)=(9+10a) or (9-10b)</th>
+                          <th class="center-t" rowspan="2">Substitued Filling?<br/> Yes/No<br/>(12)</th>
+                      </tr>
+                      <tr>
+                          <th class="center-t">Code <br/> (5a)</th>
+                          <th class="center-t">Amount <br/> (5b)</th>
+                          <th class="center-t">AMOUNT WITHHELD AND PAID FOR IN DECEMBER <br/> (10a) = (8) - (9)</th>
+                          <th class="center-t">OVER WITHHELD TAX REFUNDED TO EMPLOYEE <br/> (10b) = (9) - (8)</th>
+                      </tr>
+                      <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                      </tr>
+                      <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                      </tr>
+                      <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                      </tr>
+                  </table>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" value='Print' onclick='printDiv();' ><i class="fa fa-print" aria-hidden="true"></i>Print</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- Modal Form Form1604CF7.4 -->
+  <div class="modal fade" id="Form1604CF74" role="dialog">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title">BIR Form No. 1604 CF 7.4</h3>
+          </div>
+          <div class="modal-body col-lg-12">
+              <div class="table-responsive" style="width:100%">
+                  <table class="table table-bordered table-responsive" style="width: 1600px">
+                        <tr>
+                            <th colspan="20" style="background-color: #00cc99;"><h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Schedule 7.4</strong> ALPHALIST OF EMPLOYEES AS OF DECEMBER 31 WITH PREVIOUS EMPLOYER/S WITHIN THE YEAR (Reported Under BIR Form No. 2316)</h5></th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" rowspan="4">SEQ NO </br>(1)</th>
+                          <th class="center-t" rowspan="4">TIN </br>(2)</th>
+                          <th class="center-t" colspan="3" rowspan="2">NAME OF EMPLOYEES</th>
+                          <th class="center-t" colspan="15">GROSS COMPENSATION INCOME</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" rowspan="3">Gross Compensation Income<br/>(4a)</th>
+                          <th class="center-t" colspan="9">Previous Employer</th>
+                          <th class="center-t" colspan="5">Present Employer</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" rowspan="2">Last Name </br>(3a)</th>
+                          <th class="center-t" rowspan="2">First Name </br>(3b)</th>
+                          <th class="center-t" rowspan="2">Middle Name </br>(3c)</th>
+                          <th class="center-t" colspan="5">NON - TAXABLE</th>
+                          <th class="center-t" colspan="4">TAXABLE</th>
+                          <th class="center-t" colspan="5">NON - TAXABLE</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" >13th Month Pay & Other Benefits </br>(4b)</th>
+                          <th class="center-t" >De Minimis Benefits </br>(4c)</th>
+                          <th class="center-t" >SSS, GSIS, PHIC & Pag - ibig Contributions, and Union Dues </br>(4d)</th>
+                          <th class="center-t" >Salaries Other Forms of Compensation </br>(4e)</th>
+                          <th class="center-t" >Total Non-Taxable Compensation Income (Previous) </br>(4f)</th>
+                          <th class="center-t" >Basic Salary </br>(4g)</th>
+                          <th class="center-t" >13th Month Pay & Other Benefits </br>(4h)</th>
+                          <th class="center-t" >Salaries & Other Forms of Compensation </br>(4i)</th>
+                          <th class="center-t" >Total Taxable (Previous Employer) </br>(4= 4g+4h+4j)</th>
+                          <th class="center-t" >13th Month Pay & Other Benefits </br>(4k)</th>
+                          <th class="center-t" >De Minimis Benefits </br>(4j)</th>
+                          <th class="center-t" >SSS, GSIS, PHIC & Pag - ibig Contributions, and Union Dues </br>(4m)</th>
+                          <th class="center-t" >Salaries Other Forms of Compensation </br>(4n)</th>
+                          <th class="center-t" >Total Non-Taxable Compensation Income (Present) </br>(4o)</th>
+                        </tr>
+                        <tr>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          
+                        </tr>
+                      </table>
+              </div>
+          </div>
+          <div class="modal-body col-lg-12">
+              <div class="table-responsive" style="width:100%">
+                  <table class="table table-bordered table-responsive" style="width: 1600px">
+
+                  </table>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" value='Print' onclick='printDiv();' ><i class="fa fa-print" aria-hidden="true"></i>Print</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="modal fade" id="Form1604CF71" role="dialog">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title">BIR Form No. 1604 CF 7.1</h3>
+          </div>
+          <div class="modal-body col-lg-12">
+              <div class="table-responsive" style="width:100%">
+                  <table class="table table-bordered table-responsive" style="width: 1600px">
+                        <tr>
+                            <th colspan="20" style="background-color: #00cc99;"><h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Schedule 7.1</strong> ALPHALIST OF EMPLOYEES TERMINATED BEFORE DECEMBER 31 (Reported Under BIR Form No. 2316)</h5></th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" rowspan="4">SEQ NO </br>(1)</th>
+                          <th class="center-t" rowspan="4">TIN </br>(2)</th>
+                          <th class="center-t" colspan="3" rowspan="2">NAME OF EMPLOYEES<BR>(3)</BR></th>
+                          <th class="center-t" colspan="2" rowspan="1">Inclusive Date of Employment</th>
+                          <th class="center-t" colspan="10">(4) GROSS COMPENSATION INCOME</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" rowspan="3" >From</th>
+                          <th class="center-t" rowspan="3" >To</th>
+                          <th class="center-t" colspan="10">Previous Employer</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" rowspan="2">Last Name </br>(3a)</th>
+                          <th class="center-t" rowspan="2">First Name </br>(3b)</th>
+                          <th class="center-t" rowspan="2">Middle Name </br>(3c)</th>
+                          <th class="center-t" rowspan="2">Gross Compensation Income<br/>(4a)</th>
+                          <th class="center-t" colspan="5">NON - TAXABLE</th>
+                          <th class="center-t" colspan="4">TAXABLE</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" >13th Month Pay & Other Benefits </br>(4b)</th>
+                          <th class="center-t" >De Minimis Benefits </br>(4c)</th>
+                          <th class="center-t" >OSSS,GSIS,PHIC, & Pag - ibig Contributions and Union Dues </br>(4d)</th>
+                          <th class="center-t" >Salaries & Other Forms of Compensation </br>(4e)</th>
+                          <th class="center-t" >Total Non-Taxable/Exempt Compensation Income </br>(4f)</th>
+                          <th class="center-t" >Basic Salary </br>(4g)</th>
+                          <th class="center-t" >13th Month Pay & Other Benefits</br>(4h)</th>
+                          <th class="center-t" >Salary and Other Forms of Compensations </br>(4i)</th>
+                          <th class="center-t" >Total Taxable Compensation Income </br>(4j)</th>
+                        </tr>
+                        <tr>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 120px;" class="form-control center-t"></td>
+                          <td><input style="width: 120px;" class="form-control center-t"></td>
+                          <td><input style="width: 120px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          
+                          
+
+                         
+                          
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                         
+                          
+
+                          
+                          
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                        
+                          
+                        
+                          
+                          
+                        </tr>
+                      </table>
+
+              </div>
+              <div class="table-responsive" style="width:100%">
+                  <table class="table table-bordered table-responsive" style="width: 1600px">
+                        <tr>
+                            <th colspan="20" style="background-color: #00cc99;"><h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Schedule 7.1 Continuation</strong> ALPHALIST OF EMPLOYEES TERMINATED BEFORE DECEMBER 31 (Reported Under BIR Form No. 2316)</h5></th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" colspan="2">EXEMPTION</th>
+                          <th class="center-t" rowspan="2">Premium Paid on Health on/or Hospital Insuarance <br/>(6)</th>
+                          <th class="center-t" rowspan="2">Net Taxable Compensation Income<br/>(7)</th>
+                          <th class="center-t" rowspan="2">TAX DUE<br/>(8)</th>
+                          <th class="center-t" rowspan="2">TAX WITHHELD<br/>(9)</th>
+                          <th class="center-t" colspan="2">YEAR-END ADJUSTMENT (10a or 10b)</th>
+                          <th class="center-t" rowspan="2">AMOUNT OF TAX WITHHELD AS ADJUSTED<br/>(to be reflected in BIR Form No. 2316)<br/>(11)=(9+10a) or (9-10b)</th>
+                          <th class="center-t" rowspan="2">Substituted Filling? <br/>Yes/No<br/>(12)</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" colspan="">Code <br/>5(a)</th>
+                          <th class="center-t" colspan="">Amount <br/>5(b)</th>
+                          <th class="center-t" rowspan="">AMOUNT WITHHELD AND PAID FOR IN DECEMBER<br/>(10a)=(8)-(9)</th>
+                          <th class="center-t" rowspan="">OVER WITHHELD TAX REFUNDED TO EMPLOYEE<br/>(10b)=(9)-(8)</th>
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                   
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                  
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          
+                        </tr>
+                      </table>
+                      
+              </div>
+          </div>
+          <div class="modal-body col-lg-12">
+              <div class="table-responsive" style="width:100%">
+                  <table class="table table-bordered table-responsive" style="width: 1600px">
+
+                  </table>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" value='Print' onclick='printDiv();' ><i class="fa fa-print" aria-hidden="true"></i>Print</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+    <div class="modal fade" id="Form1604CF75" role="dialog">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title">BIR Form No. 1604 CF 7.5</h3>
+          </div>
+          <div class="modal-body col-lg-12">
+              <div class="table-responsive" style="width:100%">
+                  <table class="table table-bordered table-responsive" style="width: 1600px">
+                        <tr>
+                            <th colspan="20" style="background-color: #00cc99;"><h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Schedule 7.5</strong> ALPHALIST OF MINIMUM WAGE EARNERS (Reported Under BIR Form No. 2316)</h5></th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" rowspan="4">SEQ NO </br>(1)</th>
+                          <th class="center-t" rowspan="4">TIN </br>(2)</th>
+                          <th class="center-t" colspan="3" rowspan="2">NAME OF EMPLOYEES<BR>(3)</BR></th>
+                          <th class="center-t" rowspan="4">REGION WHERE ASSIGNED <BR>(4)</BR></th>
+                          <th class="center-t" colspan="15">GROSS COMPENSATION INCOME</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" colspan="15">Previous Employer</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" rowspan="2">Last Name </br>(3a)</th>
+                          <th class="center-t" rowspan="2">First Name </br>(3b)</th>
+                          <th class="center-t" rowspan="2">Middle Name </br>(3c)</th>
+                          <th class="center-t" colspan="11">NON - TAXABLE</th>
+                          <th class="center-t" colspan="20">TAXABLE</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" >Gross Compensation Income<br/>(5a)</th>
+                          <th class="center-t" >Basic/SMW </br>(5b)</th>
+                          <th class="center-t" >Holiday Pay </br>(5c)</th>
+                          <th class="center-t" >Overtime Pay </br>(5d)</th>
+                          <th class="center-t" >Night Shift Differential </br>(5e)</th>
+                          <th class="center-t" >Hazard Pay </br>(5f)</th>
+                          <th class="center-t" >13th Month Pay & Other Benefits </br>(5g)</th>
+                          <th class="center-t" >De Minimis Benefits </br>(5h)</th>
+                          <th class="center-t" >SSS,GSIS,PHIC, & Pag - ibig Contributions and Union Dues </br>(5i)</th>
+                          <th class="center-t" >Salaries & Other Forms of Compensation </br>(5j)</th>
+                          <th class="center-t" >Total NonTaxable/Exempt Compensation Income </br>(5k)</th>
+                          <th class="center-t" >13th Month Pay & Other Benefits </br>(5l)</th>
+                          <th class="center-t" >Salaries & Other Forms of Compensation </br>(5m)</th>
+                          <th class="center-t" >Total Taxable (Previous Employer) </br>(5n=5l+5m)</th>
+                          
+                        </tr>
+                        <tr>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+
+                         
+                          
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+
+                          
+                          
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                        
+                          
+                          
+                        </tr>
+                      </table>
+
+              </div>
+              <div class="table-responsive" style="width:100%">
+                  <table class="table table-bordered table-responsive" style="width: 1600px">
+                        <tr>
+                            <th colspan="20" style="background-color: #00cc99;"><h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Schedule 7.5 Continuation</strong> ALPHALIST OF MINIMUM WAGE EARNERS (Reported Under BIR Form No. 2316)</h5></th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" colspan="19">GROSS COMPENSATION INCOME</th>
+                        </tr>
+                        <tr>
+
+                          <th class="center-t" colspan="19">Present Employer</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" colspan="10">NON - TAXABLE</th>
+                          <th class="center-t" colspan="7">TAXABLE</th>
+                          <th class="center-t" rowspan="3">Total Compensation Present<br/>(af)</th>
+                          <th class="center-t" rowspan="3">Total Compensation Income Basic SMW Per (Previous & Present Employers)<br/>(ag)</th>
+                        </tr>
+                        <tr>
+                           <th class="center-t" colspan="2">Inclusive Date of Employment</th>
+                           <th class="center-t" rowspan="2" >Gross Compensation Income<br/>(5q)</th>
+                           <th class="center-t" rowspan="2" >Basic/SMW Per Day</br>(5r)</th>
+                           <th class="center-t" rowspan="2" >Basic/SMW Per Month</br>(5s)</th>
+                           <th class="center-t" rowspan="2" >Basic/SMW Per Year</br>(5t)</th>
+                           <th class="center-t" rowspan="2" >Factor Used (No. of Days/Years) </br>(5u)</th>
+                           <th class="center-t" rowspan="2" >Holiday Pay </br>(5v)</th>
+                           <th class="center-t" rowspan="2" >Overtime Pay & Other Benefits </br>(5w)</th>
+                           <th class="center-t" rowspan="2" >Night Shift Differential </br>(5x)</th>
+                           <th class="center-t" rowspan="2" >Hazard Pay </br>(5y)</th>
+                           <th class="center-t" rowspan="2" >13th Month Pay and Other Benefits </br>(5z)</th>
+                           <th class="center-t" rowspan="2" >De Minimis Benefits </br>(5aa)</th>
+                           <th class="center-t" rowspan="2" >SSS,GSIS,PHIC, & Pag - ibig Contributions and Union Dues </br>(5ab)</th>
+                           <th class="center-t" rowspan="2" >Salaries & Other Forms of Compensation </br>(5ac)</th>
+                           <th class="center-t" rowspan="2" >13th Month Pay & Other Benefits </br>(ad)</th>
+                           <th class="center-t" rowspan="2" >Salaries & Other Forms of Compensation</br>(ae)</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" >From<br/>(5o)</th>
+                          <th class="center-t" >To</br>(5p)</th>
+                        </tr>
+                        <tr>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                          <td><input style="width: 100px;" class="form-control center-t"></td>
+                   
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                  
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          
+                          
+                        </tr>
+                      </table>
+                      
+              </div>
+          </div>
+          <div class="modal-body col-lg-12">
+              <div class="table-responsive" style="width:100%">
+                  <table class="table table-bordered table-responsive" style="width: 1600px">
+
+                  </table>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" value='Print' onclick='printDiv();' ><i class="fa fa-print" aria-hidden="true"></i>Print</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+    <div class="modal fade" id="Form1604CF5" role="dialog">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title">BIR Form No. 1604 CF 7.4</h3>
+          </div>
+          <div class="modal-body col-lg-12">
+              <div class="table-responsive" style="width:100%">
+                  <table class="table table-bordered table-responsive" style="width: 1600px">
+                        <tr>
+                            <th colspan="20" style="background-color: #00cc99;"><h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Schedule 7.4</strong> ALPHALIST OF EMPLOYEES AS OF DECEMBER 31 WITH PREVIOUS EMPLOYER/S WITHIN THE YEAR (Reported Under BIR Form No. 2316)</h5></th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" rowspan="4">SEQ NO </br>(1)</th>
+                          <th class="center-t" rowspan="4">TIN </br>(2)</th>
+                          <th class="center-t" colspan="3" rowspan="2">NAME OF EMPLOYEES</th>
+                          <th class="center-t" colspan="15">GROSS COMPENSATION INCOME</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" rowspan="3">Gross Compensation Income<br/>(4a)</th>
+                          <th class="center-t" colspan="9">Previous Employer</th>
+                          <th class="center-t" colspan="5">Present Employer</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" rowspan="2">Last Name </br>(3a)</th>
+                          <th class="center-t" rowspan="2">First Name </br>(3b)</th>
+                          <th class="center-t" rowspan="2">Middle Name </br>(3c)</th>
+                          <th class="center-t" colspan="5">NON - TAXABLE</th>
+                          <th class="center-t" colspan="4">TAXABLE</th>
+                          <th class="center-t" colspan="5">NON - TAXABLE</th>
+                        </tr>
+                        <tr>
+                          <th class="center-t" >13th Month Pay & Other Benefits </br>(4b)</th>
+                          <th class="center-t" >De Minimis Benefits </br>(4c)</th>
+                          <th class="center-t" >SSS, GSIS, PHIC & Pag - ibig Contributions, and Union Dues </br>(4d)</th>
+                          <th class="center-t" >Salaries Other Forms of Compensation </br>(4e)</th>
+                          <th class="center-t" >Total Non-Taxable Compensation Income (Previous) </br>(4f)</th>
+                          <th class="center-t" >Basic Salary </br>(4g)</th>
+                          <th class="center-t" >13th Month Pay & Other Benefits </br>(4h)</th>
+                          <th class="center-t" >Salaries & Other Forms of Compensation </br>(4i)</th>
+                          <th class="center-t" >Total Taxable (Previous Employer) </br>(4= 4g+4h+4j)</th>
+                          <th class="center-t" >13th Month Pay & Other Benefits </br>(4k)</th>
+                          <th class="center-t" >De Minimis Benefits </br>(4j)</th>
+                          <th class="center-t" >SSS, GSIS, PHIC & Pag - ibig Contributions, and Union Dues </br>(4m)</th>
+                          <th class="center-t" >Salaries Other Forms of Compensation </br>(4n)</th>
+                          <th class="center-t" >Total Non-Taxable Compensation Income (Present) </br>(4o)</th>
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                        </tr>
+                        <tr>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td><input class="form-control center-t"></td>
+                          <td>TOTALS</td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                          <td><input placeholder="&#8369;" class="form-control"></td>
+                        </tr>
+                      </table>
+              </div>
+          </div>
+          <div class="modal-body col-lg-12">
+              <div class="table-responsive" style="width:100%">
+                  <table class="table table-bordered table-responsive" style="width: 1600px">
+
+                  </table>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" value='Print' onclick='printDiv();' ><i class="fa fa-print" aria-hidden="true"></i>Print</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+	<!-- plugin scripts -->
+	<script src="../../content/jquery/dist/jquery.min.js"></script>
+	<script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../content/datatables.net/js/jquery.dataTables.js"></script>
+	<script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+	<script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+	<!-- end of plugin scripts -->
+	<!-- your custom script -->
+    <script type="text/javascript">
+    $(function () {
+       $(".super-panel-lg").tooltip();
+    });
+    </script> 
+	<!-- end of your custom script -->
+</body>
+</html>

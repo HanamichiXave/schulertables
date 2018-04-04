@@ -1,0 +1,64 @@
+﻿.spr-label-lg {
+    font-family: Helvetica;
+    font-size: 15px;
+    color: #000033;
+}
+
+.spr-label {
+    font-family: Helvetica;
+    font-size: 18px;
+    color: #000033;
+}
+
+img {
+    background-color: transparent;
+}
+
+.super-panel-lg .row:hover,
+.super-panel-lg .row:focus {
+    background-color: white;
+    transform: scale(1.03);
+    transition: all .1s;
+    background-color: transparent;
+}
+
+.sizeButton {
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.super-panel-lg {
+    width: 310px;
+    height: 110px;
+    border: 1px solid #44A5C9;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.spr-label {
+    font-family: Helvetica;
+    font-size: 20px;
+    color: #000033;
+}
+
+.centerDiv {
+    margin: auto;
+    width: 36.5%;
+}
+
+.pagetitle {
+    width: 205px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+@media screen and (max-width: 320px){
+    .super-panel-lg {
+        width: 290px !important;
+    }
+    .pagetitle {
+        width: 190px !important;
+    }
+}
+
+/*Including this the Add Material and Checkout Reserved*/

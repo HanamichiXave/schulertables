@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<!-- saved from url=(0112)file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Preventive/preventive-maintenance-management.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Preventive Maintenance Transaction</title>
+      <link rel="icon" href="./Preventive Maintenance Transaction_files/logonatin.png">
+      
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="./Preventive Maintenance Transaction_files/bootstrap.min.css" rel="stylesheet">
+      <link href="./Preventive Maintenance Transaction_files/dataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="./Preventive Maintenance Transaction_files/style.css" rel="stylesheet">
+      <link href="./Preventive Maintenance Transaction_files/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <link href="./Preventive Maintenance Transaction_files/clndr.css" rel="stylesheet">
+      <!-- end of your custom css -->
+   <style>
+   </style></head>
+   
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="./Preventive Maintenance Transaction_files/preventive-maintenance-management.html" style="color: white;">
+               <img class="schuler" src="./Preventive Maintenance Transaction_files/logonatin.png" height="25" width="30">
+               </a>
+               <a class="navbar-brand schulercolor" href="./Preventive Maintenance Transaction_files/preventive-maintenance-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="./Preventive Maintenance Transaction_files/preventive-maintenance-management.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="./Preventive Maintenance Transaction_files/preventive-maintenance-management.html"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="./Preventive Maintenance Transaction_files/preventive-maintenance-management.html"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="./Preventive Maintenance Transaction_files/preventive-maintenance-management.html"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                        <li>
+                           <a href="./Preventive Maintenance Transaction_files/preventive-maintenance-management.html"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;See all notifications...</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="./Preventive Maintenance Transaction_files/preventive-maintenance-management.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="./Preventive Maintenance Transaction_files/preventive-maintenance-management.html"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                        <li><a href="./Preventive Maintenance Transaction_files/preventive-maintenance-management.html"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                        <li><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Preventive/preventive-maintenance-management.html#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container">
+         <br>
+         <br>
+         <br>
+         <ol class="breadcrumb" style="background-color: #D9EDF7">
+            <li><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</li>
+            <li>Preventive Maintenance Management</li>
+            <li><a href="./Preventive Maintenance Transaction_files/preventive-maintenance-management.html"></a></li>
+         </ol>
+         <section>
+            <!-- your code start here -->
+            <!-- Please observe indention -->
+            <div class="col-lg-12">
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <div class="row">
+                  
+                     <div class="row">
+                        <div class="form-group">
+                           <!-- calendar column -->
+                           <div class="col-lg-12">
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                 <div class="row">
+                                    <div class="col-lg-12">
+                                       <div class="form-group col-lg-12" style="text-align: center;">
+                                          <label class="spr-label">Number of Replacement Material</label>
+                                          <div class="col-lg-12">
+                                             <input id="" type="text" class="form-control" readonly="" disabled="" placeholder="123,456" style="height: 40px; font-size: 20px; text-align: center; background-color: white;">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-lg-12">
+                                       <div class="form-group col-lg-12" style="text-align: center;">
+                                          <label class="spr-label">Number of Replacement Material</label>
+                                          <div class="col-lg-12">
+                                             <input id="" type="text" class="form-control" readonly="" disabled="" placeholder="123,456" style="height: 40px; font-size: 20px; text-align: center; background-color: white;">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-lg-12">
+                                       <div class="form-group col-lg-12" style="text-align: center;">
+                                          <label class="spr-label">Number of Schedule for Maintenance</label>
+                                          <div class="col-lg-12">
+                                             <input id="" type="text" class="form-control" readonly="" disabled="" placeholder="324,573" style="height: 40px; font-size: 20px; text-align: center; background-color: white;">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-lg-12">
+                                       <div class="form-group col-lg-12" style="text-align: center;">
+                                          <label class="spr-label">Number of Incident Repost</label>
+                                          <div class="col-lg-12">
+                                             <input id="" type="text" class="form-control" readonly="" disabled="" placeholder="324,573" style="height: 40px; font-size: 20px; text-align: center; background-color: white;">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-sm-6 col-md-6 col-lg-4">
+                                <div class="cal1 form-group"><div class="clndr"><div class="clndr-controls" style="
+    background-color: #27908b;
+"><div class="clndr-control-button left"><span class="clndr-previous-button btn"><i class="fa fa-chevron-left fa-2x"></i></span></div><div class="month center">November 2017</div><div class="clndr-control-button rightalign right"><span class="clndr-next-button btn"><i class="fa fa-chevron-right fa-2x"></i></span></div></div><table class="clndr-table" border="0" cellspacing="0" cellpadding="0"><thead><tr class="header-days"><td class="header-day">S</td><td class="header-day">M</td><td class="header-day">T</td><td class="header-day">W</td><td class="header-day">T</td><td class="header-day">F</td><td class="header-day">S</td></tr></thead><tbody><tr><td class="day past adjacent-month last-month calendar-day-2017-10-29 calendar-dow-0"><div class="day-contents">29</div></td><td class="day past adjacent-month last-month calendar-day-2017-10-30 calendar-dow-1"><div class="day-contents">30</div></td><td class="day past adjacent-month last-month calendar-day-2017-10-31 calendar-dow-2"><div class="day-contents">31</div></td><td class="day past calendar-day-2017-11-01 calendar-dow-3"><div class="day-contents">1</div></td><td class="day past calendar-day-2017-11-02 calendar-dow-4"><div class="day-contents">2</div></td><td class="day past calendar-day-2017-11-03 calendar-dow-5"><div class="day-contents">3</div></td><td class="day past calendar-day-2017-11-04 calendar-dow-6"><div class="day-contents">4</div></td></tr><tr><td class="day past calendar-day-2017-11-05 calendar-dow-0"><div class="day-contents">5</div></td><td class="day past calendar-day-2017-11-06 calendar-dow-1"><div class="day-contents">6</div></td><td class="day past calendar-day-2017-11-07 calendar-dow-2"><div class="day-contents">7</div></td><td class="day past calendar-day-2017-11-08 calendar-dow-3"><div class="day-contents">8</div></td><td class="day past calendar-day-2017-11-09 calendar-dow-4"><div class="day-contents">9</div></td><td class="day past event calendar-day-2017-11-10 calendar-dow-5"><div class="day-contents">10</div></td><td class="day past event calendar-day-2017-11-11 calendar-dow-6"><div class="day-contents">11</div></td></tr><tr><td class="day past event calendar-day-2017-11-12 calendar-dow-0"><div class="day-contents">12</div></td><td class="day past event calendar-day-2017-11-13 calendar-dow-1"><div class="day-contents">13</div></td><td class="day past event calendar-day-2017-11-14 calendar-dow-2"><div class="day-contents">14</div></td><td class="day past calendar-day-2017-11-15 calendar-dow-3"><div class="day-contents">15</div></td><td class="day past calendar-day-2017-11-16 calendar-dow-4"><div class="day-contents">16</div></td><td class="day past calendar-day-2017-11-17 calendar-dow-5"><div class="day-contents">17</div></td><td class="day past calendar-day-2017-11-18 calendar-dow-6"><div class="day-contents">18</div></td></tr><tr><td class="day past calendar-day-2017-11-19 calendar-dow-0"><div class="day-contents">19</div></td><td class="day past calendar-day-2017-11-20 calendar-dow-1"><div class="day-contents">20</div></td><td class="day past event calendar-day-2017-11-21 calendar-dow-2"><div class="day-contents">21</div></td><td class="day past event calendar-day-2017-11-22 calendar-dow-3"><div class="day-contents">22</div></td><td class="day past event calendar-day-2017-11-23 calendar-dow-4"><div class="day-contents">23</div></td><td class="day today calendar-day-2017-11-24 calendar-dow-5"><div class="day-contents">24</div></td><td class="day calendar-day-2017-11-25 calendar-dow-6"><div class="day-contents">25</div></td></tr><tr><td class="day calendar-day-2017-11-26 calendar-dow-0"><div class="day-contents">26</div></td><td class="day event calendar-day-2017-11-27 calendar-dow-1"><div class="day-contents">27</div></td><td class="day calendar-day-2017-11-28 calendar-dow-2"><div class="day-contents">28</div></td><td class="day calendar-day-2017-11-29 calendar-dow-3"><div class="day-contents">29</div></td><td class="day calendar-day-2017-11-30 calendar-dow-4"><div class="day-contents">30</div></td><td class="day adjacent-month next-month calendar-day-2017-12-01 calendar-dow-5"><div class="day-contents">1</div></td><td class="day adjacent-month next-month calendar-day-2017-12-02 calendar-dow-6"><div class="day-contents">2</div></td></tr></tbody></table></div></div>
+                              </div>
+                              <div class="col-lg-4">
+                                 <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-12">
+                                        <a data-toggle="modal" data-target="#maintenance-sched">
+                                          <div class="hovereffect">
+                                              <img class="img-responsive" src="./Preventive Maintenance Transaction_files/schedule.png" height="100" width="100" alt="">
+                                              <div class="overlay">
+                                                 <h2>MAINTENANCE SCHEDULE</h2>
+                                                  <p class="info">
+                                                         Submit a form to schedule for a service or repair.
+                                                  </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-12">
+                                       <a data-toggle="modal" data-target="#maintenance-incident-report">
+                                          <div class="hovereffect">
+                                              <img class="img-responsive" src="./Preventive Maintenance Transaction_files/report.png" height="100" width="100" alt="">
+                                              <div class="overlay">
+                                                 <h2>MAINTENANCE INCIDENT REPORT</h2>
+                                                  <p class="info">
+                                                         Submit a report about an incident that requires immidiate maintenance.
+                                                  </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-12">
+                                       <a data-toggle="modal" data-target="#maintenance-request">
+                                          <div class="hovereffect">
+                                              <img class="img-responsive" src="./Preventive Maintenance Transaction_files/work.png" height="100" width="100" alt="">
+                                              <div class="overlay">
+                                                 <h2>MAINTENANCE REQUEST WORK ORDER</h2>
+                                                  <p class="info">
+                                                         Submit a request for a work order.
+                                                  </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-12 col-lg-12">
+                                         <h4 style="text-align: center;"><strong>Transaction Status</strong></h4>
+                                         <div class="form-group">
+                                            <center>
+                                               <button type="button" class="btn btn-success"><strong>COMPLETE</strong></button>
+                                               <button type="button" class="btn btn-danger"><strong>INCOMPLETE</strong></button>
+                                            </center>
+                                         </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                      
+                  </div>
+               </div>
+            </div>
+            <!--Maintenance Schedule Modal -->
+            <div id="maintenance-sched" class="modal fade" role="dialog">
+               <div class="modal-dialog modal-lg">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h3 class="modal-title">Maintenance Schedule</h3>
+                     </div>
+                     <div class="modal-body" id="printOnhand">
+                        <div class="row">
+                           <div class="col-lg-12">
+                              <div class="form-inline pull-right">
+                                 <label>Control Number: </label>
+                                 <input class="form-control" type="" name="" readonly="" disabled="">
+                              </div>
+                           </div>
+                           <br><br><br>
+                           <div class="col-lg-12" style="text-align: center;">
+                              <h3><strong></strong></h3>
+                           </div>
+                        </div>
+                        <div class="panel panel-custom">
+                           <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-wrench fa-lg"></i> Asset Maintenance Schedule</div>
+                           <div class="container-fluid">
+                              <div class="row">
+                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3" style="text-align: center;">
+                                    <h4>Item / Product</h4>
+                                    <div class="form-group">
+                                       <img id="imgAsset" src="./Preventive Maintenance Transaction_files/preventive-maintenance-management.html" style="height: 160px;">
+                                       <div class="btn btn-file">
+                                          <input class="required input-sm" type="file" id="picture" name="file" style="width: 100px;">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                       <div class="form-group">
+                                          <h5>RFID Tag / Barcode</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Items / Product Description</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Manufacturer</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Asset Location</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Department</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>P.O Number</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                       <div class="form-group">
+                                          <h5>Asset Type</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Brand / Model</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Serial Number</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Quantity / Units</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Date of Purchase</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Date of Warranty</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-lg-12" style="text-align: center;">
+                              <h3><strong></strong></h3>
+                           </div>
+                        </div>
+                         <div class="panel panel-custom">
+                           <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-wrench fa-lg"></i> Maintenance Repair</div>
+                           <div class="container-fluid">
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                       <div class="form-group">
+                                          <h5>Date of Maintenance</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Date Put into Service</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Validated By</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Maintenance Description</h5>
+                                          <textarea class="form-control" rows="7" style="resize: none;"></textarea>
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Next Maintenance Planned</h5>
+                                          <textarea class="form-control" rows="7" style="resize: none;"></textarea>
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                       <div class="form-group">
+                                          <h5>Work Order Number</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Person Responsible</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Assign Maintenance Person</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Time Spent</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Repair Status</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Date of Next Maintenance</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Malfunction</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Remarks</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="modal-footer">
+                        <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v5/views/Preventive/preventive-maintenance-transactions.html" class="btn btn-info pull-left" role="button">Transaction Details</a>
+                        <button id="save" onclick="save()" class="btn btn-success" type="button" style="width: 80px;" name="save-details">Save</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" style="width: 80px;">Close</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End of Modal -->
+            <!--Maintenance Incident Report Modal -->
+            <div id="maintenance-incident-report" class="modal fade" role="dialog">
+               <div class="modal-dialog modal-lg">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h3 class="modal-title">Maintenance Incident Report</h3>
+                     </div>
+                     <div class="modal-body" id="printOnhand">
+                        <div class="row">
+                           <div class="col-lg-12">
+                              <div class="form-inline pull-right">
+                                 <label>Control Number: </label>
+                                 <input class="form-control" type="" name="" readonly="" disabled="">
+                              </div>
+                           </div>
+                           <br><br><br>
+                           <div class="col-sm-12 col-lg-12" style="text-align: center;">
+                              <h3><strong></strong></h3>
+                           </div>
+                        </div>
+                        <div class="panel panel-custom">
+                           <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-wrench fa-lg"></i> Asset Maintenance Incident</div>
+                           <div class="container-fluid">
+                              <div class="row">
+                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3" style="text-align: center;">
+                                    <h4>Item / Product</h4>
+                                    <div class="form-group">
+                                       <img id="imgAsset2" src="./Preventive Maintenance Transaction_files/preventive-maintenance-management.html" style="height: 160px;">
+                                       <div class="btn btn-file">
+                                          <input class="required input-sm" type="file" id="picture2" name="file" style="width: 100px;">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                       <div class="form-group">
+                                          <h5>Date of Incident</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Items / Product Description</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>RFID Tag / Barcode</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Manufacturer</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Supplier Contact Person</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Department</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Incident Involved</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Equipment Operator Name</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Service By</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                       <div class="form-group">
+                                          <h5>Type of Incident</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Asset Type</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Serial Number</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Supplier Name</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Asset Location</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Date of Warranty</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Incident Report By</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Recent Service Date</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="modal-footer">
+                        <button id="save" onclick="save()" class="btn btn-success" type="button" name="save-details">Save</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End of Modal -->
+            <!--Maintenance Request Work Order Modal -->
+            <div id="maintenance-request" class="modal fade" role="dialog">
+               <div class="modal-dialog modal-lg">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h3 class="modal-title">Maintenance Request Work Order</h3>
+                     </div>
+                     <div class="modal-body" id="printOnhand">
+                        <div class="row">
+                           <div class="col-lg-12">
+                              <div class="form-inline pull-right">
+                                 <label>Control Number: </label>
+                                 <input class="form-control" type="" name="" readonly="" disabled="">
+                              </div>
+                           </div>
+                           <br><br><br>
+                           <div class="col-sm-12 col-lg-12" style="text-align: center;">
+                              <h3><strong></strong></h3>
+                           </div>
+                        </div>
+                        <div class="panel panel-custom">
+                           <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-wrench fa-lg"></i> Maintenance Work Order</div>
+                           <div class="container-fluid">
+                              <div class="row">
+                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3" style="text-align: center;">
+                                    <h4>Item / Product</h4>
+                                    <div class="form-group">
+                                       <img id="imgAsset3" src="./Preventive Maintenance Transaction_files/preventive-maintenance-management.html" style="height: 160px;">
+                                       <span class="btn btn-file">
+                                       <input class="required input-sm" type="file" id="picture3" name="file" style="width: 100px;">
+                                       </span>
+                                    </div>
+                                 </div>
+                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                       <div class="form-group">
+                                          <h5>Request By </h5>
+                                          <input class="form-control" type="" name="" placeholder="Department">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Department Head</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Priority</h5>
+                                          <select class="form-control">
+                                             <option disabled="disabled" selected="">Choose your option</option>
+                                             <option>High</option>
+                                             <option>Medium</option>
+                                             <option>Low</option>
+                                          </select>
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>RFID Tag / Barcode</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Brand / Model</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                       <div class="form-group">
+                                          <h5>Name of Employee</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Asset Location</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Asset Type</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Serial Number</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Manufacturer</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <div class="col-sm-12 col-lg-4">
+                                       <div class="col-sm-12">
+                                          <center>
+                                             <h4><label>Labor Cost Requirements</label></h4>
+                                          </center>
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <input class="col-xs-7" type="text" name="" style="border-radius: 3px;">
+                                          <input class="col-xs-5" type="text" name="" placeholder="Amount" style="border-radius: 3px;">
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <input class="col-xs-7" type="text" name="" style="border-radius: 3px;">
+                                          <input class="col-xs-5" type="text" name="" placeholder="Amount" style="border-radius: 3px;">
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <input class="col-xs-7" type="text" name="" style="border-radius: 3px;">
+                                          <input class="col-xs-5" type="text" name="" placeholder="Amount" style="border-radius: 3px;">
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <input class="col-xs-7" type="text" name="" style="border-radius: 3px;">
+                                          <input class="col-xs-5" type="text" name="" placeholder="Amount" style="border-radius: 3px;">
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <input class="col-xs-7" type="text" name="" style="border-radius: 3px;">
+                                          <input class="col-xs-5" type="text" name="" placeholder="Amount" style="border-radius: 3px;">
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <h5 class="col-xs-7" style="text-align: center;"><strong>Subtotal</strong></h5>
+                                          <input class="col-xs-5" type="text" name="" disabled="" style="border-radius: 3px;">
+                                       </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-4">
+                                       <div class="col-sm-12">
+                                          <center>
+                                             <h4><label>Parts / Material Requirements</label></h4>
+                                          </center>
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <input class="col-xs-7" type="text" name="" style="border-radius: 3px;">
+                                          <input class="col-xs-5" type="text" name="" placeholder="Amount" style="border-radius: 3px;">
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <input class="col-xs-7" type="text" name="" style="border-radius: 3px;">
+                                          <input class="col-xs-5" type="text" name="" placeholder="Amount" style="border-radius: 3px;">
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <input class="col-xs-7" type="text" name="" style="border-radius: 3px;">
+                                          <input class="col-xs-5" type="text" name="" placeholder="Amount" style="border-radius: 3px;">
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <input class="col-xs-7" type="text" name="" style="border-radius: 3px;">
+                                          <input class="col-xs-5" type="text" name="" placeholder="Amount" style="border-radius: 3px;">
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <input class="col-xs-7" type="text" name="" style="border-radius: 3px;">
+                                          <input class="col-xs-5" type="text" name="" placeholder="Amount" style="border-radius: 3px;">
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <h5 class="col-xs-7" style="text-align: center;"><strong>Subtotal</strong></h5>
+                                          <input class="col-xs-5" type="text" name="" disabled="" style="border-radius: 3px;">
+                                       </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-4">
+                                       <div class="col-sm-12">
+                                          <center>
+                                             <h4><label>Special Tool Requirements</label></h4>
+                                          </center>
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <input class="col-xs-7" type="text" name="" style="border-radius: 3px;">
+                                          <input class="col-xs-5" type="text" name="" placeholder="Amount" style="border-radius: 3px;">
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <input class="col-xs-7" type="text" name="" style="border-radius: 3px;">
+                                          <input class="col-xs-5" type="text" name="" placeholder="Amount" style="border-radius: 3px;">
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <input class="col-xs-7" type="text" name="" style="border-radius: 3px;">
+                                          <input class="col-xs-5" type="text" name="" placeholder="Amount" style="border-radius: 3px;">
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <input class="col-xs-7" type="text" name="" style="border-radius: 3px;">
+                                          <input class="col-xs-5" type="text" name="" placeholder="Amount" style="border-radius: 3px;">
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <input class="col-xs-7" type="text" name="" style="border-radius: 3px;">
+                                          <input class="col-xs-5" type="text" name="" placeholder="Amount" style="border-radius: 3px;">
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <h5 class="col-xs-7" style="text-align: center;"><strong>Subtotal</strong></h5>
+                                          <input class="col-xs-5" type="text" name="" disabled="" style="border-radius: 3px;">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                                       <div class="form-group">
+                                          <h5>Authorized By</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Remarks</h5>
+                                          <textarea class="form-control" rows="5" style="resize: none;"></textarea>
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                                       <div class="form-group">
+                                          <h5>Date of Work Completed</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Number of Days to Complete</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                       <div class="form-group">
+                                          <h5>Work Assign To</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                                       <div class="form-group">
+                                          <h5>Total</h5>
+                                          <input class="form-control" type="" name="">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="modal-footer">
+                        <button id="save" onclick="save()" class="btn btn-success" type="button" name="save-details">Save</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End of Modal -->
+            <!-- end of your code -->
+            <!-- footer here -->
+         </section>
+         <hr>
+         <footer class="navbar-fixed-bottom">
+            <div class="container-fluid footer">
+               <p class="pull-right powerby">© 2016 - Powered by <a href="http://www.simplevia.com/" class="quicktrackcolor">QuickTrack</a></p>
+            </div>
+         </footer>
+
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+
+      <script src="./Preventive Maintenance Transaction_files/jquery.min.js"></script>
+      <script src="./Preventive Maintenance Transaction_files/jquery-ui.min.js"></script>
+      <script src="./Preventive Maintenance Transaction_files/bootstrap.min.js"></script>
+
+      <script src="./Preventive Maintenance Transaction_files/moment.min.js"></script>
+      <script src="./Preventive Maintenance Transaction_files/fullcalendar.min.js"></script>
+      <!-- DataTable Link -->
+      <script src="./Preventive Maintenance Transaction_files/jquery.dataTables.min.js"></script> 
+      <script src="./Preventive Maintenance Transaction_files/datatables.bootstrap.js"></script>
+      <script src="./Preventive Maintenance Transaction_files/dataTables.buttons.min.js"></script>
+      <script src="./Preventive Maintenance Transaction_files/buttons.bootstrap.min.js"></script>
+      <script src="./Preventive Maintenance Transaction_files/buttons.html5.min.js"></script>
+      <script src="./Preventive Maintenance Transaction_files/buttons.print.min.js"></script>
+      <script src="./Preventive Maintenance Transaction_files/dataTables.fixedColumns.min.js"></script>
+      <script src="./Preventive Maintenance Transaction_files/dataTables.fixedHeader.min.js"></script>
+      <script src="./Preventive Maintenance Transaction_files/dataTables.keyTable.min.js"></script>
+      <script src="./Preventive Maintenance Transaction_files/dataTables.scroller.min.js"></script>
+
+      <script src="./Preventive Maintenance Transaction_files/underscore-min.js"></script>
+      <script src="./Preventive Maintenance Transaction_files/clndr.js"></script>
+      <script src="./Preventive Maintenance Transaction_files/demo.js"></script>
+
+      <!-- End of Link -->
+      <script src="./Preventive Maintenance Transaction_files/formValidation.min.js"></script>
+      <script src="./Preventive Maintenance Transaction_files/bootstrap.min(1).js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <!-- This is the Code for dataTable, Please copy paste -->
+      <script type="text/javascript">
+         $(document).ready(function(){
+           var oTable = $('#sampleTable').DataTable({
+             "orderCellsTop": false,
+             "searchHighlight" : true,
+           });
+           $('#search').keyup(function(){
+                 oTable.search($(this).val()).draw() ;
+           });
+           $(".dataTables_filter").hide();
+           oTable.on('order.dt search.dt', function(){
+             oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+              function (cell, i) {
+               cell.innerHTML = i+1;
+               } );
+           }).draw();
+         });
+      </script>
+      <script type="text/javascript">
+        $(function() {
+         var createMonthPopover = function (item, title) {
+             var $pop = $(item);
+             $pop.popover({
+                 placement: 'bottom',
+                 title: ( title || '&nbsp;' ) + ' <a class="close" href="#">&times;</a>',
+                 trigger: 'click',
+                 html: true,
+                 content: function () {
+                     return $('#monthPopUpContent').html();
+                 }
+             }).on('shown.bs.popover', function(e) {
+                 //console.log('shown triggered');
+                 // 'aria-describedby' is the id of the current popover
+                 var current_popover = '#' + $(e.target).attr('aria-describedby');
+                 var $cur_pop = $(current_popover);
+
+                 $cur_pop.find('.close').click(function(){
+                     //console.log('close triggered');
+                     $pop.popover('hide');
+                 });
+
+                 $cur_pop.find('.monthButton').click(function(){
+                     //console.log('OK triggered');
+                     $pop.popover('hide');
+                 });
+             });
+
+             return $pop;
+           };
+
+           // create popover
+           createMonthPopover('#monthPopOver', 'Select a Month');
+             var createYearPopover = function (item, title) {
+               var $pop = $(item);
+
+               $pop.popover({
+                   placement: 'bottom',
+                   title: ( title || '&nbsp;' ) + ' <a class="close" href="#">&times;</a>',
+                   trigger: 'click',
+                   html: true,
+                   content: function () {
+                       return $('#yearPopUpContent').html();
+                   }
+               }).on('shown.bs.popover', function(e) {
+                   //console.log('shown triggered');
+                   // 'aria-describedby' is the id of the current popover
+                   var current_popover = '#' + $(e.target).attr('aria-describedby');
+                   var $cur_pop = $(current_popover);
+
+                   $cur_pop.find('.close').click(function(){
+                       //console.log('close triggered');
+                       $pop.popover('hide');
+                   });
+
+                   $cur_pop.find('.yearButton').click(function(){
+                       //console.log('OK triggered');
+                       $pop.popover('hide');
+                   });
+               });
+
+               return $pop;
+           };
+
+           // create popover
+           createYearPopover('#yearPopOver', 'Select a Year');
+
+         });
+      </script>
+      <!-- This is the Code for dataTable -->
+
+      <script>
+          $(document).ready(function() {
+            
+            $('#calendar').fullCalendar({
+              height: 310,
+              header: {
+                left: 'prev',
+                center: 'title',
+                right: 'next',
+              },
+              defaultDate: '2017-11-12',
+              navLinks: false, // can click day/week names to navigate views
+              selectable: false,
+              selectHelper: false,
+              
+              editable: false,
+              eventLimit: true, // allow "more" link when too many events
+              events: [
+               
+              ]
+            });
+            
+          });
+      </script> 
+
+      <!-- end of your custom script -->
+   
+</body></html>

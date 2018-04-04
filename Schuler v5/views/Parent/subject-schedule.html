@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Parent Management Portal</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../Content/datatables.net/css/jquery.dataTables.min.css" rel="stylesheet" />
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style>
+  .notop {
+    border-top: 0px solid #ddd!important;
+    text-align: left!important;
+  }
+  .tdwidth1 {
+    width: 60%;
+  }
+  .tdwidth {
+    width: 25%;
+  }
+  @media screen and (max-width: 438px) {
+    .tdwidth {
+      width: 30%;
+    }
+  }
+  .tabwidth {
+    width: 20%;
+  }
+  @media screen and (max-width: 768px){
+    .tabwidth {
+      width: auto;
+    }
+  }
+  th {
+    background-color: #85ADDE;
+    color: #FFFFFF;
+  }
+  .table {
+    margin-bottom: 0px!important;
+  }
+   </style>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                           <li>
+                                  <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                           </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               <form class="navbar-form navbar-right search-form" role="search">
+                  <input type="text" class="form-control" placeholder="Search" />
+               </form>
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033">
+            <h2><strong>Parent Management</strong></h2>
+         </div>
+         <ol class="breadcrumb" style="background-color: #D9EDF7">
+           <li><a href="parent-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+           <li><a href="school-activities.html">School Activities</a></li>
+           <li>Subject Schedule</li>
+         </ol>
+         <!-- your code start here -->
+         <!-- Please observe indention -->
+         <!-- <div class="row">
+          <div class="col-lg-12">
+            <div class="col-lg-8">
+                <div class="row" style="padding-bottom: 10px; ">
+                    <div class="col-lg-12">
+                        <a class="btn btn-danger" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            List of Teachers
+                        </a>
+                        <div class="collapse" id="collapseExample">
+                            <div class="well">
+
+                                <div class="row">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mails m-0 table table-actions-bar">
+                                            <thead>
+                                            <th class="col-md-6">Name</th>
+                                            <th class="col-md-6">Subject</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Mrs. Avegin Sanchez</td>
+                                                    <td>Mathematics</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mrs. Bea Saducos</td>
+                                                    <td>Science</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mrs. Jhamila Okla</td>
+                                                    <td>P.E</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Nav tabs -->
+                    <!-- <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#monday" aria-controls="home" role="tab" data-toggle="tab">Monday</a></li>
+                        <li role="presentation"><a href="#tuesday" aria-controls="profile" role="tab" data-toggle="tab">Tuesday</a></li>
+                        <li role="presentation"><a href="#wednesday" aria-controls="messages" role="tab" data-toggle="tab">Wednesday</a></li>
+                        <li role="presentation"><a href="#thursday" aria-controls="settings" role="tab" data-toggle="tab">Thursday</a></li>
+                        <li role="presentation"><a href="#friday" aria-controls="settings" role="tab" data-toggle="tab">Friday</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <!-- <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="monday">
+                            <div class="table-responsive">
+                                <table class="table table-hover mails m-0 table table-actions-bar">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-md-3">Lecture</th>
+                                            <th class="col-md-3">Start Time</th>
+                                            <th class="col-md-3">End Time</th>
+                                            <th class="col-md-3">Teacher</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>P.E.</td>
+                                            <td>8:00 AM</td>
+                                            <td>10:00 AM</td>
+                                            <td>Mrs. Jhamila Okla</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Science</td>
+                                            <td>1:00 PM</td>
+                                            <td>3:00 PM</td>
+                                            <td>Mrs. Bea Saducos</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mathematics</td>
+                                            <td>3:00 PM</td>
+                                            <td>5:00 PM</td>
+                                            <td>Mrs. Avegin Sanchez</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="tuesday">
+                            <div class="table-responsive">
+                                <table class="table table-hover mails m-0 table table-actions-bar">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-md-3">Lecture</th>
+                                            <th class="col-md-3">Start Time</th>
+                                            <th class="col-md-3">End Time</th>
+                                            <th class="col-md-3">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>P.E.</td>
+                                            <td>8:00 AM</td>
+                                            <td>10:00 AM</td>
+                                            <td>Mrs. Jhamila Okla</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Science</td>
+                                            <td>1:00 PM</td>
+                                            <td>3:00 PM</td>
+                                            <td>Mrs. Bea Saducos</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mathematics</td>
+                                            <td>3:00 PM</td>
+                                            <td>5:00 PM</td>
+                                            <td>Mrs. Avegin Sanchez</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="wednesday">
+                            <div class="table-responsive">
+                                <table class="table table-hover mails m-0 table table-actions-bar">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-md-3">Lecture</th>
+                                            <th class="col-md-3">Start Time</th>
+                                            <th class="col-md-3">End Time</th>
+                                            <th class="col-md-3">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>P.E.</td>
+                                            <td>8:00 AM</td>
+                                            <td>10:00 AM</td>
+                                            <td>Mrs. Jhamila Okla</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Science</td>
+                                            <td>1:00 PM</td>
+                                            <td>3:00 PM</td>
+                                            <td>Mrs. Bea Saducos</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mathematics</td>
+                                            <td>3:00 PM</td>
+                                            <td>5:00 PM</td>
+                                            <td>Mrs. Avegin Sanchez</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="thursday">
+                            <div class="table-responsive">
+                                <table class="table table-hover mails m-0 table table-actions-bar">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-md-3">Lecture</th>
+                                            <th class="col-md-3">Start Time</th>
+                                            <th class="col-md-3">End Time</th>
+                                            <th class="col-md-3">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>P.E.</td>
+                                            <td>8:00 AM</td>
+                                            <td>10:00 AM</td>
+                                            <td>Mrs. Jhamila Okla</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Science</td>
+                                            <td>1:00 PM</td>
+                                            <td>3:00 PM</td>
+                                            <td>Mrs. Bea Saducos</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mathematics</td>
+                                            <td>3:00 PM</td>
+                                            <td>5:00 PM</td>
+                                            <td>Mrs. Avegin Sanchez</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="friday">
+                            <div class="table-responsive">
+                                <table class="table table-hover mails m-0 table table-actions-bar">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-md-3">Lecture</th>
+                                            <th class="col-md-3">Start Time</th>
+                                            <th class="col-md-3">End Time</th>
+                                            <th class="col-md-3">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>P.E.</td>
+                                            <td>8:00 AM</td>
+                                            <td>10:00 AM</td>
+                                            <td>Mrs. Jhamila Okla</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Science</td>
+                                            <td>1:00 PM</td>
+                                            <td>3:00 PM</td>
+                                            <td>Mrs. Bea Saducos</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mathematics</td>
+                                            <td>3:00 PM</td>
+                                            <td>5:00 PM</td>
+                                            <td>Mrs. Avegin Sanchez</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+            </div>
+          </div> 
+         </div> -->
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="col-md-6 col-lg-6">
+              <div class="colg-12">
+                <table class="table">
+                 <tbody>
+                   <tr>
+                      <td class="notop tdwidth"><strong>Grade:</strong></th>
+                      <td class="notop tdwidth1"><label class="control-label">5</label></td>
+                   </tr>
+                   <tr>
+                      <td class="notop tdwidth"><strong>Section:</strong></th>
+                      <td class="notop tdwidth1"><label class="control-label">Masigasig</label</td>
+                   </tr>
+                   <tr>
+                      <td class="notop tdwidth"><strong>Class Adviser:</strong></th>
+                      <td class="notop tdwidth1"><label class="control-label">Mr. Mayson Labuntog</label></td>
+                   </tr>
+                 </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-12">
+            <div class="col-lg-12">
+              <ul class="nav nav-justified nav-pills" role="tablist">
+                <li role="presentation" class="active tabwidth" ><a href="#monday" aria-controls="home" role="tab" data-toggle="tab">Monday</a></li>
+                <li role="presentation" class="tabwidth"><a href="#tuesday" aria-controls="profile" role="tab" data-toggle="tab">Tuesday</a></li>
+                <li role="presentation" class="tabwidth"><a href="#wednesday" aria-controls="messages" role="tab" data-toggle="tab">Wednesday</a></li>
+                <li role="presentation" class="tabwidth"><a href="#thursday" aria-controls="settings" role="tab" data-toggle="tab">Thursday</a></li>
+                <li role="presentation" class="tabwidth"><a href="#friday" aria-controls="settings" role="tab" data-toggle="tab">Friday</a></li>
+              </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="monday">
+                <div class="table-responsive">
+                  <table class="table table-hover mails m-0 table table-actions-bar">
+                    <thead>
+                      <tr>
+                        <th class="col-md-3">Room Number/Bldg</th>
+                        <th class="col-md-3">Subject</th>
+                        <th class="col-md-3">Time</th>
+                        <th class="col-md-3">Teacher</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Science Lab</td>
+                        <td>Science</td>
+                        <td>8:00 AM</td>
+                        <td>Mrs. Jhamila Okla</a></td>
+                      </tr>
+                      <tr>
+                        <td>Rm. 203 / Bldg. 4A</td>
+                        <td>Math</td>
+                        <td>10:00 AM</td>
+                        <td>Mrs. Bea Saducos</a></td>
+                      </tr>
+                      <tr>
+                        <td>Rm. 206 / Bldg. 3A</td>
+                        <td>Filipino</td>
+                        <td>1:00 PM</td>
+                        <td>Mrs. Avegin Sanchez</a></td>
+                      </tr>
+                      <tr>
+                        <td>Rm. 210 / Bldg. 1A</td>
+                        <td>English</td>
+                        <td>3:00 PM</td>
+                        <td>Mr. Xavier Buenaventura</a></td>
+                      </tr>
+                      <tr>
+                        <td>PE Hall</td>
+                        <td>PE</td>
+                        <td>5:00 PM</td>
+                        <td>Mr. Benson Leabres</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="tuesday">
+                <div class="table-responsive">
+                  <table class="table table-hover mails m-0 table table-actions-bar">
+                    <thead>
+                      <tr>
+                        <th class="col-md-3">Room Number/Bldg</th>
+                        <th class="col-md-3">Subject</th>
+                        <th class="col-md-3">Time</th>
+                        <th class="col-md-3">Teacher</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Science Lab</td>
+                        <td>Science</td>
+                        <td>8:00 AM</td>
+                        <td>Mrs. Jhamila Okla</a></td>
+                      </tr>
+                      <tr>
+                        <td>Rm. 203 / Bldg. 4A</td>
+                        <td>Math</td>
+                        <td>10:00 AM</td>
+                        <td>Mrs. Bea Saducos</a></td>
+                      </tr>
+                      <tr>
+                        <td>Rm. 206 / Bldg. 3A</td>
+                        <td>Filipino</td>
+                        <td>1:00 PM</td>
+                        <td>Mrs. Avegin Sanchez</a></td>
+                      </tr>
+                      <tr>
+                        <td>Rm. 210 / Bldg. 1A</td>
+                        <td>English</td>
+                        <td>3:00 PM</td>
+                        <td>Mr. Xavier Buenaventura</a></td>
+                      </tr>
+                      <tr>
+                        <td>PE Hall</td>
+                        <td>PE</td>
+                        <td>5:00 PM</td>
+                        <td>Mr. Benson Leabres</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="wednesday">
+                <div class="table-responsive">
+                  <table class="table table-hover mails m-0 table table-actions-bar">
+                    <thead>
+                      <tr>
+                        <th class="col-md-3">Room Number/Bldg</th>
+                        <th class="col-md-3">Subject</th>
+                        <th class="col-md-3">Time</th>
+                        <th class="col-md-3">Teacher</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Science Lab</td>
+                        <td>Science</td>
+                        <td>8:00 AM</td>
+                        <td>Mrs. Jhamila Okla</a></td>
+                      </tr>
+                      <tr>
+                        <td>Rm. 203 / Bldg. 4A</td>
+                        <td>Math</td>
+                        <td>10:00 AM</td>
+                        <td>Mrs. Bea Saducos</a></td>
+                      </tr>
+                      <tr>
+                        <td>Rm. 206 / Bldg. 3A</td>
+                        <td>Filipino</td>
+                        <td>1:00 PM</td>
+                        <td>Mrs. Avegin Sanchez</a></td>
+                      </tr>
+                      <tr>
+                        <td>Rm. 210 / Bldg. 1A</td>
+                        <td>English</td>
+                        <td>3:00 PM</td>
+                        <td>Mr. Xavier Buenaventura</a></td>
+                      </tr>
+                      <tr>
+                        <td>PE Hall</td>
+                        <td>PE</td>
+                        <td>5:00 PM</td>
+                        <td>Mr. Benson Leabres</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="thursday">
+                <div class="table-responsive">
+                  <table class="table table-hover mails m-0 table table-actions-bar">
+                    <thead>
+                      <tr>
+                        <th class="col-md-3">Room Number/Bldg</th>
+                        <th class="col-md-3">Subject</th>
+                        <th class="col-md-3">Time</th>
+                        <th class="col-md-3">Teacher</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Science Lab</td>
+                        <td>Science</td>
+                        <td>8:00 AM</td>
+                        <td>Mrs. Jhamila Okla</a></td>
+                      </tr>
+                      <tr>
+                        <td>Rm. 203 / Bldg. 4A</td>
+                        <td>Math</td>
+                        <td>10:00 AM</td>
+                        <td>Mrs. Bea Saducos</a></td>
+                      </tr>
+                      <tr>
+                        <td>Rm. 206 / Bldg. 3A</td>
+                        <td>Filipino</td>
+                        <td>1:00 PM</td>
+                        <td>Mrs. Avegin Sanchez</a></td>
+                      </tr>
+                      <tr>
+                        <td>Rm. 210 / Bldg. 1A</td>
+                        <td>English</td>
+                        <td>3:00 PM</td>
+                        <td>Mr. Xavier Buenaventura</a></td>
+                      </tr>
+                      <tr>
+                        <td>PE Hall</td>
+                        <td>PE</td>
+                        <td>5:00 PM</td>
+                        <td>Mr. Benson Leabres</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="friday">
+                <div class="table-responsive">
+                  <table class="table table-hover mails m-0 table table-actions-bar">
+                    <thead>
+                      <tr>
+                        <th class="col-md-3">Room Number/Bldg</th>
+                        <th class="col-md-3">Subject</th>
+                        <th class="col-md-3">Time</th>
+                        <th class="col-md-3">Teacher</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Science Lab</td>
+                        <td>Science</td>
+                        <td>8:00 AM</td>
+                        <td>Mrs. Jhamila Okla</a></td>
+                      </tr>
+                      <tr>
+                        <td>Rm. 203 / Bldg. 4A</td>
+                        <td>Math</td>
+                        <td>10:00 AM</td>
+                        <td>Mrs. Bea Saducos</a></td>
+                      </tr>
+                      <tr>
+                        <td>Rm. 206 / Bldg. 3A</td>
+                        <td>Filipino</td>
+                        <td>1:00 PM</td>
+                        <td>Mrs. Avegin Sanchez</a></td>
+                      </tr>
+                      <tr>
+                        <td>Rm. 210 / Bldg. 1A</td>
+                        <td>English</td>
+                        <td>3:00 PM</td>
+                        <td>Mr. Xavier Buenaventura</a></td>
+                      </tr>
+                      <tr>
+                        <td>PE Hall</td>
+                        <td>PE</td>
+                        <td>5:00 PM</td>
+                        <td>Mr. Benson Leabres</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            </div>
+          </div>
+        </div>
+
+         <!-- end of your code -->
+         <!-- footer here -->
+          <footer class="navbar-fixed-bottom">
+             <div class="container-fluid footer">
+                <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+             </div>
+          </footer>
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/datatables.net/js/jquery.dataTables.min.js"></script> 
+
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      
+      <script src="../../content/datatables.net/js/datatables.bootstrap.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.buttons.min.js"></script>
+
+      <script src="../../content/datatables.net/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/datatables.net/js/buttons.html5.min.js"></script>
+      <script src="../../content/datatables.net/js/buttons.print.min.js"></script>
+
+      <script src="../../content/datatables.net/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.scroller.min.js"></script>
+
+
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <!-- end of your custom script -->
+   </body>
+</html>

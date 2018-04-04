@@ -1,0 +1,39 @@
+﻿.super-panel {
+    width: 260px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.super-panel-lg {
+    width: 310px;
+    height: 110px;
+    border: 1px solid #44A5C9;
+    border-radius: 4px;
+    margin-bottom: 20px !important;
+}
+
+.panel-body .row:hover,
+.panel-body .row:focus {
+    background-color: white;
+    transform: scale(1.03);
+    transition: all .1s;
+    background-color: transparent;
+}
+
+.pagetitle {
+    width: 205px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+.spr-label {
+    font-family: Helvetica;
+    font-size: 20px;
+    color: #000033;
+}
+
+.center {
+    margin: 0 auto;
+}

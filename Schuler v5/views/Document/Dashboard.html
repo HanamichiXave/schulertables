@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Dashboard</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <link href="../../content/dashboards/bootstrap dashboard/bsdashboard.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style>
+     td, th {
+      text-align: center;
+     }
+   </style>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                        <li>
+                           <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                        <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                        <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+        <br>
+        <br>
+        <div class="page-header" style="color: #000033"><h2><strong>Document Management</strong></h2></div>
+          <ol class="breadcrumb" style="background-color: #D9EDF7">
+            <li><a href="document-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+            <li>Dashboard</li>
+          </ol>
+         <section>
+            <!-- your code start here -->
+            <!-- Please observe indention -->
+            <div class="col-lg-12">
+              <div class="container-2">
+               <div id="page-wrapper">
+                  <div class="row" >
+                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading green db-container">
+                                 <i class="fa fa-file-text fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content green db-container">
+                              <div class="circle-tile-description text-faded">
+                                 All Documents
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 85
+                              </div>
+                              <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading blue db-container">
+                                 <i class="fa fa-file-text fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content blue db-container">
+                              <div class="circle-tile-description text-faded">
+                                 New Documents
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 10
+                                 <span id="sparklineB"></span>
+                              </div>
+                              <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading red db-container">
+                                 <i class="fa fa-calendar fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content red db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Events
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 1
+                                 <span id="sparklineC"></span>
+                              </div>
+                              <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading purple db-container">
+                                 <i class="fa fa-retweet fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content purple db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Shared Documents
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 56
+                                 <span id="sparklineD"></span>
+                              </div>
+                              <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                       <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                          <div class="db-container" style="position: relative; width:auto;">
+                            <canvas id="myChartbar" style="margin-bottom: 25px;"></canvas>
+                          </div>
+                        </div>
+                        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                          <div class="db-container" style="position: relative; width:auto;">
+                            <canvas id="myChartpie" height="215px"></canvas>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="container-fluid" style="margin-top: 25px; padding-bottom: 0px;">
+                     <div class="panel panel-custom">
+                        <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-book fa-lg"></i> Search Document</div>
+                        <div class="panel-body">
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <div class="row">
+                                    <div class="col-sm-6">
+                                       <div class="form-group contact-search m-b-30">
+                                          <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                                       </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                    </div>
+                                 </div>
+                                 <div class="container-fluid">
+                                    <div class="row">
+                                       <form class="table-responsive">
+                                          <table id="myTable" class="display nowrap table table-striped table-hover"  cellspacing="0" width="100%">
+                                             <thead>
+                                                <tr>
+                                                   <th >Number</th>
+                                                   <th >Name</th>
+                                                   <th >Date Uploaded</th>
+                                                   <th >Type</th>
+                                                   <th >Owner</th>
+                                                </tr>
+                                             </thead>
+                                             <tbody>
+                                                <tr>
+                                                   <td></td>
+                                                   <td>myprofile.png</td>
+                                                   <td>2017-11-10</td>
+                                                   <td>Image</td>
+                                                   <td>John Benson</td>
+                                                </tr>
+                                                <tr>
+                                                   <td></td>
+                                                   <td>Handbook.docx</td>
+                                                   <td>2017-11-10</td>
+                                                   <td>Document</td>
+                                                   <td>John Ivan</td>
+                                                </tr>
+                                                <tr>
+                                                   <td></td>
+                                                   <td>Grades.xlsx</td>
+                                                   <td>2017-11-10</td>
+                                                   <td>Excel</td>
+                                                   <td>John Mayson</td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </form>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div><br/><br/><br/><br/>
+               <!-- page-wrapper END-->
+              </div>
+            </div>
+             
+            
+              
+           
+            <!-- end of your code -->
+            <!-- footer here -->
+         </section>
+       
+          <footer class="navbar-fixed-bottom">
+             <div class="container-fluid footer">
+                <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+             </div>
+          </footer>
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!-- DataTable Link -->
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/datatables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <!-- End of LInk -->
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script>
+      var ctxbar = $("#myChartbar");
+      var ctxline = $("#myChartline");
+      var ctxpie = $("#myChartpie");
+
+      var myChartbar = new Chart(ctxbar, {
+          type: 'bar',
+          data: {
+              labels: ["Administration", "Clinic", "Councelor", "Finance", "Human Resources", "Library"],
+              datasets: [{
+                  label: 'Department Users',
+                  data: [12, 19, 3, 5, 20, 50],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(255, 159, 64, 0.2)'
+                  ],
+                  borderColor: [
+                      'rgba(255,99,132,1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(255, 159, 64, 1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  xAxes: [{
+                      ticks: {
+                          stepSize: 1,
+                          min: 0,
+                          autoSkip: false,
+                          fontSize: 14
+                      }
+                  }],
+                  yAxes:[{
+                      ticks: {
+                          beginAtZero: true,
+                          fontSize: 14
+                      }
+                  }]
+              },title: {
+                            display: true,
+                            text: 'Department with most document Uploaded',
+                        }, 
+                  legend: { 
+                    display: false 
+                  }
+          }
+      });
+
+      
+
+      var myPieChart = new Chart(ctxpie,{
+          type: 'pie',
+          data: {
+                labels: ['Document','Images','PDF'],
+                datasets: [{
+                    data: [10, 20, 30],
+                    backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)'
+                    ],
+                    borderColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)'
+                    ],
+                    hoverBackgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)'
+                    ],
+                    hoverBorderWidth: 5,
+                    borderWidth: 1
+                }], 
+               
+            },
+              options: {
+                 title: {
+                                display: true,
+                                text: 'File Types',
+                            }, 
+                      legend: { 
+                        display: true 
+                      }
+              }
+      });
+
+
+      </script>
+       </script>
+
+        <script type="text/javascript">
+         $(document).ready(function(){
+           var oTable = $('#myTable').DataTable({
+             "orderCellsTop": false,
+             "searchHighlight" : true,
+             "ordering": false,
+           });
+           $('#search').keyup(function(){
+                 oTable.search($(this).val()).draw() ;
+           });
+           $(".dataTables_filter").hide();
+           oTable.on('order.dt search.dt', function(){
+             oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+              function (cell, i) {
+               cell.innerHTML = i+1;
+               } );
+           }).draw();
+         });
+      </script>
+      <!-- This is the Code for dataTable, Please copy paste -->
+      <!-- This is the Code for dataTable -->
+      <!-- end of your custom script -->
+   </body>
+</html>

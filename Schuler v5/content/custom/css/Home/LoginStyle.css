@@ -1,0 +1,95 @@
+﻿body {
+    width: 100%;
+    background-image: url('../../../../content/images/New-Blue.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    padding-left:20%;
+    padding-right:20%;
+    margin: auto;
+}
+
+
+
+.div1 {
+    background: url('../../../../content/Images/schulerLogo.png') center center no-repeat;
+    background-size: contain;
+    height: 240px;
+    border-right: 3px solid;
+}
+
+.div2 {
+
+    height: auto;
+    margin-top: 0;
+    padding-left:15px;
+}
+
+/*span{
+  font-size:16px;
+    font-weight:bold;
+    display: block;
+    line-height: 132px;
+    text-align: center;
+}*/
+
+@media screen and (max-width: 993px) {
+
+    .div1 {
+        border-right: none;
+        border-bottom: 3px solid white;
+
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+    button:hover {
+        opacity: 0.8;
+    }
+    
+
+
+.btn-rounded {
+    text-decoration: none !important;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #27b9d3;
+    text-align: center;
+    border-radius: 15px;
+    color: #ffffff;
+    font-weight: 150;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+    .btn-rounded:hover {
+        color: #ffffff;
+    }
+
+

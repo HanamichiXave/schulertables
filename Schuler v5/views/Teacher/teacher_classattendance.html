@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Teacher Management</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/custom/css/Teacher/T_ClassAttendance.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style type="text/css">
+      .dataTables_length {
+      margin-bottom: 15px;
+      margin-top: 5px;
+      }
+      .badge-info {
+      background-color: #5bc0de;
+      }
+      .present {
+      color: #28A745;
+      font-size: 1.45em;
+      }
+      .absent {
+      color: #dc3545;
+      font-size: 1.45em;
+      }
+      .late{
+      color: #FFC107;
+      font-size: 1.45em;
+      }
+      .excuse{
+      color: #17A2B8;
+      font-size: 1.45em;
+      }
+      .wend{
+      color: #00000;
+      font-size: 1.45em;
+      }
+      .stud-panel-lg{
+      border-radius: 4px;
+      border: 2px solid #44A5C9!important;
+      width: 70px;
+      height: 83px;
+      }
+      .attendance{
+      background-color: #D3D3D3;
+      width: 67px;
+      height: 21px;
+      text-align: center;
+      font-size: 10px;
+      border-radius: 2px;
+      }
+      .attendance p{
+      padding-top: 5px;
+      }
+      td, th {
+         text-align: center;
+      }
+   </style>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                        <li>
+                           <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                        <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                        <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033">
+            <h2><strong>Teacher Management</strong></h2>
+         </div>
+         <ol class="breadcrumb" style="background-color: #D9EDF7">
+            <li><a href="teacher-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+            <li>Class Attendance</li>
+         </ol>
+         <!-- your code start here -->
+         <!-- Please observe indention -->
+         <div class="page-header" style="color: #000033">
+            <h2>
+               My Class Attendance
+               <small>
+                  <h4>S.Y 2017 - 2018</h4>
+               </small>
+            </h2>
+         </div>
+         <div class="row">
+            <div class="col-lg-12">
+               <ul class="nav nav-tabs nav-justified nav-pills">
+                  <li class="active"><a data-toggle="tab" href="#my-classes"><strong> My Classes</strong></a></li>
+                  <li><a data-toggle="tab" href="#sit-arr"><strong> Seating Arrangement</strong></a></li>
+               </ul>
+               <div class="tab-content">
+                  <div id="my-classes" class="tab-pane fade in active">
+                     <div class="panel panel-custom">
+                        <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-address-book-o" aria-hidden="true"></i> Class List</div>
+                        <div class="panel-body">
+
+                           <h3 style="text-align: center; margin-top: 2px;">My Classes</h3>
+                           <form>
+                              <div class="row">
+                                 <div class="col-sm-8">
+                                    <div class="form-group contact-search m-b-30">
+                                       <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-4">
+                                 </div>
+                              </div>
+                              <div class="table-responsive">
+                                 <table id="myTable" class="display nowrap table table-striped table-hover">
+                                    <thead>
+                                       <tr>
+                                          <th style="width: 30%;">Grade &amp; Section</th>
+                                          <th style="width: 30%;">Subject</th>
+                                          <th style="width: 30%;">Day / Time</th>
+                                          <th ></th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <td>G1A</td>
+                                          <td>English</td>
+                                          <td>Wed / 9:00 - 10:00 AM</td>
+                                          <td>
+                                             <button type="button" data-toggle="modal" data-target="#viewClass" class="btn btn-info btn-xs center-block" style="width: 70px; height: 30px; font-size: 15px;">View</button>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>G2A</td>
+                                          <td>English</td>
+                                          <td>Mon / 9:00 - 10:00 AM</td>
+                                          <td>
+                                             <button type="button" data-toggle="modal" data-target="#viewClass" class="btn btn-info btn-xs center-block" style="width: 70px; height: 30px; font-size: 15px;">View</button>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="sit-arr" class="tab-pane fade">
+                     <div class="container-fluid no-p-l-r">
+                        <div class="col-md-3">
+                           <div class="row">
+                              <div class="panel panel-default" style="height: 3.68in;">
+                                 <div class="panel-heading" style="text-align: center;">
+                                    <label class="panel-title">Students List</label>
+                                 </div>
+                                 <div class="container-fluid no-p-l-r" style="overflow-y: auto; height: 3in;" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                    <div class="stud-panel-lg col-xs-12 col-sm-6 col-md-3 dropdown no-p-l-r" draggable="true" ondragstart="drag(event, this.id)" ondragend="show(this.id)" id="student1">
+                                       <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                          <img src="../../content/images/Teacher/Avy.jpg" width="66" height="58" style="border-radius: 2px;">
+                                          <div class="attendance" id="student1-att">
+                                             <p id="student1-text">Attendance</p>
+                                          </div>
+                                       </a>
+                                       <ul  class="dropdown-menu attendanceChoice" id="attendanceChoice-s1">
+                                          <li class="" value="Present"><a href="#">Present <i class="fa fa-circle pull-right present"></i></a></li>
+                                          <li class="" value="Late"><a href="#">Late <i class="fa fa-circle pull-right late"></i></a></li>
+                                          <li class="" value="Absent"><a href="#">Absent <i class="fa fa-circle pull-right absent"></i></a></li>
+                                          <li class="" value="Excused"> <a href="#">Excused <i class="fa fa-circle pull-right excuse"></i></a></li>
+                                       </ul>
+                                    </div>
+                                    <div class="stud-panel-lg col-xs-12 col-sm-6 col-md-3 dropdown no-p-l-r" draggable="true" ondragstart="drag(event, this.id)" ondragend="show(this.id)" id="student2">
+                                       <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                          <img src="../../content/images/Teacher/Bea.jpg" width="66" height="58" style="border-radius: 2px;">
+                                          <div class="attendance" id="student2-att">
+                                             <p id="student2-text">Attendance</p>
+                                          </div>
+                                       </a>
+                                       <ul  class="dropdown-menu attendanceChoice" id="attendanceChoice-s2">
+                                          <li class="" value="Present"><a href="#">Present <i class="fa fa-circle pull-right present"></i></a></li>
+                                          <li class="" value="Late"><a href="#">Late <i class="fa fa-circle pull-right late"></i></a></li>
+                                          <li class="" value="Absent"><a href="#">Absent <i class="fa fa-circle pull-right absent"></i></a></li>
+                                          <li class="" value="Excused"> <a href="#">Excused <i class="fa fa-circle pull-right excuse"></i></a></li>
+                                       </ul>
+                                    </div>
+                                    <div class="stud-panel-lg col-xs-12 col-sm-6 col-md-3 dropdown no-p-l-r" draggable="true" ondragstart="drag(event, this.id)" ondragend="show(this.id)" id="student3">
+                                       <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                          <img src="../../content/images/Teacher/benson.jpg" width="66" height="58" style="border-radius: 2px;">
+                                          <div class="attendance" id="student3-att">
+                                             <p id="student3-text">Attendance</p>
+                                          </div>
+                                       </a>
+                                       <ul  class="dropdown-menu attendanceChoice" id="attendanceChoice-s3">
+                                          <li class="" value="Present"><a href="#">Present <i class="fa fa-circle pull-right present"></i></a></li>
+                                          <li class="" value="Late"><a href="#">Late <i class="fa fa-circle pull-right late"></i></a></li>
+                                          <li class="" value="Absent"><a href="#">Absent <i class="fa fa-circle pull-right absent"></i></a></li>
+                                          <li class="" value="Excused"> <a href="#">Excused <i class="fa fa-circle pull-right excuse"></i></a></li>
+                                       </ul>
+                                    </div>
+                                    <div class="stud-panel-lg col-xs-12 col-sm-6 col-md-3 dropdown no-p-l-r" draggable="true" ondragstart="drag(event, this.id)" ondragend="show(this.id)" id="student4">
+                                       <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                          <img src="../../content/images/Teacher/Bravo.jpg" width="66" height="58" style="border-radius: 2px;">
+                                          <div class="attendance" id="student4-att">
+                                             <p id="student4-text">Attendance</p>
+                                          </div>
+                                       </a>
+                                       <ul  class="dropdown-menu attendanceChoice" id="attendanceChoice-s4">
+                                          <li class="" value="Present"><a href="#">Present <i class="fa fa-circle pull-right present"></i></a></li>
+                                          <li class="" value="Late"><a href="#">Late <i class="fa fa-circle pull-right late"></i></a></li>
+                                          <li class="" value="Absent"><a href="#">Absent <i class="fa fa-circle pull-right absent"></i></a></li>
+                                          <li class="" value="Excused"> <a href="#">Excused <i class="fa fa-circle pull-right excuse"></i></a></li>
+                                       </ul>
+                                    </div>
+                                    <div class="stud-panel-lg col-xs-12 col-sm-6 col-md-3 dropdown no-p-l-r" draggable="true" ondragstart="drag(event, this.id)" ondragend="show(this.id)" id="student5">
+                                       <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                          <img src="../../content/images/Teacher/carl.jpg" width="66" height="58" style="border-radius: 2px;">
+                                          <div class="attendance" id="student5-att">
+                                             <p id="student5-text">Attendance</p>
+                                          </div>
+                                       </a>
+                                       <ul  class="dropdown-menu attendanceChoice" id="attendanceChoice-s5">
+                                          <li class="" value="Present"><a href="#">Present <i class="fa fa-circle pull-right present"></i></a></li>
+                                          <li class="" value="Late"><a href="#">Late <i class="fa fa-circle pull-right late"></i></a></li>
+                                          <li class="" value="Absent"><a href="#">Absent <i class="fa fa-circle pull-right absent"></i></a></li>
+                                          <li class="" value="Excused"> <a href="#">Excused <i class="fa fa-circle pull-right excuse"></i></a></li>
+                                       </ul>
+                                    </div>
+                                    <div class="stud-panel-lg col-xs-12 col-sm-6 col-md-3 dropdown no-p-l-r" draggable="true" ondragstart="drag(event, this.id)" ondragend="show(this.id)" id="student6">
+                                       <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                          <img src="../../content/images/Teacher/Eli.jpg" width="66" height="58" style="border-radius: 2px;">
+                                          <div class="attendance" id="student6-att">
+                                             <p id="student6-text">Attendance</p>
+                                          </div>
+                                       </a>
+                                       <ul  class="dropdown-menu attendanceChoice" id="attendanceChoice-s6">
+                                          <li class="" value="Present"><a href="#">Present <i class="fa fa-circle pull-right present"></i></a></li>
+                                          <li class="" value="Late"><a href="#">Late <i class="fa fa-circle pull-right late"></i></a></li>
+                                          <li class="" value="Absent"><a href="#">Absent <i class="fa fa-circle pull-right absent"></i></a></li>
+                                          <li class="" value="Excused"> <a href="#">Excused <i class="fa fa-circle pull-right excuse"></i></a></li>
+                                       </ul>
+                                    </div>
+                                    <div class="stud-panel-lg col-xs-12 col-sm-6 col-md-3 dropdown no-p-l-r" draggable="true" ondragstart="drag(event, this.id)" ondragend="show(this.id)" id="student7">
+                                       <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                          <img src="../../content/images/Teacher/genesis.JPG" width="66" height="58" style="border-radius: 2px;">
+                                          <div class="attendance" id="student7-att">
+                                             <p id="student7-text">Attendance</p>
+                                          </div>
+                                       </a>
+                                       <ul  class="dropdown-menu attendanceChoice" id="attendanceChoice-s7">
+                                          <li class="" value="Present"><a href="#">Present <i class="fa fa-circle pull-right present"></i></a></li>
+                                          <li class="" value="Late"><a href="#">Late <i class="fa fa-circle pull-right late"></i></a></li>
+                                          <li class="" value="Absent"><a href="#">Absent <i class="fa fa-circle pull-right absent"></i></a></li>
+                                          <li class="" value="Excused"> <a href="#">Excused <i class="fa fa-circle pull-right excuse"></i></a></li>
+                                       </ul>
+                                    </div>
+                                    <div class="stud-panel-lg col-xs-12 col-sm-6 col-md-3 dropdown no-p-l-r" draggable="true" ondragstart="drag(event, this.id)" ondragend="show(this.id)" id="student8">
+                                       <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                          <img src="../../content/images/Teacher/Ishrael.jpg" width="66" height="58" style="border-radius: 2px;">
+                                          <div class="attendance" id="student8-att">
+                                             <p id="student8-text">Attendance</p>
+                                          </div>
+                                       </a>
+                                       <ul  class="dropdown-menu attendanceChoice" id="attendanceChoice-s8">
+                                          <li class="" value="Present"><a href="#">Present <i class="fa fa-circle pull-right present"></i></a></li>
+                                          <li class="" value="Late"><a href="#">Late <i class="fa fa-circle pull-right late"></i></a></li>
+                                          <li class="" value="Absent"><a href="#">Absent <i class="fa fa-circle pull-right absent"></i></a></li>
+                                          <li class="" value="Excused"> <a href="#">Excused <i class="fa fa-circle pull-right excuse"></i></a></li>
+                                       </ul>
+                                    </div>
+                                    <div class="stud-panel-lg col-xs-12 col-sm-6 col-md-3 dropdown no-p-l-r" draggable="true" ondragstart="drag(event, this.id)" ondragend="show(this.id)" id="student9">
+                                       <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                          <img src="../../content/images/Teacher/Jham.jpg" width="66" height="58" style="border-radius: 2px;">
+                                          <div class="attendance" id="student9-att">
+                                             <p id="student9-text">Attendance</p>
+                                          </div>
+                                       </a>
+                                       <ul  class="dropdown-menu attendanceChoice" id="attendanceChoice-s9">
+                                          <li class="" value="Present"><a href="#">Present <i class="fa fa-circle pull-right present"></i></a></li>
+                                          <li class="" value="Late"><a href="#">Late <i class="fa fa-circle pull-right late"></i></a></li>
+                                          <li class="" value="Absent"><a href="#">Absent <i class="fa fa-circle pull-right absent"></i></a></li>
+                                          <li class="" value="Excused"> <a href="#">Excused <i class="fa fa-circle pull-right excuse"></i></a></li>
+                                       </ul>
+                                    </div>
+                                    <div class="stud-panel-lg col-xs-12 col-sm-6 col-md-3 dropdown no-p-l-r" draggable="true" ondragstart="drag(event, this.id)" ondragend="show(this.id)" id="student10">
+                                       <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                          <img src="../../content/images/Teacher/mayson.png" width="66" height="58" style="border-radius: 2px;">
+                                          <div class="attendance" id="student10-att">
+                                             <p id="student10-text">Attendance</p>
+                                          </div>
+                                       </a>
+                                       <ul  class="dropdown-menu attendanceChoice" id="attendanceChoice-s10">
+                                          <li class="" value="Present"><a href="#">Present <i class="fa fa-circle pull-right present"></i></a></li>
+                                          <li class="" value="Late"><a href="#">Late <i class="fa fa-circle pull-right late"></i></a></li>
+                                          <li class="" value="Absent"><a href="#">Absent <i class="fa fa-circle pull-right absent"></i></a></li>
+                                          <li class="" value="Excused"> <a href="#">Excused <i class="fa fa-circle pull-right excuse"></i></a></li>
+                                       </ul>
+                                    </div>
+                                    <div class="stud-panel-lg col-xs-12 col-sm-6 col-md-3 dropdown no-p-l-r" draggable="true" ondragstart="drag(event, this.id)" ondragend="show(this.id)" id="student11">
+                                       <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                          <img src="../../content/images/Teacher/Nikko.jpg" width="66" height="58" style="border-radius: 2px;">
+                                          <div class="attendance" id="student11-att">
+                                             <p id="student11-text">Attendance</p>
+                                          </div>
+                                       </a>
+                                       <ul  class="dropdown-menu attendanceChoice" id="attendanceChoice-s11">
+                                          <li class="" value="Present"><a href="#">Present <i class="fa fa-circle pull-right present"></i></a></li>
+                                          <li class="" value="Late"><a href="#">Late <i class="fa fa-circle pull-right late"></i></a></li>
+                                          <li class="" value="Absent"><a href="#">Absent <i class="fa fa-circle pull-right absent"></i></a></li>
+                                          <li class="" value="Excused"> <a href="#">Excused <i class="fa fa-circle pull-right excuse"></i></a></li>
+                                       </ul>
+                                    </div>
+                                    <div class="stud-panel-lg col-xs-12 col-sm-6 col-md-3 dropdown no-p-l-r" draggable="true" ondragstart="drag(event, this.id)" ondragend="show(this.id)" id="student12">
+                                       <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                          <img src="../../content/images/Teacher/xavier.jpg" width="66" height="58" style="border-radius: 2px;">
+                                          <div class="attendance" id="student12-att">
+                                             <p id="student12-text">Attendance</p>
+                                          </div>
+                                       </a>
+                                       <ul  class="dropdown-menu attendanceChoice" id="attendanceChoice-s12">
+                                          <li class="" value="Present"><a href="#">Present <i class="fa fa-circle pull-right present"></i></a></li>
+                                          <li class="" value="Late"><a href="#">Late <i class="fa fa-circle pull-right late"></i></a></li>
+                                          <li class="" value="Absent"><a href="#">Absent <i class="fa fa-circle pull-right absent"></i></a></li>
+                                          <li class="" value="Excused"> <a href="#">Excused <i class="fa fa-circle pull-right excuse"></i></a></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-9 panel panel-default container-fluid">
+                           <div class="col-md-12 no-p-l-r">
+                              <strong> Section: 1</strong></br>
+                              <strong> Class: English</strong>
+                           </div>
+                           <div class="row no-p-l-r">
+                              <div class="col-xs-12 col-sm-6 p-l-r-5 text-center">
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                              </div>
+                              <div class="col-xs-12 col-sm-6 p-l-r-5 text-center">
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                              </div>
+                              <div class="col-xs-12 col-sm-6 p-l-r-5 text-center">
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                              </div>
+                              <div class="col-xs-12 col-sm-6 p-l-r-5 text-center">
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                              </div>
+                              <div class="col-xs-12 col-sm-6 p-l-r-5 text-center">
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                              </div>
+                              <div class="col-xs-12 col-sm-6 p-l-r-5 text-center">
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                              </div>
+                              <div class="col-xs-12 col-sm-6 p-l-r-5 text-center">
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                              </div>
+                              <div class="col-xs-12 col-sm-6 p-l-r-5 text-center">
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                                 <div class="student-container panel panel-default center-block no-m-l-r"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 </div>
+                              </div>
+                           </div>
+                           <div style="text-align: center;">
+                              <div class="teacher-table panel panel-default center-block no-m-l-r">
+                                 <img src="../../content/images/Teacher/student-girl.png"/>
+                              </div>
+                           </div>
+                           <div style="text-align: center; margin-bottom:20px; background: #dff0d8 !important;" class="panel panel-default">
+                              <label class="panel-title">Green board</label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-12">
+                        <button type="button" class="btn btn-primary pull-right">Save</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <br><br>
+
+
+      <!-- Modal ViewClass -->
+      <div id="viewClass" class="modal fade" role="dialog">
+         <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button> 
+                  <h4 class="modal-title">View Class</h4>
+               </div>
+               <div class="modal-body">
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="panel panel-custom">
+                           <div class="panel-heading"><i class="fa fa-address-book-o" aria-hidden="true"></i>
+                              &nbspClass Information
+                           </div>
+                           <div class="panel-body">
+                                <div class="panel panel-custom">
+                                   <div class="row">
+                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <table class="table">
+                                               <tr>
+                                                  <td>
+                                                     Grade: 
+                                                  </td>
+                                                  <td>
+                                                     <span >Grade 2</span>
+                                                  </td>
+                                               </tr>
+                                               <tr>
+                                                  <td>
+                                                     Section: 
+                                                  </td>
+                                                  <td>
+                                                     <span >Section A</span>
+                                                  </td>
+                                               </tr>
+                                               <tr>
+                                                  <td>
+                                                     Subject: 
+                                                  </td>
+                                                  <td>
+                                                     <span >Basic English 101</span>
+                                                  </td>
+                                               </tr>
+                                               <tr>
+                                                  <td>
+                                                     Day / Time: 
+                                                  </td>
+                                                  <td>
+                                                     <span >Mon / 9:00am - 12:00nn</span>
+                                                  </td>
+                                               </tr>
+                                            </table>
+                                         </div>
+                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <table class="table">
+                                               <tr>
+                                                  <td>
+                                                     Room No: 
+                                                  </td>
+                                                  <td>
+                                                     <span class="badge badge-info">Rm. 401</span>
+                                                  </td>
+                                               </tr>
+                                               <tr>
+                                                  <td>
+                                                     Number of Student: 
+                                                  </td>
+                                                  <td>
+                                                     <span class="badge badge-info">35</span>
+                                                  </td>
+                                               </tr>
+                                               <tr>
+                                                  <td>
+                                                     Class Teacher: 
+                                                  </td>
+                                                  <td>
+                                                     <span >Mrs. Avegin Sanchez</span>
+                                                  </td>
+                                               </tr>
+                                               <tr>
+                                                  <td>
+                                                     Section Adviser: 
+                                                  </td>
+                                                  <td>
+                                                     <span >Mr. Antonio Bravo Jr.</span>
+                                                  </td>
+                                               </tr>
+                                            </table>
+                                         </div>
+                                   </div>
+                                </div>
+                              <div class="col-lg-12">
+                                 <div class="row">
+                                    <div class=" panel panel-custom">
+                                       <table class="table">
+                                          <tr>
+                                             <td>
+                                                Total Male Students: 
+                                             </td>
+                                             <td>
+                                                <span class="badge badge-info">15</span>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>
+                                                Total Female Students: 
+                                             </td>
+                                             <td>
+                                                <span class="badge badge-info">20</span>
+                                             </td>
+                                          </tr>
+                                       </table>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12">
+                                 <div class="row">
+                                    <div class="panel panel-custom">
+                                       <h5>&nbsp&nbsp Attendance Legend</h5>
+                                       <table class="table">
+                                          <tr>
+                                             <td>
+                                                <span class="badge badge-info">PRESENT</span>
+                                             </td>
+                                             <td>
+                                                <i class="fa fa-circle present">
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                          <td>
+                                          <span class="badge badge-info">ABSENT</span>
+                                          </td>
+                                          <td>
+                                          <i class="fa fa-circle absent">
+                                          </td>
+                                          </tr>
+                                          <tr>
+                                          <td>
+                                          <span class="badge badge-info">LATE</span>
+                                          </td>
+                                          <td>
+                                          <i class="fa fa-circle late">
+                                          </td>
+                                          </tr>
+                                          <tr>
+                                          <td>
+                                          <span class="badge badge-info">EXCUSED</span>
+                                          </td>
+                                          <td>
+                                          <i class="fa fa-circle excuse">
+                                          </td>
+                                          </tr>
+                                          <tr>
+                                          <td>
+                                          <span class="badge badge-info">WEEKEND</span>
+                                          </td>
+                                          <td>
+                                          <i class="fa fa-circle wend">
+                                          </td>
+                                          </tr>
+                                       </table>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12">
+                                <div class="row">
+                                  <div class="panel panel-custom">
+                                  <center><h4>Month of January</h4></center>
+                                     <div class="table-responsive">
+                                      <div class="container">
+                                      <table id="stud-attendance" class="table table-hover table-responsive ">
+                                       <thead>
+                                          <tr>
+                                             <th>#</th>
+                                             <th style="text-align: center;"></i>Students</th>
+                                             <th style="text-align: center;"></i> 1</th>
+                                             <th style="text-align: center;"></i> 2</th>
+                                             <th style="text-align: center;"></i> 3</th>
+                                             <th style="text-align: center;"></i> 4</th>
+                                             <th style="text-align: center;"></i> 5</th>
+                                             <th style="text-align: center;"></i> 6</th>
+                                             <th style="text-align: center;"></i> 7</th>
+                                             <th style="text-align: center;"></i> 8</th>
+                                             <th style="text-align: center;"></i> 9</th>
+                                             <th style="text-align: center;"></i> 10</th>
+                                             <th style="text-align: center;"></i> 11</th>
+                                             <th style="text-align: center;"></i> 12</th>
+                                             <th style="text-align: center;"></i> 13</th>
+                                             <th style="text-align: center;"></i> 14</th>
+                                             <th style="text-align: center;"></i> 15</th>
+                                             <th style="text-align: center;"></i> 16</th>
+                                             <th style="text-align: center;"></i> 17</th>
+                                             <th style="text-align: center;"></i> 18</th>
+                                             <th style="text-align: center;"></i> 19</th>
+                                             <th style="text-align: center;"></i> 20</th>
+                                             <th style="text-align: center;"></i> 21</th>
+                                             <th style="text-align: center;"></i> 22</th>
+                                             <th style="text-align: center;"></i> 23</th>
+                                             <th style="text-align: center;"></i> 24</th>
+                                             <th style="text-align: center;"></i> 25</th>
+                                             <th style="text-align: center;"></i> 26</th>
+                                             <th style="text-align: center;"></i> 27</th>
+                                             <th style="text-align: center;"></i> 28</th>
+                                             <th style="text-align: center;"></i> 29</th>
+                                             <th style="text-align: center;"></i> 30</th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <tr style="text-align: left;">
+                                             <td>1</td>
+                                             <td>Avegin Villaranda</td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle excuse"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                          </tr>
+                                          <tr style="text-align: left;">
+                                             <td>2</td>
+                                             <td>Bea Saducos</td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle excuse"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                          </tr>
+                                          <tr style="text-align: left;">
+                                             <td>3</td>
+                                             <td>Benson Leabres</td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle excuse"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                          </tr>
+                                          <tr style="text-align: left;">
+                                             <td>4</td>
+                                             <td>Antonio Bravo</td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle excuse"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                          </tr>
+                                          <tr style="text-align: left;">
+                                             <td>5</td>
+                                             <td>Carl Joseph Gorgonia</td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle excuse"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                          </tr>
+                                          <tr style="text-align: left;">
+                                             <td>6</td>
+                                             <td>Eliseo Balido</td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle excuse"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                          </tr>
+                                          <tr style="text-align: left;">
+                                             <td>7</td>
+                                             <td>Genesis Ivan Aquino</td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle excuse"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                          </tr>
+                                          <tr style="text-align: left;">
+                                             <td>8</td>
+                                             <td>Ishrael Nonoma</td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle excuse"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                          </tr>
+                                          <tr style="text-align: left;">
+                                             <td>9</td>
+                                             <td>Jhamila Okla</td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle excuse"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                          </tr>
+                                          <tr style="text-align: left;">
+                                             <td>10</td>
+                                             <td>Mayson Labuntog</td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle excuse"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                          </tr>
+                                          <tr style="text-align: left;">
+                                             <td>11</td>
+                                             <td>Nikko Orbasido</td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle excuse"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                          </tr>
+                                          <tr style="text-align: left;">
+                                             <td>12</td>
+                                             <td>Xavier Buenaventura</td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle excuse"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle late"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle wend"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                             <td><i class="fa fa-circle present"></i></td>
+                                          </tr>
+                                       </tbody>
+                                      </table>
+                                    </div>
+                                    </div>   
+                                  </div>
+                                </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer"> 
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end of your code -->
+      <!-- footer here -->
+      <hr />
+      <footer class="navbar-fixed-bottom">
+         <div class="container-fluid footer">
+            <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+         </div>
+      </footer>
+      <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/dataTables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script type="text/javascript">
+         // $('ul.attendanceChoice li').click(function(e) 
+         //    { 
+         //     alert($(this).find("value").text());
+         //    });
+         $("#attendanceChoice-s1 li").click(function(e) {
+          var selKeyVal = $(this).attr("value");
+            if(selKeyVal == "Absent"){
+              $("#student1-att").css("background-color", "#dc3545");
+              $("#student1-text").css("color", "white").text("Absent");
+              e.preventDefault();
+            }else if(selKeyVal == "Present"){
+              $("#student1-att").css("background-color", "#28A745");
+              $("#student1-text").css("color", "white").text("Present");
+               e.preventDefault();
+            }else if(selKeyVal == "Late"){
+              $("#student1-att").css("background-color", "#FFC107");
+              $("#student1-text").css("color", "white").text("Late");
+               e.preventDefault();
+            }else{
+              $("#student1-att").css("background-color", "#17A2B8");
+              $("#student1-text").css("color", "white").text("Excused");
+               e.preventDefault();
+            }
+         });
+         $("#attendanceChoice-s2 li").click(function(e) {
+          var selKeyVal = $(this).attr("value");
+            if(selKeyVal == "Absent"){
+              $("#student2-att").css("background-color", "#dc3545");
+              $("#student2-text").css("color", "white").text("Absent");
+              e.preventDefault();
+            }else if(selKeyVal == "Present"){
+              $("#student2-att").css("background-color", "#28A745");
+              $("#student2-text").css("color", "white").text("Present");
+              e.preventDefault();
+            }else if(selKeyVal == "Late"){
+              $("#student2-att").css("background-color", "#FFC107");
+              $("#student2-text").css("color", "white").text("Late");
+              e.preventDefault();
+            }else{
+              $("#student2-att").css("background-color", "#17A2B8");
+              $("#student2-text").css("color", "white").text("Excused");
+              e.preventDefault();
+            }
+         });
+         $("#attendanceChoice-s3 li").click(function(e) {
+          var selKeyVal = $(this).attr("value");
+            if(selKeyVal == "Absent"){
+              $("#student3-att").css("background-color", "#dc3545");
+              $("#student3-text").css("color", "white").text("Absent");
+              e.preventDefault();
+            }else if(selKeyVal == "Present"){
+              $("#student3-att").css("background-color", "#28A745");
+              $("#student3-text").css("color", "white").text("Present");
+              e.preventDefault();
+            }else if(selKeyVal == "Late"){
+              $("#student3-att").css("background-color", "#FFC107");
+              $("#student3-text").css("color", "white").text("Late");
+              e.preventDefault();
+            }else{
+              $("#student3-att").css("background-color", "#17A2B8");
+              $("#student3-text").css("color", "white").text("Excused");
+              e.preventDefault();
+            }
+         });
+         $("#attendanceChoice-s4 li").click(function(e) {
+          var selKeyVal = $(this).attr("value");
+            if(selKeyVal == "Absent"){
+              $("#student4-att").css("background-color", "#dc3545");
+              $("#student4-text").css("color", "white").text("Absent");
+              e.preventDefault();
+            }else if(selKeyVal == "Present"){
+              $("#student4-att").css("background-color", "#28A745");
+              $("#student4-text").css("color", "white").text("Present");
+              e.preventDefault();
+            }else if(selKeyVal == "Late"){
+              $("#student4-att").css("background-color", "#FFC107");
+              $("#student4-text").css("color", "white").text("Late");
+              e.preventDefault();
+            }else{
+              $("#student4-att").css("background-color", "#17A2B8");
+              $("#student4-text").css("color", "white").text("Excused");
+              e.preventDefault();
+            }
+         });
+         $("#attendanceChoice-s5 li").click(function(e) {
+          var selKeyVal = $(this).attr("value");
+            if(selKeyVal == "Absent"){
+              $("#student5-att").css("background-color", "#dc3545");
+              $("#student5-text").css("color", "white").text("Absent");
+              e.preventDefault();
+            }else if(selKeyVal == "Present"){
+              $("#student5-att").css("background-color", "#28A745");
+              $("#student5-text").css("color", "white").text("Present");
+              e.preventDefault();
+            }else if(selKeyVal == "Late"){
+              $("#student5-att").css("background-color", "#FFC107");
+              $("#student5-text").css("color", "white").text("Late");
+              e.preventDefault();
+            }else{
+              $("#student5-att").css("background-color", "#17A2B8");
+              $("#student5-text").css("color", "white").text("Excused");
+              e.preventDefault();
+            }
+         });
+         $("#attendanceChoice-s6 li").click(function(e) {
+          var selKeyVal = $(this).attr("value");
+            if(selKeyVal == "Absent"){
+              $("#student6-att").css("background-color", "#dc3545");
+              $("#student6-text").css("color", "white").text("Absent");
+              e.preventDefault();
+            }else if(selKeyVal == "Present"){
+              $("#student6-att").css("background-color", "#28A745");
+              $("#student6-text").css("color", "white").text("Present");
+              e.preventDefault();
+            }else if(selKeyVal == "Late"){
+              $("#student6-att").css("background-color", "#FFC107");
+              $("#student6-text").css("color", "white").text("Late");
+              e.preventDefault();
+            }else{
+              $("#student6-att").css("background-color", "#17A2B8");
+              $("#student6-text").css("color", "white").text("Excused");
+              e.preventDefault();
+            }
+         });
+         $("#attendanceChoice-s7 li").click(function(e) {
+          var selKeyVal = $(this).attr("value");
+            if(selKeyVal == "Absent"){
+              $("#student7-att").css("background-color", "#dc3545");
+              $("#student7-text").css("color", "white").text("Absent");
+              e.preventDefault();
+            }else if(selKeyVal == "Present"){
+              $("#student7-att").css("background-color", "#28A745");
+              $("#student7-text").css("color", "white").text("Present");
+              e.preventDefault();
+            }else if(selKeyVal == "Late"){
+              $("#student7-att").css("background-color", "#FFC107");
+              $("#student7-text").css("color", "white").text("Late");
+              e.preventDefault();
+            }else{
+              $("#student7-att").css("background-color", "#17A2B8");
+              $("#student7-text").css("color", "white").text("Excused");
+              e.preventDefault();
+            }
+         });
+         $("#attendanceChoice-s8 li").click(function(e) {
+          var selKeyVal = $(this).attr("value");
+            if(selKeyVal == "Absent"){
+              $("#student8-att").css("background-color", "#dc3545");
+              $("#student8-text").css("color", "white").text("Absent");
+              e.preventDefault();
+            }else if(selKeyVal == "Present"){
+              $("#student8-att").css("background-color", "#28A745");
+              $("#student8-text").css("color", "white").text("Present");
+              e.preventDefault();
+            }else if(selKeyVal == "Late"){
+              $("#student8-att").css("background-color", "#FFC107");
+              $("#student8-text").css("color", "white").text("Late");
+              e.preventDefault();
+            }else{
+              $("#student8-att").css("background-color", "#17A2B8");
+              $("#student8-text").css("color", "white").text("Excused");
+              e.preventDefault();
+            }
+         });
+         $("#attendanceChoice-s9 li").click(function(e) {
+          var selKeyVal = $(this).attr("value");
+            if(selKeyVal == "Absent"){
+              $("#student9-att").css("background-color", "#dc3545");
+              $("#student9-text").css("color", "white").text("Absent");
+              e.preventDefault();
+            }else if(selKeyVal == "Present"){
+              $("#student9-att").css("background-color", "#28A745");
+              $("#student9-text").css("color", "white").text("Present");
+              e.preventDefault();
+            }else if(selKeyVal == "Late"){
+              $("#student9-att").css("background-color", "#FFC107");
+              $("#student9-text").css("color", "white").text("Late");
+              e.preventDefault();
+            }else{
+              $("#student9-att").css("background-color", "#17A2B8");
+              $("#student9-text").css("color", "white").text("Excused");
+              e.preventDefault();
+            }
+         });
+         $("#attendanceChoice-s10 li").click(function(e) {
+          var selKeyVal = $(this).attr("value");
+            if(selKeyVal == "Absent"){
+              $("#student10-att").css("background-color", "#dc3545");
+              $("#student10-text").css("color", "white").text("Absent");
+              e.preventDefault();
+            }else if(selKeyVal == "Present"){
+              $("#student10-att").css("background-color", "#28A745");
+              $("#student10-text").css("color", "white").text("Present");
+              e.preventDefault();
+            }else if(selKeyVal == "Late"){
+              $("#student10-att").css("background-color", "#FFC107");
+              $("#student10-text").css("color", "white").text("Late");
+              e.preventDefault();
+            }else{
+              $("#student10-att").css("background-color", "#17A2B8");
+              $("#student10-text").css("color", "white").text("Excused");
+              e.preventDefault();
+            }
+         });
+         $("#attendanceChoice-s11 li").click(function(e) {
+          var selKeyVal = $(this).attr("value");
+            if(selKeyVal == "Absent"){
+              $("#student11-att").css("background-color", "#dc3545");
+              $("#student11-text").css("color", "white").text("Absent");
+              e.preventDefault();
+            }else if(selKeyVal == "Present"){
+              $("#student11-att").css("background-color", "#28A745");
+              $("#student11-text").css("color", "white").text("Present");
+              e.preventDefault();
+            }else if(selKeyVal == "Late"){
+              $("#student11-att").css("background-color", "#FFC107");
+              $("#student11-text").css("color", "white").text("Late");
+              e.preventDefault();
+            }else{
+              $("#student11-att").css("background-color", "#17A2B8");
+              $("#student11-text").css("color", "white").text("Excused");
+              e.preventDefault();
+            }
+         });
+         $("#attendanceChoice-s12 li").click(function(e) {
+          var selKeyVal = $(this).attr("value");
+            if(selKeyVal == "Absent"){
+              $("#student12-att").css("background-color", "#dc3545");
+              $("#student12-text").css("color", "white").text("Absent");
+              e.preventDefault();
+            }else if(selKeyVal == "Present"){
+              $("#student12-att").css("background-color", "#28A745");
+              $("#student12-text").css("color", "white").text("Present");
+              e.preventDefault();
+            }else if(selKeyVal == "Late"){
+              $("#student12-att").css("background-color", "#FFC107");
+              $("#student12-text").css("color", "white").text("Late");
+              e.preventDefault();
+            }else{
+              $("#student12-att").css("background-color", "#17A2B8");
+              $("#student12-text").css("color", "white").text("Excused");
+              e.preventDefault();
+            }
+         });
+      </script>
+      <script>
+         $('#custom-table2').DataTable({
+           scrollY: 200,
+           searching: false,
+         });
+         $(document).ready(function(){
+           var oTable = $('#stud-attendance').DataTable({
+             "orderCellsTop": false,
+             "searchHighlight" : true,
+           });
+           $('#search').keyup(function(){
+                 oTable.search($(this).val()).draw() ;
+           });
+           $(".dataTables_filter").hide();
+           oTable.on('order.dt search.dt', function(){
+             oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+              function (cell, i) {
+               cell.innerHTML = i+1;
+               } );
+           }).draw();
+         });
+         function allowDrop(event) {
+         event.preventDefault();
+         }
+         function drag(event, id) {
+             var img1 = document.getElementById(id);
+             event.dataTransfer.setData("osaicon", img1.id);
+             img1.style.opacity = 0;
+         }
+         function drop(event) {
+             var data = event.dataTransfer.getData("osaicon");
+            
+             if ( event.target.nodeName == "IMG" || event.target.nodeName == "BUTTON" || event.target.nodeName == "A") {
+             }else{
+               event.target.appendChild(document.getElementById(data));
+             }
+         }
+         function show(id) {
+             var img1 = document.getElementById(id);
+             img1.style.opacity = 1;
+         }
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+           var oTable = $('#myTable').DataTable({
+             "orderCellsTop": false,
+             "searchHighlight" : true,
+           });
+           $('#search').keyup(function(){
+                 oTable.search($(this).val()).draw() ;
+           });
+           $(".dataTables_filter").hide();
+           oTable.on('order.dt search.dt', function(){
+             oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+              function (cell, i) {
+               cell.innerHTML = i+1;
+               } );
+           }).draw();
+         });
+      </script>
+      <!-- end of your custom script -->
+   </body>
+</html>

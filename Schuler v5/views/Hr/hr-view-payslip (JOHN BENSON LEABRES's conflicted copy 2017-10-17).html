@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Human Resource Management</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../Content/datatables.net/css/jquery.dataTables.min.css" rel="stylesheet" />
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand" href="#" style="color: #35ac49;">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                           <li>
+                                  <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                           </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               <form class="navbar-form navbar-right search-form" role="search">
+                  <input type="text" class="form-control" placeholder="Search" />
+               </form>
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033">
+            <h2><strong>Payroll</strong></h2>
+         </div>
+         <!-- your code start here -->
+         <!-- Please observe indention -->
+         <div class="row">
+        <div class="card-box">
+          <div class="row">
+            <div class="col-lg-4 text-center" style="padding-bottom: 10px;">
+              <img class="img-circle " title="contact-img" alt="contact-img" src="http://localhost:8000/images/bravopogi.jpg" width="100px" height="100px"><br>
+            </div>
+            <div class="col-lg-4">
+              <div class="row">
+                <div class="col-xs-6 col-lg-4">
+                  <div>
+                    Name:
+                  </div>
+                  <div>
+                    Designation:
+                  </div>
+                  <div>
+                    Employee No:
+                  </div>
+                  <div>
+                    Pay Rate: 
+                  </div>
+                  <div>
+                    No. of Dependents:
+                  </div>
+                  <div>
+                    Working Days:
+                  </div>
+                  <div>
+                    Bank Account Details:
+                  </div>
+                </div>
+                  <div class="col-xs-6 col-lg-4">
+                  <div>
+                    test, test test
+                  </div>
+                  <div>
+                    Principal
+                  </div>
+                  <div id="empNo">
+                    1
+                    
+                  </div>
+                  <div>
+                    Php 10,000
+                  </div>
+                  <div id="dependents">
+                    0
+                  </div>
+                  <div id="workingDays">
+                    5
+                  </div>
+                  <div id="bankAccDetails">
+                    Details here (hardcode)
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-xs-6 col-lg-4">
+                <div>
+                  Pag-ibig No:
+                </div>
+                <div>
+                  Philhealth No:
+                </div>
+                <div>
+                  SSS No:
+                </div>
+                <div>
+                  TIN:
+                </div>
+              </div>
+              <div class="col-xs-6 col-lg-4">
+                <div>
+                  2147483647
+                </div>
+                <div>
+                  2147483647
+                </div>
+                <div>
+                  2147483647
+                </div>
+                <div>
+                  2147483647
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <form id="savePayroll" method="POST" action="http://localhost:8000/hr/save_payslip">
+      <input type="hidden" name="_token" value="DreERMAVSHl54Nao8kqFtAIQtidPzqJ6v7oLM701">
+      <input type="text" id="empNoHidden" name="empNoHidden" style=" position: absolute; visibility: hidden;">
+      <div class="col-lg-12">
+          <div class="col-lg-4">
+            <div class=" card-box col-lg-12">
+              <div class="table-responsive">
+                <table class="table table-striped mails m-0 table table-action-bar"> 
+                  <thead>
+                    <tr><th>Attendance Summary</th>
+                  </tr></thead>
+                  <tbody>
+                    <tr class="">
+                      <td>Absent</td>
+                      <td class="align-right">0</td>
+                    </tr>
+                    <tr class="">
+                      <td>Holiday</td>
+                      <td class="align-right">0</td>
+                    </tr>
+                    <tr class="">
+                      <td>Present</td>
+                      <td class="align-right">0</td>
+                    </tr>
+                    <tr class="">
+                      <td>Leave</td>
+                      <td class="align-right">0</td>
+                    </tr>
+                    <tr class="">
+                      <td>Late</td>
+                      <td class="align-right">0</td>
+                    </tr>
+                    <tr class="">
+                      <td>Overtime</td>
+                      <td class="align-right">0</td>
+                    </tr>
+                    <tr class="">
+                      <td>Early Leaving</td>
+                      <td class="align-right">0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class=" card-box col-lg-12">
+              <div class="table-responsive">
+                <table class="table table-striped mails m-0 table table-action-bar"> 
+                  <thead>
+                    <tr><th>Hours Summary</th>
+                  </tr></thead>
+                  <tbody>
+                    <tr class="">
+                      <td>Total Late</td>
+                      <td class="align-right">00:00</td>
+                    </tr>
+                    <tr class="">
+                      <td>Total Early</td>
+                      <td class="align-right">00:00</td>
+                    </tr>
+                    <tr class="">
+                      <td>Total Rest</td>
+                      <td class="align-right">00:00</td>
+                    </tr>
+                    <tr class="">
+                      <td>Total Overtime</td>
+                      <td class="align-right">00:00</td>
+                    </tr>
+                    <tr class="">
+                      <td>Total Work</td>
+                      <td class="align-right">00:00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        
+        <div class="col-lg-8">
+          <div class=" card-box col-lg-12">
+            <!-- end of salary breakdown-->
+            <div class="col-lg-12" style="padding-top:30px; border-bottom: 1px dotted #8c8b8b; padding-bottom: 30px">
+            <div class="col-lg-12" style="border-bottom: 1px dotted #8c8b8b; padding-bottom: 30px">
+              <h4>Payroll Period</h4>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Cut-off From</label>
+                <div class="col-lg-12 form-group">
+                  <div class="input-group date form_date col-lg-12" data-date-format="MM dd, yyyy" data-link-field="cutOffFrom">
+                    <input class="form-control" size="16" type="text" id="cutOffFrom" name="cutOffFrom" readonly="">
+                    <span class="input-group-addon"><div class="glyphicon glyphicon-remove"></div></span>
+                    <span class="input-group-addon"><div class="glyphicon glyphicon-calendar"></div></span>
+                  </div>
+                  <input type="text" id="cutOffFromHidden" name="cutOffFromHidden" class="cj" value="" style=" position: absolute; visibility: hidden;">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Cut-off To</label>
+                <div class="col-lg-12 form-group">
+                  <div class="input-group date form_date col-lg-12" data-date-format="MM dd, yyyy" data-link-field="cutOffTo">
+                    <input class="form-control" size="16" type="text" id="cutOffTo" name="cutOffTo" readonly="">
+                    <span class="input-group-addon"><div class="glyphicon glyphicon-remove"></div></span>
+                    <span class="input-group-addon"><div class="glyphicon glyphicon-calendar"></div></span>
+                  </div>
+                  <input type="text" id="cutOffToHidden" name="cutOffToHidden" class="cj" value="" style=" position: absolute; visibility: hidden;">
+                </div>
+              </div>
+            </div>
+            <!-- end of salary breakdown-->
+            <div class="col-xs-12 col-lg-12" style="padding-top:10px; padding-bottom: 10px; border-bottom: 1px dotted #8c8b8b; ">
+              <h4>Salary Breakdown</h4>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Basic Pay</label>
+                <div class="col-lg-12 form-group">
+                  <input class="required form-control" type="text" id="basic" name="basic" value="10,000" readonly="">
+                  <input class="required form-control" type="hidden" id="basicpay" name="basicpay" value="10000" readonly="">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Overtime</label>
+                <div class="col-lg-12 form-group">
+                  <input class="required form-control" type="number" id="overtime" name="overtime">
+                </div>
+              </div>
+              
+
+              
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Daily Rate</label>
+                <div class="col-lg-12 form-group">
+                  <input id="dailyrate" class="required form-control" type="text" name="dailyrate" readonly="">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Holiday Pay</label>
+                <div class="col-lg-12 form-group">
+                  <input class="required form-control" type="number" id="holidayPay" name="holidayPay">
+                </div>
+              </div>
+              <div class="col-lg-12"></div>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Hour Rate</label>
+                <div class="col-lg-12 form-group">
+                  <input class="required form-control" type="text" id="hourrate" name="hourrate" readonly="">
+                </div>
+              </div>
+              <div class="col-lg-12"></div>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Minute Rate</label>
+                <div class="col-lg-12 form-group">
+                  <input class="required form-control" type="text" id="minuterate" name="minuterate" readonly="">
+                </div>
+              </div>
+
+
+              <div class="col-xs-12 col-lg-4" style="padding-top: 25px;">
+                  <label class="control-label col-lg-6" style="color: #ff7558">GROSS PAY: </label>
+                </div>
+              <!-- <div class="col-xs-6 col-lg-2" style="padding-top: 25px">
+                <div class="col-xs-12 col-lg-6 form-group">
+                  <button type="submit" class="btn btn-sm btn-default waves-effect waves-light"><i class="md md-add"></i> Add</button>
+                </div>
+              </div> -->
+            </div>
+            
+            
+
+
+
+            <div class="col-lg-12" style="padding-top:30px; border-bottom: 1px dotted #8c8b8b; padding-bottom: 30px">
+              <h4>Deductions</h4>
+
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Philhealth</label>
+                <div class="col-lg-12 form-group">
+                  <input id="philhealth" class="required form-control" type="number" name="philhealth" readonly="">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Absent</label>
+                <div class="col-lg-12 form-group">
+                  <input class="required form-control" type="text" name="">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">SSS/GSIS</label>
+                <div class="col-lg-12 form-group">
+                  <input id="sss" class="required form-control" type="number" name="sss" readonly="">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Tardiness (Late)</label>
+                <div class="col-lg-12 form-group">
+                  <input class="required form-control" type="text" name="">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Pag-ibig dues</label>
+                <div class="col-lg-12 form-group">
+                  <input id="pagibig" class="required form-control" type="number" name="pagibig" readonly="">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Undertime</label>
+                <div class="col-lg-12 form-group">
+                  <input class="required form-control" type="number" name="">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Withholding Tax</label>
+                <div class="col-lg-12 form-group">
+                  <input class="required form-control" type="text" id="withholdingtax" name="withholdingtax" readonly="">
+                </div>
+              </div>
+
+
+              
+              
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Unpaid Leave</label>
+                <div class="col-lg-12 form-group">
+                  <input class="required form-control" type="text" name="">
+                </div>
+              </div>
+
+              <div class="col-lg-12" style="padding-top: 10px">
+                <div class="col-lg-6 form-group">
+                  <button type="submit" class="btn btn-sm btn-default waves-effect waves-light"><i class="md md-add"></i> Add</button>
+                </div>
+                <div class="col-lg-6">
+                  <h4 style="color: #ff7558">DEDUCTION: <label id="deduction" style="color: red; font-weight: bold; text-decoration: underline; font-size: 20px; padding-left: 5%">1,208.335</label></h3>
+                  <input type="hidden" id="deductionHidden" name="deductionHidden" value="1208.335">
+                 
+                </div>
+              </div>
+            </div>
+            <!-- END OF DEDUCTION-->
+            <div class="col-lg-12" style="padding-top:30px; border-bottom: 1px dotted #8c8b8b; padding-bottom: 30px">
+              <h4>Other Deductions</h4>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Cash Advance</label>
+                <div class="col-lg-12 form-group">
+                  <input class="required form-control" type="text" name="">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">SSS/GSIS Loan</label>
+                <div class="col-lg-12 form-group">
+                  <input class="required form-control" type="text" name="">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Pag-ibig Loan</label>
+                <div class="col-lg-12 form-group">
+                  <input class="required form-control" type="text" name="">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <label class="col-lg-12 control-label">Union Dues</label>
+                <div class="col-lg-12 form-group">
+                  <input class="required form-control" type="text" name="">
+                </div>
+              </div>
+              <div class="col-lg-12" style="padding-top: 10px">
+                <div class="col-lg-6 form-group">
+                  <button type="submit" class="btn btn-sm btn-default waves-effect waves-light"><i class="md md-add"></i> Add</button>
+                </div>
+                <div class="col-lg-6">
+                  <h3 class="control-label col-lg-6" style="color: #ff7558" id="otherDeduction">OTHER DEDUCTION:</h3>
+                  <input type="hidden" id="otherDeductionHidden" name="otherDeductionHidden" value="OTHER DEDUCTION:">
+                </div>
+              </div>
+            </div>
+            <!-- END OTHER DEDUCTIONS-->
+            <div class="col-lg-12" style="padding-top:30px">
+              <div class="col-lg-6 pull-right">
+                <h3 style="color: #26AF8C">NET PAY: <label id="netincome" style=" font-weight: bold; text-decoration: underline; font-size: 20px; padding-left: 5%">8,791.67</label></h3>
+                <input type="hidden" id="netPayHidden" name="netPayHidden" value="8791.67">
+              </div>
+               <div class="col-lg-12 col-lg-push-9 button-list" style="padding-top: 10px">
+                <!-- <button class="btn btn-default btn-rounded waves-effect waves-light" type="button">Cancel</button> -->
+                <button class="btn btn-default btn-rounded waves-effect waves-light" type="submit" id="save">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- end col-10-->
+      
+    </div></form>
+  </div> <!-- end of row-->
+</div>
+
+
+
+
+         
+         <!-- end of your code -->
+         <!-- footer here -->
+         <hr />
+         <footer class="navbar-fixed-bottom">
+            <div class="container-fluid" style="background-color: #35AC49;">
+               <p class="pull-right " style="padding-top: .5%; padding-right: 3%; font-size: 10px; font-weight: bolder; color: #000033;">&copy; 2016 - Powered by <a href="http://www.simplevia.com" style="color: #fff;">QuickTrack</a></p>
+            </div>
+         </footer>
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/datatables.net/js/jquery.dataTables.min.js"></script> 
+
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      
+      <script src="../../content/datatables.net/js/datatables.bootstrap.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.buttons.min.js"></script>
+
+      <script src="../../content/datatables.net/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/datatables.net/js/buttons.html5.min.js"></script>
+      <script src="../../content/datatables.net/js/buttons.print.min.js"></script>
+
+      <script src="../../content/datatables.net/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.scroller.min.js"></script>
+
+
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <!-- end of your custom script -->
+   </body>
+</html>

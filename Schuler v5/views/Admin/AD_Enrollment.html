@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Administration Management</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style>
+   
+   </style>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Setting</a></li>
+                        <li><a href="#exit">Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+       
+      <!-- end of your code -->
+      <!-- footer here -->
+      <hr />
+      <footer class="navbar-fixed-bottom">
+         <div class="container-fluid footer">
+            <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+         </div>
+      </footer>
+      <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <!-- <script src="../../content/jquery/dist/jquery.min.js"></script> -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/datatables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script>
+      function printDiv() 
+      {
+        var divToPrint=document.getElementById('AppForm');
+        var newWin=window.open('','Print-Window');
+        newWin.document.open();
+        newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+        newWin.document.close();
+        setTimeout(function(){newWin.close();},10);
+      }
+      </script>
+
+    <script>
+      $('#dateOfBirthIcon').click(function(){
+          $('#dateOfBirth').datepicker("show");
+      })
+      $('#dateOfBirthCloseIcon').click(function(){
+          $('#dateOfBirth').datepicker("hide");
+          $('#dateOfBirth').datepicker('setDate', null)
+      })
+
+      $( function() {
+         $( "#dateOfBirth" ).datepicker({
+            dateFormat: 'd, MM, yy',
+            changeMonth: true,
+            changeYear: true,
+            maxDate: 0
+         });
+      } );
+     </script>
+
+     <script>
+      $('#dateOfBirthIconFather').click(function(){
+          $('#dateOfBirthFather').datepicker("show");
+      })
+
+      $('#dateOfBirthCloseIconFather').click(function(){
+          $('#dateOfBirthFather').datepicker("hide");
+          $('#dateOfBirthFather').datepicker('setDate', null)
+      })
+
+      $( function() {
+         $( "#dateOfBirthFather" ).datepicker({
+            dateFormat: 'd, MM, yy',
+            changeMonth: true,
+            changeYear: true,
+            maxDate: 0
+         });
+      } );
+     </script>
+
+     <script>
+      $('#dateOfBirthIconMother').click(function(){
+          $('#dateOfBirthMother').datepicker("show");
+      })
+
+      $('#dateOfBirthCloseIconMother').click(function(){
+          $('#dateOfBirthMother').datepicker("hide");
+          $('#dateOfBirthMother').datepicker('setDate', null)
+      })
+
+      $( function() {
+         $( "#dateOfBirthMother" ).datepicker({
+            dateFormat: 'd, MM, yy',
+            changeMonth: true,
+            changeYear: true,
+            maxDate: 0
+         });
+      } );
+     </script>
+
+     <script>
+      $('#dateOfBirthIconGuardian').click(function(){
+          $('#dateOfBirthGuardian').datepicker("show");
+      })
+
+      $('#dateOfBirthCloseIconGuardian').click(function(){
+          $('#dateOfBirthGuardian').datepicker("hide");
+          $('#dateOfBirthGuardian').datepicker('setDate', null)
+      })
+
+      $( function() {
+         $( "#dateOfBirthGuardian" ).datepicker({
+            dateFormat: 'd, MM, yy',
+            changeMonth: true,
+            changeYear: true,
+            maxDate: 0
+         });
+      } );
+     </script>
+     <!-- Upload Image in Student info -->
+     <script type="text/javascript">
+         function readURL(input) {
+            if (input.files && input.files[0]) {
+              var reader = new FileReader();
+            
+              reader.onload = function(e) {
+                $('#studentimg').attr('src', e.target.result);
+              }
+            
+              reader.readAsDataURL(input.files[0]);
+            }
+            }
+            
+            $("#studentimginp").change(function() {
+               readURL(this);
+            });
+      </script>
+
+      <!-- Upload Image in Father info -->
+      <script type="text/javascript">
+         function readURL2(input) {
+            if (input.files && input.files[0]) {
+              var reader = new FileReader();
+            
+              reader.onload = function(e) {
+                $('#fatherimg').attr('src', e.target.result);
+              }
+            
+              reader.readAsDataURL(input.files[0]);
+            }
+            }
+            
+            $("#fatherimginp").change(function() {
+            readURL2(this);
+         });
+      </script>
+
+      <script type="text/javascript">
+         function readURL3(input) {
+            if (input.files && input.files[0]) {
+              var reader = new FileReader();
+            
+              reader.onload = function(e) {
+                $('#motherimg').attr('src', e.target.result);
+              }
+            
+              reader.readAsDataURL(input.files[0]);
+            }
+            }
+            
+            $("#motherimginp").change(function() {
+            readURL3(this);
+         });
+      </script>
+
+      <script type="text/javascript">
+         function readURL4(input) {
+            if (input.files && input.files[0]) {
+              var reader = new FileReader();
+            
+              reader.onload = function(e) {
+                $('#guardianimg').attr('src', e.target.result);
+              }
+            
+              reader.readAsDataURL(input.files[0]);
+            }
+            }
+            
+            $("#guardianimginp").change(function() {
+            readURL4(this);
+         });
+      </script>
+
+      <!-- end of your custom script -->
+   </body>
+</html>

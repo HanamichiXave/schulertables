@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Library Management</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style>
+      td {
+         text-align: left!important;
+      }
+      .nav >li > a {
+         padding: 10px 3px!important;
+      }
+      
+      .img-thumbnail {
+         border: none!important;
+      }
+   </style>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                           <li>
+                                  <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                           </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033"><h2><strong>Library Management</strong></h2></div>
+           <ol class="breadcrumb" style="background-color: #D9EDF7">
+               <li><a href="library-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+               <li><a href="library-catalouge.html">Library Catalogue</a></li>
+               <li>Material Details</li>
+           </ol>
+         <!-- your code start here -->
+         <!-- Please observe indention -->
+         <div class="row">
+            <div class="col-lg-12">
+               <ul class="nav nav-pills nav-tabs tabs">
+                  <li class="active tab">
+                     <a href="#home-1" data-toggle="tab" aria-expanded="false">
+                     <!-- <span class="visible-xs"><i class="fa fa-home"></i></span>
+                     <span class="hidden-xs">Material Image  </span> -->
+                     <label>Material Image</label>
+                     </a>
+                  </li>
+                  <li class="tab">
+                     <a href="#home-2" data-toggle="tab" aria-expanded="false">
+                     <!-- <span class="visible-xs"><i class="fa fa-user"></i></span>
+                     <span class="hidden-xs">Brief Record</span> -->
+                     <label>Brief Record</label>
+                     </a>
+                  </li>
+                  <li class="tab">
+                     <a href="#home-3" data-toggle="tab" aria-expanded="false">
+                     <!-- <span class="visible-xs"><i class="fa fa-user"></i></span>
+                     <span class="hidden-xs">Complete Record</span> -->
+                     <label>Complete Record</label>
+                     </a>
+                  </li>
+               </ul>
+               <div class="tab-content">
+                  <div class="tab-pane active" id="home-1">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <center>
+                              <div class="container">
+                                 <h2 id="materialName"></h2>
+                                 <p id="materialCompleteDetails"></p>
+                                 <img src="../../content/images/logonatin.png" class="img-thumbnail" id="myImage" style="width: 550px; height: 800px;" alt="Cinque Terre">
+                              </div>
+                           </center>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-pane" id="home-2">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="table-responsive ">
+                              <table class="display nowrap table table-striped table-hover">
+                                 <thead>
+                                    <tr></tr>
+                                 </thead>
+                                 <tr class="">
+                                    <td>Accession No.</td>
+                                    <td></td>
+                                 </tr>
+                                 <tbody>
+                                    <tr class="">
+                                       <td>Local Call No.</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Main Entry -- Personal Name</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Date Published</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Vol. / Year</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Material Location</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Title Statement</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Publication, Distribution, etc</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Price</td>
+                                       <td>&#x20B1;</td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Fine / Day, Material not Return</td>
+                                       <td>&#x20B1;</td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Physical Description</td>
+                                       <td></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-pane" id="home-3">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="table-responsive ">
+                              <table class="table table-striped table-hover">
+                                 <thead>
+                                    <tr></tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr class="">
+                                       <td>General Information</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Language Code</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Authentication Code</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Local Call Number</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Vol. / Year</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Main Entry -- Personal Name</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Physical Description</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Title Statement</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Publication, Distribution, etc</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Material Location</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Added Entry -- Peronsal Name</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Collection Category</td>
+                                       <td></td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Price</td>
+                                       <td>&#x20B1;</td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Fine / Day, Material not Return</td>
+                                       <td>&#x20B1; </td>
+                                    </tr>
+                                    <tr class="">
+                                       <td>Format</td>
+                                       <td></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end of your code -->
+         <!-- footer here -->
+         <hr />
+         <footer class="navbar-fixed-bottom">
+            <div class="container-fluid footer">
+               <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+            </div>
+         </footer>
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      
+
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/datatables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <!-- end of your custom script -->
+   </body>
+</html>

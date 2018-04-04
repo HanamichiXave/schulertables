@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Dashboard</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <link href="../../content/dashboards/bootstrap dashboard/bsdashboard.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                        <li>
+                           <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                        <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                        <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033">
+            <h2><strong>Dashboard</strong></h2>
+         </div>
+         <section>
+            <!-- your code start here -->
+            <!-- Please observe indention -->
+            <div class="col-lg-12">
+              <div class="container-2">
+               <div id="page-wrapper">
+                  <div class="row">
+                      <div class="page-title">
+                         <ol class="breadcrumb" style="background-color: #D9EDF7">
+                            <li style="font-size: 18px;"><i class="fa fa-dashboard"></i> Dashboard</li>
+                         </ol>
+                      </div>
+                  </div>
+                  <div class="row" >
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading dark-blue db-container">
+                                 <i class="fa fa-users fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content dark-blue db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Enrolled <br/>Students
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 5,232
+                                 <span id="sparklineA"></span>
+                              </div>
+                              <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading green db-container">
+                                 <i class="fa fa-money fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content green db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Margin <br/>Profit
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 44%
+                              </div>
+                              <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading orange db-container">
+                                 <i class="fa fa-bell fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content orange db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Active <br/>Concerns
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 9 New
+                              </div>
+                              <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading blue db-container">
+                                 <i class="fa fa-book fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content blue db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Number of <br/>Books
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 369
+                                 <span id="sparklineB"></span>
+                              </div>
+                              <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading red db-container">
+                                 <i class="fa fa-users fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content red db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Number of <br/>Teachers
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 159
+                                 <span id="sparklineC"></span>
+                              </div>
+                              <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading purple db-container">
+                                 <i class="fa fa-users fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content purple db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Number of <br/>Employees
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 363
+                                 <span id="sparklineD"></span>
+                              </div>
+                              <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading yellow db-container">
+                                 <i class="fa fa-database fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content yellow db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Available <br/>Assets
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 363
+                                 <span id="sparklineD"></span>
+                              </div>
+                              <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading gray db-container">
+                                 <i class="fa fa-users fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content gray db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Number of <br/>Parents
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 186
+                                 <span id="sparklineD"></span>
+                              </div>
+                              <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading red db-container">
+                                 <i class="fa fa-users fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content red db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Reported <br/>Lost Items
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 44
+                                 <span id="sparklineD"></span>
+                              </div>
+                              <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading green db-container">
+                                 <i class="fa fa-wheelchair fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content green   db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Number of <br/>Patients
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 24
+                                 <span id="sparklineD"></span>
+                              </div>
+                              <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading purple db-container">
+                                 <i class="fa fa-users fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content purple db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Daily <br/>Visitors
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 363
+                                 <span id="sparklineD"></span>
+                              </div>
+                              <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading blue db-container">
+                                 <i class="fa fa-file-text fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content blue db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Number of <br/>Documents
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 363
+                                 <span id="sparklineD"></span>
+                              </div>
+                              <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+               <!-- page-wrapper END-->
+              </div>
+            </div>
+             
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="panel panel-custom">
+                    <div class="panel-heading">
+                      <i class="fa fa-users"></i>
+                      <label>Enrolled Students</label>                    
+                    </div>
+                    <div class="db-container" style="position: relative; width:auto;">
+                      <canvas id="myChartbar" height="150px"></canvas>
+                    </div>
+                </div>
+              </div>
+
+               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="panel panel-custom">
+                    <div class="panel-heading">
+                      <i class="fa fa-balance-scale"></i>
+                      <label>Profit Comparison per Semester</label>                    
+                    </div>
+                    <div class="db-container" style="position: relative; width:auto;">
+                      <canvas id="myBarGroupChart" height="150px"></canvas>
+                     </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="panel panel-custom">
+                    <div class="panel-heading">
+                      <i class="fa fa-book"></i>
+                      <label>Library Books</label>                    
+                    </div>
+                    <div class="db-container" style="position: relative; width:auto;">
+                      <canvas id="myChartpie" ></canvas>
+                    </div>
+                </div>
+              </div>
+
+               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="panel panel-custom">
+                    <div class="panel-heading">
+                      <i class="fa fa-user"></i>
+                      <label>Teacher Breakdown</label>                    
+                    </div>
+                    <div id="chart" class="db-container" style="position: relative; width:auto;">
+                      <canvas id="myChartPolar" height="150px"></canvas>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="panel panel-custom">
+                    <div class="panel-heading">
+                      <i class="fa fa-users"></i>
+                      <label>Number of Employee per Department</label>                    
+                    </div>
+                    <div class="db-container" style="position: relative; width:auto;">
+                      <canvas id="myChartbarhr" ></canvas>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="panel panel-custom">
+                    <div class="panel-heading">
+                      <i class="fa fa-users"></i>
+                      <label>Monthly joinees and resignees</label>                    
+                    </div>
+                   <div class="db-container" style="position: relative; width:auto;">
+                      <canvas id="myChartline" height="80px"></canvas>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <div class="panel panel-custom">
+                          <div class="panel-heading">
+                            <i class="fa fa-database"></i>
+                            <label>Assets</label>                    
+                          </div>
+                          <div class="db-container" style="position: relative; width:auto;">
+                            <div class="db-container" style="width:100%;">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 blue"> 
+                          <center>
+                            <div class="circle-tile-description text-faded">
+                             Assets
+                            </div>
+                            <div class="circle-tile-number text-faded">
+                               21
+                               <span id="sparklineB"></span>
+                            </div>
+                          </center>
+                        </div> 
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 green">
+                          <center>
+                            <div class="circle-tile-description text-faded">
+                               Checked-In
+                            </div>
+                            <div class="circle-tile-number text-faded">
+                               6
+                               <span id="sparklineB"></span>
+                            </div>
+                          </center>
+                        </div> 
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 red">
+                          <center> 
+                            <div class="circle-tile-description text-faded">
+                               Checked-Out
+                            </div>
+                            <div class="circle-tile-number text-faded">
+                               15
+                               <span id="sparklineB"></span>
+                            </div>
+                          </center>
+                        </div> 
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 purple">
+                          <center>
+                            <div class="circle-tile-description text-faded">
+                               For Disposal
+                            </div>
+                            <div class="circle-tile-number text-faded">
+                               5
+                               <span id="sparklineB"></span>
+                            </div>
+                          </center>
+                        </div> 
+                      </div>
+                      <canvas id="myChartdn"></canvas>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <div class="panel panel-custom">
+                          <div class="panel-heading">
+                            <i class="fa fa-database"></i>
+                            <label>Reported Lost</label>                    
+                          </div>
+                          <div class="db-container" style="position: relative; width:auto;">
+                            <div class="db-container" style="width:100%;">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 blue"> 
+                          <center>
+                            <div class="circle-tile-description text-faded">
+                             Assets
+                            </div>
+                            <div class="circle-tile-number text-faded">
+                               30
+                               <span id="sparklineB"></span>
+                            </div>
+                          </center>
+                        </div> 
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 green">
+                          <center>
+                            <div class="circle-tile-description text-faded">
+                               Items Found
+                            </div>
+                            <div class="circle-tile-number text-faded">
+                               2
+                               <span id="sparklineB"></span>
+                            </div>
+                          </center>
+                        </div> 
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 red">
+                          <center> 
+                            <div class="circle-tile-description text-faded">
+                               Returned
+                            </div>
+                            <div class="circle-tile-number text-faded">
+                               15
+                               <span id="sparklineB"></span>
+                            </div>
+                          </center>
+                        </div> 
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 purple">
+                          <center>
+                            <div class="circle-tile-description text-faded">
+                               Donated
+                            </div>
+                            <div class="circle-tile-number text-faded">
+                               8
+                               <span id="sparklineB"></span>
+                            </div>
+                          </center>
+                        </div> 
+                      </div>
+                      <canvas id="myChartdnlf"></canvas>
+                    </div>
+                </div>
+              </div>
+           
+            <!-- end of your code -->
+            <!-- footer here -->
+         </section>
+                  <br/><br/><br/><br/>
+       
+         <footer class="navbar-fixed-bottom">
+            <div class="container-fluid footer">
+               <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+            </div>
+         </footer>
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!-- DataTable Link -->
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/datatables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <!-- End of LInk -->
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script>
+      var ctxbar = $("#myChartbar");
+      var ctxline = $("#myChartline");
+      var ctxpie = $("#myChartpie");
+      var ctxbargroup = $("#myBarGroupChart");
+      var ctxbarhr = $("#myChartbarhr");
+      var ctxdn = $("#myChartdn");
+      var ctxlf = $("#myChartdnlf");
+
+
+      var myChartbar = new Chart(ctxbar, {
+          type: 'horizontalBar',
+          data: {
+              labels: ["K", "1", "2", "3", "4"
+                        , "5", "6", "7", "8", "9"
+                        , "10", "11", "12"],
+              datasets: [{
+                  label: 'Student',
+                  data: [35, 76, 32, 53, 23, 56,34,42,75,47,74,46,52],
+                  backgroundColor: [
+                      '#ff0000','#ff8000','#ffff00','#80ff00', '#00ff00', '#00ff80',
+                                 '#00ffff','#0080FF','#0000ff','#8000ff', '#ff00ff', '#ff0080',
+                                 '#F08800'
+
+                  ],
+                  borderColor: [
+                      '#ff0000','#ff8000','#ffff00','#80ff00', '#00ff00', '#00ff80',
+                                 '#00ffff','#0080FF','#0000ff','#8000ff', '#ff00ff', '#ff0080',
+                                 '#F08800'
+
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  xAxes: [{
+                      ticks: {
+                          stepSize: 5,
+                          min: 0,
+                          autoSkip: false,
+                          fontSize: 14
+                      }
+                  }],
+                  yAxes:[{
+                      ticks: {
+                          beginAtZero: true,
+                          fontSize: 14
+                      }
+                  }]
+              }, 
+                     legend: { 
+                       display: false 
+                     },
+                     title: {
+                        display: true,
+                        text: 'Student Enrolled'
+                      }
+          }
+      });
+
+       var myBarGroupChart = new Chart(ctxbargroup,{
+          type: 'bar',
+          data: {
+                datasets: [{
+                            label: "First Semester",
+                            backgroundColor:  'rgba(255, 99, 132, 0.2)',
+                            data: [5838]
+                          }, {
+                            label: "Second Semester",
+                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                            data: [6464]
+                           }, {
+                            label: "Third Semester",
+                            backgroundColor: 'rgba(255,140,0, 0.2)',
+                            data: [5734]
+                           }, {
+                            label: "Fourth Semester",
+                            backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                            data: [8453]
+                           }], 
+            }, options: {
+                  title: {
+                            display: false,
+                            text: 'Profit Comparison',
+                        },
+                        legend: { 
+                          display: false 
+                        },scales: {
+                          yAxes:[{
+                              ticks: {
+                                  beginAtZero: true,
+                                  fontSize: 14
+                              }
+                          }]
+                      }
+                    }
+              });
+
+      var myChartline = new Chart(ctxline, {
+          type: 'line',
+          data: {
+              labels: ["Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"],
+              datasets: [{
+                  label: 'Monthly resignees',
+                  data: [10, 13, 15, 10, 20, 25, 10],
+                  backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                  borderColor: 'rgba(54, 162, 235, 0.2)',
+                  borderWidth: 1,
+                  pointBackgroundColor: 'rgba(54, 162, 235, 0.2)'
+              },{
+                  label: 'Monthly joinees',
+                  data: [15, 16, 18, 20, 16, 28, 14],
+                  backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                  borderColor: 'rgba(255, 99, 132, 0.2)',
+                  borderWidth: 1,
+                  pointBackgroundColor: 'rgba(255, 99, 132, 0.2)'
+              }]
+          },
+           options: {
+              scales: {
+                  xAxes: [{
+                      ticks: {
+                          stepSize: 1,
+                          min: 0,
+                          autoSkip: false,
+                          fontSize: 14
+                      }
+                  }],
+                  yAxes:[{
+                      ticks: {
+                          beginAtZero: true,
+                          fontSize: 14
+                      }
+                  }]
+              },
+                title: {
+                          display: false,
+                          text: 'Monthly joinees and resignees'
+                      },
+          }
+      });
+
+
+      var myPieChart = new Chart(ctxpie,{
+          type: 'pie',
+          data: {
+                labels: ['Barrowed','Returned','With Issue'],
+                datasets: [{
+                    data: [10, 20, 4],
+                    backgroundColor: [
+                      'Green','Purple','Red'
+                    ],
+                    borderColor: [
+                      'Green','Purple','Red'
+                    ],
+                    hoverBackgroundColor: [
+                      'Green','Purple','Red'
+                    ],
+                    hoverBorderColor: [
+                     'Green','Purple','Red'
+                    ],
+                    hoverBorderWidth: 5,
+                    borderWidth: 1
+                }], 
+                // These labels appear in the legend and in the tooltips when hovering different arcs
+               
+            }
+      });
+
+      var data = {
+          datasets: [{
+              data: [
+                  30,
+                  28,
+                  25,
+                  34,
+                  29
+              ],backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255,140,0, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)'
+                ],
+              label: 'My dataset' // for legend
+          }],
+          labels: [
+              "Math",
+              "English",
+              "Science",
+              "Physical Education",
+              "Health"
+          ]
+      };
+      var ctx = $("#myChartPolar");
+      new Chart(ctx, {
+          data: data,
+          type: 'polarArea'
+      });
+
+      var myChartbar = new Chart(ctxbarhr, {
+          type: 'bar',
+          data: {
+              labels: ["Administration", "Clinic", "Counselor", "Finance", "Human Resource",
+                        "Library", "Maintenance", "Security", "Teacher", "Transportation", "Other Staffs"],
+              datasets: [{
+                  label: 'Total',
+                  data: [20, 48, 50, 60, 70, 25, 30, 45, 35, 15, 65],
+                  backgroundColor: [
+                       '#ff0000','#ff8000','#ffff00','#80ff00', '#00ff00', '#00ff80',
+                                 '#00ffff','#0080FF','#0000ff','#8000ff', '#ff00ff', '#ff0080',
+                  ],
+                  borderColor: [
+                       '#ff0000','#ff8000','#ffff00','#80ff00', '#00ff00', '#00ff80',
+                                 '#00ffff','#0080FF','#0000ff','#8000ff', '#ff00ff', '#ff0080',
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  xAxes: [{
+                      ticks: {
+                          stepSize: 1,
+                          min: 0,
+                          autoSkip: false,
+                          fontSize: 14
+                      }
+                  }],
+                  yAxes:[{
+                      ticks: {
+                          beginAtZero: true,
+                          fontSize: 14
+                      }
+                  }]
+              },
+                title: {
+                          display: false,
+                          text: 'No. of Employee per Department'
+                      },
+                legend: { 
+                          display: false 
+                        }
+          }
+      });
+
+      var myDnChart = new Chart(ctxdn,{
+          type: 'doughnut',
+          data: {
+                labels: ['Assets','Checked-In','Checked-Out','For Disposal'],
+                datasets: [{
+                    data: [21, 6, 15, 10],
+                    backgroundColor: [
+                      '#2980b9','#16a085','#e74c3c','#8e44ad'
+                    ],
+                    borderColor: [
+                      '#2980b9','#16a085','#e74c3c','#8e44ad'
+                    ],
+                    hoverBackgroundColor: [
+                      '#2980b9','#16a085','#e74c3c','#8e44ad'
+                    ],
+                    hoverBorderColor: [
+                      '#2980b9','#16a085','#e74c3c','#8e44ad'
+                    ],
+                    hoverBorderWidth: 5,
+                    borderWidth: 1
+                }], 
+                // These labels appear in the legend and in the tooltips when hovering different arcs
+               
+            }
+      });
+
+       var myDnChart = new Chart(ctxlf,{
+          type: 'doughnut',
+          data: {
+                labels: ['Lost','Found','Returned','Donated'],
+                datasets: [{
+                    data: [30, 2, 4, 8],
+                    backgroundColor: [
+                      '#2980b9','#16a085','#e74c3c','#8e44ad'
+                    ],
+                    borderColor: [
+                      '#2980b9','#16a085','#e74c3c','#8e44ad'
+                    ],
+                    hoverBackgroundColor: [
+                      '#2980b9','#16a085','#e74c3c','#8e44ad'
+                    ],
+                    hoverBorderColor: [
+                      '#2980b9','#16a085','#e74c3c','#8e44ad'
+                    ],
+                    hoverBorderWidth: 5,
+                    borderWidth: 1
+                }], 
+                // These labels appear in the legend and in the tooltips when hovering different arcs
+               
+            }
+      });
+
+
+
+
+      </script>
+      <!-- This is the Code for dataTable, Please copy paste -->
+      <!-- This is the Code for dataTable -->
+      <!-- end of your custom script -->
+   </body>
+</html>

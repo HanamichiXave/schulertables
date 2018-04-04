@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Disciplinary Management</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style>
+    .super-panel-lg {
+    border: 3px solid #44A5C9!important;
+    border-radius: 20px!important;
+    }
+    .pageimg {
+      height: 70px;
+      margin: 0px 5px 5px 5px;
+    }
+    .spr-label {
+      font-size: 18px !important;
+    }
+    .breadcrumb {
+      padding: 5px 15px!important;
+      margin-bottom: 0px!important;
+    }
+    .modal-xl {
+      width: 90%;
+      max-width: 1200px;
+    }
+    @media (min-width: 768px) {
+    .modal-dialog {
+        width: 600px;
+        margin: 30px auto;
+    }
+
+    ...
+    }
+
+    @media (min-width: 992px) {
+        .modal-lg {
+            width: 900px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .modal-xl {
+            width: 90%;
+            max-width: 1200px;
+        }
+    }
+    .dataTables_paginate {
+      float: right;
+    }
+    .marginbottom {
+      margin-bottom: 20px;
+    }
+    .margintop {
+      margin-top: 20px;
+    }
+    .dataTables_length {
+      margin-bottom: 25px;
+    }
+    .levelaction {
+      font-size: 20px; margin: 15px 15px 15px 15px;
+    }
+    .check {
+      margin-left: 25px;
+    }
+    .text {
+      justify-content: center; 
+      text-align: center;
+    }
+    .box {
+      border: 1px solid; 
+      height: 100px;
+    }
+    .bordertop {
+      border-top: 1px solid; border-color: #1284ad;
+    }
+    td, th {
+      text-align: center;
+    }
+  </style>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                         <li>
+                                <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                         </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container">
+        <br>
+        <br>
+        <div class="page-header" style="color: #000033"><h2><strong></strong></h2></div>
+          <ol class="breadcrumb" style="background-color: #D9EDF7">
+            <li><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</li>
+          </ol>
+        <br />
+      <!-- your code start here -->
+      <!-- Please observe indention -->
+        <div class="panel panel-custom">
+          <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-pencil-square-o fa-lg"></i> Disciplinary Report</div>
+          <div class="container-fluid">
+
+            <div class="row" style="margin-top: 15px;">
+              <div class="col-sm-6 col-md-6 col-lg-8">
+                <div class="form-group contact-search m-b-30">
+                   <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4 marginbottom">
+                <a href="#" class="btn btn-info btn-md waves-effect waves-light m-b-30" style="height: 40px; margin-top: 7px;" data-toggle="modal" data-target="#addreport">
+                <i class="fa fa-pencil"></i> File Report</a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="table-responsive">
+                  <table id="incident" class="display nowrap table table-hover table-striped">
+                    <thead class="thead-color">
+                      <tr>
+                       <th>#</th>
+                       <th>Student ID</th>
+                       <th>Student Name</th>
+                       <th>Grade</th>
+                       <th>Section</th>
+                       <th>Reported By</th>
+                       <th>Level of Corrective Action</th>
+                       <th>Remarks</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td>148-879</td>
+                        <td>John Suarez</td>
+                        <td>Grade 6</td>
+                        <td>Rizal</td>
+                        <td>Mr. Benhard Canoza</td>
+                        <td>2</td>
+                        <td>Don't do it again</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>135-765</td>
+                        <td>James Fernandez</td>
+                        <td>Grade 7</td>
+                        <td>Sampaguita</td>
+                        <td>Mr. Jef Galande</td>
+                        <td>1</td>
+                        <td>Don't do it again</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>154-757</td>
+                        <td>Willy Ponce</td>
+                        <td>Grade 10</td>
+                        <td>Narra</td>
+                        <td>Mr. Rico Furio</td>
+                        <td>1</td>
+                        <td>Don't do it again</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- end of your code -->
+      <!-- footer here -->
+      <footer class="navbar-fixed-bottom">
+         <div class="container-fluid footer">
+            <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+         </div>
+      </footer>
+      <!-- end foooter -->
+      </div>
+
+      <!-- Modal For Add Report -->
+      <div class="modal fade" id="addreport" role="dialog">
+       <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+             <div class="modal-body">
+                <div class="panel panel-custom">
+                  <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-exclamation-circle fa-lg"></i> Add Incident Report</div>
+                    <div class="row">
+                      <div class="col-lg-12 margintop">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 marginbottom">
+                          <div class="col-xs-4 col-sm-12  col-md-5 col-lg-5">
+                            <label class="control-label">Student ID:</label>
+                          </div>
+                          <div class="col-xs-8 col-sm-12 col-md-7 col-lg-6">
+                            <input class="form-control">
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 marginbottom">
+                          <div class="col-xs-4 col-sm-12 col-md-5 col-lg-5">
+                            <label class="control-label">School Year:</label>
+                          </div>
+                          <div class="col-xs-8 col-sm-12 col-md-7 col-lg-6">
+                            <input class="form-control">
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 marginbottom">
+                          <div class="col-xs-4 col-sm-12 col-md-5 col-lg-5">
+                            <label class="control-label">Student Name:</label>
+                          </div>
+                          <div class="col-xs-8 col-sm-12 col-md-7 col-lg-6">
+                            <input class="form-control">
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 marginbottom">
+                          <div class="col-xs-4 col-sm-12 col-md-5 col-lg-5">
+                            <label class="control-label">Date:</label>
+                          </div>
+                          <div class="col-xs-8 col-sm-12 col-md-7 col-lg-6">
+                            <input class="form-control">
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 marginbottom">
+                          <div class="col-xs-4 col-sm-12 col-md-5 col-lg-5">
+                            <label class="control-label">Grade:</label>
+                          </div>
+                          <div class="col-xs-8 col-sm-12 col-md-7 col-lg-6">
+                            <input class="form-control">
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 marginbottom">
+                          <div class="col-xs-4 col-sm-12 col-md-5 col-lg-5">
+                            <label class="control-label">Reported By:</label>
+                          </div>
+                          <div class="col-xs-8 col-sm-12 col-md-7 col-lg-6">
+                            <input class="form-control">
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 marginbottom">
+                          <div class="col-xs-4 col-sm-12 col-md-5 col-lg-5">
+                            <label class="control-label">Section:</label>
+                          </div>
+                          <div class="col-xs-8 col-sm-12 col-md-7 col-lg-6">
+                            <input class="form-control">
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 marginbottom">
+                          <div class="col-xs-4 col-sm-12 col-md-5 col-lg-5">
+                            <label class="control-label">Class Adviser:</label>
+                          </div>
+                          <div class="col-xs-8 col-sm-12 col-md-7 col-lg-6">
+                            <input class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="form-group bordertop">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <label class="control-label levelaction">Level of Corrective Action</label>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 col-lg-6 marginbottom">
+                              <label class="checkbox-inline check"><input type="checkbox" value="">Verbal Warning with Counseling</label>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 col-lg-6 marginbottom">
+                              <label class="checkbox-inline check"><input type="checkbox" value="">Written Warning with Counseling</label>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 col-lg-6 marginbottom">
+                              <label class="checkbox-inline check"><input type="checkbox" value="">Suspension</label>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 col-lg-6 marginbottom">
+                              <label class="checkbox-inline check"><input type="checkbox" value="">Termination</label>
+                            </div>
+
+                            <div class="col-lg-12">
+
+                              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 marginbottom">
+                                  <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2 text">
+                                    <label class="control-label" style="margin-top: 30px;">Facts</label>
+                                  </div>
+                                  <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+                                    <input class="form-control box">
+                                  </div>
+                              </div>
+
+                              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 marginbottom">
+                                <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2 text">
+                                  <label class="control-label" style="margin-top: 30px;">Objective</label>
+                                </div>
+                                <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+                                  <input class="form-control box">
+                                </div>
+                              </div>
+
+                              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 marginbottom">
+                                <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2 text">
+                                  <label class="control-label" style="margin-top: 30px;">Solutions</label>
+                                </div>
+                                <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+                                  <input class="form-control box">
+                                </div>
+                              </div>
+
+                              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 marginbottom">
+                                <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2 text">
+                                  <label class="control-label" style="margin-top: 30px;">Action Taken</label>
+                                </div>
+                                <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+                                  <input class="form-control box">
+                                </div>
+                              </div>
+
+                              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 marginbottom">
+                                  <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2 text">
+                                    <label class="control-label" style="margin-top: 30px;">Remarks</label>
+                                  </div>
+                                  <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+                                    <input class="form-control box">
+                                  </div>
+                              </div>
+
+                              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
+                                <div class="col-md-6 col-lg-6">
+                                  <label class="col-lg-12 control-label">Discussed With Principal</label>
+                                </div>
+                                <div class="col-md-3 col-lg-3">
+                                  <label class="radio-inline" style="margin-left: 25px;"><input type="radio" value="">Yes</label>
+                                  <label class="radio-inline" style="margin-left: 25px;"><input type="radio" value="">No</label>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                </div>
+              </div>
+              <div class="modal-footer">
+                 <button class="btn btn-success btn-rounded waves-effect waves-light" type="sumbit" id="addReport">Save</button>
+                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+             </div>
+          </div>
+       </div>
+      </div>
+      <!-- End of Modal --> 
+
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/dataTables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script type="text/javascript">
+       $(document).ready(function(){
+         var oTable = $('#incident').DataTable({
+           "orderCellsTop": false,
+           "searchHighlight": true,
+           "ordering": false,
+         });
+         $('#search').keyup(function(){
+               oTable.search($(this).val()).draw() ;
+         });
+         $(".dataTables_filter").hide();
+         oTable.on('order.dt search.dt', function(){
+           oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+            function (cell, i) {
+             cell.innerHTML = i+1;
+             } );
+         }).draw();
+
+
+       });
+    </script>
+
+      <!-- end of your custom script -->
+   </body>
+</html>

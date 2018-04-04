@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Teacher</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <link href="../../content/dashboards/bootstrap dashboard/bsdashboard.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                        <li>
+                           <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                        <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                        <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+        <br>
+        <br>
+        <div class="page-header" style="color: #000033"><h2><strong>Teacher Management</strong></h2></div>
+        <ol class="breadcrumb" style="background-color: #D9EDF7">
+           <li><a href="teacher-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+           <li>Dashboard</li>
+       </ol>
+         <section>
+            <!-- your code start here -->
+            <!-- Please observe indention -->
+            <div class="col-lg-12">
+              <div class="container-2">
+               <div id="page-wrapper">
+                  <div class="row" >
+                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading dark-blue db-container">
+                                 <i class="fa fa-book fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content dark-blue db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Curriculum
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 Algebra
+                                 <span id="sparklineA"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading green db-container">
+                                 <i class="fa fa-user fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content green db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Students
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 20
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading orange db-container">
+                                 <i class="fa fa-calendar fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content orange db-container">
+                              <div class="circle-tile-description text-faded">
+                                 School Year
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 2017-2018
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading blue db-container">
+                                 <i class="fa fa-code fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content blue db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Class Code
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 ABCDEF
+                                 <span id="sparklineB"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- page-wrapper END-->
+              </div>
+            </div>
+             
+             <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="panel panel-custom">
+                  <div class="panel-heading">
+                     <i class="fa fa-star"></i>
+                    <label>Achievement Score Distribution</label>
+                  </div>
+                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h5>Class Size </h5>
+                    <h4>20 <label style="font-size:13px;">Students</label></h4>
+                  </div>
+                    <div style="position: relative; width:auto;">
+                      <canvas id="myChartbar" height="250px"></canvas>
+                    </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"> 
+                <div class="panel panel-custom">
+                  <div class="panel-heading">
+                     <i class="fa fa-star"></i>
+                    <label>Achievement Trend</label>
+                  </div>
+                  <div class="panel-body">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h5>Avg Achievement </h5>
+                      <h4 style="color:green">78<i class="fa fa-caret-up fa-fw"></i><label style="font-size:13px;">7.2</label></h4>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h5>Avg % Completed </h5>
+                      <h4 style="color:#006eff">81<i class="fa fa-caret-up fa-fw"></i><label style="font-size:13px;">9</label></h4>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div style="position: relative; width:auto;">
+                        <canvas id="myChartline" height="250px"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="panel panel-custom">
+                  <div class="panel-heading">
+                    <i class="fa fa-check"></i>
+                    <label>Work Completed</label>
+                  </div>
+                  <div class="panel-body">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h5>Problem Solved</h5>
+                      <h4>8,200<i class="fa fa-caret-up fa-fw"></i><label style="font-size:13px;">300</label></h4><br/>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h5>Avg Prob Solved</h5>
+                      <h4>410<i class="fa fa-caret-up fa-fw"></i><label style="font-size:13px;">12</label></h4>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div style="position: relative; width:auto;">
+                        <canvas id="myChartbar2" height="250px"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>    
+              </div>               
+             </div>
+            <!-- end of your code -->
+            <!-- footer here -->
+         </section>
+       
+         <footer class="navbar-fixed-bottom">
+            <div class="container-fluid footer">
+               <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+            </div>
+         </footer>
+         <!-- end foooter -->
+      </div><br/><br/><br/>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!-- DataTable Link -->
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/datatables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <!-- End of LInk -->
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script>
+      var ctxbar = $("#myChartbar");
+      var ctxline = $("#myChartline");
+      var ctxbar2 = $("#myChartbar2");
+
+      var myChartbar = new Chart(ctxbar, {
+          type: 'horizontalBar',
+          data: {
+              labels: ["90-100", "80-89", "70-79", "60-69", "50-59"],
+              datasets: [{
+                  label: 'Student',
+                  data: [1, 2, 3, 4, 5],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)'
+                  ],
+                  borderColor: [
+                      'rgba(255,99,132,1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  xAxes: [{
+                      ticks: {
+                          stepSize: 1,
+                          min: 0,
+                          autoSkip: false,
+                          fontSize: 14
+                      }
+                  }],
+                  yAxes:[{
+                      ticks: {
+                          beginAtZero: true,
+                          fontSize: 14
+                      }
+                  }]
+              }, 
+                     legend: { 
+                       display: false 
+                     }
+          }
+      });
+
+      var myChartline = new Chart(ctxline, {
+          type: 'line',
+          data: {
+              labels: ["Jun","Jul","Sept","Oct","Nov","Dec"],
+              datasets: [{
+                  label: 'Achievement',
+                  data: [3, 5, 11, 19, 14, 18],
+                  backgroundColor: [
+                      'rgba(75, 192, 192, 0.2)'
+                  ],
+                  borderColor: [
+                      'rgba(75, 192, 192, 1)'
+                  ], 
+                  hoverBackgroundColor: [
+                      'rgba(75, 192, 192, 1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+           options: {
+              scales: {
+                  xAxes: [{
+                      ticks: {
+                          stepSize: 1,
+                          min: 0,
+                          autoSkip: false,
+                          fontSize: 14
+                      }
+                  }],
+                  yAxes:[{
+                      ticks: {
+                          beginAtZero: true,
+                          fontSize: 14
+                      }
+                  }]
+              }, 
+                     legend: { 
+                       display: false 
+                     }
+          }
+      });
+
+       var myChartbar = new Chart(ctxbar2, {
+          type: 'bar',
+          data: {
+              labels: ["Nov 1-7", "Nov 8-14", "Nov 15-21", "Nov 22-28", "This Week"],
+              datasets: [{
+                  label: 'Problem Solved',
+                  data: [5524, 7655, 3213, 6234, 8500],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)'
+                  ],
+                  borderColor: [
+                      'rgba(255,99,132,1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  xAxes: [{
+                      ticks: {
+                          stepSize: 1,
+                          min: 0,
+                          autoSkip: false,
+                          fontSize: 14
+                      }
+                  }],
+                  yAxes:[{
+                      ticks: {
+                          beginAtZero: true,
+                          fontSize: 14
+                      }
+                  }]
+              }, 
+                     legend: { 
+                       display: false 
+                     }
+          }
+      });
+
+
+      </script>
+      <!-- This is the Code for dataTable, Please copy paste -->
+      <!-- This is the Code for dataTable -->
+      <!-- end of your custom script -->
+   </body>
+</html>

@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finance Management</title>
+  <link rel="icon" href="../../content/images/logonatin.png">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../content/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+	<!-- css for nav bar -->
+	<link href="../../content/custom/css/style.css" rel="stylesheet">
+  <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+	<!-- end of css  -->
+	<!-- your custom css -->
+
+	<!-- end of your custom css -->
+</head>
+<style>
+.spr-label-lg {
+    font-family: Helvetica;
+    font-size: 15px;
+    color: #000033;
+}
+
+.spr-label {
+    font-family: Helvetica;
+    font-size: 18px;
+    color: #000033;
+}
+
+img {
+    background-color: transparent;
+}
+
+.panel-body:hover,
+.panel-body:focus {
+    background-color: white;
+    transform: scale(1.03);
+    transition: all .1s;
+    background-color: transparent;
+}
+
+.sizeButton {
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.super-panel-lg {
+    width: 285px;
+    height: 110px;
+    border: 1px solid #44A5C9;
+    border-radius: 4px;
+    margin-bottom: 20px !important;
+}
+
+.spr-label {
+    font-family: Helvetica;
+    font-size: 20px;
+    color: #000033;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.pagetitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 600px;
+        margin: 30px auto;
+    }
+
+    ...
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 900px;
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-xl {
+        width: 90%;
+        max-width: 1200px;
+    }
+}
+
+.no-p-l-r {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.no-border-right {
+  border-right: solid 1px #FFF!important;
+}
+
+</style>
+<body>
+	<!-- navigation bar  -->
+	<nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+	    <div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                 <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+                    <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+                </a>
+				<a class="navbar-brand" href="#" style="color: #35ac49;">SchulerTrack</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+							</li>
+              <li class="divider">|</li>
+               <li>
+                      <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+               </li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+				<form class="navbar-form navbar-right search-form" role="search">
+					<input type="text" class="form-control" placeholder="Search" />
+				</form>
+			</div>
+		</div>
+	</nav>
+	<!-- end of navigation bar -->
+	<div class="container" >
+		<br>
+		<br>
+		<div class="page-header" style="color: #000033"><h2><strong>Bureau of Internal Revenue Forms</strong></h2></div>
+    <ol class="breadcrumb">
+           <li><a href="#">Finance Management</a></li>
+           <li><a href="#">B.I.R Compliance</a></li>
+           <li>Forms</li>
+           <li><a href="#"></a></li>
+     </ol>
+	<!-- your code start here -->
+	<!-- Please observe indention -->
+
+    <!-- Modal Form 1600 -->
+    <div class="modal fade" id="Form1600" role="dialog">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3 class="modal-title">BIR Form No. 1600</h3>
+            </div>
+            <div class="modal-body col-lg-12">
+              <div class="col-lg-10">
+                <div class="col-lg-12" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0; margin-top: 0;">
+                  <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Part I</strong> Background Information</h5>
+                </div>
+                <div class="col-lg-12" style="padding-bottom: 10px; padding-top: 10px; border-bottom: 1px dotted;">
+                  <div class="row">  
+                    <div class="form-group">
+                      <div class="form-inline col-lg-3 no-p-l-r">
+                        <label style="font-weight: normal;"><strong>1 </strong> For the Month</label>
+                        <input class="form-control" type="" name="" style="width: 40px; padding: 0; text-align: center;" placeholder="MM"> - 
+                        <input class="form-control" type="" name="" style="width: 50px; padding: 0; text-align: center;" placeholder="YYYY">
+                      </div>
+                      <div class="form-inline col-lg-3 no-p-l-r">
+                        <label style="padding-bottom: 0px; margin-bottom: 0px; border-bottom: 0px; font-weight: normal;"><strong>2 </strong> Amended Return?</label><br>
+                        <input id="amended-return1" class="css-checkbox" type="checkbox" />
+                        <label for="amended-return1" name="demo_lbl_2" class="checkbox-inline css-label"> Yes</label>
+                        <input id="amended-return2" class="css-checkbox" type="checkbox" />
+                        <label for="amended-return2" name="demo_lbl_3" class="checkbox-inline css-label"> No</label>        
+                      </div>
+                      <div class="form-inline col-lg-3 no-p-l-r">
+                        <label style="font-weight: normal;"><strong>3 </strong> No. of Sheets Attached</label>
+                        <input class="form-control" type="" name="" style="width: 40px; padding: 0; text-align: center;" placeholder="- -">
+                      </div>
+                      <div class="form-inline col-lg-3 no-p-l-r">
+                        <label style="padding-bottom: 0px; margin-bottom: 0px; border-bottom: 0px; font-weight: normal;"><strong>4 </strong> Any Taxes Withheld?</label><br>
+                        <input id="any-tax1" class="css-checkbox" type="checkbox" />
+                        <label for="any-tax1" name="demo_lbl_2" class="checkbox-inline css-label"> Yes</label>
+                        <input id="any-tax2" class="css-checkbox" type="checkbox" />
+                        <label for="any-tax2" name="demo_lbl_3" class="checkbox-inline css-label"> No</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12" style="padding-bottom: 10px; padding-top: 10px; border-bottom: 1px dotted;">
+                  <div class="row">  
+                    <div class="form-group">
+                      <div class="form-inline col-lg-4 no-p-l-r">
+                        <label style="font-weight: normal;"><strong>5 </strong> TIN </label>
+                        <input class="form-control" type="" name="" style="width: 50px; padding: 0; text-align: center;" value="000"> - 
+                        <input class="form-control" type="" name="" style="width: 50px; padding: 0; text-align: center;" value="000"> - 
+                        <input class="form-control" type="" name="" style="width: 50px; padding: 0; text-align: center;" value="000"> - 
+                        <input class="form-control" type="" name="" style="width: 50px; padding: 0; text-align: center;" value="000">
+                      </div>
+                      <div class="form-inline col-lg-2   no-p-l-r">
+                        <label style="font-weight: normal;"><strong>6 </strong> RDO Code </label>
+                        <input class="form-control" type="" name="" style="width: 45px; padding: 0; text-align: center;" placeholder="- - -">
+                      </div>
+                      <div class="form-inline col-lg-6 no-p-l-r">
+                        <label style="font-weight: normal;"><strong>7 </strong> Line of Business/Occupation </label>
+                        <input class="form-control" type="" name="" style="width: 50%; padding: 0; text-align: center;" value="Private School">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12" style="padding-top: 10px; border-bottom: 1px dotted;">
+                  <div class="row">
+                    <div class="form-group col-lg-10">
+                      <label style="font-weight: normal;"><strong>8 </strong> Withholding Agent's Name<small style="font-weight: normal;"> (Last Name, First Name, Middle Name for Individuals)/(Registered Names for Non-Individuals)</small></label>
+                      <input class="form-control" type="" name="" value="Private School of San Juan" style="text-align: center;">
+                    </div>
+                    <div class="form-group col-lg-2">
+                      <label style="font-weight: normal;"><strong>9 </strong> Telephone No.</label>
+                      <input class="form-control" type="" name="" value="123-45-67" style="text-align: center;">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12" style="padding-top: 10px;">
+                  <div class="row">
+                    <div class="form-group col-lg-10">
+                      <label style="font-weight: normal;"><strong>10 </strong> Registered Address</label>
+                      <input class="form-control" type="" name="" value="01 Greenhills Street, Greenhills, San Juan, Metro Manila"  style="text-align: center;">
+                    </div>
+                    <div class="form-group col-lg-2">
+                      <label style="font-weight: normal;"><strong>11 </strong> Zip Code</label>
+                      <input class="form-control" type="" name="" value="1500" style="text-align: center;">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0;margin-top: 0;">
+                  <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Part II</strong> Computation of Tax</h5>
+                </div>
+                <div class="col-lg-12" style="padding-bottom: 10px; padding-top: 10px;">
+                  <div class="row">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th style="text-align: center; vertical-align: middle; width: 40%;">NATURE OF INCOME PAYMENT</th>
+                          <th style="text-align: center; vertical-align: middle; width: 5%;">ATC</th>
+                          <th style="text-align: center; vertical-align: middle; width: 25%;">TAX BASE</th>
+                          <th style="text-align: center; vertical-align: middle; width: 5%;">TAX<br>RATE</th>
+                          <th style="text-align: center; vertical-align: middle; width: 25%;">TAX REQUIRED<br>TO BE WITHHELD</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td colspan="4" style="border-bottom: none;"><strong>14 </strong> Total Tax Required to be Withheld and Remitted <strong style="float: right;">14</strong></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="border-top: none; border-bottom: none;"><strong>15 </strong>&nbsp;&nbsp;&nbsp; Less: Tax Remitted in Return Previously Filed, if this is an amended return <strong style="float: right;">15</strong></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="border-top: none; border-bottom: none;"><strong>16 </strong> Tax Still Due/(Overremittance) <strong style="float: right;">16</strong></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td class="col-lg-12" colspan="5" style="border-top: none; border-bottom: none;"><strong>17 </strong>&nbsp;&nbsp;&nbsp; Add: Penalties<br>
+                            <div class="col-lg-3" style="padding-left: 4cm;">Surcharge</div>
+                            <div class="col-lg-3" style="padding-left: 3cm;">Interest</div>
+                            <div class="col-lg-3" style="padding-left: 1.45cm;">Compromise</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="form-group" colspan="4" style="border-top: none; border-bottom: none;">
+                            <div class="form-inline col-lg-11" style="padding: 0; text-align: right; vertical-align: top;">
+                              17A <input type="" name="" style="vertical-align: top; text-align: center;">
+                              17B <input type="" name="" style="vertical-align: top; text-align: center;">
+                              17C <input type="" name="" style="vertical-align: top; text-align: center;">
+                            </div>
+                            <div class="col-lg-1" style="vertical-align: bottom; padding-right: 0; margin-right: 0;">
+                              <strong style="float: right;">17D</strong>
+                            </div>                        
+                          </td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="border-top: none; border-bottom: none;"><strong>18 </strong> Total Amount Still Due/(Overremittance) (Sum of Items 16 &amp; 17D)<strong style="float: right;">18</strong></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td colspan="5" style="border-top: none;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For late filers with overremittance, extend amount of penalties (Item 17D to 18)
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="5" style="text-align: center; padding-bottom: 0; margin-bottom: 0;">
+                            <p>I declare, under the penalties of perjury that this return has made in good faith, verified by me, and to the best of my knowledge and belief,<br> is true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof.</p><br>
+
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-6" style="text-align: center;">
+                                  <strong>19 <input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>&nbsp;&nbsp;President/Vice President/Authorized Representative/Tax Agent<br>(Signature Over Printed Name)</p>
+                                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>Title/Position of Signatory</p>
+                                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>TIN of Tax Agent (if applicable)</p>
+                                </div>
+                                <div class="col-lg-6" style="text-align: center;">
+                                  <strong>20 <input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>Treasurer/Asst. Treasurer/Authorized Representative<br>(Signature Over Printed Name)</p>
+                                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>Title/Position of Signatory</p>
+                                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>TIN Tax Acrreditation No. (if applicable)</p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="4">
+                            <div class="col-lg-12" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0; margin-top: 0;">
+                              <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Part III</strong> Details of Payment</h5>
+                            </div>
+                            <div class="col-lg-9" style=" border-top: 1px solid black; border-left: 1px solid black; border-bottom: none; border-right: none;">
+                              <div class="row" style="margin-bottom: 0; padding-bottom: 0;">
+                                <label style="text-align: center; width: 24%; margin-bottom: 0;">Particulars</label>
+                                <label style="text-align: center; width: 24%; border-left: 1px solid black; border-right: 1px solid black; background-color: ">Drawee Bank/<br>Agency</label>
+                                <label style="text-align: center; width: 24%;">Numbers</label>
+                                <label style="text-align: center; width: 25%; border-left: 1px solid black; border-right: 1px solid black; background-color: ">Date<br>MM | DD | YYYY</label>
+                              </div>
+                            </div>
+                            <div class="col-lg-3" style="border-top: 1px solid black; border-bottom: none; border-left: none; border-right: 1px solid black;">
+                              <div class="row" style="margin-bottom: 0; padding-bottom: 5px; text-align: center;">
+                                <label style="text-align: center; margin-bottom: 0;"><br>Amount</label>
+                              </div>
+                            </div>
+                            <div class="col-lg-9">
+                              <div class="row">
+                                <p><strong>21 </strong>&nbsp;&nbsp; Cash/Bank<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit Memo</p>
+                                <p>
+                                  <strong>22 </strong>&nbsp;&nbsp; Check 
+                                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22A </strong>
+                                  <input type="" name="" size="11">
+                                  <strong>&nbsp;22B </strong>
+                                  <input type="" name="" size="11">
+                                  <strong>&nbsp;22C </strong>
+                                  <input type="" name="" style="width: 30px; text-align: center;" placeholder="- -">
+                                  <input type="" name="" style="width: 30px; text-align: center;" placeholder="- -">
+                                  <input type="" name="" style="width: 30px; text-align: center;" placeholder="- - - -">
+                                </p>
+                                <p>
+                                  <strong>23 </strong>&nbsp;&nbsp; Others 
+                                  <strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22A </strong>
+                                  <input type="" name="" size="11">
+                                  <strong>&nbsp;23B </strong>
+                                  <input type="" name="" size="11">
+                                  <strong>&nbsp;23C </strong>
+                                  <input type="" name="" style="width: 30px; text-align: center;" placeholder="- -">
+                                  <input type="" name="" style="width: 30px; text-align: center;" placeholder="- -">
+                                  <input type="" name="" style="width: 30px; text-align: center;" placeholder="- - - -">
+                                </p>
+                              </div>
+                            </div>
+                            <div class="col-lg-3">
+                              <div class="row">
+                                <strong>21 <input type="" name="" size="15" style="text-align: center; font-weight: normal;"></strong><br><br>
+                                <strong>22D <input type="" name="" style="width: 147px;text-align: center; font-weight: normal;"></strong><br><br>
+                                <strong>24D <input type="" name="" style="width: 147px;text-align: center; font-weight: normal;"></strong>
+                              </div>
+                            </div>
+                          </td>
+                          <td style="text-align: center;">
+                            Stamp of Receiving<br>Office and<br>Date of Receipt
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="5" style="height: 2.3cm;">
+                            Machine Validation/Revenue Official Receipt Details (If not filed with the bank)
+                          </td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group" style="border-bottom: 1px solid black;">
+                  <label>BIR Reference</label>
+                  <input class="form-control" type="" name="">
+                  <label>Date</label>
+                  <input class="form-control" type="" name="">
+                  <label>Time</label>
+                  <input class="form-control" type="" name=""><br>
+                </div>
+                <div class="form-group">
+                <label>Months</label>
+                <button class="btn btn-default btn-block" type="button">January</button>
+                <button class="btn btn-default btn-block" type="button">February</button>
+                <button class="btn btn-default btn-block" type="button">March</button>
+                <button class="btn btn-default btn-block" type="button">April</button>
+                <button class="btn btn-default btn-block" type="button">May</button>
+                <button class="btn btn-default btn-block" type="button">June</button>
+                <button class="btn btn-default btn-block" type="button">July</button>
+                <button class="btn btn-default btn-block" type="button">August</button>
+                <button class="btn btn-default btn-block" type="button">September</button>
+                <button class="btn btn-default btn-block" type="button">October</button>
+                <button class="btn btn-default btn-block" type="button">November</button>
+                <button class="btn btn-default btn-block" type="button">December</button>
+              </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" value='Print' onclick='printDiv();' ><i class="fa fa-print" aria-hidden="true"></i>Print</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Modal Form 1601-F -->
+    <div class="modal fade" id="Form1601F" role="dialog">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3 class="modal-title">BIR Form No. 1601-F</h3>
+            </div>
+            <div class="modal-body col-lg-12">
+              <div class="col-lg-12">
+                <div class="col-lg-12" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0; margin-top: 0;">
+                  <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Part I</strong> Background Information</h5>
+                </div>
+                <div class="col-lg-12" style="padding-bottom: 10px; padding-top: 10px; border-bottom: 1px dotted;">
+                  <div class="row">  
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <div class="form-inline col-lg-3 no-p-l-r">
+                          <label style="font-weight: normal;"><strong>1 </strong> For the Month</label>
+                          <input class="form-control" type="" name="" style="width: 40px; padding: 0; text-align: center;" placeholder="MM"> - 
+                          <input class="form-control" type="" name="" style="width: 50px; padding: 0; text-align: center;" placeholder="YYYY">
+                        </div>
+                        <div class="form-inline col-lg-3 no-p-l-r">
+                          <label style="padding-bottom: 0px; margin-bottom: 0px; border-bottom: 0px; font-weight: normal;"><strong>2 </strong> Amended Return?</label><br>
+                          <input id="amended-return1" class="css-checkbox" type="checkbox" />
+                          <label for="amended-return1" name="demo_lbl_2" class="checkbox-inline css-label"> Yes</label>
+                          <input id="amended-return2" class="css-checkbox" type="checkbox" />
+                          <label for="amended-return2" name="demo_lbl_3" class="checkbox-inline css-label"> No</label>        
+                        </div>
+                        <div class="form-inline col-lg-3 no-p-l-r">
+                          <label style="font-weight: normal;"><strong>3 </strong> No. of Sheets Attached</label>
+                          <input class="form-control" type="" name="" style="width: 40px; padding: 0; text-align: center;" placeholder="- -">
+                        </div>
+                        <div class="form-inline col-lg-3 no-p-l-r">
+                          <label style="padding-bottom: 0px; margin-bottom: 0px; border-bottom: 0px; font-weight: normal;"><strong>4 </strong> Any Taxes Withheld?</label><br>
+                          <input id="any-tax1" class="css-checkbox" type="checkbox" />
+                          <label for="any-tax1" name="demo_lbl_2" class="checkbox-inline css-label"> Yes</label>
+                          <input id="any-tax2" class="css-checkbox" type="checkbox" />
+                          <label for="any-tax2" name="demo_lbl_3" class="checkbox-inline css-label"> No</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12" style="padding-bottom: 10px; padding-top: 10px; border-bottom: 1px dotted;">
+                  <div class="col-lg-12">
+                    <div class="row">  
+                      <div class="form-group">
+                        <div class="form-inline col-lg-4 no-p-l-r">
+                          <label style="font-weight: normal;"><strong>5 </strong> TIN </label>
+                          <input class="form-control" type="" name="" style="width: 50px; padding: 0; text-align: center;" value="000"> - 
+                          <input class="form-control" type="" name="" style="width: 50px; padding: 0; text-align: center;" value="000"> - 
+                          <input class="form-control" type="" name="" style="width: 50px; padding: 0; text-align: center;" value="000"> - 
+                          <input class="form-control" type="" name="" style="width: 50px; padding: 0; text-align: center;" value="000">
+                        </div>
+                        <div class="form-inline col-lg-2   no-p-l-r">
+                          <label style="font-weight: normal;"><strong>6 </strong> RDO Code </label>
+                          <input class="form-control" type="" name="" style="width: 45px; padding: 0; text-align: center;" placeholder="- - -">
+                        </div>
+                        <div class="form-inline col-lg-6 no-p-l-r">
+                          <label style="font-weight: normal;"><strong>7 </strong> Line of Business/Occupation </label>
+                          <input class="form-control" type="" name="" style="width: 50%; padding: 0; text-align: center;" value="Private School">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12" style="padding-top: 10px; border-bottom: 1px dotted;">
+                  <div class="row">
+                    <div class="form-group col-lg-10">
+                      <label style="font-weight: normal;"><strong>8 </strong> Withholding Agent's Name<small style="font-weight: normal;"> (Last Name, First Name, Middle Name for Individuals)/(Registered Names for Non-Individuals)</small></label>
+                      <input class="form-control" type="" name="" value="Private School of San Juan" style="text-align: center;">
+                    </div>
+                    <div class="form-group col-lg-2">
+                      <label style="font-weight: normal;"><strong>9 </strong> Telephone No.</label>
+                      <input class="form-control" type="" name="" value="123-45-67" style="text-align: center;">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12" style="padding-top: 10px; border-bottom: 1px dotted;">
+                  <div class="row">
+                    <div class="form-group col-lg-10">
+                      <label style="font-weight: normal;"><strong>10 </strong> Registered Address</label>
+                      <input class="form-control" type="" name="" value="01 Greenhills Street, Greenhills, San Juan, Metro Manila"  style="text-align: center;">
+                    </div>
+                    <div class="form-group col-lg-2">
+                      <label style="font-weight: normal;"><strong>11 </strong> Zip Code</label>
+                      <input class="form-control" type="" name="" value="1500" style="text-align: center;">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12" style="padding-top: 10px; padding-bottom: 10px;">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-inline col-lg-3 no-p-l-r">
+                        <label style="padding-bottom: 0px; margin-bottom: 0px; border-bottom: 0px; font-weight: normal;"><strong>12 </strong>Category of Withholding Agent</label><br>
+                        <input id="withholding-agent1" class="css-checkbox" type="checkbox" />
+                        <label for="withholding-agent1" name="demo_lbl_2" class="checkbox-inline css-label"> Private</label>
+                        <input id="withholdingagent2" class="css-checkbox" type="checkbox" />
+                        <label for="withholdingagent2" name="demo_lbl_3" class="checkbox-inline css-label"> Government</label>        
+                      </div>
+                      <div class="col-lg-9">
+                        <label style="padding-bottom: 0px; margin-bottom: 0px; border-bottom: 0px; font-weight: normal;"><strong>12 </strong>Are these payees availing of tax relief under Special Law or International Treaty?</label><br>
+                        <div class="form-inline">
+                          <input id="tax-treaty1" class="css-checkbox" type="checkbox" />
+                          <label for="tax-treaty1" name="demo_lbl_2" class="checkbox-inline css-label"> Yes</label>
+                          <input id="tax-treaty2" class="css-checkbox" type="checkbox" />
+                          <label for="tax-treaty2" name="demo_lbl_3" class="checkbox-inline css-label"> No</label>
+                          <label class="checkbox-inline">If yes, specify </label>
+                          <input class="form-control" type="" name="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0;margin-top: 0;">
+                  <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Part II</strong> Computation of Tax</h5>
+                </div>
+                <div class="col-lg-12" style="padding-bottom: 10px; padding-top: 10px;">
+                  <div class="row">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th style="text-align: center; vertical-align: middle; width: 40%;">NATURE OF INCOME PAYMENT</th>
+                          <th style="text-align: center; vertical-align: middle; width: 5%;">ATC</th>
+                          <th style="text-align: center; vertical-align: middle; width: 25%;">TAX BASE</th>
+                          <th style="text-align: center; vertical-align: middle; width: 5%;">TAX<br>RATE</th>
+                          <th style="text-align: center; vertical-align: middle; width: 25%;">TAX REQUIRED<br>TO BE WITHHELD</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td colspan="4" style="border-bottom: none;"><strong>14 </strong> Total Tax Required to be Withheld Based on Regular Rates <strong style="float: right;">14</strong></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="border-top: none; border-bottom: none;"><strong>15 </strong>Total Tax Required to be Withheld Based on Tax Treaty Rates(from Schedule 1 at the back)<strong style="float: right;">15</strong></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="border-top: none; border-bottom: none;"><strong>16 </strong> Total (Sum of Items 14 and 15) <strong style="float: right;">16</strong></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="border-top: none; border-bottom: none;"><strong>17 </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Less: Tax Remitted in Return Previously Filed, if this an amended return <strong style="float: right;">17</strong></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="border-top: none; border-bottom: none;"><strong>18 </strong> Tax Still Due (Overremittance)<strong style="float: right;">18</strong></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td class="col-lg-12" colspan="5" style="border-top: none; border-bottom: none;"><strong>19 </strong>Add: Penalties<br>
+                            <div class="col-lg-3" style="padding-left: 4cm;">Surcharge</div>
+                            <div class="col-lg-3" style="padding-left: 3cm;">Interest</div>
+                            <div class="col-lg-3" style="padding-left: 1.45cm;">Compromise</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="form-group" colspan="4" style="border-top: none; border-bottom: none;">
+                            <div class="form-inline col-lg-10" style="padding: 0; text-align: right; vertical-align: top;">
+                              19A <input type="" name="" style="vertical-align: top; text-align: center;">
+                              19B <input type="" name="" style="vertical-align: top; text-align: center;">
+                              19C <input type="" name="" style="vertical-align: top; text-align: center;">
+                            </div>
+                            <div class="col-lg-2" style="vertical-align: bottom; padding-right: 0; margin-right: 0;">
+                              <strong style="float: right;">19D</strong>
+                            </div>                        
+                          </td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="border-top: none; border-bottom: none;"><strong>20 </strong> Amount Still Due/(Overremittance) (Sum of Items 18 and 19D) <strong style="float: right;">20</strong></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="5" style="text-align: center; padding-bottom: 0; margin-bottom: 0;">
+                            <p>I declare, under the penalties of perjury that this return has made in good faith, verified by me, and to the best of my knowledge and belief,<br> is true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof.</p><br>
+
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-6" style="text-align: center;">
+                                  <strong>21 <input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>&nbsp;&nbsp;President/Vice President/Authorized Representative/Tax Agent<br>(Signature Over Printed Name)</p>
+                                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>Title/Position of Signatory</p>
+                                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>TIN of Tax Agent (if applicable)</p>
+                                </div>
+                                <div class="col-lg-6" style="text-align: center;">
+                                  <strong>22 <input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>Treasurer/Asst. Treasurer/Authorized Representative<br>(Signature Over Printed Name)</p>
+                                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>Title/Position of Signatory</p>
+                                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>TIN Tax Acrreditation No. (if applicable)</p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="4">
+                            <div class="col-lg-12" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0; margin-top: 0;">
+                              <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Part III</strong> Details of Payment</h5>
+                            </div>
+                            <div class="col-lg-9" style=" border-top: 1px solid black; border-left: 1px solid black; border-bottom: none; border-right: none;">
+                              <div class="row" style="margin-bottom: 0; padding-bottom: 0;">
+                                <label style="text-align: center; width: 24%; margin-bottom: 0;">Particulars</label>
+                                <label style="text-align: center; width: 24%; border-left: 1px solid black; border-right: 1px solid black; background-color: ">Drawee Bank/<br>Agency</label>
+                                <label style="text-align: center; width: 24%;">Numbers</label>
+                                <label style="text-align: center; width: 25%; border-left: 1px solid black; border-right: 1px solid black; background-color: ">Date<br>MM | DD | YYYY</label>
+                              </div>
+                            </div>
+                            <div class="col-lg-3" style="border-top: 1px solid black; border-bottom: none; border-left: none; border-right: 1px solid black;">
+                              <div class="row" style="margin-bottom: 0; padding-bottom: 5px; text-align: center;">
+                                <label style="text-align: center; margin-bottom: 0;"><br>Amount</label>
+                              </div>
+                            </div>
+                            <div class="col-lg-9">
+                              <div class="row">
+                                <p><strong>23 </strong>&nbsp;&nbsp; Cash/Bank<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit Memo
+                                  <strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23A </strong>
+                                  <input type="" name="" size="11">
+                                  <strong>&nbsp;23B </strong>
+                                  <input type="" name="" size="11">
+                                  <strong>&nbsp;23C </strong>
+                                  <input type="" name="" style="width: 30px; text-align: center;" placeholder="- -">
+                                  <input type="" name="" style="width: 30px; text-align: center;" placeholder="- -">
+                                  <input type="" name="" style="width: 30px; text-align: center;" placeholder="- - - -">
+                                </p>
+                                <p>
+                                  <strong>24 </strong>&nbsp;&nbsp; Check &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24A </strong>
+                                  <input type="" name="" size="11">
+                                  <strong>&nbsp;24B </strong>
+                                  <input type="" name="" size="11">
+                                  <strong>&nbsp;24C </strong>
+                                  <input type="" name="" style="width: 30px; text-align: center;" placeholder="- -">
+                                  <input type="" name="" style="width: 30px; text-align: center;" placeholder="- -">
+                                  <input type="" name="" style="width: 30px; text-align: center;" placeholder="- - - -">
+                                </p>
+                                <p>
+                                  <strong>25 </strong>&nbsp;&nbsp; Others &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  <strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25A </strong>
+                                  <input type="" name="" size="11">
+                                  <strong>&nbsp;25B </strong>
+                                  <input type="" name="" size="11">
+                                  <strong>&nbsp;25C </strong>
+                                  <input type="" name="" style="width: 30px; text-align: center;" placeholder="- -">
+                                  <input type="" name="" style="width: 30px; text-align: center;" placeholder="- -">
+                                  <input type="" name="" style="width: 30px; text-align: center;" placeholder="- - - -">
+                                </p>
+                              </div>
+                            </div>
+                            <div class="col-lg-3">
+                              <div class="row">
+                                <strong>23D <input type="" name="" style="text-align: center; font-weight: normal;"></strong><br><br>
+                                <strong>24D <input type="" name="" style="width: 147px;text-align: center; font-weight: normal;"></strong><br><br>
+                                <strong>25D <input type="" name="" style="width: 147px;text-align: center; font-weight: normal;"></strong>
+                              </div>
+                            </div>
+                          </td>
+                          <td style="text-align: center;">
+                            Stamp of Receiving<br>Office and<br>Date of Receipt<br>(RO's Signature/Bank Teller's Initial)
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="5" style="height: 2.3cm;">
+                            Machine Validation/Revenue Official Receipt Details (If not filed with an Authorized Agent bank)
+                          </td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" value='Print' onclick='printDiv();' ><i class="fa fa-print" aria-hidden="true"></i>Print</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Modal Form 1604-CF -->
+    <div class="modal fade" id="Form1604CF" role="dialog">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3 class="modal-title">BIR Form No. 1604-CF</h3>
+            </div>
+            <div class="modal-body col-lg-12">
+              <div class="col-lg-12">
+                <div class="col-lg-12" style="padding-bottom: 10px; padding-top: 10px; border-bottom: 1px dotted;">
+                  <div class="row">  
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <div class="form-inline col-lg-4 no-p-l-r">
+                          <label style="font-weight: normal;"><strong>1 </strong> For the Year</label>
+                          <input class="form-control" type="" name="" style="width: 50px; padding: 0; text-align: center;" placeholder="YYYY">
+                        </div>
+                        <div class="form-inline col-lg-4 no-p-l-r">
+                          <label style="padding-bottom: 0px; margin-bottom: 0px; border-bottom: 0px; font-weight: normal;"><strong>2 </strong> Amended Return?</label><br>
+                          <input id="amended-return1" class="css-checkbox" type="checkbox" />
+                          <label for="amended-return1" name="demo_lbl_2" class="checkbox-inline css-label"> Yes</label>
+                          <input id="amended-return2" class="css-checkbox" type="checkbox" />
+                          <label for="amended-return2" name="demo_lbl_3" class="checkbox-inline css-label"> No</label>        
+                        </div>
+                        <div class="form-inline col-lg-4 no-p-l-r">
+                          <label style="font-weight: normal;"><strong>3 </strong> No. of Sheets Attached</label>
+                          <input class="form-control" type="" name="" style="width: 40px; padding: 0; text-align: center;" placeholder="- -">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0; margin-top: 0;">
+                  <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Part I</strong> Background Information</h5>
+                </div>
+                <div class="col-lg-12" style="padding-bottom: 10px; padding-top: 10px; border-bottom: 1px dotted;">
+                  <div class="col-lg-12">
+                    <div class="row">  
+                      <div class="form-group">
+                        <div class="form-inline col-lg-4 no-p-l-r">
+                          <label style="font-weight: normal;"><strong>4 </strong> TIN </label>
+                          <input class="form-control" type="" name="" style="width: 50px; padding: 0; text-align: center;" value="000"> - 
+                          <input class="form-control" type="" name="" style="width: 50px; padding: 0; text-align: center;" value="000"> - 
+                          <input class="form-control" type="" name="" style="width: 50px; padding: 0; text-align: center;" value="000"> - 
+                          <input class="form-control" type="" name="" style="width: 50px; padding: 0; text-align: center;" value="000">
+                        </div>
+                        <div class="form-inline col-lg-2   no-p-l-r">
+                          <label style="font-weight: normal;"><strong>5 </strong> RDO Code </label>
+                          <input class="form-control" type="" name="" style="width: 45px; padding: 0; text-align: center;" placeholder="- - -">
+                        </div>
+                        <div class="form-inline col-lg-6 no-p-l-r">
+                          <label style="font-weight: normal;"><strong>6 </strong> Line of Business/Occupation </label>
+                          <input class="form-control" type="" name="" style="width: 50%; padding: 0; text-align: center;" value="Private School">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12" style="padding-top: 10px; border-bottom: 1px dotted;">
+                  <div class="row">
+                    <div class="form-group col-lg-10">
+                      <label style="font-weight: normal;"><strong>7 </strong> Withholding Agent's Name<small style="font-weight: normal;"> (Last Name, First Name, Middle Name for Individuals)/(Registered Names for Non-Individuals)</small></label>
+                      <input class="form-control" type="" name="" value="Private School of San Juan" style="text-align: center;">
+                    </div>
+                    <div class="form-group col-lg-2">
+                      <label style="font-weight: normal;"><strong>8 </strong> Telephone No.</label>
+                      <input class="form-control" type="" name="" value="123-45-67" style="text-align: center;">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12" style="padding-top: 10px; border-bottom: 1px dotted;">
+                  <div class="row">
+                    <div class="form-group col-lg-10">
+                      <label style="font-weight: normal;"><strong>9 </strong> Registered Address</label>
+                      <input class="form-control" type="" name="" value="01 Greenhills Street, Greenhills, San Juan, Metro Manila"  style="text-align: center;">
+                    </div>
+                    <div class="form-group col-lg-2">
+                      <label style="font-weight: normal;"><strong>10 </strong> Zip Code</label>
+                      <input class="form-control" type="" name="" value="1500" style="text-align: center;">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12" style="padding-top: 10px; padding-bottom: 10px; border-bottom: 1px dotted;">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-inline col-lg-12 no-p-l-r">
+                        <label style="padding-bottom: 0px; margin-bottom: 0px; border-bottom: 0px; font-weight: normal;"><strong>11 </strong>In case of overwithholding/overremittance after the year-end adjustment on compensation, have you released the refund/s to your employee/s</label><br>
+                        <input id="compensation1" class="css-checkbox" type="checkbox" />
+                        <label for="compensation1" name="demo_lbl_2" class="checkbox-inline css-label"> Yes</label>
+                        <input id="compensation2" class="css-checkbox" type="checkbox" />
+                        <label for="compensation2" name="demo_lbl_3" class="checkbox-inline css-label"> No</label> 
+                        <label class="checkbox-inline">If yes, specify </label>
+                        <input class="form-control" type="" name="">       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12" style="padding-top: 10px; padding-bottom: 10px;">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-inline col-lg-4 no-p-l-r">
+                        <label style="padding-bottom: 0px; margin-bottom: 0px; border-bottom: 0px; font-weight: normal;"><strong>12 </strong>Total Amount of Overremittance on Tax Withheld under Compensation</label><br>
+                        <input class="form-control" type="" name="" style="text-align: center;">
+                      </div>
+                      <div class="form-inline col-lg-4 no-p-l-r">
+                        <label style="padding-bottom: 0px; margin-bottom: 0px; border-bottom: 0px; font-weight: normal;"><strong>13 </strong>Month of First Crediting of Overremittance</label><br>
+                        <input class="form-control" type="" name="" style="text-align: center;">
+                      </div>
+                      <div class="form-inline col-lg-4 no-p-l-r">
+                        <label style="padding-bottom: 0px; margin-bottom: 0px; border-bottom: 0px; font-weight: normal;"><strong>14 </strong>Category of Withholding Agent</label><br>
+                        <input id="category1" class="css-checkbox" type="checkbox" />
+                        <label for="category1" name="demo_lbl_2" class="checkbox-inline css-label"> Private</label>
+                        <input id="category2" class="css-checkbox" type="checkbox" />
+                        <label for="category2" name="demo_lbl_3" class="checkbox-inline css-label"> Government</label> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12" style="background-color: #00cc99; padding-bottom: 0; padding-top: 0; margin-bottom: 0;margin-top: 0;">
+                  <h5 style="text-align: center; font-weight: bold;"><strong style="float: left;">Part II</strong> Summary of Remittances</h5>
+                </div>
+                <div class="col-lg-12" style="padding-bottom: 10px; padding-top: 10px;">
+                  <div class="row">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th class="no-border-right" style="text-align: center; vertical-align: middle; width: 100%;" colspan="2">Schedule 1</th>
+                          <th style="text-align: center; vertical-align: middle; width: 100%;" colspan="5">Remittance per BIR Form No. 1601-C</th>
+                        </tr>
+                        <tr>
+                          <th style="text-align: center; vertical-align: middle; width: 5%;">MONTH</th>
+                          <th style="text-align: center; vertical-align: middle; width: 15%;">DATE OF<br>REMITTANCE</th>
+                          <th style="text-align: center; vertical-align: middle; width: 20%;">NAME OF BANK/BANKCODE/<BR>ROR NO., IF ANY</th>
+                          <th style="text-align: center; vertical-align: middle; width: 15%;">TAX WITHHELD</th>
+                          <th style="text-align: center; vertical-align: middle; width: 15%;">ADJUSTMENT</th>
+                          <th style="text-align: center; vertical-align: middle; width: 15%;">PENALTIES</th>
+                          <th style="text-align: center; vertical-align: middle; width: 15%;">TOTAL AMOUNT REMITTED</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>JAN</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td>FEB</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td>MAR</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td>APR</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td>MAY</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td>JUN</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td>JUL</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td>AUG</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td>SEP</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td>OCT</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td>NOV</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td>DEC</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td>TOTAL</td>
+                          <td colspan="2"></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                      </tbody>
+                      <thead>
+                        <tr>
+                          <th class="no-border-right" style="text-align: center; vertical-align: middle; width: 100%;" colspan="2">Schedule 2</th>
+                          <th style="text-align: center; vertical-align: middle; width: 100%;" colspan="5">Remittance per BIR Form No. 1601-F</th>
+                        </tr>
+                        <tr>
+                          <th style="text-align: center; vertical-align: middle; width: 5%;">MONTH</th>
+                          <th style="text-align: center; vertical-align: middle; width: 20%;">DATE OF<br>REMITTANCE</th>
+                          <th style="text-align: center; vertical-align: middle; width: 20%;">NAME OF BANK/BANKCODE/<BR>ROR NO., IF ANY</th>
+                          <th style="text-align: center; vertical-align: middle; width: 15%;">TAX WITHHELD</th>
+                          <th style="text-align: center; vertical-align: middle; width: 15%;">PENALTIES</th>
+                          <th style="text-align: center; vertical-align: middle; width: 15%;" colspan="2">TOTAL AMOUNT REMITTED</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>JAN</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>FEB</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>MAR</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>APR</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>MAY</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>JUN</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>JUL</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>AUG</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>SEP</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>OCT</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>NOV</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>DEC</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>TOTAL</td>
+                          <td colspan="2"></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                      </tbody>
+                      <thead>
+                        <tr>
+                          <th class="no-border-right" style="text-align: center; vertical-align: middle; width: 100%;" colspan="2">Schedule 3</th>
+                          <th style="text-align: center; vertical-align: middle; width: 100%;" colspan="5">Remittance per BIR Form No. 1602</th>
+                        </tr>
+                        <tr>
+                          <th style="text-align: center; vertical-align: middle; width: 5%;">MONTH</th>
+                          <th style="text-align: center; vertical-align: middle; width: 20%;">DATE OF<br>REMITTANCE</th>
+                          <th style="text-align: center; vertical-align: middle; width: 20%;">NAME OF BANK/BANKCODE/<BR>ROR NO., IF ANY</th>
+                          <th style="text-align: center; vertical-align: middle; width: 15%;">TAX WITHHELD</th>
+                          <th style="text-align: center; vertical-align: middle; width: 15%;">PENALTIES</th>
+                          <th style="text-align: center; vertical-align: middle; width: 15%;" colspan="2">TOTAL AMOUNT REMITTED</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>JAN</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>FEB</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>MAR</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>APR</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>MAY</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>JUN</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>JUL</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>AUG</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>SEP</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>OCT</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>NOV</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>DEC</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>TOTAL</td>
+                          <td colspan="2"></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                      </tbody>
+                      <thead>
+                        <tr>
+                          <th class="no-border-right" style="text-align: center; vertical-align: middle; width: 100%;" colspan="2">Schedule 4</th>
+                          <th style="text-align: center; vertical-align: middle; width: 100%;" colspan="5">Remittance per BIR Form No. 1603</th>
+                        </tr>
+                        <tr>
+                          <th style="text-align: center; vertical-align: middle; width: 10%;">MONTH</th>
+                          <th style="text-align: center; vertical-align: middle; width: 20%;">DATE OF<br>REMITTANCE</th>
+                          <th style="text-align: center; vertical-align: middle; width: 20%;">NAME OF BANK/BANKCODE/<BR>ROR NO., IF ANY</th>
+                          <th style="text-align: center; vertical-align: middle; width: 15%;">TAX WITHHELD</th>
+                          <th style="text-align: center; vertical-align: middle; width: 15%;">PENALTIES</th>
+                          <th style="text-align: center; vertical-align: middle; width: 15%;" colspan="2">TOTAL AMOUNT REMITTED</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1ST QTR</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>2ND QTR</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>3RD QTR</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>4TH QTR</td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                          <td>TOTAL</td>
+                          <td colspan="2"></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          <td colspan="2"><input class="gs-input2" type="" name="" style="width: 100%;"></td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td colspan="4" style="border-bottom: none;"><strong>14 </strong> Total Tax Required to be Withheld Based on Regular Rates <strong style="float: right;">14</strong></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="border-top: none; border-bottom: none;"><strong>15 </strong>Total Tax Required to be Withheld Based on Tax Treaty Rates(from Schedule 1 at the back)<strong style="float: right;">15</strong></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="border-top: none; border-bottom: none;"><strong>16 </strong> Total (Sum of Items 14 and 15) <strong style="float: right;">16</strong></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="border-top: none; border-bottom: none;"><strong>17 </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Less: Tax Remitted in Return Previously Filed, if this an amended return <strong style="float: right;">17</strong></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="border-top: none; border-bottom: none;"><strong>18 </strong> Tax Still Due (Overremittance)<strong style="float: right;">18</strong></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td class="col-lg-12" colspan="5" style="border-top: none; border-bottom: none;"><strong>19 </strong>Add: Penalties<br>
+                            <div class="col-lg-3" style="padding-left: 4cm;">Surcharge</div>
+                            <div class="col-lg-3" style="padding-left: 3cm;">Interest</div>
+                            <div class="col-lg-3" style="padding-left: 1.45cm;">Compromise</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="form-group" colspan="4" style="border-top: none; border-bottom: none;">
+                            <div class="form-inline col-lg-10" style="padding: 0; text-align: right; vertical-align: top;">
+                              19A <input type="" name="" style="vertical-align: top; text-align: center;">
+                              19B <input type="" name="" style="vertical-align: top; text-align: center;">
+                              19C <input type="" name="" style="vertical-align: top; text-align: center;">
+                            </div>
+                            <div class="col-lg-2" style="vertical-align: bottom; padding-right: 0; margin-right: 0;">
+                              <strong style="float: right;">19D</strong>
+                            </div>                        
+                          </td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="border-top: none; border-bottom: none;"><strong>20 </strong> Amount Still Due/(Overremittance) (Sum of Items 18 and 19D) <strong style="float: right;">20</strong></td>
+                          <td><input class="gs-input2" type="" name=""></td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="text-align: center; padding-bottom: 0; margin-bottom: 0;">
+                            <p>I declare, under the penalties of perjury that this return has made in good faith, verified by me, and to the best of my knowledge and belief,<br> is true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof.</p><br>
+
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-6" style="text-align: center;">
+                                  <strong>21 <input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>&nbsp;&nbsp;President/Vice President/Authorized Representative/Tax Agent<br>(Signature Over Printed Name)</p>
+                                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>Title/Position of Signatory</p>
+                                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>TIN of Tax Agent (if applicable)</p>
+                                </div>
+                                <div class="col-lg-6" style="text-align: center;">
+                                  <strong>22 <input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>Treasurer/Asst. Treasurer/Authorized Representative<br>(Signature Over Printed Name)</p>
+                                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>Title/Position of Signatory</p>
+                                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="" name="" size="55" style="border-top: 0; border-right: 0; border-left: 0; border-bottom: 1px solid black; font-weight: normal; text-align: center;"></strong>
+                                  <p>TIN Tax Acrreditation No. (if applicable)</p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td colspan="1" style="text-align: center; padding-bottom: 0; margin-bottom: 0;">
+                            <p>Stamp of Receiving<br>Office and<br>Date of Receipt</p>
+                          </td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" value='Print' onclick='printDiv();' ><i class="fa fa-print" aria-hidden="true"></i>Print</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="center super-panel-lg" data-toggle="modal" data-target="#Form1600">
+                    <div class="row panel-body">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                            <div>
+                                <img src="../../Content/Images/reserved.png" height="80" />
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                                <label class="spr-label">BIR-1600</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="center super-panel-lg" data-toggle="modal" data-target="#Form1601F">
+                    <div class="row panel-body">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                            <div>
+                                <img src="../../Content/Images/reserved.png" height="80" />
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                                <label class="spr-label">BIR-1601 F</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="center super-panel-lg" data-toggle="modal" data-target="#Form1604CF">
+                    <div class="row panel-body">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                            <div>
+                                <img src="../../Content/Images/reserved.png" height="80" />
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                                <label class="spr-label">BIR-1604 CF</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="center super-panel-lg">
+                    <div class="row panel-body">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                            <div>
+                                <img src="../../Content/Images/reserved.png" height="80" />
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                                <label class="spr-label">BIR-1601 C</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="center super-panel-lg">
+                    <div class="row panel-body">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                            <div>
+                                <img src="../../Content/Images/reserved.png" height="80" />
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                                <label class="spr-label">BIR-1602</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="center super-panel-lg">
+                    <div class="row panel-body">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                            <div>
+                                <img src="../../Content/Images/reserved.png" height="80" />
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                                <label class="spr-label">BIR-1604 E</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="center super-panel-lg">
+                    <div class="row panel-body">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                            <div>
+                                <img src="../../Content/Images/reserved.png" height="80" />
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                                <label class="spr-label">BIR-1601 E</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="center super-panel-lg">
+                    <div class="row panel-body">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                            <div>
+                                <img src="../../Content/Images/reserved.png" height="80" />
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                                <label class="spr-label">BIR-1603</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="center super-panel-lg">
+                    <div class="row panel-body">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageimg">
+                            <div>
+                                <img src="../../Content/Images/reserved.png" height="80" />
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pagetitle">
+                                <label class="spr-label">BIR-1606 (99)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<!-- end of your code -->
+	<!-- footer here -->
+	 <hr />
+        <footer class="navbar-fixed-bottom">
+            <div class="container-fluid" style="background-color: #35AC49;">
+                <p class="pull-right " style="padding-top: .5%; padding-right: 3%; font-size: 10px; font-weight: bolder; color: #000033;">&copy; 2016 - Powered by <a href="http://www.simplevia.com" style="color: #fff;">QuickTrack</a></p>
+            </div>
+        </footer>
+	<!-- end foooter -->
+	</div>
+
+  <!-- Form No. 1600 -->
+  <div id="AppForm" style="height: 13in; width: 8.5in;" hidden="">
+    <img src="../../Content/Images/Finance/Form1600.jpg" style="height: auto; width: 100%;">
+  </div>
+
+	<!-- plugin scripts -->
+	<script src="../../content/jquery/dist/jquery.min.js"></script>
+	<script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+  <script src="../../content/DataTables/js/datatables.bootstrap.js"></script>
+  <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+  <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+  <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+  <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+  <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+  <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+  <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+  <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+  <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+	<script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+	<!-- end of plugin scripts -->
+	<!-- your custom script -->
+  <script>
+    function printDiv() 
+    {
+      var divToPrint=document.getElementById('AppForm');
+      var newWin=window.open('','Print-Window');
+      newWin.document.open();
+      newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+      newWin.document.close();
+      setTimeout(function(){newWin.close();},10);
+    }
+  </script>
+
+	<!-- end of your custom script -->
+</body>
+</html>

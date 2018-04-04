@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Preventive Maintenance Transaction</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style type="text/css">
+   .dataTables_length {
+    margin-bottom: 10px;
+    margin-top: 10px;
+   }
+   .panel-heading {
+      font-size: 20px;
+   }
+   td, th {
+      text-align: center;
+   }
+</style>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                        <li>
+                           <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                        <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                        <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+         <br>
+         <br>
+            <div class="page-header" style="color: #000033"><h2><strong>Preventive Maintenance Management</strong></h2></div>
+               <ol class="breadcrumb" style="background-color: #D9EDF7">
+                  <li><a href="preventive-maintenance-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+                  <li><a href="preventive-maintenance-management.html">Preventive Maintenance Management</a></li>
+                  <li>Preventive Maintenance Transactions</li>
+              </ol>
+         <section>
+            <!-- your code start here -->
+            <!-- Please observe indention -->
+            <div class="panel panel-custom">
+               <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-users fa-lg"></i> Transaction List
+               </div>
+               <div class="panel-body">
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
+                           <div class="form-group contact-search m-b-30">
+                              <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="panel-body">
+                           <div class="table-responsive">
+                              <table id="myTable" class="table table-striped table-hover"  cellspacing="0" width="100%">
+                                 <thead> 
+                                    <tr>
+                                       <th></th>
+                                       <th>Control Number</th>
+                                       <th>RFID Tag / Barcode</th>
+                                       <th>Date of Maintenance</th>
+                                       <th>Department</th>
+                                       <th>Items / Product Description</th>
+                                       <th>Assigned Maintenance</th>
+                                       <th></th>
+                                    </tr>
+                                 </thead>
+                                 <tbody style="text-align: center;">
+                                    <tr>
+                                       <td>1</td>
+                                       <td>0002514568</td>
+                                       <td>65442482</td>
+                                       <td>01-01-2017</td>
+                                       <td>I.T Dept.</td>
+                                       <td>Laptop</td>
+                                       <td>Genesis Ivan</td>
+                                       <td>
+                                          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#transaction">Details</button>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>1</td>
+                                       <td>0002514568</td>
+                                       <td>65442482</td>
+                                       <td>01-01-2017</td>
+                                       <td>I.T Dept.</td>
+                                       <td>Laptop</td>
+                                       <td>Genesis Ivan</td>
+                                       <td>
+                                          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#transaction">Details</button>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>1</td>
+                                       <td>0002514568</td>
+                                       <td>65442482</td>
+                                       <td>01-01-2017</td>
+                                       <td>I.T Dept.</td>
+                                       <td>Laptop</td>
+                                       <td>Genesis Ivan</td>
+                                       <td>
+                                          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#transaction">Details</button>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>1</td>
+                                       <td>0002514568</td>
+                                       <td>65442482</td>
+                                       <td>01-01-2017</td>
+                                       <td>I.T Dept.</td>
+                                       <td>Laptop</td>
+                                       <td>Genesis Ivan</td>
+                                       <td>
+                                          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#transaction">Details</button>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>1</td>
+                                       <td>0002514568</td>
+                                       <td>65442482</td>
+                                       <td>01-01-2017</td>
+                                       <td>I.T Dept.</td>
+                                       <td>Laptop</td>
+                                       <td>Genesis Ivan</td>
+                                       <td>
+                                          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#transaction">Details</button>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>1</td>
+                                       <td>0002514568</td>
+                                       <td>65442482</td>
+                                       <td>01-01-2017</td>
+                                       <td>I.T Dept.</td>
+                                       <td>Laptop</td>
+                                       <td>Genesis Ivan</td>
+                                       <td>
+                                          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#transaction">Details</button>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>1</td>
+                                       <td>0002514568</td>
+                                       <td>65442482</td>
+                                       <td>01-01-2017</td>
+                                       <td>I.T Dept.</td>
+                                       <td>Laptop</td>
+                                       <td>Genesis Ivan</td>
+                                       <td>
+                                          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#transaction">Details</button>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>1</td>
+                                       <td>1840000</td>
+                                       <td>65442482</td>
+                                       <td>01-01-2017</td>
+                                       <td>I.T Dept.</td>
+                                       <td>Laptop</td>
+                                       <td>Genesis Ivan</td>
+                                       <td>
+                                          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#transaction">Details</button>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Modal Content of Transaction -->
+            <div id="transaction" class="modal fade" role="dialog">
+               <div class="modal-dialog modal-lg">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     </div>
+                     <div class="modal-body" id="transaction-info">
+                        <form>
+                           <div class="panel panel-custom">
+                              <div class="panel-heading"><i class="fa fa-exchange fa-lg"></i> Transaction Details</div>
+                              <div class="panel-body">
+                                 <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                       <div class="form-group">
+                                          <label>Control Number</label>
+                                          <input type="" class="form-control" id="" readonly="" size=23>
+                                       </div>
+                                       <div class="form-group">
+                                          <label>RFID Tag</label>
+                                          <input type="" class="form-control" readonly="">
+                                       </div>
+                                       <div class="form-group">
+                                          <label>Brand / Model</label>
+                                          <input type="" class="form-control" readonly="">
+                                       </div>
+                                       <div class="form-group">
+                                          <label>Item / Product Description</label>
+                                          <input type="" class="form-control" readonly="">
+                                       </div>
+                                       <div class="form-group">
+                                          <label>Asset Location</label>
+                                          <input type="" class="form-control" readonly="">
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                       <div class="form-group">
+                                          <label>Date of Maintenance</label>
+                                          <input type="" class="form-control" readonly="">
+                                       </div>
+                                       <div class="form-group">
+                                          <label>Date of Next Maintenance</label>
+                                          <input type="" class="form-control" readonly="">
+                                       </div>
+                                       <div class="form-group">
+                                          <label>Assign Maintenance</label>
+                                          <input type="" class="form-control" readonly="">
+                                       </div>
+                                       <div class="form-group">
+                                          <label>Department</label>
+                                          <input type="" class="form-control" readonly="">
+                                       </div>
+                                       <div class="form-group">
+                                          <label>Quantity / Unit</label>
+                                          <input type="" class="form-control" readonly="">
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                       <div class="form-group">
+                                          <label>Remarks</label>
+                                          <textarea style="resize: none;" class="form-control" rows="5" readonly=""></textarea>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                     <div class="modal-footer">
+                        <button id="print" class="btn btn-success" type="button" name="save-details">Print</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End of Modal -->
+            <!-- end of your code -->
+            <!-- footer here -->
+         </section>
+         <hr />
+         <footer class="navbar-fixed-bottom">
+            <div class="container-fluid footer">
+               <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+            </div>
+         </footer>
+
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!-- DataTable Link -->
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/datatables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <!-- End of LInk -->
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <!-- This is the Code for dataTable, Please copy paste -->
+      <script type="text/javascript">
+         $(document).ready(function(){
+           var oTable = $('#myTable').DataTable({
+             "orderCellsTop": false,
+             "searchHighlight" : true,
+             "ordering": false,
+           });
+           $('#search').keyup(function(){
+                 oTable.search($(this).val()).draw() ;
+           });
+           $(".dataTables_filter").hide();
+           oTable.on('order.dt search.dt', function(){
+             oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+              function (cell, i) {
+               cell.innerHTML = i+1;
+               } );
+           }).draw();
+         });
+      </script>
+      <!-- This is the Code for dataTable -->
+      <!-- end of your custom script -->
+   </body>
+</html>

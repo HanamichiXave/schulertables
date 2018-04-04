@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Library Management</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style type="text/css">
+   .dataTables_length {
+    margin-bottom: 15px;
+    margin-top: 15px;
+   }
+   td, th {
+      text-align: center;
+   }
+   </style>
+
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                           <li>
+                                  <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                           </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033"><h2><strong>Library Management</strong></h2></div>
+           <ol class="breadcrumb" style="background-color: #D9EDF7">
+               <li><a href="library-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+               <li>Library Catalogue</li>
+           </ol>
+         <!-- your code start here -->
+         <!-- Please observe indention -->
+         
+            <div class="panel panel-custom">
+              <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-male fa-lg"></i> Material List
+               </div>
+               <div class="panel-body"> 
+                  <div class="col-lg-12">
+                     <center>
+                        Filter by: &nbsp; &nbsp; &nbsp;
+                        <label class="radio-inline"><input type="radio" id="optn_employee" name="rButton" checked="checked" value="All">All</label>
+                        <label class="radio-inline"><input type="radio" id="optn_employee" name="rButton" value="Book">Books</label>
+                        <label class="radio-inline"><input type="radio" id="optn_employee" name="rButton" value="Journal">Journal</label>
+                        <label class="radio-inline"><input type="radio" id="optn_employee" name="rButton" value="Open">Open</label>
+                        <label class="radio-inline"><input type="radio" id="optn_employee" name="rButton" value="Cd">CD</label>
+                        <label class="radio-inline"><input type="radio" id="optn_employee" name="rButton" value="Dvd">DVD</label>
+                        <label class="radio-inline"><input type="radio" id="optn_employee" name="rButton" value="Others">Others</label>
+                     </center>
+                  </div>
+                  <br />
+                  <br />
+                  <div class="row">
+                     <div class="col-sm-8">
+                        <div class="form-group contact-search m-b-30">
+                           <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                        </div>
+                     </div>
+                     <div class="col-lg-12">
+                     <div class="table-responsive">
+                        <table class="display nowrap table table-striped table-hover"  id="myTable">
+                           <thead>
+                              <tr>
+                                 <th style="max-width: 95px;"> </th>
+                                 <th style="max-width: 95px;"> </th>
+                                 <th >Material Type</th>
+                                 <th >Material Name</th>
+                                 <th >I.S.B.N.</th>
+                                 <th >Author</th>
+                                 <th >Action</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr class="">
+                                 <td></td>
+                                 <td></td>
+                                 <td>Book</td>
+                                 <td>Mathematics</td>
+                                 <td>0934275</td>
+                                 <td>Jorge Lopez</td>
+                                 <td><a href="library-catalouge_details.html" class="btn btn-info" id="" name="" type="button">View Details</a></td>
+                              </tr>
+                              <tr class="">
+                                 <td></td>
+                                 <td></td>
+                                 <td>Magazine</td>
+                                 <td>Sports</td>
+                                 <td>08325</td>
+                                 <td>Charles Dickens</td>
+                                 <td><a href="library-catalouge_details.html" class="btn btn-info" id="" name="" type="button">View Details</a></td>
+                              </tr>
+                              <tr class="">
+                                 <td></td>
+                                 <td></td>
+                                 <td>Periodicals</td>
+                                 <td>Trade Publications</td>
+                                 <td>22934275</td>
+                                 <td>Anne Lamott</td>
+                                 <td><a href="library-catalouge_details.html" class="btn btn-info" id="" name="" type="button">View Details</a></td>
+                              </tr>
+                              <tr class="">
+                                 <td></td>
+                                 <td></td>
+                                 <td>NewsPaper</td>
+                                 <td>Tabloids</td>
+                                 <td>4766100</td>
+                                 <td>Neil Gaiman</td>
+                                 <td><a href="library-catalouge_details.html" class="btn btn-info" id="" name="" type="button">View Details</a></td>
+                              </tr>
+                              <tr class="">
+                                 <td></td>
+                                 <td></td>
+                                 <td>Government Documents</td>
+                                 <td>Committee Reports</td>
+                                 <td>8735111</td>
+                                 <td>William Shakespeare</td>
+                                 <td><a href="library-catalouge_details.html" class="btn btn-info" id="" name="" type="button">View Details</a></td>
+                              </tr>
+                              <tr class="">
+                                 <td></td>
+                                 <td></td>
+                                 <td>Dissertations & Thesis</td>
+                                 <td>Narrative</td>
+                                 <td>0092665</td>
+                                 <td>Mark Twain</td>
+                                 <td><a href="library-catalouge_details.html" class="btn btn-info" id="" name="" type="button">View Details</a></td>
+                              </tr>
+                              <tr class="">
+                                 <td></td>
+                                 <td></td>
+                                 <td>Books of Fiction</td>
+                                 <td>Literature</td>
+                                 <td>6418332</td>
+                                 <td>Stephen King</td>
+                                 <td><a href="library-catalouge_details.html" class="btn btn-info" id="" name="" type="button">View Details</a></td>
+                              </tr>
+                              <tr class="">
+                                 <td></td>
+                                 <td></td>
+                                 <td>Reference Book</td>
+                                 <td>American Psychological Association</td>
+                                 <td>2465387</td>
+                                 <td>John F. Kennedy</td>
+                                 <td><a href="library-catalouge_details.html" class="btn btn-info" id="" name="" type="button">View Details</a></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+                  </div>
+                  
+               </div>
+            </div>
+       
+      <!-- end of your code -->
+      <!-- footer here -->
+      <hr />
+      <footer class="navbar-fixed-bottom">
+         <div class="container-fluid footer">
+            <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+         </div>
+      </footer>
+      <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/dataTables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+
+
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script type="text/javascript">
+         $(document).ready(function(){
+           var oTable = $('#myTable').DataTable({
+             "orderCellsTop": false,
+             "searchHighlight" : true,
+           });
+           $('#search').keyup(function(){
+                 oTable.search($(this).val()).draw() ;
+           });
+           $(".dataTables_filter").hide();
+           oTable.on('order.dt search.dt', function(){
+             oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+              function (cell, i) {
+               cell.innerHTML = i+1;
+               } );
+           }).draw();
+         });
+    </script>
+      <!-- end of your custom script -->
+   </body>
+</html>

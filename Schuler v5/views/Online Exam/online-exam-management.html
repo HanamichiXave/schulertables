@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html ng-app="examApp">
+   <head>
+      <title>Online Exam Management</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../Content/datatables.net/css/jquery.dataTables.min.css" rel="stylesheet" />
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <style type="text/css">
+         .super-panel {
+             width: 260px;
+             text-align: center;
+             border: 1px solid black;
+         }
+
+         .super-panel-lg {
+             width: 310px;
+             height: 110px;
+             border: 1px solid #44A5C9;
+             border-radius: 4px;
+             margin-bottom: 20px !important;
+         }
+         .modal-super-panel-lg {
+             width: 230px;
+             height: 50px;
+             border: 1px solid #44A5C9;
+             border-radius: 4px;
+             margin-bottom: 20px !important;
+         }
+         .modal-pagetitle {
+             width: 150px;
+             display: flex;
+             align-items: center;
+             height: 50px;
+         }
+         .modal-panel-body .row:hover,
+         .modal-panel-body .row:focus {
+             background-color: white;
+             transform: scale(1.03);
+             transition: all .1s;
+             background-color: transparent;
+         }
+         .modal-pageimg{
+            padding-top: 1%;
+         }
+         .modal-spr-label{
+            font-family: Helvetica;
+             font-size: 14px;
+             color: #000033;
+             text-align: center;
+             padding-top: 2%;
+         }
+
+
+
+        .sm-modal-super-panel-lg {
+             width: 100px;
+             height: 25px;
+             border: 1px solid #44A5C9;
+             border-radius: 4px;
+             margin-bottom: 20px !important;
+         }
+         .sm-modal-pagetitle {
+             width: 70px;
+             display: flex;
+             align-items: left;
+             height: 15px;
+         }
+         .sm-modal-panel-body .row:hover,
+         .sm-modal-panel-body .row:focus {
+             background-color: white;
+             transform: scale(1.03);
+             transition: all .1s;
+             background-color: transparent;
+         }
+         .sm-modal-pageimg{
+            padding-top: 1%;
+         }
+         .sm-modal-spr-label{
+            font-family: Helvetica;
+             font-size: 7px;
+             color: #000033;
+             text-align: left;
+             padding-top: 2%;
+         }
+
+
+
+         .panel-body .row:hover,
+         .panel-body .row:focus {
+             background-color: white;
+             transform: scale(1.03);
+             transition: all .1s;
+             background-color: transparent;
+         }
+
+         .pagetitle {
+             width: 205px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             height: 75px;
+         }
+         .pageimg {
+            width: 80px;
+            height: 70px;
+            margin: 5px 5px 5px 5px;
+          }
+
+         .spr-label {
+             font-family: Helvetica;
+             font-size: 18px;
+             color: #000033;
+             text-align: center;
+         }
+         
+
+         .center {
+             margin: 0 auto;
+         }
+        .super-panel-lg {
+        border: 3px solid #44A5C9!important;
+        border-radius: 20px!important;
+          }
+      </style>
+      <!-- end of your custom css -->
+   </head>
+   <body ng-controller="examCtrl">
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                           <li>
+                                  <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                           </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Setting</a></li>
+                        <li><a href="#exit">Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+        <br>
+        <br>
+        <br>
+    <!-- <div class="page-header" style="color: #000033"><h2><strong>Administration Management</strong></h2></div> -->
+        <ol class="breadcrumb" style="background-color: #D9EDF7">
+          <li><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</li>
+        </ol>
+        <!-- your code start here -->
+        <!-- Please observe indention -->
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+            <a href="Dashboard.html">
+              <div class="hovereffect">
+                <img class="img-responsive" src="../../content/images/Super Admin/v5/dashboard.png" height="100" width="100" />
+                <div class="overlay">                    
+                  <h2>Dashboard</h2>                  
+                  <p class="info">
+                    Provides in-depth data analysis, organizes and presents information regarding online examinations
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="hovereffect" data-toggle="modal" data-target="#listExam">
+              <img class="img-responsive" src="../../content/images/Exam/add.png" height="100" width="100" />
+                <div class="overlay">                    
+                  <h2>Manage Exam</h2>                  
+                  <p class="info">
+                    Create an online exam for a specific subject.
+                  </p>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="hovereffect" data-toggle="modal" data-target="#manageQuestion">
+              <img class="img-responsive" src="../../content/images/Exam/edit.png" height="100" width="100" />
+                <div class="overlay">
+                  <h2>Manage Exam Question(s)</h2>
+                  <p class="info">
+                    Create or edit questions from an online exam that is already created.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+         <div id="chooseExam" class="modal fade" role="dialog">
+           <div class="modal-dialog modal-md">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 <h4 class="modal-title">Choose Exam</h4>
+               </div>
+               <div class="modal-body">
+                 <div class="row">
+                     <div class="col-lg-12">
+               
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                              <label>Choose Exam:</label>
+                              <select>
+                                <option ng-model="ExamTypeOpt" ng-repeat="type in ExamType" >{{type}}</option>
+                              </select>
+                          </div>
+
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                              <label>Choose Period:</label>
+                              <select ng-disabled="ExamType.length < 1">
+                                <option ng-repeat="period in ExamPeriod" >{{period}}</option>
+                              </select>
+                          </div>
+
+                           <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="modal-panel-body modal-super-panel-lg center">
+                                 <div class="center-block">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 modal-pageimg">
+                                       <div>
+                                          <img src="../../content/images/Exam/add.png" height="40" />
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 modal-pagetitle">
+                                       <label class="modal-spr-label" data-toggle="modal" data-target="#chooseGrading" data-dismiss="modal">Pre - Admission Examination</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="modal-panel-body modal-super-panel-lg center">
+                                 <div class="center-block">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 modal-pageimg">
+                                       <div>
+                                          <img src="../../content/images/Exam/add.png" height="40" />
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 modal-pagetitle">
+                                       <label class="modal-spr-label" data-toggle="modal" data-target="#chooseGrading" data-dismiss="modal">Kinder Examination</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="modal-panel-body modal-super-panel-lg center">
+                                 <div class="center-block">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 modal-pageimg">
+                                       <div>
+                                          <img src="../../content/images/Exam/add.png" height="40" />
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 modal-pagetitle">
+                                       <label class="modal-spr-label" data-toggle="modal" data-target="#chooseGrading" data-dismiss="modal">Grade 1 Examination</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="modal-panel-body modal-super-panel-lg center">
+                                 <div class="center-block">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 modal-pageimg">
+                                       <div>
+                                          <img src="../../content/images/Exam/add.png" height="40" />
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 modal-pagetitle">
+                                       <label class="modal-spr-label" data-toggle="modal" data-target="#chooseGrading" data-dismiss="modal">Grade 2 Examination</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="modal-panel-body modal-super-panel-lg center">
+                                 <div class="center-block">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 modal-pageimg">
+                                       <div>
+                                          <img src="../../content/images/Exam/add.png" height="40" />
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 modal-pagetitle">
+                                       <label class="modal-spr-label" data-toggle="modal" data-target="#chooseGrading" data-dismiss="modal">Grade 3 Examination</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="modal-panel-body modal-super-panel-lg center">
+                                 <div class="center-block">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 modal-pageimg">
+                                       <div>
+                                          <img src="../../content/images/Exam/add.png" height="40" />
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 modal-pagetitle">
+                                       <label class="modal-spr-label" data-toggle="modal" data-target="#chooseGrading" data-dismiss="modal">Grade 4 Examination</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="modal-panel-body modal-super-panel-lg center">
+                                 <div class="center-block">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 modal-pageimg">
+                                       <div>
+                                          <img src="../../content/images/Exam/add.png" height="40" />
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 modal-pagetitle">
+                                       <a href="">
+                                       <label class="modal-spr-label" data-toggle="modal" data-target="#chooseGrading" data-dismiss="modal">Grade 5 Examination</label>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="modal-panel-body modal-super-panel-lg center">
+                                 <div class="center-block">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 modal-pageimg">
+                                       <div>
+                                          <img src="../../content/images/Exam/add.png" height="40" />
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 modal-pagetitle">
+                                       <a href="">
+                                       <label class="modal-spr-label" data-toggle="modal" data-target="#chooseGrading" data-dismiss="modal">Grade 6 Examination</label>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+ 
+                     </div>
+                 </div>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+             </div>
+           </div>
+         </div>
+
+           <div id="chooseGrading" class="modal fade" role="dialog">
+           <div class="modal-dialog modal-md">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 <h4 class="modal-title">Choose Period</h4>
+               </div>
+               <div class="modal-body">
+                 <div class="row">
+                     <div class="col-lg-12">
+                       <center>
+                           <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="modal-panel-body modal-super-panel-lg center" data-dismiss="modal" data-toggle="modal" data-target="#listExam">
+                                 <div class="center-block">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 modal-pageimg">
+                                       <div>
+                                          <img src="../../content/images/Exam/add.png" height="40" />
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 modal-pagetitle">
+                                       <label class="modal-spr-label">First Grading</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="modal-panel-body modal-super-panel-lg center">
+                                 <div class="center-block">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 modal-pageimg">
+                                       <div>
+                                          <img src="../../content/images/Exam/add.png" height="40" />
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 modal-pagetitle">
+                                       <a href="../../views/Online Exam/create-exam.html">
+                                       <label class="modal-spr-label">Second Grading</label>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="modal-panel-body modal-super-panel-lg center">
+                                 <div class="center-block">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 modal-pageimg">
+                                       <div>
+                                          <img src="../../content/images/Exam/add.png" height="40" />
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 modal-pagetitle">
+                                       <a href="../../views/Online Exam/create-exam.html">
+                                       <label class="modal-spr-label">Third Grading</label>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="modal-panel-body modal-super-panel-lg center">
+                                 <div class="center-block">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 modal-pageimg">
+                                       <div>
+                                          <img src="../../content/images/Exam/add.png" height="40" />
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 modal-pagetitle">
+                                       <a href="../../views/Online Exam/create-exam.html">
+                                       <label class="modal-spr-label">Fourth Grading</label>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </center>    
+                     </div>
+                 </div>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#chooseExam">Go Back</button>
+                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+             </div>
+           </div>
+         </div>
+
+
+          <div id="createExam" class="modal fade" role="dialog">
+           <div class="modal-dialog modal-md">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 <h4 class="modal-title">Create New Exam</h4>
+               </div>
+               <div class="modal-body">
+                 <div class="row">
+                     <div class="col-lg-12">
+                      <form>
+                         <div class="form-group">
+                              <label>Enter Subject Name</label>
+                              <input type="text" class="form-control" placeholder="Enter subject name" ng-model="ExamName">
+                         </div>
+                         <div class="form-group">
+                              <label>Enter Exam Description</label>
+                              <textarea class="form-control" placeholder="Enter description about the exam" ng-model="ExamDescription"></textarea> 
+                         </div>
+                         <div class="form-group">
+                           <button class="btn btn-success" ng-click="SaveExam(ExamName)">Save</button>
+                        </div>
+                     </form>
+                     </div>
+                 </div>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#listExam">Go Back</button>
+                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+             </div>
+           </div>
+         </div>
+
+         <div id="listExam" class="modal fade" role="dialog">
+           <div class="modal-dialog modal-lg">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 <h4 class="modal-title">Exam List</h4>
+               </div>
+               <div class="modal-body">
+                 <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label>Choose Exam:</label>
+                        <select>
+                          <option ng-model="ExamTypeOpt" ng-repeat="type in ExamType" >{{type}}</option>
+                        </select>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label>Choose Period:</label>
+                        <select ng-disabled="ExamType.length < 1">
+                          <option ng-repeat="period in ExamPeriod" >{{period}}</option>
+                        </select>
+                  </div>
+                   <hr/>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                     <button class="btn btn-success"  data-dismiss="modal" data-toggle="modal" data-target="#createExam">NEW</button>
+                     <button class="btn btn-danger" ng-click="examRemove(ExamList, $index)">DELETE</button>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <br/>
+                    <label>Search Subject:</label>
+                    <input type="text" class="form-control col-lg-12" ng-model="subsearch">
+                    <br/>
+                  </div>
+                     <div class="col-lg-12">
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th class="col-lg-1"></th> 
+                              <th class="col-lg-5">Exam Subject</th> 
+                              <th class="col-lg-6">Exam Description</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr ng-repeat="subject in ExamList | filter:subsearch track by $index">
+                              <td class="col-lg-1"> 
+                                <input type="checkbox" id="{{$index}}" ng-model="showForm" ng-click="showEditForm(showForm, subject, desc, $index)">
+                              </td>
+                              <td class="col-lg-5" ng-model="subj">{{subject}}</td> 
+                              <td class="col-lg-6" ng-model="desc">Sample Exam Description only.</td>
+                            </tr>
+                          </tbody>
+                          </table>
+                          <div class="row" ng-model="updateForm" ng-show="showForm">
+
+                           <div class="col-lg-12">
+                            <form>
+                               <div class="form-group">
+                                    <label>Enter Subject Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter subject name" ng-model="showFormSubject">
+                               </div>
+                               <div class="form-group">
+                                    <label>Enter Exam Description</label>
+                                    <textarea class="form-control" placeholder="Enter description about the exam" ng-model="showFormDescription">Sample Exam Description only.</textarea> 
+                               </div>
+                               <div class="form-group">
+                                 <button class="btn btn-info" ng-click="examUpdate(showFormSubject)">Update</button>
+                              </div>
+                           </form>
+                           </div>
+                     </div>
+                       <label class="col-lg-12" ng-hide="ExamList.length" style="text-align: center">No Records to display.</label>                          
+                 </div>
+               </div>
+               <div class="modal-footer">
+
+                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+             </div>
+           </div>
+         </div>
+      </div>
+
+         <div id="manageQuestion" class="modal fade" role="dialog">
+           <div class="modal-dialog modal-lg">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 <h4 class="modal-title">Manage Question(s)</h4>
+               </div>
+               <div class="modal-body">
+                 <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label>Choose Exam:</label>
+                        <select>
+                          <option ng-model="ExamTypeOpt" ng-repeat="type in ExamType" >{{type}}</option>
+                        </select>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label>Choose Period:</label>
+                        <select ng-disabled="ExamType.length < 1">
+                          <option ng-repeat="period in ExamPeriod" >{{period}}</option>
+                        </select>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label>Choose Subject:</label>
+                        <select>
+                          <option ng-repeat="subject in ExamList" >{{subject}}</option>
+                        </select>
+                  </div>
+                   <hr/>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                     <button class="btn btn-success"  data-dismiss="modal" data-toggle="modal" data-target="#createExam">NEW</button>
+                     <button class="btn btn-danger" ng-click="examRemove(ExamList, $index)">DELETE</button>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <br/>
+                    <label>Search Question Number:</label>
+                    <input type="number" class="form-control col-lg-12" ng-model="numsearch">
+                    <br/>
+                  </div>
+                     <div class="col-lg-12">
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th class="col-lg-1"></th> 
+                              <th class="col-lg-1">Number</th> 
+                              <th class="col-lg-10">Question</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr ng-repeat="subject in Science | filter:numsearch track by $index">
+                              <td class="col-lg-1"> 
+                                <input type="checkbox" id="{{$index}}" ng-model="showForm" ng-click="showEditForm(showForm, subject, desc, $index)">
+                              </td>
+                              <td class="col-lg-1" ng-model="qnumber">{{subject.Number}}</td> 
+                              <td class="col-lg-10" ng-model="question">{{subject.Question}}</td>
+                            </tr>
+                          </tbody>
+                          </table>
+                          <div class="row" ng-model="updateForm" ng-show="showForm">
+
+                           <div class="col-lg-12">
+                            <form>
+                               <div class="form-group">
+                                    <label>Enter Subject Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter subject name" ng-model="showFormSubject">
+                               </div>
+                               <div class="form-group">
+                                    <label>Enter Exam Description</label>
+                                    <textarea class="form-control" placeholder="Enter description about the exam" ng-model="showFormDescription">Sample Exam Description only.</textarea> 
+                               </div>
+                               <div class="form-group">
+                                 <button class="btn btn-info" ng-click="examUpdate(showFormSubject)">Update</button>
+                              </div>
+                           </form>
+                           </div>
+                     </div>
+                       <label class="col-lg-12" ng-hide="ExamList.length" style="text-align: center">No Records to display.</label>                          
+                 </div>
+               </div>
+               <div class="modal-footer">
+
+                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+             </div>
+           </div>
+         </div>
+      </div>
+
+
+
+</div>
+</div>
+
+         <!-- end of your code -->
+         <!-- footer here -->
+         <hr />
+         <footer class="navbar-fixed-bottom">
+            <div class="container-fluid footer">
+               <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+            </div>
+         </footer>
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/datatables.net/js/jquery.dataTables.min.js"></script> 
+
+      <script src="../../content/angularJS/angular.min.js"></script>
+
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      
+      <script src="../../content/datatables.net/js/datatables.bootstrap.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.buttons.min.js"></script>
+
+      <script src="../../content/datatables.net/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/datatables.net/js/buttons.html5.min.js"></script>
+      <script src="../../content/datatables.net/js/buttons.print.min.js"></script>
+
+      <script src="../../content/datatables.net/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/datatables.net/js/dataTables.scroller.min.js"></script>
+
+
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script src="../../content/custom/scripts/onlineexam/examApp.js"></script>
+      <!-- end of your custom script -->
+   </body>
+</html>

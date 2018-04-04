@@ -1,0 +1,291 @@
+
+
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+}
+
+
+/* Generic styling */
+
+
+.content{
+	width: 100%;
+	max-width: 1142px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+a:focus{
+	outline: 2px dashed #f7f7f7;
+}
+
+a:hover{
+	text-decoration: none !important;
+}
+
+@media all and (max-width: 1036px){
+	.content{
+		padding: 0 20px;
+	}	
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;		
+}
+
+figure ul a{
+	display: block;
+	background: #ccc;
+	border: 1.5px solid #44A5C9;
+	text-align: center;
+	overflow: hidden;
+	font-size: .7em;
+	text-decoration: none;
+	font-weight: bold;
+	color: #333;
+	height: 85px;
+	margin-bottom: -26px;
+	box-shadow: 4px 4px 9px -4px rgba(0,0,0,0.4);
+	-webkit-transition: all linear .1s;
+	-moz-transition: all linear .1s;
+	transition: all linear .1s;
+}
+
+
+@media all and (max-width: 1036px){
+	ul a{
+		font-size: 1em;
+	}
+}
+
+
+ul a span{
+	font-size: 12px;
+}
+
+/*
+ 
+ */
+
+.administration > li > a{
+	margin-bottom: 25px;
+}
+
+.director > li > a{
+	width: 50%;
+	margin: 0 auto 0px auto;
+}
+
+.subdirector:after{
+	content: "";
+	display: block;
+	width: 0;
+	height: 130px;
+	background: red;
+	border-left: 1.5px solid #44A5C9;
+	left: 50%;
+	position: relative;
+}
+
+.subdirector,
+.departments{
+	position: absolute;
+	width: 100%;
+}
+
+.subdirector > li:first-child,
+.departments > li:first-child{	
+	width: 50%;
+	height: 64px;
+	margin: 0 auto 92px auto;		
+	padding-top: 25px;
+	border-bottom: 1.5px solid #44A5C9;
+	z-index: 1;	
+}
+
+.subdirector > li:first-child{
+	float: right;
+	right: 27.2%;
+	border-left: 1.5px solid #44A5C9;
+}
+
+
+
+.subdirector > li:first-child a,
+.departments > li:first-child a{
+	width: 100%;
+}
+
+.subdirector > li:first-child a{	
+	left: 25px;
+}
+
+@media all and (max-width: 1036px){
+	.subdirector > li:first-child,
+	.departments > li:first-child{
+		width: 50%;	
+	}
+
+	.subdirector > li:first-child{
+		right: 10%;
+		margin-right: 2px;
+	}
+
+	.subdirector:after{
+		left: 50%;
+	}
+
+	.departments > li:first-child{
+		left: 25%;
+		margin-left: 2px;
+	}
+}
+
+
+.department:first-child,
+.departments li:nth-child(2){
+	margin-left: 0;
+	clear: left;	
+}
+
+.departments:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 81.1%;
+	height: 28px;	
+	border-top: 1.5px solid #44A5C9;
+	border-right: 1.5px solid #44A5C9;
+	border-left: 1.5px solid #44A5C9;
+	margin: 0 auto;
+	top: 128px;
+	left: 9.1%
+}
+
+@media all and (max-width: 1036px){
+	.departments:after{
+		border-right: none;
+		left: 0;
+		width: 50%;
+	}  
+}
+
+@media all and (min-width: 768px){
+	.department:first-child:before,
+   .department:last-child:before{
+    border:none;
+  }
+}
+
+.department:before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 25px;
+	border-left: 1.5px solid #44A5C9;
+	z-index: 1;
+	top: -27px;
+	left: 51.8%;
+	margin-left: -4px;
+}
+
+li.department.dep-a::before{
+	border:0px !important;
+}
+.department{
+	border-left: 1.5px solid #44A5C9;
+	width: 18.59894921190893%;
+	float: left;
+	margin-left: 1.751313485113835%;
+	margin-bottom: 60px;
+}
+
+.lt-ie8 .department{
+	width: 18.25%;
+}
+
+@media all and (max-width: 1036px){
+	.department{
+		float: none;
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.department:before{
+		content: "";
+		display: block;
+		position: absolute;
+		width: 0;
+		height: 60px;
+		border-left: 1.5px solid #44A5C9;
+		z-index: 1;
+		top: -60px;
+		left: 0.7%;
+		margin-left: -4px;
+	}
+
+	.department:nth-child(2):before{
+		display: none;
+	}
+}
+
+.department > a{
+	margin: 0 0 -26px -4px;
+	z-index: 1;
+}
+
+.department > a:hover{	
+	height: 90px;
+	text-decoration: none !important;
+}
+
+.department > ul{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.department li{	
+	padding-left: 25px;
+	border-bottom: 1.5px solid #44A5C9;
+	height: 100px;	
+}
+
+.department li a{
+	background: #44A5C9;
+	top: 48px;	
+	position: absolute;
+	z-index: 1;
+	width: 95%;
+	height: 85px;
+	vertical-align: middle;
+	right: -1px;
+}
+
+.department li a:hover{
+	box-shadow: 8px 8px 9px -4px rgba(0,0,0,0.1);
+	height: 90px;
+	width: 95%;
+	top: 39px;
+	text-decoration: none !important;
+}
+
+/* Department/ section colors */
+.department.dep-a a{ background: #FFD600; }
+.department.dep-b a{ background: #AAD4E7; }
+.department.dep-c a{ background: #FDB0FD; }
+.department.dep-d a{ background: #A3A2A2; }
+.department.dep-e a{ background: #f0f0f0; }
+
+#scimag{
+	margin-top:5px; 
+
+	background-size: 75px;
+	height: 100%; 
+	background-repeat: no-repeat;
+}

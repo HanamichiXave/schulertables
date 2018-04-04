@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!-- saved from url=(0094)file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher_lessonplan.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Teacher Management</title>
+      <link rel="icon" href="./Teacher Management_files/logonatin.png">
+      
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="./Teacher Management_files/bootstrap.min.css" rel="stylesheet">
+      <link href="./Teacher Management_files/dataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="./Teacher Management_files/style.css" rel="stylesheet"> 
+      <link href="./Teacher Management_files/font-awesome.min.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   <style type="text/css">
+      .dataTables_length {
+       margin-bottom: 7px;
+       margin-top: 5px;
+      }
+   </style></head>
+   
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher_lessonplan.html#" style="color: white;">
+               <img class="schuler" src="./Teacher Management_files/logonatin.png" height="25" width="30">
+               </a>
+               <a class="navbar-brand" href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher_lessonplan.html#" style="color: #35ac49;">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher_lessonplan.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher_lessonplan.html#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher_lessonplan.html#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher_lessonplan.html#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                           <li>
+                                  <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher_lessonplan.html#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;See all notifications...</a>
+                           </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher_lessonplan.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher_lessonplan.html#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                     <li><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher_lessonplan.html#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                     <li><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher_lessonplan.html#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               <form class="navbar-form navbar-right search-form" role="search">
+                  <input type="text" class="form-control" placeholder="Search">
+               </form>
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container">
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033">
+            <h2><strong>My Lesson Plan</strong></h2>
+         </div>
+         <ol class="breadcrumb">
+             <li><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher-management.html">Teacher Management</a></li>
+             <li>My Lesson Plan</li>
+             <li><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher_lessonplan.html#"></a></li>
+         </ol>
+         <!-- your code start here -->
+         <!-- Please observe indention -->
+         <div class="container">
+            <div class="container-fluid" style="margin: 0; padding-bottom: 0px;">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="panel panel-custom">
+                        <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-pencil-square-o fa-lg"></i> Lesson Plan List</div>
+                           <div class="panel-body"> 
+                              <div class="row">
+                                 <div class="col-sm-8">
+                                    <div class="form-group contact-search m-b-30">
+                                       <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                                    </div>
+                                 </div>
+                                    <div class="col-sm-4">
+                                       <button type="button" class="btn btn-info" style="height: 40px; margin-top: 7px;" data-toggle="modal" data-target="#addModal">Add Lesson Plan</button>
+                                 </div>
+                              </div>
+                              <form class="table-responsive">
+                                 <div id="myTable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="myTable_length"><label>Show <select name="myTable_length" aria-controls="myTable" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"><div id="myTable_filter" class="dataTables_filter" style="display: none;"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="myTable"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="myTable" class="table table-hover table-bordered display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="myTable_info" style="width: 100%;">
+                                    <thead>
+                                       <tr role="row"><th class="info sorting_asc" style="width: 52px; text-align: center;" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Quarter: activate to sort column descending" aria-sort="ascending">Quarter</th><th class="warning sorting" style="width: 64px; text-align: center;" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending">Date</th><th class="info sorting" style="width: 67px; text-align: center;" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Subject: activate to sort column ascending">Subject</th><th class="warning sorting" style="width: 66px; text-align: center;" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Grade Level: activate to sort column ascending">Grade Level</th><th class="info sorting" style="width: 166px; text-align: center;" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Topic: activate to sort column ascending">Topic</th><th class="warning sorting" style="width: 166px; text-align: center;" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Title: activate to sort column ascending">Title</th><th class="info sorting" style="width: 68px; text-align: center;" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Lesson Duration: activate to sort column ascending">Lesson Duration</th><th class="warning sorting" style="width: 118px;" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label=": activate to sort column ascending"></th></tr>
+                                    </thead>
+                                    <tbody>
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                    <tr role="row" class="odd">
+                                          <td class="sorting_1">1</td>
+                                          <td>1-1-2017</td>
+                                          <td>English</td>
+                                          <td>1</td>
+                                          <td>Part of Speech</td>
+                                          <td>The Part of Speech</td>
+                                          <td>2h</td>
+                                          <td>
+                                             <button type="button" class="btn btn-info btn-xs center-block" data-toggle="modal" data-target="#editModal" style="width: 60px;">Edit</button>
+                                             <button type="button" class="btn btn-danger btn-xs center-block" data-toggle="modal" data-target="#deleteModal" style="width: 60px;">Delete</button>
+                                          </td>
+                                       </tr><tr role="row" class="even">
+                                          <td class="sorting_1">2</td>
+                                          <td>1-1-2017</td>
+                                          <td>English</td>
+                                          <td>1</td>
+                                          <td>Part of Speech</td>
+                                          <td>The Part of Speech</td>
+                                          <td>2h</td>
+                                          <td>
+                                             <button type="button" class="btn btn-info btn-xs center-block" data-toggle="modal" data-target="#editModal" style="width: 60px;">Edit</button>
+                                             <button type="button" class="btn btn-danger btn-xs center-block" data-toggle="modal" data-target="#deleteModal" style="width: 60px;">Delete</button>
+                                          </td>
+                                       </tr><tr role="row" class="odd">
+                                          <td class="sorting_1">3</td>
+                                          <td>1-1-2017</td>
+                                          <td>English</td>
+                                          <td>1</td>
+                                          <td>Part of Speech</td>
+                                          <td>The Part of Speech</td>
+                                          <td>2h</td>
+                                          <td>
+                                             <button type="button" class="btn btn-info btn-xs center-block" data-toggle="modal" data-target="#editModal" style="width: 60px;">Edit</button>
+                                             <button type="button" class="btn btn-danger btn-xs center-block" data-toggle="modal" data-target="#deleteModal" style="width: 60px;">Delete</button>
+                                          </td>
+                                       </tr><tr role="row" class="even">
+                                          <td class="sorting_1">4</td>
+                                          <td>1-1-2017</td>
+                                          <td>English</td>
+                                          <td>1</td>
+                                          <td>Part of Speech</td>
+                                          <td>The Part of Speech</td>
+                                          <td>2h</td>
+                                          <td>
+                                             <button type="button" class="btn btn-info btn-xs center-block" data-toggle="modal" data-target="#editModal" style="width: 60px;">Edit</button>
+                                             <button type="button" class="btn btn-danger btn-xs center-block" data-toggle="modal" data-target="#deleteModal" style="width: 60px;">Delete</button>
+                                          </td>
+                                       </tr><tr role="row" class="odd">
+                                          <td class="sorting_1">5</td>
+                                          <td>1-1-2017</td>
+                                          <td>English</td>
+                                          <td>1</td>
+                                          <td>Part of Speech</td>
+                                          <td>The Part of Speech</td>
+                                          <td>2h</td>
+                                          <td>
+                                             <button type="button" class="btn btn-info btn-xs center-block" data-toggle="modal" data-target="#editModal" style="width: 60px;">Edit</button>
+                                             <button type="button" class="btn btn-danger btn-xs center-block" data-toggle="modal" data-target="#deleteModal" style="width: 60px;">Delete</button>
+                                          </td>
+                                       </tr><tr role="row" class="even">
+                                          <td class="sorting_1">6</td>
+                                          <td>1-1-2017</td>
+                                          <td>English</td>
+                                          <td>1</td>
+                                          <td>Part of Speech</td>
+                                          <td>The Part of Speech</td>
+                                          <td>2h</td>
+                                          <td>
+                                             <button type="button" class="btn btn-info btn-xs center-block" data-toggle="modal" data-target="#editModal" style="width: 60px;">Edit</button>
+                                             <button type="button" class="btn btn-danger btn-xs center-block" data-toggle="modal" data-target="#deleteModal" style="width: 60px;">Delete</button>
+                                          </td>
+                                       </tr><tr role="row" class="odd">
+                                          <td class="sorting_1">7</td>
+                                          <td>1-1-2017</td>
+                                          <td>English</td>
+                                          <td>1</td>
+                                          <td>Part of Speech</td>
+                                          <td>The Part of Speech</td>
+                                          <td>2h</td>
+                                          <td>
+                                             <button type="button" class="btn btn-info btn-xs center-block" data-toggle="modal" data-target="#editModal" style="width: 60px;">Edit</button>
+                                             <button type="button" class="btn btn-danger btn-xs center-block" data-toggle="modal" data-target="#deleteModal" style="width: 60px;">Delete</button>
+                                          </td>
+                                       </tr><tr role="row" class="even">
+                                          <td class="sorting_1">8</td>
+                                          <td>1-1-2017</td>
+                                          <td>English</td>
+                                          <td>1</td>
+                                          <td>Part of Speech</td>
+                                          <td>The Part of Speech</td>
+                                          <td>2h</td>
+                                          <td>
+                                             <button type="button" class="btn btn-info btn-xs center-block" data-toggle="modal" data-target="#editModal" style="width: 60px;">Edit</button>
+                                             <button type="button" class="btn btn-danger btn-xs center-block" data-toggle="modal" data-target="#deleteModal" style="width: 60px;">Delete</button>
+                                          </td>
+                                       </tr><tr role="row" class="odd">
+                                          <td class="sorting_1">9</td>
+                                          <td>1-1-2017</td>
+                                          <td>English</td>
+                                          <td>1</td>
+                                          <td>Part of Speech</td>
+                                          <td>The Part of Speech</td>
+                                          <td>2h</td>
+                                          <td>
+                                             <button type="button" class="btn btn-info btn-xs center-block" data-toggle="modal" data-target="#editModal" style="width: 60px;">Edit</button>
+                                             <button type="button" class="btn btn-danger btn-xs center-block" data-toggle="modal" data-target="#deleteModal" style="width: 60px;">Delete</button>
+                                          </td>
+                                       </tr><tr role="row" class="even">
+                                          <td class="sorting_1">10</td>
+                                          <td>1-1-2017</td>
+                                          <td>English</td>
+                                          <td>1</td>
+                                          <td>Part of Speech</td>
+                                          <td>The Part of Speech</td>
+                                          <td>2h</td>
+                                          <td>
+                                             <button type="button" class="btn btn-info btn-xs center-block" data-toggle="modal" data-target="#editModal" style="width: 60px;">Edit</button>
+                                             <button type="button" class="btn btn-danger btn-xs center-block" data-toggle="modal" data-target="#deleteModal" style="width: 60px;">Delete</button>
+                                          </td>
+                                       </tr></tbody>
+                                 </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="myTable_info" role="status" aria-live="polite">Showing 1 to 10 of 10 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="myTable_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="myTable_previous"><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher_lessonplan.html#" aria-controls="myTable" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher_lessonplan.html#" aria-controls="myTable" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button next disabled" id="myTable_next"><a href="file:///Users/SIMPLEVIA/Dropbox/all%20files/Schuler%20v4/views/Teacher/teacher_lessonplan.html#" aria-controls="myTable" data-dt-idx="2" tabindex="0">Next</a></li></ul></div></div></div></div>
+                              </form>
+                           </div>
+                                 <!-- Modal -->
+                        <div class="modal fade" id="addModal" role="dialog">
+                           <div class="modal-dialog modal-lg">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h4 class="modal-title">Lesson Plan</h4>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="card-box">
+                                       <div class="row">
+                                        
+                                          <div class="col-lg-12">
+                                             <div class="row">
+                                                <div class="col-lg-12">
+                                                   <h3 style="text-align: center;"><strong>Add Lesson Plan</strong></h3><br>
+                                                   </div>
+                                                   <div class="col-lg-12">
+                                                   <form class="table-rensponsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <th style="width: 20%;">Date of Lesson Plan:</th>
+                                                               <td style="width: 30%;"><input style="width: 100%;" type="" name=""></td>
+                                                               <th style="width: 10%;">Time:</th>
+                                                               <td style="width: 40%;"><input style="width: 100%;" type="" name=""></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <th style="width: 20%;">Subject:</th>
+                                                               <td style="width: 30%;"><input style="width: 100%;" type="" name=""></td>
+                                                               <th style="width: 10%;">Quarter:</th>
+                                                               <td style="width: 40%;"><input style="width: 100%;" type="" name=""></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <th style="width: 20%;">Topic:</th>
+                                                               <td colspan="4" style="width: 80%;"><input style="width: 100%;" type="" name=""></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <th style="width: 20%;">Title:</th>
+                                                               <td colspan="3" style="width: 80%;"><input style="width: 100%;" type="" name=""></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <th style="width: 20%;">Grade Level:</th>
+                                                               <td style="width: 30%;"><input style="width: 100%;" type="" name=""></td>
+                                                               <th style="width: 20%;">Lesson Duration:</th>
+                                                               <td style="width: 40%;"><input style="width: 100%;" type="" name=""></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <th colspan="4">Lesson Objective:</th>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="4" height="250">
+                                                                  <textarea style="width: 100%; height: 100%; resize: none;"></textarea>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <th colspan="2">Materials / Equipment:</th>
+                                                               <th colspan="2">References:</th>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" height="250"><textarea style="width: 100%; height: 100%; resize: none;"></textarea></td>
+                                                               <td colspan="2" height="250"><textarea style="width: 100%; height: 100%; resize: none;"></textarea></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <th colspan="2">Take Home Tasks:</th>
+                                                               <th colspan="2">Notes:</th>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" height="250"><textarea style="width: 100%; height: 100%; resize: none;"></textarea></td>
+                                                               <td colspan="2" height="250"><textarea style="width: 100%; height: 100%; resize: none;"></textarea></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </form>
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                       </div>
+                                       <!-- End of Row-->
+                                    </div>
+                                    <div class="modal-footer">
+                                       <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+                                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div><!--end of modal-->   
+                        <div class="modal fade" id="editModal" role="dialog">
+                           <div class="modal-dialog modal-lg">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h4 class="modal-title">Lesson Plan</h4>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="card-box">
+                                       <div class="row">
+                                        
+                                          <div class="col-lg-12">
+                                             <div class="row">
+                                                <div class="col-lg-12">
+                                                   <h3 style="text-align: center;"><strong>Edit Lesson Plan</strong></h3><br>
+                                                   </div>
+                                                   <div class="col-lg-12">
+                                                   <form class="table-rensponsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <th style="width: 20%;">Date of Lesson Plan:</th>
+                                                               <td style="width: 30%;"><input style="width: 100%;" type="" name="" value="January 26,2017"></td>
+                                                               <th style="width: 10%;">Time:</th>
+                                                               <td style="width: 40%;"><input style="width: 100%;" type="" name="" value="1:30pm"></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <th style="width: 20%;">Subject:</th>
+                                                               <td style="width: 30%;"><input style="width: 100%;" type="" name="" value="English"></td>
+                                                               <th style="width: 10%;">Quarter:</th>
+                                                               <td style="width: 40%;"><input style="width: 100%;" type="" name="" value="1"></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <th style="width: 20%;">Topic:</th>
+                                                               <td colspan="4" style="width: 80%;"><input style="width: 100%;" type="" name="" value="Part of Speech"></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <th style="width: 20%;">Title:</th>
+                                                               <td colspan="3" style="width: 80%;"><input style="width: 100%;" type="" name="" value="Part of Speech"></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <th style="width: 20%;">Grade Level:</th>
+                                                               <td style="width: 30%;"><input style="width: 100%;" type="" name="" value="1"></td>
+                                                               <th style="width: 20%;">Lesson Duration:</th>
+                                                               <td style="width: 40%;"><input style="width: 100%;" type="" name="" value="2hours"></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <th colspan="4">Lesson Objective:</th>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="4" height="250">
+                                                                  <textarea style="width: 100%; height: 100%; resize: none;">To teach students the different parts of a speech</textarea>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <th colspan="2">Materials / Equipment:</th>
+                                                               <th colspan="2">References:</th>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" height="250"><textarea style="width: 100%; height: 100%; resize: none;">Pen and Paper</textarea></td>
+                                                               <td colspan="2" height="250"><textarea style="width: 100%; height: 100%; resize: none;">Shakespear</textarea></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <th colspan="2">Take Home Tasks:</th>
+                                                               <th colspan="2">Notes:</th>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" height="250"><textarea style="width: 100%; height: 100%; resize: none;">Short Quiz</textarea></td>
+                                                               <td colspan="2" height="250"><textarea style="width: 100%; height: 100%; resize: none;">Submit before deadline</textarea></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </form>
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                       </div>
+                                       <!-- End of Row-->
+                                    </div>
+                                    <div class="modal-footer">
+                                       <button type="button" class="btn btn-success" data-dismiss="modal">Update</button>
+                                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div><!--end of modal-->   
+                        <div class="modal fade" id="deleteModal" role="dialog">
+                           <div class="modal-dialog modal-lg">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h4 class="modal-title">Delete Lesson</h4>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="card-box">
+                                       <div class="row">
+                                        
+                                          <div class="col-lg-12">
+                                             <div class="row">
+                                                <div class="col-lg-12">
+                                                   <h3 style="text-align: center;"><strong>Are you sure you want to delete Lesson Plan?</strong></h3><br>
+                                                   </div>
+                                                   <div class="col-lg-12">
+                                                   <center> 
+                                                   <button type="button" class="btn btn-warning" data-dismiss="modal">Delete</button>
+                                                   <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                   </center>  
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                       </div>
+                                       <!-- End of Row-->
+                                    </div>                 
+                                 </div>
+                              </div>
+                           </div>
+                        </div><!--end of modal-->   
+                     </div>
+                  </div>
+                  
+               </div>
+               
+            </div>
+
+         </div>
+         <hr>
+      
+      <!-- end of your code -->
+      <!-- footer here -->
+ 
+      <footer class="navbar-fixed-bottom">
+         <div class="container-fluid" style="background-color: #35AC49;">
+            <p class="pull-right " style="padding-top: .5%; padding-right: 3%; font-size: 10px; font-weight: bolder; color: #000033;">© 2016 - Powered by <a href="http://www.simplevia.com/" style="color: #fff;">QuickTrack</a></p>
+         </div>
+      </footer>
+      <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="./Teacher Management_files/jquery.min.js"></script>
+      <script src="./Teacher Management_files/jquery-ui.min.js"></script>
+      
+      <script src="./Teacher Management_files/jquery.min.js"></script>
+      <script src="./Teacher Management_files/bootstrap.min.js"></script>
+      <script src="./Teacher Management_files/jquery.dataTables.min.js"></script> 
+      <script src="./Teacher Management_files/datatables.bootstrap.js"></script>
+      <script src="./Teacher Management_files/dataTables.buttons.min.js"></script>
+      <script src="./Teacher Management_files/buttons.bootstrap.min.js"></script>
+      <script src="./Teacher Management_files/buttons.html5.min.js"></script>
+      <script src="./Teacher Management_files/buttons.print.min.js"></script>
+      <script src="./Teacher Management_files/dataTables.fixedColumns.min.js"></script>
+      <script src="./Teacher Management_files/dataTables.fixedHeader.min.js"></script>
+      <script src="./Teacher Management_files/dataTables.keyTable.min.js"></script>
+      <script src="./Teacher Management_files/dataTables.scroller.min.js"></script>
+
+
+      <script src="./Teacher Management_files/formValidation.min.js"></script>
+      <script src="./Teacher Management_files/bootstrap.min(1).js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script type="text/javascript">
+         $(document).ready(function(){
+           var oTable = $('#myTable').DataTable({
+             "orderCellsTop": false,
+             "searchHighlight" : true,
+           });
+           $('#search').keyup(function(){
+                 oTable.search($(this).val()).draw() ;
+           });
+           $(".dataTables_filter").hide();
+           oTable.on('order.dt search.dt', function(){
+             oTable.column(0, {search:'applied', order:'applied'}).nodes().each(
+              function (cell, i) {
+               cell.innerHTML = i+1;
+               } );
+           }).draw();
+         });
+    </script>
+      <script>
+         $('#custom-table2').DataTable({
+             scrollY: 300,
+             paging: false,
+             searching: false
+         });
+      </script>
+      <!-- end of your custom script -->
+   
+</body></html>

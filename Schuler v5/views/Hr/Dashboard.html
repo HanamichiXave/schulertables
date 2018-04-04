@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Dashboard</title>
+      <link rel="icon" href="../../content/images/logonatin.png">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../../content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../content/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+      <!-- css for nav bar -->
+      <link href="../../content/custom/css/style.css" rel="stylesheet">
+      <link href="../../content/fontawesome/font-awesome.min.css" rel="stylesheet">
+      <link href="../../content/dashboards/bootstrap dashboard/bsdashboard.css" rel="stylesheet">
+      <!-- end of css  -->
+      <!-- your custom css -->
+      <!-- end of your custom css -->
+   </head>
+   <style>
+    .text-faded {
+      height: 40px;
+    }
+    .row-bordered:after {
+     content: "";
+     display: block;
+     border-bottom: 1px solid #ccc;
+     margin: 0 15px;
+   }
+   svg {
+      display: block;
+      margin: 0 auto;
+   }
+   </style>
+   <body>
+      <!-- navigation bar  -->
+      <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+               <img class="schuler" src="../../content/images/logonatin.png" height="25" width="30" />
+               </a>
+               <a class="navbar-brand schulercolor" href="../Super Admin/super-admin-management.html">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                        </li>
+                        <li class="divider">|</li>
+                        <li>
+                           <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                        <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                        <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- end of navigation bar -->
+      <div class="container" >
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033"><h2><strong>Human Resource Management</strong></h2></div>
+         <ol class="breadcrumb" style="background-color: #D9EDF7">
+           <li><a href="hr-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+           <li>Dashboard</li>
+         </ol>
+         <section>
+            <!-- your code start here -->
+            <!-- Please observe indention -->
+            <div class="col-lg-12">
+              <div class="container-2">
+               <div id="page-wrapper">
+                  <div class="row" >
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading dark-blue db-container">
+                                 <i class="fa fa-users fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content dark-blue db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Total Employees
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 475
+                                 <span id="sparklineA"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading green db-container">
+                                 <i class="fa fa-desktop fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content green db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Administration Department
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 20
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading orange db-container">
+                                 <i class="fa fa-eyedropper fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content orange db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Clinic Department
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 40
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading blue db-container">
+                                 <i class="fa fa-handshake-o fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content blue db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Counselor Department
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 50
+                                 <span id="sparklineB"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading red db-container">
+                                 <i class="fa fa-money fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content red db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Finance Department
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 60
+                                 <span id="sparklineC"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading purple db-container">
+                                 <i class="fa fa-user fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content purple db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Human Resource Department
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 70
+                                 <span id="sparklineD"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading purple db-container">
+                                 <i class="fa fa-book fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content purple db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Library Department
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 25
+                                 <span id="sparklineC"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading red db-container">
+                                 <i class="fa fa-bolt fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content red db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Maintenance Department
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 30
+                                 <span id="sparklineC"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading blue db-container">
+                                 <i class="fa fa-shield fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content blue db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Security Department
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 45
+                                 <span id="sparklineC"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading orange db-container">
+                                 <i class="fa fa-pencil fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content orange db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Teacher Department
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 35
+                                 <span id="sparklineC"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading green db-container">
+                                 <i class="fa fa-bus fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content green db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Transportation Department
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 15
+                                 <span id="sparklineC"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="circle-tile">
+                           <a href="#">
+                              <div class="circle-tile-heading dark-blue db-container">
+                                 <i class="fa fa-user-plus fa-fw fa-3x"></i>
+                              </div>
+                           </a>
+                           <div class="circle-tile-content dark-blue db-container">
+                              <div class="circle-tile-description text-faded">
+                                 Other Staffs
+                              </div>
+                              <div class="circle-tile-number text-faded">
+                                 65
+                                 <span id="sparklineC"></span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- page-wrapper END-->
+              </div>
+            </div>
+             
+            <div class="row">
+
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 db-container panel panel-custom m-b">
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 row-bordered">
+                     <center>
+                        <h4>New Hires</h4>
+                        <label>Last 6 Months of 2017</label>
+                        <h1>560</h1>
+                     </center>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 row-bordered">
+                     <center>
+                        <h4>Open Positions</h4>
+                        <label>Year of 2018</label>
+                        <h1>220</h1>
+                     </center>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 row-bordered">
+                     <center>
+                        <h4>Applicants</h4>
+                        <label>Last 6 Months of 2017</label>
+                        <h1>1754</h1>
+                     </center>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                     <center>
+                        <h4>Interns</h4>
+                        <label>Year of 2018</label>
+                        <h1>57</h1>
+                     </center>
+                  </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 m-b">
+                  <div class="panel panel-custom db-container">
+                     <div class="panel-heading">
+                         <i class="fa fa-venus-mars"></i>
+                         <label>New Hire Count by Gender</label>
+                     </div>
+                     <div class="panel-body">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                           <div style="position: relative; width:auto;">
+                              <canvas id="mychartpie" height="150px"></canvas>
+                           </div>
+                        </div>
+                     </div>    
+                  </div>    
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 m-b">
+               <div class="panel panel-custom db-container">
+                     <div class="panel-heading">
+                         <i class="fa fa-bell"></i>
+                         <label>Active Employee Count by Age Gap</label>
+                     </div>
+                     <div class="panel-body">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                           <div style="position: relative; width:auto;">
+                              <canvas id="mychartpie1" height="150px"></canvas>
+                           </div>
+                        </div>
+                     </div>    
+                  </div>    
+             </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m-b">
+               <div class="panel panel-custom db-container">
+                  <div class="panel-heading">
+                        <i class="fa fa-user" aria-hidden="true"></i><label>&nbsp;Employee Status</label>
+                  </div>
+                  <div class="panel-body">
+                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                        <svg width="100" height="100">
+                          <circle cx="50" cy="50" r="50" fill='rgba(255, 99, 132, 0.2)' />
+                          <text x="50%" y="45%" text-anchor="middle" fill="black" dy="1em">
+                            <tspan x="47%" dy=".6em" font-size = "30">53</tspan>
+                          </text>
+                        </svg>
+                        <center><h4>Present</h4></center>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                        <svg width="100" height="100">
+                          <circle cx="50" cy="50" r="50" fill='rgba(54, 162, 235, 0.2)' />
+                          <text x="50%" y="45%" text-anchor="middle" fill="black" dy="1em">
+                            <tspan x="47%" dy=".6em" font-size = "30">15</tspan>
+                          </text>
+                        </svg>
+                        <center><h4>On Leave</h4></center>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                        <svg width="100" height="100">
+                          <circle cx="50" cy="50" r="50" fill='rgba(255, 206, 86, 0.2)' />
+                          <text x="50%" y="45%" text-anchor="middle" fill="black" dy="1em">
+                            <tspan x="47%" dy=".6em" font-size = "30">24</tspan>
+                          </text>
+                        </svg>
+                        <center><h4>WFH</h4></center>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                        <svg width="100" height="100">
+                          <circle cx="50" cy="50" r="50" fill='rgba(75, 192, 192, 0.2)' />
+                          <text x="50%" y="45%" text-anchor="middle" fill="black" dy="1em">
+                            <tspan x="47%" dy=".6em" font-size = "30">45</tspan>
+                          </text>
+                        </svg>
+                        <center><h4>WOH</h4></center>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                        <svg width="100" height="100">
+                          <circle cx="50" cy="50" r="50" fill='rgba(153, 102, 255, 0.2)' />
+                          <text x="50%" y="45%" text-anchor="middle" fill="black" dy="1em">
+                            <tspan x="47%" dy=".6em" font-size = "30">24</tspan>
+                          </text>
+                        </svg>
+                        <center><h4>On Tour</h4></center>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                        <svg width="100" height="100">
+                          <circle cx="50" cy="50" r="50" fill='rgba(185, 152, 152, 0.2)' />
+                          <text x="50%" y="45%" text-anchor="middle" fill="black" dy="1em">
+                            <tspan x="47%" dy=".6em" font-size = "30">5</tspan>
+                          </text>
+                        </svg>
+                        <center><h4>Late Comers</h4></center>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="panel panel-custom">
+                     <div class="panel-heading">
+                        <i class="fa fa-users"></i>
+                        <label>Monthly joinees and resignees</label>                    
+                     </div>
+                     <div class="db-container" style="position: relative; width:auto;">
+                         <canvas id="myChartline"></canvas>
+                     </div>
+                  </div>
+             </div>
+           
+           </div>
+           <br/><br/><br/><br/>
+            <!-- end of your code -->
+            <!-- footer here -->
+         </section>
+       
+         <footer class="navbar-fixed-bottom">
+            <div class="container-fluid footer">
+               <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+            </div>
+         </footer>
+         <!-- end foooter -->
+      </div>
+      <!-- plugin scripts -->
+      <script src="../../content/jquery/dist/jquery.min.js"></script>
+      <script src="../../content/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../../content/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!-- DataTable Link -->
+      <script src="../../content/DataTables/js/jquery.dataTables.min.js"></script> 
+      <script src="../../content/DataTables/js/datatables.bootstrap.js"></script>
+      <script src="../../content/DataTables/js/dataTables.buttons.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.bootstrap.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.html5.min.js"></script>
+      <script src="../../content/DataTables/js/buttons.print.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedColumns.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.keyTable.min.js"></script>
+      <script src="../../content/DataTables/js/dataTables.scroller.min.js"></script>
+      <!-- End of LInk -->
+      <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+      <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+      <!-- end of plugin scripts -->
+      <!-- your custom script -->
+      <script>
+      var ctxbar = $("#myChartbar");
+      var ctxline = $("#myChartline");
+      var ctxpie = $("#mychartpie");
+      var ctxpie1 = $("#mychartpie1");
+
+
+      var myPieChart = new Chart(ctxpie,{
+                type: 'pie',
+                data: {
+                      labels: ['Male','Female'],
+                      datasets: [{
+                          data: [260, 300],
+                          backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)'
+                          ],
+                           borderColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)'
+                          ],
+                           hoverBackgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)'
+                          ],
+                          hoverBorderWidth: 5,
+                          borderWidth: 1
+                      }], 
+                      // These labels appear in the legend and in the tooltips when hovering different arcs
+                     
+                  }
+            });
+
+       var myPieChart1 = new Chart(ctxpie1,{
+                type: 'pie',
+                data: {
+                      labels: ['< 30','30 - 49', '50 +'],
+                      datasets: [{
+                          data: [200, 170, 180],
+                          backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)'
+                          ],
+                           borderColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)'
+                          ],
+                           hoverBackgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)'
+                          ],
+                          hoverBorderWidth: 5,
+                          borderWidth: 1
+                      }], 
+                      // These labels appear in the legend and in the tooltips when hovering different arcs
+                     
+                  }
+            });
+
+       var myChartline = new Chart(ctxline, {
+          type: 'line',
+          data: {
+              labels: ["Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"],
+              datasets: [{
+                  label: 'Monthly resignees',
+                  data: [10, 13, 15, 10, 20, 25, 10],
+                  backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                  borderColor: 'rgba(54, 162, 235, 0.2)',
+                  borderWidth: 1,
+                  pointBackgroundColor: 'rgba(54, 162, 235, 0.2)'
+              },{
+                  label: 'Monthly joinees',
+                  data: [15, 16, 18, 20, 16, 28, 14],
+                  backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                  borderColor: 'rgba(255, 99, 132, 0.2)',
+                  borderWidth: 1,
+                  pointBackgroundColor: 'rgba(255, 99, 132, 0.2)'
+              }]
+          },
+           options: {
+              scales: {
+                  xAxes: [{
+                      ticks: {
+                          stepSize: 1,
+                          min: 0,
+                          autoSkip: false,
+                          fontSize: 14
+                      }
+                  }],
+                  yAxes:[{
+                      ticks: {
+                          beginAtZero: true,
+                          fontSize: 14
+                      }
+                  }]
+              },
+                title: {
+                          display: true,
+                          text: 'Monthly joinees and resignees'
+                      },
+          }
+      });
+
+    
+
+
+      </script>
+      <!-- This is the Code for dataTable, Please copy paste -->
+      <!-- This is the Code for dataTable -->
+      <!-- end of your custom script -->
+   </body>
+</html>
